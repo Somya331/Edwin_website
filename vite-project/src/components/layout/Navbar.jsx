@@ -67,7 +67,7 @@ const MENU_STRUCTURE = [
   },
   {
     label: 'Academicians',
-    path: '/academicians',
+    path: '',
     submenu: [
       {
         label: 'Research Paper Publication - Services',
@@ -134,7 +134,7 @@ const MENU_STRUCTURE = [
   },
   {
     label: 'R&D/EBI',
-    path: '/rnd-ebi',
+    path: '',
     submenu: [
       { label: 'Edwin Academic & Immigration Solutions', path: '/edwin-academic-immigration-solutions' },
       {
@@ -174,7 +174,7 @@ const MENU_STRUCTURE = [
   },
   {
     label: 'Educational',
-    path: '/educational',
+    path: '',
     submenu: [
       {
         label: 'Academic News Channel',
@@ -205,7 +205,7 @@ const MENU_STRUCTURE = [
   },
   {
     label: 'University/College',
-    path: '/university-college',
+    path: '',
     submenu: [
       {
         label: 'University/College Services',
@@ -241,7 +241,7 @@ const MENU_STRUCTURE = [
   },
   {
     label: 'Editors || NGO || Business',
-    path: '/editors-ngo-business',
+    path: '',
     submenu: [
       { label: 'Edwin Journal', path: '/edwin-journal' },
       {
