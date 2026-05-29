@@ -433,142 +433,29 @@ export default function FacultyAndCoGuideRegistration() {
         </section>
 
         <section id="registration-form" className="bg-[#EAF1FB] px-5 py-20">
-          <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                Register Online
-              </p>
-              <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-                Research Paper Submission Form
-              </h2>
-              <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                Submit your enquiry for faculty, guide, co-guide, or academic publication
-                support. Our team will communicate through official email and phone.
-              </p>
+          <div
+  id="submit-research-paper"
+  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+>
+  <div className="mb-6">
+    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
+      Research Paper Submission
+    </p>
 
-              <div className="mt-8 grid gap-4">
-                <div className="flex items-center gap-3 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4">
-                  <FaEnvelope className="text-[#1B3A6B]" />
-                  <span className="text-[15px] font-normal text-[#1A1A2E]">
-                    care@edwinepc.com
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4">
-                  <FaPhoneAlt className="text-[#1B3A6B]" />
-                  <span className="text-[15px] font-normal text-[#1A1A2E]">
-                    +91 6262752167
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4">
-                  <FaGlobe className="text-[#1B3A6B]" />
-                  <span className="text-[15px] font-normal text-[#1A1A2E]">
-                    www.academichelpstore.com
-                  </span>
-                </div>
-              </div>
-            </div>
+    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
+      Submit Research Paper
+    </h2>
+  </div>
 
-            <form
-              onSubmit={handleSubmit}
-              className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            >
-              <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Enter your full name"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="Enter your email"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="Enter your phone number"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Applicant Type
-                  </label>
-                  <select
-                    required
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]"
-                  >
-                    <option value="">Select applicant type</option>
-                    <option>Academician</option>
-                    <option>Research Scholar</option>
-                    <option>Faculty Member</option>
-                    <option>University / Organising Secretary</option>
-                    <option>Registered Agency</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mt-5">
-                <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                  Service Interest
-                </label>
-                <select
-                  required
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]"
-                >
-                  <option value="">Select service</option>
-                  <option>Faculty And Co-guide Registration</option>
-                  <option>Research Paper Submission Online</option>
-                  <option>Copyright Forms</option>
-                  <option>Journals List Under Consultancy</option>
-                  <option>Publication Support</option>
-                </select>
-              </div>
-
-              <div className="mt-5">
-                <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                  Message
-                </label>
-                <textarea
-                  rows="5"
-                  placeholder="Write your enquiry"
-                  className="w-full resize-none rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="mt-6 w-full rounded-[8px] bg-[#1B3A6B] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-              >
-                Submit Registration Enquiry
-              </button>
-
-              {formStatus && (
-                <p className="mt-4 rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-[15px] font-normal text-[#2D7A4F]">
-                  {formStatus}
-                </p>
-              )}
-            </form>
-          </div>
+  <iframe
+    title="Submit Research Paper"
+    width="100%"
+    height="1150"
+    src="https://crm.zoho.in/crm/WebFormServeServlet?rid=19b346c275371c182386b8d862cbb94f145a3f8212e9c535be5bcc35b2a97113c01f7eb5de1c61578ee5f816e4c25f63gidb08d0d24bf5d4d6139ea227b24516344c89b3668cc28463acce6c87b78f7392d"
+    className="w-full border-0"
+    scrolling="auto"
+  />
+</div>
         </section>
 
         <section className="bg-[#1B3A6B] px-5 py-20">
@@ -631,3 +518,21 @@ export default function FacultyAndCoGuideRegistration() {
     </div>
   );
 }
+
+/* 
+-- dropdown menus no showing on mobile view
+-- navbar should having a toggle on mobile view but right now there is a slider fix it to a toggle bar
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+

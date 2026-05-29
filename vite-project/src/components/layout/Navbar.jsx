@@ -33,6 +33,8 @@ import {
   Monitor,
   Trophy,
   Calculator,
+  Menu,
+  X,
 } from 'lucide-react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -373,20 +375,33 @@ const getMenuIcon = (label = '') => {
   return Sparkles;
 };
 
-const NavItem = ({ item, depth = 0 }) => {
+const NavItem = ({ item, depth = 0, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const hasSubmenu = item.submenu && item.submenu.length > 0;
   const Icon = getMenuIcon(item.label);
 
+  const handleClick = (event) => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 992;
+
+    if (hasSubmenu && isMobile) {
+      event.preventDefault();
+      setIsOpen((current) => !current);
+      return;
+    }
+
+    if (onNavigate) onNavigate();
+  };
+
   return (
     <div
-      className="nav-item-wrap"
+      className={`nav-item-wrap ${isOpen ? 'is-open' : ''}`}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
       <Link
         to={item.path}
         className={depth === 0 ? 'nav-link-top' : 'nav-link-sub'}
+        onClick={handleClick}
       >
         <span className="nav-link-content">
           {depth === 0 && item.label === 'Home' && <Icon size={18} strokeWidth={2.5} />}
@@ -403,7 +418,7 @@ const NavItem = ({ item, depth = 0 }) => {
       {hasSubmenu && isOpen && (
         <div className={`dropdown-menu ${depth === 0 ? 'top-dropdown' : 'side-dropdown'}`}>
           {item.submenu.map((subItem, index) => (
-            <NavItem key={index} item={subItem} depth={depth + 1} />
+            <NavItem key={index} item={subItem} depth={depth + 1} onNavigate={onNavigate} />
           ))}
         </div>
       )}
@@ -412,6 +427,8 @@ const NavItem = ({ item, depth = 0 }) => {
 };
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <nav className="main-navbar">
       <div className="top-bar">
@@ -448,9 +465,19 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="nav-menu">
+      <button
+        type="button"
+        className="mobile-nav-toggle"
+        aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+        aria-expanded={isMobileMenuOpen}
+        onClick={() => setIsMobileMenuOpen((current) => !current)}
+      >
+        {isMobileMenuOpen ? <X size={24} strokeWidth={2.6} /> : <Menu size={24} strokeWidth={2.6} />}
+      </button>
+
+      <div className={`nav-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         {MENU_STRUCTURE.map((item, index) => (
-          <NavItem key={index} item={item} />
+          <NavItem key={index} item={item} onNavigate={() => setIsMobileMenuOpen(false)} />
         ))}
       </div>
 
@@ -570,6 +597,19 @@ const Navbar = () => {
           box-shadow: 0 6px 16px rgba(6, 42, 83, 0.25);
         }
 
+        .mobile-nav-toggle {
+          display: none;
+          width: 100%;
+          min-height: 52px;
+          border: 0;
+          background: linear-gradient(90deg, ${COLORS.primaryBlue}, ${COLORS.deepBlue});
+          color: ${COLORS.white};
+          align-items: center;
+          justify-content: flex-end;
+          padding: 0 20px;
+          cursor: pointer;
+        }
+
        .nav-menu {
   background: linear-gradient(90deg, ${COLORS.primaryBlue}, ${COLORS.deepBlue});
   padding: 0 30px;
@@ -654,7 +694,62 @@ const Navbar = () => {
           .top-bar, .logo-section { padding-left: 20px; padding-right: 20px; }
           .logo-section { flex-direction: column; align-items: flex-start; gap: 18px; }
           .search-box { width: 100%; }
-          .nav-menu { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; padding: 0 12px; }
+          .mobile-nav-toggle { display: flex; }
+          .nav-menu {
+            display: none;
+            position: static;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow: visible;
+            padding: 8px 12px 14px;
+            gap: 0;
+          }
+          .nav-menu.mobile-open { display: flex; }
+          .nav-item-wrap { width: 100%; }
+          .nav-link-top {
+            min-height: 48px;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+            border-radius: 8px;
+            white-space: normal;
+          }
+          .dropdown-menu {
+            position: static;
+            min-width: 0;
+            width: 100%;
+            margin: 4px 0 8px;
+            padding: 8px;
+            border-top: 0;
+            border-left: 3px solid ${COLORS.accentGold};
+            border-radius: 8px;
+            box-shadow: none;
+            animation: none;
+          }
+          .side-dropdown {
+            border-radius: 8px;
+            margin-left: 10px;
+            width: calc(100% - 10px);
+          }
+          .nav-link-sub {
+            min-height: 44px;
+            padding: 11px 12px;
+            gap: 10px;
+            white-space: normal;
+            font-size: 14px;
+          }
+          .chevron,
+          .chevron-right {
+            flex: 0 0 auto;
+            transition: transform 0.2s ease;
+          }
+          .nav-item-wrap.is-open > a .chevron,
+          .nav-item-wrap.is-open > a .chevron-right {
+            transform: rotate(180deg);
+          }
         }
      
         
@@ -665,4 +760,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

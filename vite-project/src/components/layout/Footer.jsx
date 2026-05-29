@@ -60,6 +60,7 @@ const Footer = () => {
 
   return (
     <footer
+      className="site-footer"
       style={{
         background:
           "radial-gradient(circle at 82% 35%, rgba(255,255,255,0.08), transparent 28%), linear-gradient(135deg, #082F5F 0%, #062B55 48%, #031D3A 100%)",
@@ -71,6 +72,7 @@ const Footer = () => {
       }}
     >
       <div
+        className="footer-pattern"
         style={{
           position: "absolute",
           right: "70px",
@@ -85,6 +87,7 @@ const Footer = () => {
       />
 
       <div
+        className="footer-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1.45fr 0.75fr 1fr 1.2fr",
@@ -96,7 +99,7 @@ const Footer = () => {
           zIndex: 1,
         }}
       >
-        <div>
+        <div className="footer-about">
           <h3 style={headingStyle}>Edwin Incorporation</h3>
           <div style={underlineStyle} />
 
@@ -118,6 +121,7 @@ const Footer = () => {
           </p>
 
           <div
+            className="footer-pill"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -136,7 +140,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div>
+        <div className="footer-section">
           <h3 style={headingStyle}>Quick Links</h3>
           <div style={underlineStyle} />
           {quickLinks.map((item) => (
@@ -159,7 +163,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div>
+        <div className="footer-section">
           <h3 style={headingStyle}>Our Services</h3>
           <div style={underlineStyle} />
           {services.map((item) => (
@@ -182,7 +186,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div>
+        <div className="footer-section footer-contact">
           <h3 style={headingStyle}>Contact Us</h3>
           <div style={underlineStyle} />
 
@@ -193,6 +197,7 @@ const Footer = () => {
             [Globe, "www.edwinepc.com"],
           ].map(([Icon, text], index) => (
             <p
+              className="footer-contact-row"
               key={index}
               style={{
                 display: "flex",
@@ -212,6 +217,7 @@ const Footer = () => {
       </div>
 
       <div
+        className="footer-bottom"
         style={{
           borderTop: "1px solid rgba(255,255,255,0.14)",
           padding: "10px",
@@ -225,6 +231,72 @@ const Footer = () => {
       >
         © {new Date().getFullYear()} Edwin Incorporation. All Rights Reserved.
       </div>
+
+      <style>{`
+        .site-footer,
+        .site-footer * {
+          box-sizing: border-box;
+        }
+
+        .footer-about p,
+        .footer-contact-row,
+        .footer-section a {
+          overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 1100px) {
+          .footer-grid {
+            grid-template-columns: 1.25fr 1fr !important;
+            padding: 34px 32px !important;
+            gap: 30px !important;
+          }
+
+          .footer-pattern {
+            right: 20px !important;
+            width: 280px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .site-footer {
+            margin-top: 28px !important;
+          }
+
+          .footer-grid {
+            grid-template-columns: 1fr !important;
+            padding: 28px 18px !important;
+            gap: 26px !important;
+          }
+
+          .footer-pattern {
+            display: none !important;
+          }
+
+          .footer-about p {
+            font-size: 13px !important;
+            line-height: 1.75 !important;
+          }
+
+          .footer-pill {
+            width: 100% !important;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+            border-radius: 12px !important;
+            padding: 10px 12px !important;
+            text-align: center !important;
+          }
+
+          .footer-contact-row {
+            font-size: 13px !important;
+            gap: 10px !important;
+          }
+
+          .footer-bottom {
+            padding: 12px 18px !important;
+            line-height: 1.6 !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 };

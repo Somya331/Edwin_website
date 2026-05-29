@@ -421,23 +421,31 @@ export default function JobsPage() {
               className="h-[260px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_14px_38px_rgba(27,58,107,0.10)]"
             />
           </div>
+         <div className="grid gap-8">
+         <div
+  id="career-with-edwin-inc"
+  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+>
+  <div className="mb-6">
+    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
+      Career Application
+    </p>
 
-          <div className="grid gap-8">
-            <ApplicationForm
-              id="job-application"
-              title="Application"
-              subtitle="Job Application"
-              type="Job Application"
-              status={jobStatus}
-              onSubmit={(event) =>
-                submitForm(
-                  event,
-                  setJobStatus,
-                  "Your job application has been prepared successfully."
-                )
-              }
-            />
+    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
+      Career with Edwin INC
+    </h2>
+  </div>
 
+  <iframe
+    title="Career with Edwin INC"
+    width="100%"
+    height="1010"
+    src="https://crm.zoho.in/crm/WebFormServeServlet?rid=26de158348063c1edfc9ad6d9b57f6013cfc563a93e3a947e8c7a579ef58a5861996ceaefe1a0ec211dd26e8e9cf1b5fgid563201e6b42013857924a77e1873d2135f199456df88f061c1cd4ff3586038c3"
+    className="w-full border-0"
+    scrolling="auto"
+  />
+</div>
+          
             <div
   id="partnership-programme"
   className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
@@ -461,21 +469,55 @@ export default function JobsPage() {
   />
 </div>
 
-            <ApplicationForm
-              id="internship-application"
-              title="Application for Internship"
-              subtitle="Internship Application"
-              type="Internship"
-              status={internshipStatus}
-              onSubmit={(event) =>
-                submitForm(
-                  event,
-                  setInternshipStatus,
-                  "Your internship application has been prepared successfully."
-                )
-              }
-            />
-          </div>
+            <div
+  id="internship-application"
+  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+>
+  <div className="mb-6">
+    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
+      Internship Application
+    </p>
+
+    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
+      Application for Internship
+    </h2>
+  </div>
+
+  <iframe
+    title="Application for Internship"
+    width="100%"
+    height="1010"
+    src="https://crm.zoho.in/crm/WebFormServeServlet?rid=51112abc98f271a6263dd1fd29565976fa602534a4908959c69abb1f87ba1a3d3cbf6408e31181bda780c28e59585ae2gid81e615699b36668458c9dfaef197d543fec8c64e6e2aa6e20992204e1a6cd988"
+    className="w-full border-0"
+    scrolling="auto"
+  />
+   </div>
+
+   <div
+  id="schedule-meeting"
+  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+>
+  <div className="mb-6">
+    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
+      Meeting Application
+    </p>
+
+    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
+      Schedule Meeting
+    </h2>
+  </div>
+
+  <iframe
+    title="Schedule Meeting"
+    width="100%"
+    height="660"
+    src="https://crm.zoho.in/crm/WebFormServeServlet?rid=09c1ba8807a47da8593d7e5cef940856613db46cd890907d627fe190e9c64175f0badb869d7f41d1481a730090ddb372gidf6805627c413a1d9346818821e3c81fe75b92f9fbaf81e434d986bb1b5f07c2d"
+    className="w-full border-0"
+    scrolling="auto"
+  />
+</div>
+
+   </div>
         </div>
       </section>
 
