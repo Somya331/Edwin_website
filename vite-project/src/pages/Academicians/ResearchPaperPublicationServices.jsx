@@ -458,52 +458,31 @@ export default function FacultyAndCoGuideRegistration() {
 </div>
         </section>
 
-        <section className="bg-[#1B3A6B] px-5 py-20">
-          <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
-            <div>
-              <p className="text-[13px] font-normal uppercase tracking-wide text-[#C89B3C]">
-                Keep in Touch with Us
-              </p>
-              <h2 className="mt-3 text-[28px] font-semibold text-[#FFFFFF]">
-                Need academic publication or registration support?
-              </h2>
-              <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#FFFFFF]">
-                Contact Edwin Incorporation for research paper submission, faculty and
-                co-guide registration, copyright forms, and journal consultancy services.
-              </p>
-            </div>
 
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-              <div className="grid gap-4">
-                <div className="flex gap-3">
-                  <FaMapMarkerAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi 110019
-                  </p>
-                </div>
-                <div className="flex gap-3">
-                  <FaPhoneAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    India: 011-66155019 | Phone: +91 6262752167 | Phone: +12792029553
-                  </p>
-                </div>
-                <div className="flex gap-3">
-                  <FaEnvelope className="mt-1 shrink-0 text-[#C89B3C]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Email: care@edwinepc.com
-                  </p>
-                </div>
-              </div>
+        <section className="w-full bg-[#eef7fd] px-5 py-16">
+  <div className="mx-auto max-w-[1200px]">
+    <h2 className="text-center text-[36px] font-bold text-[#2f356b] font-serif">
+      Journals List -
+    </h2>
 
-              <a
-                href="#registration-form"
-                className="mt-6 inline-flex rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#1B3A6B]"
-              >
-                Start Submission
-              </a>
-            </div>
-          </div>
-        </section>
+    <h3 className="mt-4 text-center text-[34px] font-bold text-[#2f356b] font-serif">
+      (Under Consultancy)
+    </h3>
+
+    <div className="mt-12 overflow-hidden rounded-[12px] bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+      <iframe
+        title="Journals List - Under Consultancy"
+        src="https://creatorapp.zohopublic.in/edwininc/journals-list/report-embed/All_New_Data/RjsB1VSEeKQRCMTZ72r9rrArj9ugtOr2qDkwR0sYZUb0SXAS5W45PB2HXvG3QZZAzbpyfnqeR9rp6uZDUY5CX98D669z09frxUuB"
+        width="100%"
+        height="500px"
+        frameBorder="0"
+        allowTransparency="true"
+        scrolling="auto"
+      />
+    </div>
+  </div>
+</section>
+
       </main>
 
       <a
