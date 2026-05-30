@@ -28,7 +28,7 @@ const applicationCards = [
     title: "Application",
     text: "Submit your profile for available career opportunities and professional roles at Edwin Incorporation.",
     icon: FaBriefcase,
-    link: "#job-application",
+    link: "#career-with-edwin-inc",
   },
   {
     title: "Partnership Programme",
@@ -521,71 +521,7 @@ export default function JobsPage() {
         </div>
       </section>
 
-      <section className="bg-[#1B3A6B] px-5 py-16">
-        <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
-          <div>
-            <p className="text-[13px] font-normal uppercase tracking-wide text-[#C89B3C]">
-              Keep in Touch with Us
-            </p>
-            <h2 className="mt-3 text-[30px] font-semibold text-[#FFFFFF]">
-              Need help with your application?
-            </h2>
-            <p className="mt-4 max-w-2xl text-[15px] font-normal leading-[1.7] text-[#FFFFFF]">
-              Contact Edwin Incorporation for jobs, internships, partnership programmes,
-              and application support.
-            </p>
-
-            <a
-              href="mailto:care@edwinincorp.com"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#C89B3C] px-7 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-            >
-              Email Now
-              <FaArrowRight />
-            </a>
-          </div>
-
-          <div className="rounded-[24px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-            <div className="grid gap-5">
-              <div className="flex gap-3">
-                <FaMapMarkerAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
-                  15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi 110019
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaPhoneAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
-                  India : 011-66155019
-                  <br />
-                  Phone: +916262752168
-                  <br />
-                  Phone: +12792029553
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaEnvelope className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
-                  care@edwinincorp.com
-                  <br />
-                  www.academichelpstore.com
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaBuilding className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
-                  Edwin_Incorporation
-                  <br />
-                  Services for Academicians II Universities II Colleges II Journals Editors II Admission Services
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       <a
         href="https://wa.me/916262752168"
         target="_blank"

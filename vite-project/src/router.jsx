@@ -6,14 +6,14 @@ import NotFound from './pages/NotFound';
 // Home
 import Home from './pages/Home/Home';
 import AboutUs from './pages/Home/AboutUs';
-import ApplyForJobs from './pages/Home/ApplyForJobs';
+import Jobs from './pages/Home/Jobs';
 import ApplyForScheduleMeeting from './pages/Home/ApplyForScheduleMeeting';
 import PartnershipProgramme from './pages/Home/PartnershipProgramme';
 import Awards from './pages/Home/Awards';
 
 // Academicians
 import Academicians from './pages/Academicians/Academicians';
-import ResearchPaperPublicationServices from './pages/Academicians/ResearchPaperPublicationServices';
+import ResearchPaper from './pages/Academicians/Researchpaper';
 import EditorialBoardMembership from './pages/Academicians/EditorialBoardMembership';
 import MembershipOthers from './pages/Academicians/MembershipOthers';
 import ServicesToMembers from './pages/Academicians/ServicesToMembers';
@@ -69,6 +69,7 @@ import NAACAssistance from './pages/University_College/NAACAssistance';
 
 // Editors_NGO_Business
 import Editors_NGO_Business from './pages/Editors_NGO_Business/Editors_NGO_Business';
+import JournalHelpBoard from './pages/Editors_NGO_Business/JournalHelpBoard';
 import OpeningJournalServices from './pages/Editors_NGO_Business/OpeningJournalServices';
 import TechnicalSupportForIndexing from './pages/Editors_NGO_Business/TechnicalSupportForIndexing';
 import PrintEISSNAllotmentSupport from './pages/Editors_NGO_Business/PrintEISSNAllotmentSupport';
@@ -77,6 +78,7 @@ import PaidDOICrossref from './pages/Editors_NGO_Business/PaidDOICrossref';
 import DOIPortal from './pages/Editors_NGO_Business/DOIPortal';
 import MembershipPortal from './pages/Editors_NGO_Business/MembershipPortal';
 import CSRFundingAssistant from './pages/Editors_NGO_Business/CSRFundingAssistant';
+import ServiceForBusiness from './pages/Editors_NGO_Business/ServiceForBusiness';
 import BusinessAutomation from './pages/Editors_NGO_Business/BusinessAutomation';
 import DigitalMarketing from './pages/Editors_NGO_Business/DigitalMarketing';
 import AppsForIOSAndAndroid from './pages/Editors_NGO_Business/AppsForIOSAndAndroid';
@@ -108,16 +110,19 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'about-us', element: <AboutUs /> },
-      { path: 'apply-for-jobs', element: <ApplyForJobs /> },
+      { path: 'jobs', element: <Jobs /> },
       { path: 'apply-schedule-meeting', element: <ApplyForScheduleMeeting /> },
       { path: 'partnership-programme', element: <PartnershipProgramme /> },
       { path: 'awards', element: <Awards /> },
 
       { path: 'academicians', element: <Academicians /> },
-      { path: 'research-paper-publication-services', element: <ResearchPaperPublicationServices /> },
+      { path: 'Researchpaper', element: <ResearchPaper /> },
       { path: 'Onemember', element: <Onemember /> },
+      { path: 'one-member', element: <Onemember /> },
       { path: 'Doimember', element: <Doimember /> },
+      { path: 'doi-member', element: <Doimember /> },
       { path: 'Professionalmember', element: <Professionalmember /> },
+      { path: 'professional-member', element: <Professionalmember /> },
       { path: 'editorial-board-membership', element: <EditorialBoardMembership /> },
       { path: 'membership-others', element: <MembershipOthers /> },
       { path: 'services-to-members', element: <ServicesToMembers /> },
@@ -166,6 +171,7 @@ const router = createBrowserRouter([
       { path: 'naac-assistance', element: <NAACAssistance /> },
 
       { path: 'editors-ngo-business', element: <Editors_NGO_Business /> },
+      { path: 'journal-help-board', element: <JournalHelpBoard /> },
       { path: 'opening-journal-services', element: <OpeningJournalServices /> },
       { path: 'technical-support-for-indexing', element: <TechnicalSupportForIndexing /> },
       { path: 'print-eissn-allotment-support', element: <PrintEISSNAllotmentSupport /> },
@@ -174,6 +180,7 @@ const router = createBrowserRouter([
       { path: 'doi-portal', element: <DOIPortal /> },
       { path: 'membership-portal', element: <MembershipPortal /> },
       { path: 'csr-funding-assistant', element: <CSRFundingAssistant /> },
+      { path: 'services-for-business', element: <ServiceForBusiness /> },
       { path: 'business-automation', element: <BusinessAutomation /> },
       { path: 'digital-marketing', element: <DigitalMarketing /> },
       { path: 'apps-for-ios-and-android', element: <AppsForIOSAndAndroid /> },

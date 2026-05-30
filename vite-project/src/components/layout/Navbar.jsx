@@ -60,7 +60,7 @@ const MENU_STRUCTURE = [
     path: '/',
     submenu: [
       { label: 'About us', path: '/about-us' },
-      { label: 'Apply for Jobs', path: '/apply-for-jobs' },
+      { label: 'Apply for Jobs', path: '/jobs' },
       { label: 'Apply For Schedule Meeting', path: '/apply-schedule-meeting' },
       { label: 'Partnership Programme', path: '/partnership-programme' },
     ]
@@ -71,9 +71,9 @@ const MENU_STRUCTURE = [
     submenu: [
       {
         label: 'Research Paper Publication - Services',
-        path: '/research-paper-publication-services',
+        path: '/Researchpaper',
         submenu: [
-          { label: 'Submit Paper Online', path: '/research-paper-publication-services' },
+          { label: 'Submit Paper Online', path: '/researchpaper#registration-form' },
           { label: 'Bulk Paper Submission', path: '/research-paper-publication-services' },
         ]
       },
@@ -88,10 +88,10 @@ const MENU_STRUCTURE = [
         label: 'Membership Others',
         path: '/membership-others',
         submenu: [
-          { label: 'Apply for Professional Membership', path: '/membership-others' },
-          { label: 'Apply For DOI Membership', path: '/membership-others' },
-          { label: 'Apply for One Membership - Edwin INC', path: '/membership-others' },
-          { label: 'JMA (Jabalpur Management Association)', path: '/membership-others' },
+          { label: 'Apply for Professional Membership', path: '/professional-member' },
+          { label: 'Apply For DOI Membership', path: '/doi-member' },
+          { label: 'Apply for One Membership - Edwin INC', path: '/one-member' },
+          { label: 'JMA (Jabalpur Management Association)', path: '/professional-member' },
         ]
       },
       {
@@ -241,12 +241,14 @@ const MENU_STRUCTURE = [
   },
   {
     label: 'Editors || NGO || Business',
-    path: '',
+    path: '/editors-ngo-business',
+    alignDropdown: 'right',
+    flyoutDirection: 'left',
     submenu: [
       { label: 'Edwin Journal', path: '/edwin-journal' },
       {
         label: 'Journals Help Board',
-        path: '/editors-ngo-business',
+        path: '/journal-help-board',
         submenu: [
           { label: 'Apply For Opening Journal Services', path: '/opening-journal-services' },
           { label: 'Technical Support For Indexing', path: '/technical-support-for-indexing' },
@@ -264,7 +266,7 @@ const MENU_STRUCTURE = [
       },
       {
         label: 'Services for NGO',
-        path: '/editors-ngo-business',
+        path: '/membership-portal',
         submenu: [
           { label: 'Membership portal', path: '/membership-portal' },
           { label: 'CSR Funding Assistant', path: '/csr-funding-assistant' },
@@ -272,7 +274,7 @@ const MENU_STRUCTURE = [
       },
       {
         label: 'Services for Business',
-        path: '/editors-ngo-business',
+        path: '/services-for-business',
         submenu: [
           { label: 'Services For Business Automation', path: '/business-automation' },
           { label: 'Digital Marketing', path: '/digital-marketing' },
@@ -375,10 +377,17 @@ const getMenuIcon = (label = '') => {
   return Sparkles;
 };
 
-const NavItem = ({ item, depth = 0, onNavigate }) => {
+const NavItem = ({ item, depth = 0, onNavigate, flyoutDirection = 'right' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const hasSubmenu = item.submenu && item.submenu.length > 0;
   const Icon = getMenuIcon(item.label);
+  const childFlyoutDirection = depth === 0 ? item.flyoutDirection || 'right' : flyoutDirection;
+  const dropdownClasses = [
+    'dropdown-menu',
+    depth === 0 ? 'top-dropdown' : 'side-dropdown',
+    depth === 0 && item.alignDropdown === 'right' ? 'top-dropdown-right' : '',
+    depth > 0 && flyoutDirection === 'left' ? 'side-dropdown-left' : '',
+  ].filter(Boolean).join(' ');
 
   const handleClick = (event) => {
     const isMobile = typeof window !== 'undefined' && window.innerWidth <= 992;
@@ -416,9 +425,15 @@ const NavItem = ({ item, depth = 0, onNavigate }) => {
       </Link>
 
       {hasSubmenu && isOpen && (
-        <div className={`dropdown-menu ${depth === 0 ? 'top-dropdown' : 'side-dropdown'}`}>
+        <div className={dropdownClasses}>
           {item.submenu.map((subItem, index) => (
-            <NavItem key={index} item={subItem} depth={depth + 1} onNavigate={onNavigate} />
+            <NavItem
+              key={index}
+              item={subItem}
+              depth={depth + 1}
+              onNavigate={onNavigate}
+              flyoutDirection={childFlyoutDirection}
+            />
           ))}
         </div>
       )}
@@ -659,7 +674,9 @@ const Navbar = () => {
           animation: dropdownFade 0.18s ease;
         }
         .top-dropdown { top: 100%; left: 0; }
+        .top-dropdown-right { left: auto; right: 0; }
         .side-dropdown { top: -12px; left: 100%; border-radius: 14px; }
+        .side-dropdown-left { left: auto; right: 100%; }
 
         .nav-link-sub {
           display: flex;
@@ -733,6 +750,11 @@ const Navbar = () => {
             border-radius: 8px;
             margin-left: 10px;
             width: calc(100% - 10px);
+          }
+          .top-dropdown-right,
+          .side-dropdown-left {
+            left: auto;
+            right: auto;
           }
           .nav-link-sub {
             min-height: 44px;
