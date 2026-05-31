@@ -22,19 +22,6 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-const slideImages = [
-  "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1900&q=90",
-];
-
 const conferences = [
   [52, "52nd International Conference — Philippines", "NEW", "In Association with Mahakoshal University, Jabalpur (M.P., India)", "Trends in Innovation, Education and Social Sciences", "19–21 Dec 2026", "University of the Philippines, Diliman (Metro Manila), Manila", "Scheduled", "52nd phillippines conference brochure 2026.pdf"],
   [51, "51st International Conference — Maldives", "NEW", "In Association with Mahakoshal University, Jabalpur (M.P., India)", "Global Research and Education Conclave", "12–14 Dec 2026", "The Maldives National University, Malé", "Scheduled", "51st conference maldives brochure.pdf"],
@@ -90,6 +77,47 @@ const conferences = [
   [1, "1st International Conference — India", "", "In Association with Partner Universities in India", "Innovative Technologies Driven by Multidisciplinary Research", "05 Jul 2014", "India", "Winner's List", "Download"],
 ];
 
+const conferenceHeroImageBase = "/images/apply-for-conferences";
+
+const conferenceHeroImageSequence = [
+  { no: 43, image: "WhatsApp_20Image_202026-05-12_20at_204.26.02_20PM.jpeg" },
+  { no: 43, image: "WhatsApp_20Image_202026-05-12_20at_204.36.08_20PM.jpeg" },
+  { no: 40, image: "40.png" },
+  { no: 39, image: "39.png" },
+  { no: 38, image: "38.png" },
+  { no: 37, image: "37.png" },
+  { no: 36, image: "36.png" },
+  { no: 35, image: "35.png" },
+  { no: 34, image: "34.png" },
+  { no: 33, image: "33.png" },
+  { no: 32, image: "32.png" },
+  { no: 31, image: "31.png" },
+  { no: 30, image: "WhatsApp_20Image_202026-03-07_20at_2011.54.18_20AM.jpeg" },
+  { no: 29, image: "29.png" },
+  { no: 28, image: "28.png" },
+  { no: 27, image: "27.jpeg" },
+  { no: 21, image: "21.png" },
+  { no: 18, image: "18.png" },
+  { no: 17, image: "17.jpeg" },
+  { no: 15, image: "WhatsApp_20Image_202022-01-31_20at_2015.57.52.jpeg" },
+  { no: 14, image: "14.jpeg" },
+  { no: 13, image: "WhatsApp_20Image_202026-03-07_20at_202.45.57_20PM.jpeg" },
+  { no: 12, image: "12.png" },
+  { no: 11, image: "11.png" },
+  { no: 10, image: "10.png" },
+  { no: 9, image: "9.jpg" },
+  { no: 8, image: "8.jpeg" },
+  { no: 7, image: "7.png" },
+  { no: 6, image: "6-2.jpg" },
+  { no: 5, image: "5.jpg" },
+  { no: 4, image: "4.jpg" },
+  { no: 3, image: "3.jpg" },
+  { no: 2, image: "2.jpeg" },
+  { no: 1, image: "1.jpg" },
+  { no: 16, image: "16.jpeg" },
+  { no: 44, image: "WhatsApp_20Image_202026-05-09_20at_202.59.15_20PM.jpeg" },
+];
+
 const applyCards = [
   { title: "Apply For Conference", subtitle: "Apply for Upcoming Conference", icon: FaFileAlt, link: "#conference-form" },
   { title: "Apply For Speaker/Resource Person", subtitle: "Speaker and Resource Person", icon: FaMicrophone, link: "#speaker-form" },
@@ -122,22 +150,22 @@ const previousGallery = [
   {
     title: "41st International Conference — Nepal",
     text: "Previous international conference record, participants, gallery images, and recognition details.",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=90",
+    image: "/images/apply-for-conferences/previous-nepal-01.jpg",
   },
   {
     title: "40th International Conference — U.S.A",
     text: "Conference highlights, research presentations, awards, and participant memories.",
-    image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=900&q=90",
+    image: "/images/apply-for-conferences/previous-usa-01.jpg",
   },
   {
     title: "39th International Conference — Vietnam",
     text: "Academic networking, multidisciplinary research, and sustainable development theme.",
-    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=90",
+    image: "/images/apply-for-conferences/39.png",
   },
   {
     title: "38th International Conference — Malaysia",
     text: "Winner list, participant details, and conference recognition records.",
-    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=900&q=90",
+    image: "/images/apply-for-conferences/38.png",
   },
 ];
 
@@ -194,14 +222,26 @@ export default function ApplyForConferencesPage() {
   const [awardStatus, setAwardStatus] = useState("");
 
   const heroSlides = useMemo(() => {
-    return conferences.slice(0, 30).map((item, index) => ({
-      no: item[0],
-      title: item[1],
-      subject: item[4],
-      date: item[5],
-      venue: item[6],
-      image: slideImages[index % slideImages.length],
-    }));
+    const conferenceByNumber = new Map(conferences.map((item) => [item[0], item]));
+
+    return conferenceHeroImageSequence
+      .map((slide) => {
+        const item = conferenceByNumber.get(slide.no);
+
+        if (!item) {
+          return null;
+        }
+
+        return {
+          no: item[0],
+          title: item[1],
+          subject: item[4],
+          date: item[5],
+          venue: item[6],
+          image: `${conferenceHeroImageBase}/${slide.image}`,
+        };
+      })
+      .filter(Boolean);
   }, []);
 
   useEffect(() => {
@@ -255,13 +295,13 @@ export default function ApplyForConferencesPage() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-contain"
           />
         </AnimatePresence>
 
         <div className="absolute inset-x-0 top-0 flex items-center justify-between p-5">
           <span className="rounded-full bg-[#FFFFFF]/95 px-4 py-2 text-[13px] font-semibold text-[#1B3A6B] shadow-sm backdrop-blur">
-            Slide {activeSlide + 1} of 30
+            Slide {activeSlide + 1} of {heroSlides.length}
           </span>
 
           <span className="rounded-full bg-[#C89B3C] px-4 py-2 text-[13px] font-semibold text-[#FFFFFF] shadow-sm">
@@ -362,7 +402,7 @@ export default function ApplyForConferencesPage() {
           <div className="mt-5 flex max-w-full flex-wrap items-center gap-2">
             {heroSlides.map((slide, index) => (
               <button
-                key={slide.no}
+                key={`${slide.no}-${index}`}
                 type="button"
                 onClick={() => setActiveSlide(index)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${

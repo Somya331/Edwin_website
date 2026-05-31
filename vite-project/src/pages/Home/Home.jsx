@@ -442,11 +442,11 @@ export default function Home() {
 
           <div className="fade-up">
             <span className="text-[13px] font-black uppercase tracking-wider text-[#FFD35A]">
-              Why Choose Edwin Incorporation
+               Excellence, Trust, Global Impact
             </span>
 
             <h2 className="mt-3 text-[38px] font-black leading-tight text-white md:text-[46px]">
-              Excellence, Trust, Global Impact
+              Why Choose Edwin Incorporation ? 
             </h2>
 
             <p className="mt-5 text-[16px] font-semibold leading-[1.9] text-white/78">
