@@ -6,16 +6,12 @@ import {
   FaCheckCircle,
   FaArrowRight,
   FaAward,
-  FaPassport,
   FaUserTie,
   FaFileSignature,
   FaChevronLeft,
   FaChevronRight,
   FaStar,
   FaQuoteLeft,
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
   FaClock,
   FaShieldAlt,
   FaHandshake,
@@ -133,12 +129,15 @@ function EdwinAcademicImmigrationSolutions() {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
+
     return () => clearInterval(timer);
   }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -193,15 +192,6 @@ function EdwinAcademicImmigrationSolutions() {
             }
           }
 
-          @keyframes pulse {
-            0%, 100% {
-              transform: scale(1);
-            }
-            50% {
-              transform: scale(1.05);
-            }
-          }
-
           @keyframes shimmer {
             0% {
               background-position: -1000px 0;
@@ -232,26 +222,8 @@ function EdwinAcademicImmigrationSolutions() {
             box-shadow: 0 20px 40px rgba(27, 58, 107, 0.15);
           }
 
-          .hover-scale {
-            transition: transform 0.3s ease;
-          }
-
-          .hover-scale:hover {
-            transform: scale(1.05);
-          }
-
           .hover-glow:hover {
             box-shadow: 0 0 30px rgba(200, 155, 60, 0.3);
-          }
-
-          .shimmer {
-            background: linear-gradient(90deg, 
-              transparent 0%, 
-              rgba(255,255,255,0.2) 50%, 
-              transparent 100%
-            );
-            background-size: 1000px 100%;
-            animation: shimmer 2s infinite;
           }
 
           .card-hover-effect {
@@ -287,9 +259,8 @@ function EdwinAcademicImmigrationSolutions() {
         `}
       </style>
 
-      {/* HERO SECTION WITH SLIDING IMAGES */}
+      {/* HERO SECTION */}
       <section className="relative h-screen bg-white overflow-hidden">
-        {/* Slider */}
         <div className="relative h-full">
           {heroSlides.map((slide, index) => (
             <div
@@ -311,13 +282,13 @@ function EdwinAcademicImmigrationSolutions() {
             </div>
           ))}
 
-          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-[#C89B3C] transition-all duration-300 border border-white/20"
           >
             <FaChevronLeft className="text-xl" />
           </button>
+
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-[#C89B3C] transition-all duration-300 border border-white/20"
@@ -325,7 +296,6 @@ function EdwinAcademicImmigrationSolutions() {
             <FaChevronRight className="text-xl" />
           </button>
 
-          {/* Content */}
           <div className="relative z-20 flex items-center h-full max-w-[1200px] mx-auto px-5">
             <div className="lg:w-1/2">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-white text-sm font-medium mb-6 hover:bg-white/20 transition-all duration-300">
@@ -357,7 +327,6 @@ function EdwinAcademicImmigrationSolutions() {
                 </button>
               </div>
 
-              {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mt-12 animate-fadeInUp">
                 <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <h3 className="text-3xl font-bold text-white">500+</h3>
@@ -377,7 +346,6 @@ function EdwinAcademicImmigrationSolutions() {
             </div>
           </div>
 
-          {/* Slider Indicators */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
             {heroSlides.map((_, index) => (
               <button
@@ -402,9 +370,11 @@ function EdwinAcademicImmigrationSolutions() {
               <FaAward />
               Our Services
             </div>
+
             <h2 className="text-4xl font-bold text-[#1B3A6B]">
               Our EB-1 Visa Categories
             </h2>
+
             <p className="text-[15px] leading-[1.8] text-[#5A6A85] mt-4">
               Professional immigration support designed to help extraordinary
               individuals and executives achieve permanent residency in the
@@ -423,9 +393,13 @@ function EdwinAcademicImmigrationSolutions() {
                 <div
                   className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl transition-all duration-300"
                   style={{
-                    backgroundColor: isHovering === index ? service.color : "#EAF1FB",
+                    backgroundColor:
+                      isHovering === index ? service.color : "#EAF1FB",
                     color: isHovering === index ? "white" : service.color,
-                    transform: isHovering === index ? "rotate(5deg) scale(1.1)" : "rotate(0deg)",
+                    transform:
+                      isHovering === index
+                        ? "rotate(5deg) scale(1.1)"
+                        : "rotate(0deg)",
                   }}
                 >
                   {service.icon}
@@ -440,7 +414,7 @@ function EdwinAcademicImmigrationSolutions() {
                 </p>
 
                 <button className="mt-6 flex items-center gap-2 text-[#1B3A6B] hover:text-[#C89B3C] transition-all duration-300 font-medium group">
-                  Learn More{" "}
+                  Learn More
                   <FaArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
                 </button>
               </div>
@@ -457,6 +431,7 @@ function EdwinAcademicImmigrationSolutions() {
               <FaShieldAlt />
               Why Choose Us
             </div>
+
             <h2 className="text-4xl font-bold text-[#1B3A6B] leading-tight">
               Why Choose Edwin Incorporation?
             </h2>
@@ -476,6 +451,7 @@ function EdwinAcademicImmigrationSolutions() {
                   <div className="text-[#C89B3C] text-xl mt-1 group-hover:scale-125 transition-transform duration-300">
                     {item.icon}
                   </div>
+
                   <p className="text-[15px] leading-[1.7] text-[#1A1A2E] font-medium">
                     {item.text}
                   </p>
@@ -507,12 +483,16 @@ function EdwinAcademicImmigrationSolutions() {
               <div className="grid grid-cols-2 gap-5 mt-10">
                 <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <h4 className="text-3xl font-bold">10+</h4>
-                  <p className="text-sm text-[#D6E0F0] mt-2">Years Experience</p>
+                  <p className="text-sm text-[#D6E0F0] mt-2">
+                    Years Experience
+                  </p>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <h4 className="text-3xl font-bold">24/7</h4>
-                  <p className="text-sm text-[#D6E0F0] mt-2">Consultation Support</p>
+                  <p className="text-sm text-[#D6E0F0] mt-2">
+                    Consultation Support
+                  </p>
                 </div>
               </div>
             </div>
@@ -520,7 +500,7 @@ function EdwinAcademicImmigrationSolutions() {
         </div>
       </section>
 
-      {/* PROCESS */}
+      {/* PROCESS SECTION */}
       <section className="bg-[#EAF1FB] py-20 px-5">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center max-w-3xl mx-auto">
@@ -528,9 +508,11 @@ function EdwinAcademicImmigrationSolutions() {
               <FaClock />
               Our Process
             </div>
+
             <h2 className="text-4xl font-bold text-[#1B3A6B]">
               Our Immigration Process
             </h2>
+
             <p className="text-[15px] leading-[1.8] text-[#5A6A85] mt-4">
               A structured and transparent process to guide you from
               consultation to visa approval.
@@ -547,6 +529,7 @@ function EdwinAcademicImmigrationSolutions() {
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#1B3A6B] to-[#2C5F8A] text-white flex items-center justify-center text-2xl shadow-lg">
                     {item.icon}
                   </div>
+
                   <span className="text-4xl font-bold text-[#EAF1FB]">
                     {item.step}
                   </span>
@@ -571,7 +554,7 @@ function EdwinAcademicImmigrationSolutions() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* TESTIMONIALS SECTION */}
       <section className="bg-white py-20 px-5">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center max-w-3xl mx-auto">
@@ -579,9 +562,11 @@ function EdwinAcademicImmigrationSolutions() {
               <FaStar className="text-[#C89B3C]" />
               Testimonials
             </div>
+
             <h2 className="text-4xl font-bold text-[#1B3A6B]">
               What Our Clients Say
             </h2>
+
             <p className="text-[15px] leading-[1.8] text-[#5A6A85] mt-4">
               Hear from professionals who successfully obtained their EB-1 visas
               with our support.
@@ -595,19 +580,25 @@ function EdwinAcademicImmigrationSolutions() {
                 className="hover-lift bg-gradient-to-b from-[#EAF1FB] to-white rounded-2xl border border-[#D6E0F0] p-8 relative"
               >
                 <FaQuoteLeft className="text-4xl text-[#C89B3C] opacity-50 mb-4" />
+
                 <p className="text-[15px] leading-[1.8] text-[#5A6A85] italic">
                   "{testimonial.text}"
                 </p>
+
                 <div className="flex items-center gap-1 mt-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <FaStar key={i} className="text-[#C89B3C]" />
                   ))}
                 </div>
+
                 <div className="border-t border-[#D6E0F0] mt-6 pt-4">
                   <h4 className="font-semibold text-[#1B3A6B]">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm text-[#5A6A85]">{testimonial.role}</p>
+
+                  <p className="text-sm text-[#5A6A85]">
+                    {testimonial.role}
+                  </p>
                 </div>
               </div>
             ))}
@@ -615,52 +606,89 @@ function EdwinAcademicImmigrationSolutions() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-gradient-to-r from-[#1B3A6B] to-[#2C5F8A] py-20 px-5 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-[#C89B3C] opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C89B3C] opacity-5 rounded-full blur-3xl"></div>
-        
-        <div className="relative max-w-[1200px] mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight animate-fadeInUp">
-            Start Your EB-1 Visa Journey Today
-          </h2>
+{/* ZOHO FORM SECTION */}
+<section className="relative py-12 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="max-w-5xl mx-auto px-4 relative z-10">
+    <div className="text-center mb-8">
+      <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-semibold mb-4 shadow-sm">
+        <FaFileSignature />
+        ​​Apply Now
+      </div>
 
-          <p className="text-[#D6E0F0] text-lg leading-[1.8] max-w-3xl mx-auto mt-5 animate-fadeInUp">
-            Connect with Edwin Incorporation for professional immigration
-            consultation and personalized guidance tailored to your profile and
-            residency goals.
-          </p>
+      <h2 className="text-4xl font-bold text-[#1B3A6B]">
+        EB-1 Visa Application Form
+      </h2>
 
-          <div className="flex flex-wrap justify-center gap-4 mt-8 animate-fadeInUp">
-            <button className="bg-[#C89B3C] hover:bg-[#A67B2E] transition-all duration-300 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:shadow-[#C89B3C]/20 hover-lift">
-              Apply Now
-            </button>
+      <p className="text-[16px] leading-[1.7] text-[#5A6A85] mt-3 max-w-2xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </div>
 
-            <button className="border-2 border-white text-white hover:bg-white hover:text-[#1B3A6B] transition-all duration-300 px-8 py-4 rounded-lg font-semibold hover-lift">
-              Contact Our Team
-            </button>
-          </div>
+    <div className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden">
+      <div className="bg-gradient-to-r from-[#1B3A6B] to-[#2C5F8A] px-6 py-4">
+        <h3 className="text-white text-xl font-bold">
+          Application Form
+        </h3>
+      </div>
 
-          {/* Contact Info */}
-          <div className="grid md:grid-cols-3 gap-6 mt-16">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <FaPhone className="text-[#C89B3C] text-2xl mx-auto mb-3" />
-              <p className="text-white font-semibold">+1 (555) 123-4567</p>
-              <p className="text-gray-300 text-sm">Call Us Anytime</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <FaEnvelope className="text-[#C89B3C] text-2xl mx-auto mb-3" />
-              <p className="text-white font-semibold">info@edwininc.com</p>
-              <p className="text-gray-300 text-sm">Email Us</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <FaMapMarkerAlt className="text-[#C89B3C] text-2xl mx-auto mb-3" />
-              <p className="text-white font-semibold">New York, USA</p>
-              <p className="text-gray-300 text-sm">Visit Our Office</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <iframe
+        title="Zoho CRM Web Form"
+        src="https://crm.zoho.in/crm/WebFormServeServlet?rid=10e82c0d7b54cdc93e2c4e476d74423cae8a64561dde736ea4b44cd5b4d8085059881b5df68554605c26d79d17a3fa3agid24da6f4d0b762ddad1244ca9337e302ee419f08e17e8fd762e758e6bd82d53d2"
+        width="100%"
+        height="430"
+        frameBorder="0"
+        scrolling="yes"
+        style={{
+          border: "none",
+          width: "100%",
+          display: "block",
+        }}
+      />
+    </div>
+  </div>
+</section>
+
+{/* ZOHO FORM SECTION */}
+<section className="relative py-12 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="max-w-5xl mx-auto px-4 relative z-10">
+    <div className="text-center mb-8">
+      <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-semibold mb-4 shadow-sm">
+        <FaFileSignature />
+        ​​Apply Now
+      </div>
+
+      <h2 className="text-4xl font-bold text-[#1B3A6B]">
+        Passport Application Form
+      </h2>
+
+      <p className="text-[16px] leading-[1.7] text-[#5A6A85] mt-3 max-w-2xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </div>
+
+    <div className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden">
+      <div className="bg-gradient-to-r from-[#1B3A6B] to-[#2C5F8A] px-6 py-4">
+        <h3 className="text-white text-xl font-bold">
+          Application Form
+        </h3>
+      </div>
+
+      <iframe
+        title="Zoho CRM Web Form"
+        src="https://crm.zoho.in/crm/WebFormServeServlet?rid=9bde249f47bc02c54a880a78c2d48660131e55177f6bec2fe69fd2c5e83a2ef8a21ada5cfc06bc6722947f8f69ba83c4gid9cf07970b6726da6e7abfcf2e93b3c8cd535041dbb6d19729e7caf941af37dc9"
+        width="100%"
+        height="520"
+        frameBorder="0"
+        scrolling="yes"
+        style={{
+          border: "none",
+          width: "100%",
+          display: "block",
+        }}
+      />
+    </div>
+  </div>
+</section>
     </div>
   );
 }

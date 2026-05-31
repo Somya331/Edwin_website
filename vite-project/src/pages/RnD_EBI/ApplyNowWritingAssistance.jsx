@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  FaChevronDown, 
-  FaPaperPlane, 
-  FaFileAlt, 
-  FaProjectDiagram, 
+import React, { useState, useEffect } from "react";
+
+import {
+  FaPaperPlane,
+  FaFileAlt,
+  FaProjectDiagram,
   FaPenFancy,
   FaChevronLeft,
   FaChevronRight,
@@ -18,9 +17,13 @@ import {
   FaShieldAlt,
   FaHandshake,
   FaUserGraduate,
+  FaAward,
   FaGlobeAmericas,
-  FaAward
-} from 'react-icons/fa';
+  FaBuilding,
+  FaArrowRight,
+  FaUserTie,
+  FaFileSignature,
+} from "react-icons/fa";
 import { motion } from 'framer-motion';
 
 const heroSlides = [
@@ -281,38 +284,8 @@ const WritingAssistancePage = () => {
         `}
       </style>
 
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-[#1B3A6B] shadow-lg backdrop-blur-md bg-opacity-95">
-        <div className="max-w-[1200px] mx-auto px-5 py-4 flex justify-between items-center">
-          <div className="text-white text-2xl font-bold tracking-tight hover-scale">
-            Edwin<span className="text-[#C89B3C]">Incorporation</span>
-          </div>
-          <div className="hidden md:flex gap-8">
-            <Link to="/" className="text-white text-sm hover:text-[#C89B3C] transition-colors duration-300 relative group">
-              Home
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#C89B3C] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link to="/services" className="text-[#C89B3C] text-sm border-b-2 border-[#C89B3C] transition-colors duration-300">
-              Services
-            </Link>
-            <Link to="/about" className="text-white text-sm hover:text-[#C89B3C] transition-colors duration-300 relative group">
-              About
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#C89B3C] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link to="/contact" className="text-white text-sm hover:text-[#C89B3C] transition-colors duration-300 relative group">
-              Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#C89B3C] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          </div>
-          <div className="md:hidden text-white hover:text-[#C89B3C] transition-colors duration-300">
-            <FaChevronDown />
-          </div>
-        </div>
-      </nav>
-
       {/* HERO SECTION WITH SLIDING IMAGES */}
       <section className="relative h-screen bg-white overflow-hidden">
-        {/* Slider */}
         <div className="relative h-full">
           {heroSlides.map((slide, index) => (
             <div
@@ -334,13 +307,13 @@ const WritingAssistancePage = () => {
             </div>
           ))}
 
-          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-[#C89B3C] transition-all duration-300 border border-white/20 hover:scale-110"
           >
             <FaChevronLeft className="text-xl" />
           </button>
+
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-[#C89B3C] transition-all duration-300 border border-white/20 hover:scale-110"
@@ -348,7 +321,6 @@ const WritingAssistancePage = () => {
             <FaChevronRight className="text-xl" />
           </button>
 
-          {/* Content */}
           <div className="relative z-20 flex items-center h-full max-w-[1200px] mx-auto px-5">
             <div className="lg:w-1/2">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-white text-sm font-medium mb-6 hover:bg-white/20 transition-all duration-300">
@@ -378,7 +350,6 @@ const WritingAssistancePage = () => {
                 </button>
               </div>
 
-              {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mt-12 animate-fadeInUp">
                 <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <h3 className="text-3xl font-bold text-white">500+</h3>
@@ -398,7 +369,6 @@ const WritingAssistancePage = () => {
             </div>
           </div>
 
-          {/* Slider Indicators */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
             {heroSlides.map((_, index) => (
               <button
@@ -430,7 +400,7 @@ const WritingAssistancePage = () => {
               Comprehensive PhD assistance designed to support your academic journey
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mt-14">
             {services.map((service, index) => (
               <motion.div
@@ -539,184 +509,6 @@ const WritingAssistancePage = () => {
         </div>
       </section>
 
-      {/* Application Form Section */}
-      <section className="bg-[#EAF1FB] py-20 px-5">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-medium mb-4">
-                <FaFileAlt />
-                Application Form
-              </div>
-              <h2 className="text-4xl font-bold text-[#1B3A6B]">Apply For PhD Assistance</h2>
-              <p className="text-[#5A6A85] mt-4">Fill out the form below and our academic experts will contact you within 24 hours</p>
-            </div>
-            
-            {isSubmitted && (
-              <motion.div 
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mb-6 p-4 bg-[#2D7A4F] text-white rounded-lg text-center shadow-lg"
-              >
-                Application submitted successfully! We'll contact you soon.
-              </motion.div>
-            )}
-
-            <motion.form 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              onSubmit={onSubmit} 
-              className="bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-[#D6E0F0]"
-            >
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[#1B3A6B] text-sm font-semibold mb-2">First Name *</label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    required
-                    className="w-full px-4 py-3 border-2 border-[#D6E0F0] rounded-lg focus:outline-none focus:border-[#1B3A6B] transition-all duration-200 text-[#1A1A2E] hover:border-[#C89B3C]"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[#1B3A6B] text-sm font-semibold mb-2">Last Name *</label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    required
-                    className="w-full px-4 py-3 border-2 border-[#D6E0F0] rounded-lg focus:outline-none focus:border-[#1B3A6B] transition-all duration-200 text-[#1A1A2E] hover:border-[#C89B3C]"
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[#1B3A6B] text-sm font-semibold mb-2">Select Your Location</label>
-                  <select
-                    value={selectedCountry}
-                    onChange={(e) => setSelectedCountry(e.target.value)}
-                    name="location"
-                    className="w-full px-4 py-3 border-2 border-[#D6E0F0] rounded-lg focus:outline-none focus:border-[#1B3A6B] transition-all duration-200 text-[#1A1A2E] hover:border-[#C89B3C]"
-                  >
-                    <option value="">Select Your Country</option>
-                    <option value="India">India</option>
-                    <option value="USA">USA</option>
-                    <option value="UK">UK</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Germany">Germany</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-[#1B3A6B] text-sm font-semibold mb-2">Designation</label>
-                  <select
-                    name="designation"
-                    className="w-full px-4 py-3 border-2 border-[#D6E0F0] rounded-lg focus:outline-none focus:border-[#1B3A6B] transition-all duration-200 text-[#1A1A2E] hover:border-[#C89B3C]"
-                  >
-                    <option value="">Select Designation</option>
-                    <option value="Student">Student</option>
-                    <option value="Research Scholar">Research Scholar</option>
-                    <option value="Professor">Professor</option>
-                    <option value="Professional">Professional</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-[#1B3A6B] text-sm font-semibold mb-2">Title of Project *</label>
-                <input
-                  type="text"
-                  name="projectTitle"
-                  required
-                  className="w-full px-4 py-3 border-2 border-[#D6E0F0] rounded-lg focus:outline-none focus:border-[#1B3A6B] transition-all duration-200 text-[#1A1A2E] hover:border-[#C89B3C]"
-                  placeholder="Enter your research/project title"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[#1B3A6B] text-sm font-semibold mb-2">Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border-2 border-[#D6E0F0] rounded-lg focus:outline-none focus:border-[#1B3A6B] transition-all duration-200 text-[#1A1A2E] hover:border-[#C89B3C]"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[#1B3A6B] text-sm font-semibold mb-2">Mobile *</label>
-                  <input
-                    type="tel"
-                    name="mobile"
-                    required
-                    className="w-full px-4 py-3 border-2 border-[#D6E0F0] rounded-lg focus:outline-none focus:border-[#1B3A6B] transition-all duration-200 text-[#1A1A2E] hover:border-[#C89B3C]"
-                    placeholder="+91 98765 43210"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-[#1B3A6B] text-sm font-semibold mb-2">Upload a File (if Proposal have)</label>
-                <div className="border-2 border-dashed border-[#D6E0F0] rounded-lg p-6 text-center hover:border-[#C89B3C] transition-all duration-200 hover:bg-[#EAF1FB] cursor-pointer">
-                  <input
-                    type="file"
-                    onChange={handleFileChange}
-                    className="hidden"
-                    id="fileUpload"
-                  />
-                  <label htmlFor="fileUpload" className="cursor-pointer">
-                    <div className="text-[#1B3A6B] mb-2">
-                      <FaFileAlt className="w-12 h-12 mx-auto" />
-                    </div>
-                    <p className="text-[#1B3A6B] font-semibold">
-                      {selectedFile ? selectedFile : "Choose Files"}
-                    </p>
-                    <p className="text-[#A0AEC0] text-xs mt-1">PDF, DOC, DOCX up to 10MB</p>
-                  </label>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  checked={termsAccepted}
-                  onChange={(e) => setTermsAccepted(e.target.checked)}
-                  className="mt-1 w-5 h-5 text-[#1B3A6B] border-2 border-[#D6E0F0] rounded focus:ring-[#1B3A6B] cursor-pointer"
-                />
-                <label className="text-[#1A1A2E] text-sm">
-                  I have read and agree to the <span className="text-[#C89B3C] cursor-pointer hover:underline font-semibold">Terms & Conditions</span> *
-                </label>
-              </div>
-
-              <div className="flex gap-4 pt-4">
-                <button
-                  type="submit"
-                  className="flex-1 bg-[#1B3A6B] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#C89B3C] transition-all duration-300 shadow-lg hover:shadow-xl hover-lift"
-                >
-                  Submit Application
-                </button>
-                <button
-                  type="reset"
-                  className="px-6 py-4 bg-white border-2 border-[#D6E0F0] text-[#1A1A2E] rounded-lg font-semibold hover:bg-[#EAF1FB] hover:border-[#C89B3C] transition-all duration-300 hover-lift"
-                  onClick={() => {
-                    setSelectedCountry('');
-                    setSelectedFile(null);
-                    setTermsAccepted(false);
-                  }}
-                >
-                  Reset Form
-                </button>
-              </div>
-            </motion.form>
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials */}
       <section className="bg-white py-20 px-5">
@@ -765,60 +557,47 @@ const WritingAssistancePage = () => {
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="bg-gradient-to-r from-[#1B3A6B] to-[#2C5F8A] py-20 px-5 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-[#C89B3C] opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C89B3C] opacity-5 rounded-full blur-3xl"></div>
-        
-        <div className="relative max-w-[1200px] mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight animate-fadeInUp">
-            Need Personalized Guidance?
-          </h2>
-          <p className="text-[#D6E0F0] text-lg leading-[1.8] max-w-3xl mx-auto mt-5 animate-fadeInUp">
-            Our academic counselors are available 24/7 to help you with your PhD journey
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 animate-fadeInUp">
-            <button className="bg-[#C89B3C] hover:bg-[#A67B2E] transition-all duration-300 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:shadow-[#C89B3C]/20 hover-lift">
-              Schedule Consultation
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-[#1B3A6B] transition-all duration-300 px-8 py-4 rounded-lg font-semibold hover-lift">
-              We're Online!
-            </button>
-          </div>
-
-          {/* Contact Info */}
-          <div className="grid md:grid-cols-3 gap-6 mt-16">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <FaPhone className="text-[#C89B3C] text-2xl mx-auto mb-3" />
-              <p className="text-white font-semibold">+1 (555) 123-4567</p>
-              <p className="text-gray-300 text-sm">Call Us Anytime</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <FaEnvelope className="text-[#C89B3C] text-2xl mx-auto mb-3" />
-              <p className="text-white font-semibold">academics@edwininc.com</p>
-              <p className="text-gray-300 text-sm">Email Us</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <FaMapMarkerAlt className="text-[#C89B3C] text-2xl mx-auto mb-3" />
-              <p className="text-white font-semibold">New York, USA</p>
-              <p className="text-gray-300 text-sm">Visit Our Office</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Floating Chat Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <motion.div 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-[#1B3A6B] text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-3 cursor-pointer hover:bg-[#C89B3C] transition-all duration-300 animate-pulse"
-        >
-          <FaPaperPlane className="w-5 h-5" />
-          <span className="text-sm font-semibold">Chat with us</span>
-        </motion.div>
+      {/* ZOHO FORM SECTION */}
+<section className="relative py-12 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="max-w-3xl mx-auto px-4 relative z-10">
+    <div className="text-center mb-8">
+      <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-semibold mb-4 shadow-sm">
+        <FaFileSignature />
+        Application Form
       </div>
+
+      <h2 className="text-4xl font-bold text-[#1B3A6B]">
+       Apply for Projects
+      </h2>
+
+      <p className="text-[16px] leading-[1.7] text-[#5A6A85] mt-3 max-w-xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </div>
+
+    <div className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[650px] mx-auto">
+      <div className="bg-gradient-to-r from-[#1B3A6B] to-[#2C5F8A] px-6 py-4">
+        <h3 className="text-white text-xl font-bold">Application Form</h3>
+      </div>
+
+      <div className="w-full flex justify-center bg-white">
+        <iframe
+          title="Zoho CRM Web Form"
+          src="https://crm.zoho.in/crm/WebFormServeServlet?rid=a531f32547fa4dc8c10ed9b84d5e7884d5992f22435685e04ce37a2f0265c6381cadc6834824cc5d49cf3fcf8a81b3a4gid3a9a5f833a623ec528c2516db64a6696d1edb448afba3af3d7b0ca901b85a48f"
+          width="610"
+          height="500"
+          frameBorder="0"
+          scrolling="yes"
+          style={{
+            border: "none",
+            maxWidth: "100%",
+            display: "block",
+          }}
+        />
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 };

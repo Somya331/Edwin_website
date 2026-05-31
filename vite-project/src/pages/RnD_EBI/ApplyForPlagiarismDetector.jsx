@@ -12,6 +12,7 @@ import {
   FaHeart,
   FaPhoneAlt,
   FaQuoteLeft,
+  FaFileSignature,
   FaStar,
   FaUpload,
   FaUserShield,
@@ -466,74 +467,71 @@ const PlagiarismDetector = () => {
               />
             </motion.div>
 
-            <motion.form
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.45 }}
-              className="grid gap-6 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] md:grid-cols-2"
-            >
-              <h3 className="text-[18px] font-semibold text-[#1A1A2E] md:col-span-2">
-                {activeTab === "submit"
-                  ? "Submit DOC for Plagiarism"
-                  : "Institutional Membership Form"}
-              </h3>
+          {/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-              <div className="md:col-span-2">
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Select Your Location
-                </label>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>International</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  Select Your Country
-                </p>
-              </div>
+  <div className="max-w-5xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+      
 
-              {formFields.map((label) => (
-                <div key={label}>
-                  <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                    {label}
-                  </label>
-                  <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]" />
-                </div>
-              ))}
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+       Submit DOC for Plagiarism
+      </h2>
 
-              <div className="md:col-span-2">
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Upload DOC / Research Paper
-                </label>
-                <input
-                  type="file"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]"
-                />
-              </div>
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
+    </motion.div>
 
-              <div className="md:col-span-2">
-                <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                  <input type="checkbox" /> Terms & Condition * Read
-                </label>
-              </div>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-              <div className="flex gap-4 md:col-span-2">
-                <button
-                  type="button"
-                  className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-                >
-                  Submit
-                </button>
-                <button
-                  type="reset"
-                  className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-                >
-                  Reset
-                </button>
-              </div>
-            </motion.form>
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">
+           Submit DOC for Plagiarism
+          </h3>
+          
+        </div>
+
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
+
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=bbb8e318c9757fb4855b5eb43d114bc88e5783d82a8d39196361f5d0a55ebfecebd7d4e075efe0c1c59719ad870cff29gidd3f8be96bbb38eefff2c7877ba6c7a29f8524b04b4b622ae4c8a35ce03ff71c0"
+            width="100%"
+            height="500"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
           </div>
         </div>
       </section>
@@ -579,47 +577,7 @@ const PlagiarismDetector = () => {
         </div>
       </section>
 
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1200px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-        >
-          <FaUserShield className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Need Plagiarism Checking Support?
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for research paper checking, thesis
-            checking, plagiarism detector support, certificates, and
-            institutional membership assistance.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-            <a
-              href="tel:+916262752167"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaPhoneAlt /> +91 6262752167
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
-      <a
-        href="https://wa.me/916262752167"
-        className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:bg-[#C89B3C]"
-      >
-        <FaWhatsapp />
-      </a>
+      
     </main>
   );
 };

@@ -1,114 +1,80 @@
 // Home.jsx
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
-  ChevronRight,
+  ArrowRight,
   BookOpen,
   GraduationCap,
   Globe,
   ShieldCheck,
+  Users,
+  Award,
+  Quote,
+  Star,
+  MapPin,
+  FileText,
+  BriefcaseBusiness,
+  Newspaper,
+  BadgeCheck,
+  LibraryBig,
+  Handshake,
+  Lightbulb,
   Building2,
-  Briefcase,
-  ArrowRight,
-  PhoneCall,
-  Mail,
+  ScrollText,
+  Calculator,
+  Trophy,
+  Network,
+  ChevronRight,
+  CheckCircle2,
 } from "lucide-react";
 
 import hero1 from "../../assets/images/hero1.jpg";
 import hero2 from "../../assets/images/hero2.jpg";
 import hero4 from "../../assets/images/hero4.png";
 
-const serviceCards = [
-  {
-    title: "Services for Academicians",
-    icon: <BookOpen size={24} />,
-    span: "lg:col-span-2",
-    items: [
-      "Research Paper Publication – Submit Now",
-      "Editorial Board Membership – Apply Now / Members",
-      "Fellowships – Apply Now",
-      "Attend the International Conference",
-      "Calculate API Score",
-      "Online Learning Course (Affiliated with WASC, USA)",
-      "Professional Membership – National / International",
-      "Grant for Attending Conference",
-      "Plagiarism Detector Service (Checker)",
-      "Book Publication Services (National, International)",
-      "Membership of the Digital Library",
-      "HR Support (Jobs – Private & Govt)",
-      "Patent Registration",
-      "Major/Minor Project Support",
-    ],
-  },
-  {
-    title: "Services for Journals Editors",
-    icon: <Globe size={24} />,
-    span: "",
-    items: [
-      "E-ISSN and P-ISSN Technical Help – Allotment",
-      "Indexing Services – Technical Help",
-      "DOI – Free",
-      "DOI – Crossref",
-      "E-Journals Management Services",
-    ],
-  },
-  {
-    title: "Services for Research Scholar",
-    icon: <GraduationCap size={24} />,
-    span: "",
-    items: ["PhD Assistant", "Plagiarism Checker", "Admission in University"],
-  },
-  {
-    title: "Services for University and Colleges",
-    icon: <Building2 size={24} />,
-    span: "lg:col-span-2",
-    items: [
-      "NAAC – Technical Support",
-      "Conference Management Board – Support for Conference",
-      "Publications Support – Books and Journals",
-      "HR Services Support (Faculty Support)",
-      "Business Process Outsourcing Support (BPO)",
-      "Admission Services",
-      "Training and Development Support",
-      "Accreditation and Membership",
-      "MOU Support (International Only)",
-      "Book/Library/Digital Supply Support",
-      "Educational Tours Supports",
-      "Support for the Automation of the University",
-    ],
-  },
-  {
-    title: "Upcoming Projects",
-    icon: <ShieldCheck size={24} />,
-    span: "",
-    items: [
-      "South Asian University of Higher Education",
-      "Educational News – YouTube Channel",
-    ],
-  },
-  {
-    title: "Professional Membership",
-    icon: <Briefcase size={24} />,
-    span: "",
-    items: [
-      "South Asia Management Association",
-      "Jabalpur Management Association",
-    ],
-  },
-];
-
-const facebookLinks = [
-  { title: "41st International Conference: Nepal", link: "https://www.facebook.com/people/41th-International-Conference-Nepal/61582637724040/" },
-  { title: "40th International Conference: USA", link: "https://www.facebook.com/people/40th-International-Conference-USA/61578401152336/" },
-  { title: "Edwin Patent Support Services | Delhi", link: "https://www.facebook.com/people/Edwin-Patent-Support-services/61578565791587/" },
-  { title: "Edwin's Job Support Services | Delhi", link: "https://www.facebook.com/people/Edwins-Job-Support-Services/61578053891299/" },
-  { title: "Edwin Academic Conferences Services | Delhi", link: "https://www.facebook.com/people/Edwin-Academic-Conferences-Services/61578072282499/" },
-  { title: "Edwin's Award Services | Delhi", link: "https://www.facebook.com/people/Edwins-Award-Services/61578162038702/" },
-  { title: "Edwin Major & Minor Project Support | Delhi", link: "https://www.facebook.com/people/Edwin-Major-Minor-Project-Support/61578393956960/" },
-  { title: "Edwin's Editorial Board Membership | Delhi", link: "https://www.facebook.com/people/Edwins-Editorial-Board-Membership/61578135487044/" },
-  { title: "Edwin's API Calculator | Delhi", link: "https://www.facebook.com/people/Edwin-API-Calculator/61577999776688/" },
-];
-
 const carouselSlides = [hero1, hero2, hero4];
+
+const serviceCards = [
+  { title: "Research Publication", icon: <BookOpen size={26} />, desc: "Journal selection, manuscript support, publication guidance and UGC Care assistance." },
+  { title: "DOI & Indexing Services", icon: <Globe size={26} />, desc: "DOI registration, Crossref support, indexing guidance and journal technical solutions." },
+  { title: "Patent Support", icon: <ShieldCheck size={26} />, desc: "Patent filing, drafting, documentation and application support services." },
+  { title: "Conferences & Events", icon: <Users size={26} />, desc: "National and international academic conferences, seminars and event support." },
+  { title: "Editorial & Peer Review", icon: <GraduationCap size={26} />, desc: "Editorial board membership, reviewer support and peer-review management." },
+  { title: "Academic Membership", icon: <Award size={26} />, desc: "Academic membership and fellowship support for scholars and organizations." },
+  { title: "ISSN Support", icon: <ScrollText size={26} />, desc: "ISSN documentation, application guidance and journal identity support." },
+  { title: "Book Publication", icon: <LibraryBig size={26} />, desc: "ISBN book publication support, cover, formatting and publishing assistance." },
+  { title: "Journal Website & OJS", icon: <Network size={26} />, desc: "Journal website setup, OJS configuration and online publishing workflow support." },
+  { title: "Plagiarism & Formatting", icon: <FileText size={26} />, desc: "Similarity checking, formatting, proofreading and manuscript improvement support." },
+  { title: "API Calculator Support", icon: <Calculator size={26} />, desc: "Academic API score calculation support for faculty and researchers." },
+  { title: "Awards & Recognition", icon: <Trophy size={26} />, desc: "Academic awards, certificates and recognition support for professionals." },
+  { title: "Major & Minor Project", icon: <Lightbulb size={26} />, desc: "Project topic selection, report preparation and academic project guidance." },
+  { title: "Recruitment Services", icon: <BriefcaseBusiness size={26} />, desc: "Academic, institutional and professional recruitment support services." },
+  { title: "Press & Media", icon: <Newspaper size={26} />, desc: "Press release, media coverage and academic event promotion support." },
+  { title: "Institutional Consultancy", icon: <Building2 size={26} />, desc: "Support for colleges, universities, NGOs, journals and academic organizations." },
+];
+
+const stats = [
+  ["25+", "Countries Served"],
+  ["10K+", "Researchers Connected"],
+  ["500+", "Research Papers"],
+  ["1000+", "Institutions"],
+  ["170+", "Journals Supported"],
+];
+
+const partners = [
+  { name: "Scopus", logo: "https://www.scopus.com/static/images/scopus-logo-orange.svg" },
+  { name: "Web of Science", logo: "https://clarivate.com/wp-content/uploads/2020/06/Web-of-Science-Logo.png" },
+  { name: "Crossref", logo: "https://assets.crossref.org/logo/crossref-logo-landscape-200.svg" },
+  { name: "DOAJ", logo: "https://doaj.org/static/doaj/images/logo.svg" },
+  { name: "UGC", logo: "https://www.ugc.gov.in/assets/images/logo.png" },
+  { name: "Google Scholar", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" },
+  { name: "ISSN", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/ISSN_Logo.svg" },
+];
+
+const testimonials = [
+  { name: "Dr. Raman Kumar", role: "Professor, Delhi University", text: "Excellent support for our research publication and academic process." },
+  { name: "Dr. Kavita Sharma", role: "Research Scholar, JNU", text: "DOI and indexing services are reliable, transparent and highly professional." },
+  { name: "Dr. Ankit Verma", role: "Scholar", text: "The guidance in paper writing and journal selection helped me greatly." },
+];
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -131,21 +97,48 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#FFF8EA] font-['Plus_Jakarta_Sans',sans-serif] text-[#172033]">
+    <div className="min-h-screen overflow-hidden bg-[#EEF5FF] font-['Plus_Jakarta_Sans',sans-serif] text-[#08224A]">
       <style>{`
         @keyframes floatSoft {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-12px); }
+          0%,100% { transform: translateY(0); }
+          50% { transform: translateY(-14px); }
+        }
+
+        @keyframes fadeUp {
+          from { opacity:0; transform:translateY(28px); }
+          to { opacity:1; transform:translateY(0); }
+        }
+
+        @keyframes slideLeft {
+          from { opacity:0; transform:translateX(40px); }
+          to { opacity:1; transform:translateX(0); }
+        }
+
+        @keyframes glowPulse {
+          0%,100% { box-shadow:0 0 0 rgba(255,176,0,0); }
+          50% { box-shadow:0 0 38px rgba(255,176,0,.28); }
         }
 
         @keyframes shineMove {
-          0% { transform: translateX(-170%) rotate(16deg); }
-          100% { transform: translateX(230%) rotate(16deg); }
+          0% { transform: translateX(-180%) rotate(18deg); opacity:0; }
+          35% { opacity:.9; }
+          100% { transform: translateX(260%) rotate(18deg); opacity:0; }
         }
 
-        @keyframes pulseGlow {
-          0%, 100% { box-shadow: 0 0 0 rgba(255, 179, 0, 0); }
-          50% { box-shadow: 0 0 26px rgba(255, 179, 0, 0.26); }
+        @keyframes gradientMove {
+          0% { background-position:0% 50%; }
+          50% { background-position:100% 50%; }
+          100% { background-position:0% 50%; }
+        }
+
+        .fade-up { animation: fadeUp .85s ease both; }
+        .slide-left { animation: slideLeft .85s ease both; }
+        .float-soft { animation: floatSoft 5.5s ease-in-out infinite; }
+        .pulse-glow { animation: glowPulse 3.8s ease-in-out infinite; }
+
+        .modern-bg {
+          background-size: 180% 180%;
+          animation: gradientMove 12s ease infinite;
         }
 
         .glass-card {
@@ -154,272 +147,431 @@ export default function Home() {
         }
 
         .glass-card::before {
-          content: "";
-          position: absolute;
-          top: -55%;
-          left: -65%;
-          width: 18%;
-          height: 230%;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 211, 90, 0.08),
-            rgba(255, 255, 255, 0.15),
-            rgba(255, 211, 90, 0.08),
-            transparent
-          );
-          filter: blur(18px);
-          opacity: 0;
-          pointer-events: none;
+          content:"";
+          position:absolute;
+          top:-70%;
+          left:-80%;
+          width:28%;
+          height:260%;
+          background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),rgba(255,210,80,.38),rgba(255,255,255,.18),transparent);
+          filter:blur(16px);
+          opacity:0;
+          pointer-events:none;
         }
 
         .glass-card:hover::before {
-          opacity: 1;
-          animation: shineMove 1.5s ease;
-        }
-
-        .float-soft {
-          animation: floatSoft 5s ease-in-out infinite;
-        }
-
-        .pulse-glow {
-          animation: pulseGlow 3.5s ease-in-out infinite;
+          animation: shineMove 1.45s ease;
         }
       `}</style>
 
-      <section className="relative h-[520px] w-full overflow-hidden bg-[#071C34] md:h-[560px]">
-  {carouselSlides.map((image, index) => (
-    <div
-      key={image}
-      className={`absolute inset-0 transition-all duration-[1200ms] ease-in-out ${
-        index === currentSlide ? "z-10 scale-100 opacity-100" : "z-0 scale-105 opacity-0"
-      }`}
-    >
-      <img
-        src={image}
-        alt={`Edwin carousel ${index + 1}`}
-        className="h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#061B33]/95 via-[#061B33]/68 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#061B33]/55 via-transparent to-transparent" />
-    </div>
-  ))}
+  {/* HERO */}
+<section className="relative overflow-visible bg-gradient-to-br from-[#031329] via-[#073B86] to-[#051B3B] px-5 pt-6 pb-8">
+  <div className="absolute inset-0 opacity-40">
+    <div className="absolute -left-24 top-8 h-[300px] w-[300px] rounded-full bg-[#FFB000]/40 blur-3xl" />
+    <div className="absolute right-0 top-0 h-[360px] w-[360px] rounded-full bg-[#4DA3FF]/35 blur-3xl" />
+  </div>
 
-  <div className="relative z-30 mx-auto flex h-full max-w-[1200px] items-center px-6">
-    <div className="max-w-[560px]">
-      <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#FFD35A]/35 bg-white/10 px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#FFD35A] backdrop-blur-md">
-        <GraduationCap size={16} />
-        Academic Growth Platform
-      </div>
+  <div className="relative mx-auto grid max-w-[1320px] items-center gap-8 lg:grid-cols-[0.62fr_1.38fr]">
+    {/* LEFT CONTENT */}
+    <div className="fade-up">
+      <p className="mb-3 text-[12px] font-black uppercase tracking-wider text-[#FFD35A]">
+        Global Academic & Research Network
+      </p>
 
-      <h1 className="text-[42px] font-black leading-[1.08] text-white md:text-[54px]">
-        The Edwin{" "}
-        <span className="bg-gradient-to-r from-[#FFB000] to-[#FFD35A] bg-clip-text text-transparent">
-          INC
+      <h1 className="max-w-[560px] text-[42px] font-black leading-[1.05] text-white md:text-[62px]">
+        Edwin
+        <span className="block bg-gradient-to-r from-[#FFB000] to-[#FFD35A] bg-clip-text text-transparent">
+          Incorporation
         </span>
       </h1>
 
-      <p className="mt-4 max-w-[540px] text-[15.5px] font-semibold leading-[1.75] text-white/88">
-        Research, journal, university, membership, conference and academic support
-        services under one creative professional platform.
+      <p className="mt-4 max-w-[520px] text-[15px] font-semibold leading-[1.65] text-white/82">
+        Connecting scholars, institutions and publishers across the world
+        through trusted academic and research support services.
       </p>
 
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-5 flex flex-wrap gap-4">
+        <a
+          href="#services"
+          className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[#FF9D00] to-[#FFD35A] px-7 py-3 text-[14px] font-black text-[#071C34] shadow-[0_16px_42px_rgba(255,176,0,.35)] transition duration-300 hover:-translate-y-1"
+        >
+          Explore Services
+          <ArrowRight size={17} className="transition group-hover:translate-x-1" />
+        </a>
+
+        <a
+          href="#about-edwin"
+          className="inline-flex items-center gap-3 rounded-full border border-white/25 bg-white/10 px-7 py-3 text-[14px] font-black text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#071C34]"
+        >
+          Book Consultation
+        </a>
+      </div>
+
+      <div className="mt-5 grid max-w-[620px] grid-cols-2 gap-3 md:grid-cols-4">
         {[
-          ["Global Research", "Opportunities"],
-          ["Academic", "Excellence"],
-          ["Trusted by", "Institutions Worldwide"],
-        ].map((item, i) => (
+          ["Trusted Support", "Reliable & Transparent"],
+          ["Global Presence", "25+ Countries"],
+          ["Excellence", "Quality Services"],
+          ["24/7 Assistance", "Always Available"],
+        ].map((item) => (
           <div
-            key={i}
-            className="flex items-center gap-3 rounded-[18px] border border-white/12 bg-white/10 px-4 py-3 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[#FFD35A]/60 hover:bg-white/15"
+            key={item[0]}
+            className="glass-card rounded-2xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#FFD35A]/70 hover:bg-white/15"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFB000]/20 text-[#FFD35A]">
-              <BookOpen size={18} />
-            </div>
-            <p className="text-[13px] font-bold leading-[1.45] text-white">
-              {item[0]} <br /> {item[1]}
+            <BadgeCheck className="mb-2 text-[#FFD35A]" size={17} />
+            <h4 className="text-[13px] font-black text-white">{item[0]}</h4>
+            <p className="mt-1 text-[11px] font-semibold text-white/65">
+              {item[1]}
             </p>
           </div>
         ))}
       </div>
+    </div>
 
-      <div className="mt-7 flex flex-wrap gap-4">
-        <a
-          href="#services"
-          className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#FF9D00] to-[#FFD35A] px-7 py-3.5 text-[15px] font-black text-[#071C34] shadow-[0_15px_35px_rgba(255,176,0,.30)] transition duration-300 hover:-translate-y-1"
-        >
-          Explore Services
-          <ArrowRight size={18} className="transition group-hover:translate-x-1" />
-        </a>
+    {/* RIGHT IMAGE */}
+    <div className="relative slide-left">
+      <div className="glass-card relative h-[390px] overflow-hidden rounded-[28px] border border-white/20 bg-white/10 p-3 shadow-[0_30px_90px_rgba(0,0,0,.32)] backdrop-blur-md">
+        {carouselSlides.map((image, index) => (
+          <img
+            key={image}
+            src={image}
+            alt="Edwin Incorporation"
+            className={`absolute inset-3 h-[calc(100%-24px)] w-[calc(100%-24px)] rounded-[22px] object-cover transition-all duration-[1200ms] ${
+              index === currentSlide
+                ? "scale-100 opacity-100"
+                : "scale-105 opacity-0"
+            }`}
+          />
+        ))}
 
-        <a
-          href="#about"
-          className="inline-flex items-center gap-3 rounded-xl border border-[#FFD35A]/50 bg-white/8 px-7 py-3.5 text-[15px] font-black text-white backdrop-blur-md transition duration-300 hover:bg-[#FFD35A] hover:text-[#071C34]"
-        >
-          Learn More
-        </a>
+        <button className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#082B63]/80 text-[#FFD35A] shadow-lg backdrop-blur-md">
+          ‹
+        </button>
+
+        <button className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#082B63]/80 text-[#FFD35A] shadow-lg backdrop-blur-md">
+          ›
+        </button>
+
+        <div className="absolute bottom-7 left-1/2 flex -translate-x-1/2 gap-2">
+          {carouselSlides.map((_, index) => (
+            <span
+              key={index}
+              className={`h-2.5 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? "w-8 bg-[#FFB000]"
+                  : "w-2.5 bg-white/70"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   </div>
 
-  <div className="absolute bottom-8 right-[8%] z-30 hidden rounded-[22px] border border-white/15 bg-[#071C34]/75 px-7 py-4 text-white shadow-[0_20px_55px_rgba(0,0,0,.25)] backdrop-blur-xl lg:flex gap-7">
-    {[
-      ["25+", "Countries Served"],
-      ["10K+", "Happy Members"],
-      ["500+", "Research Papers"],
-    ].map((stat) => (
-      <div key={stat[0]} className="text-center">
-        <h3 className="text-[24px] font-black text-[#FFD35A]">{stat[0]}</h3>
-        <p className="text-[11px] font-semibold text-white/75">{stat[1]}</p>
-      </div>
-    ))}
-  </div>
-
-  <button
-    onClick={() =>
-      setCurrentSlide((currentSlide - 1 + carouselSlides.length) % carouselSlides.length)
-    }
-    className="absolute left-5 top-1/2 z-40 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-white/10 text-3xl text-white backdrop-blur-md transition duration-300 hover:scale-110 hover:bg-[#FFB000] hover:text-[#071C34]"
-  >
-    ‹
-  </button>
-
-  <button
-    onClick={() => setCurrentSlide((currentSlide + 1) % carouselSlides.length)}
-    className="absolute right-5 top-1/2 z-40 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-white/10 text-3xl text-white backdrop-blur-md transition duration-300 hover:scale-110 hover:bg-[#FFB000] hover:text-[#071C34]"
-  >
-    ›
-  </button>
-
-  <div className="absolute bottom-7 left-1/2 z-40 flex -translate-x-1/2 gap-3 rounded-full border border-white/20 bg-black/30 px-4 py-2.5 backdrop-blur-md">
-    {carouselSlides.map((_, index) => (
-      <button
-        key={index}
-        onClick={() => setCurrentSlide(index)}
-        className={`h-2.5 rounded-full transition-all duration-300 ${
-          index === currentSlide ? "w-10 bg-[#FFB000]" : "w-2.5 bg-white/70"
-        }`}
-      />
-    ))}
+  {/* STATS BAR */}
+  <div className="relative z-10 mx-auto -mb-14 mt-5 max-w-[1120px]">
+    <div className="glass-card grid grid-cols-2 gap-0 rounded-[24px] border-2 border-[#FFD35A]/80 bg-white/95 px-4 py-4 shadow-[0_24px_70px_rgba(255,176,0,.24)] backdrop-blur-xl md:grid-cols-5">
+      {stats.map((item) => (
+        <div
+          key={item[0]}
+          className="group flex items-center justify-center border-[#F2D37A] px-3 py-2 text-center transition duration-300 hover:bg-gradient-to-br hover:from-[#FFF7D6] hover:to-[#FFE39A] md:border-r last:border-r-0"
+        >
+          <div className="transition duration-300 group-hover:-translate-y-1">
+            <h3 className="bg-gradient-to-r from-[#082B63] to-[#0B66C3] bg-clip-text text-[31px] font-black text-transparent group-hover:from-[#D97706] group-hover:to-[#FFB000]">
+              {item[0]}
+            </h3>
+            <p className="mt-1 text-[12px] font-black leading-snug text-[#5B6B83] group-hover:text-[#082B63]">
+              {item[1]}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
 </section>
 
-      <section className="relative px-5 py-20">
-        <div className="absolute -right-28 top-6 h-96 w-96 rounded-full bg-[#FFD35A]/45 blur-3xl" />
-        <div className="absolute -left-28 bottom-8 h-96 w-96 rounded-full bg-[#FF8A00]/20 blur-3xl" />
+      {/* ABOUT */}
+      <section
+        id="about-edwin"
+        className="relative overflow-hidden bg-gradient-to-br from-[#FFF7E5] via-[#F4F8FF] to-[#EAF4FF] px-5 py-16"
+      >
+        <div className="absolute -left-24 top-8 h-72 w-72 rounded-full bg-[#FFB000]/25 blur-3xl" />
+        <div className="absolute -right-24 bottom-8 h-72 w-72 rounded-full bg-[#0B66C3]/20 blur-3xl" />
 
-        <div className="relative mx-auto max-w-[1200px]">
-          <div className="glass-card rounded-[36px] border border-white/70 bg-white/65 p-7 shadow-[0_30px_90px_rgba(97,54,0,.12)] backdrop-blur-xl md:p-12">
-            <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
-              <div className="float-soft rounded-[30px] bg-gradient-to-br from-[#071C34] via-[#0C3B70] to-[#FF9D00] p-8 text-white shadow-[0_28px_70px_rgba(7,28,52,.28)]">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/15 text-[#FFD35A] backdrop-blur">
-                  <ChevronRight size={34} />
-                </div>
-                <h2 className="mt-6 text-[34px] font-black">
-                  About Edwin Incorporation
-                </h2>
-                <p className="mt-4 text-[15px] leading-[1.8] text-white/90">
-                  A modern platform for academicians, journals, universities,
-                  research scholars and professional members.
-                </p>
+        <div className="relative mx-auto max-w-[1180px]">
+          <div className="glass-card rounded-[34px] border border-white/70 bg-white/70 p-8 shadow-[0_24px_70px_rgba(8,34,74,.12)] backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(8,34,74,.18)] md:p-10">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="pulse-glow flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0B66C3] to-[#083A7C] text-white shadow-lg">
+                <ArrowRight size={28} />
               </div>
 
               <div>
-                <p className="text-[17px] font-bold leading-[1.85] text-[#172033]">
-                  Edwin Incorporation delivers a wide range of solutions for
-                  universities, journals, NGOs, and businesses — combining
-                  research support, digital tools, and expert services to
-                  accelerate academic and professional growth.
-                </p>
-                <p className="mt-5 text-[15px] leading-[1.85] text-[#536071]">
-                  Our offerings include research & development, educational
-                  development for colleges and universities, journal support,
-                  membership services, patent registrations, book publications,
-                  online courses and conferences, HR services, API calculators,
-                  digital library solutions, PhD assistance, and more.
+                <span className="text-[13px] font-black uppercase tracking-wider text-[#FF9D00]">
+                  About Edwin Incorporation
+                </span>
+                <h2 className="mt-2 text-[34px] font-black leading-tight text-[#082B63] md:text-[44px]">
+                  The Edwin INC
+                </h2>
+              </div>
+            </div>
+
+            <div className="h-1 w-24 rounded-full bg-gradient-to-r from-[#0B66C3] via-[#FFB000] to-[#FFD35A]" />
+
+            <p className="mt-7 text-[17px] font-semibold leading-[1.9] text-[#08224A]">
+              Edwin Incorporation delivers a wide range of solutions for universities,
+              journals, NGOs, and businesses—combining research support, digital tools,
+              and expert services to accelerate academic and professional growth.
+            </p>
+
+            <p className="mt-5 text-[15px] font-semibold leading-[1.9] text-[#52647B]">
+              Our offerings include research & development, educational development for
+              colleges and universities, journal support, membership services, patent
+              registrations, book publications, online courses and conferences, HR
+              services, API calculators, digital library solutions, PhD assistance, and
+              more. We operate with a commitment to customer satisfaction, integrity,
+              innovation, collaboration, and continuous improvement—empowering
+              individuals and organizations worldwide to reach their academic and
+              intellectual potential.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              {[
+                "Customer Satisfaction",
+                "Integrity",
+                "Expertise",
+                "Innovation",
+                "Collaboration",
+                "Continuous Improvement",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-[#BFD5F2] bg-[#EEF6FF]/90 px-5 py-2 text-[13px] font-black text-[#164A96] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#FFB000] hover:bg-[#FFF1C2] hover:text-[#082B63]"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#services"
+                className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#0B66C3] to-[#315BC7] px-7 py-3.5 text-[15px] font-black text-white shadow-[0_16px_42px_rgba(11,102,195,.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(11,102,195,.36)]"
+              >
+                Explore Services
+                <ArrowRight size={18} />
+              </a>
+
+              <a
+                href="#about"
+                className="inline-flex items-center gap-3 rounded-xl border border-[#DDE9F7] bg-white px-7 py-3.5 text-[15px] font-black text-[#083A7C] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#FFB000] hover:bg-[#FFF7E5]"
+              >
+                About Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="relative overflow-hidden bg-gradient-to-br from-[#EAF4FF] via-[#F7FBFF] to-[#FFF4D8] px-5 py-20">
+        <div className="absolute -left-28 top-10 h-96 w-96 rounded-full bg-[#FFD35A]/30 blur-3xl" />
+        <div className="absolute -right-28 bottom-10 h-96 w-96 rounded-full bg-[#4DA3FF]/25 blur-3xl" />
+
+        <div className="relative mx-auto max-w-[1280px]">
+          <div className="mb-12 text-center fade-up">
+            <span className="rounded-full bg-white/80 px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#FF8A00] shadow-sm backdrop-blur-md">
+              What We Do
+            </span>
+            <h2 className="mt-4 text-[40px] font-black text-[#082B63]">
+              Our Complete Services
+            </h2>
+            <p className="mx-auto mt-3 max-w-3xl text-[15px] font-semibold leading-[1.8] text-[#5B6B83]">
+              Complete academic, research, journal, publication, conference and
+              institutional support under one professional platform.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {serviceCards.map((service, index) => (
+              <div
+                key={service.title}
+                className="glass-card group rounded-[28px] border border-white/70 bg-white/75 p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] backdrop-blur-xl transition duration-500 hover:-translate-y-3 hover:border-[#FFB000] hover:bg-white hover:shadow-[0_24px_70px_rgba(255,157,0,.24)]"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-[22px] bg-gradient-to-br from-[#0B66C3] to-[#083A7C] text-white shadow-lg transition duration-300 group-hover:rotate-6 group-hover:scale-110 group-hover:from-[#FF9D00] group-hover:to-[#FFD35A] group-hover:text-[#071C34]">
+                    {service.icon}
+                  </div>
+                  <span className="text-[13px] font-black text-[#FFB000]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+
+                <h3 className="mt-6 text-[20px] font-black text-[#082B63]">
+                  {service.title}
+                </h3>
+                <p className="mt-3 text-[14px] font-semibold leading-[1.75] text-[#5B6B83]">
+                  {service.desc}
                 </p>
 
-                <div className="mt-7 flex flex-wrap gap-3">
-                  {[
-                    "Customer Satisfaction",
-                    "Integrity",
-                    "Expertise",
-                    "Innovation",
-                    "Collaboration",
-                    "Continuous Improvement",
-                  ].map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-[#FFE4A8] bg-white/80 px-5 py-2 text-[13px] font-black text-[#071C34] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#FFB000] hover:bg-gradient-to-r hover:from-[#FF9D00] hover:to-[#FFD35A] hover:text-[#071C34]"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                <button className="mt-6 inline-flex items-center gap-2 text-[14px] font-black text-[#083A7C] transition group-hover:text-[#D97706]">
+                  Learn More
+                  <ArrowRight size={16} className="transition group-hover:translate-x-2" />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* IMPACT */}
+      <section
+        id="about"
+        className="relative overflow-hidden bg-gradient-to-br from-[#051B3B] via-[#083A7C] to-[#031329] px-5 py-20"
+      >
+        <div className="absolute -left-24 top-12 h-96 w-96 rounded-full bg-[#FFB000]/20 blur-3xl" />
+        <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-[#4DA3FF]/20 blur-3xl" />
+
+        <div className="relative mx-auto grid max-w-[1280px] items-center gap-10 lg:grid-cols-[1fr_1.05fr]">
+          <div className="glass-card rounded-[34px] border border-white/15 bg-white/10 p-4 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-xl transition duration-500 hover:-translate-y-2">
+            <img
+              src={hero2}
+              alt="Academic Network"
+              className="h-[460px] w-full rounded-[26px] object-cover"
+            />
+          </div>
+
+          <div className="fade-up">
+            <span className="text-[13px] font-black uppercase tracking-wider text-[#FFD35A]">
+              Why Choose Edwin Incorporation
+            </span>
+
+            <h2 className="mt-3 text-[38px] font-black leading-tight text-white md:text-[46px]">
+              Excellence, Trust, Global Impact
+            </h2>
+
+            <p className="mt-5 text-[16px] font-semibold leading-[1.9] text-white/78">
+              Edwin Incorporation delivers solutions for universities, journals,
+              NGOs, scholars and businesses — combining research support,
+              publication services, digital tools and expert academic guidance.
+            </p>
+
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              {[
+                "Experienced Academic Experts",
+                "Scopus, WoS & UGC Care Support",
+                "DOI, ISSN, Patent & More",
+                "Dedicated Customer Support",
+                "Transparent Services",
+                "Global Network of Institutions",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="glass-card flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-[14px] font-black text-white shadow-sm backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[#FFB000] hover:bg-white/15"
+                >
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#FFB000] text-[#071C34]">
+                    ✓
+                  </span>
+                  {item}
                 </div>
+              ))}
+            </div>
+
+            <a
+              href="#services"
+              className="mt-8 inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#FF9D00] to-[#FFD35A] px-7 py-3.5 text-[15px] font-black text-[#071C34] shadow-[0_16px_42px_rgba(255,176,0,.28)] transition hover:-translate-y-1"
+            >
+              View Services
+              <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* GLOBAL PRESENCE */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-[#EAF4FF] to-[#FFF4D8] px-5 py-20">
+        <div className="absolute -left-28 top-10 h-96 w-96 rounded-full bg-[#FFD35A]/30 blur-3xl" />
+        <div className="absolute -right-28 bottom-10 h-96 w-96 rounded-full bg-[#4DA3FF]/25 blur-3xl" />
+
+        <div className="relative mx-auto grid max-w-[1280px] items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="fade-up">
+            <span className="text-[13px] font-black uppercase tracking-wider text-[#FF9D00]">
+              Our Global Presence
+            </span>
+
+            <h2 className="mt-3 text-[38px] font-black leading-tight text-[#082B63]">
+              Serving scholars and institutions across 25+ countries
+            </h2>
+
+            <p className="mt-4 text-[15px] font-semibold leading-[1.85] text-[#5B6B83]">
+              Edwin Incorporation supports academicians, research scholars,
+              journals, colleges and universities through a growing global
+              academic network.
+            </p>
+
+            <div className="mt-7 grid gap-4 sm:grid-cols-2">
+              {stats.slice(0, 4).map((item) => (
+                <div
+                  key={item[0]}
+                  className="glass-card rounded-[24px] border border-white/70 bg-white/75 p-5 shadow-[0_14px_40px_rgba(8,34,74,.10)] backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-[#FFB000]"
+                >
+                  <h3 className="text-[30px] font-black text-[#083A7C]">
+                    {item[0]}
+                  </h3>
+                  <p className="text-[13px] font-bold text-[#65758C]">{item[1]}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="glass-card rounded-[34px] border border-white/70 bg-white/75 p-8 shadow-[0_24px_70px_rgba(8,34,74,.12)] backdrop-blur-xl transition duration-500 hover:-translate-y-2">
+            <div className="flex h-[370px] items-center justify-center rounded-[26px] bg-gradient-to-br from-[#EAF4FF] via-white to-[#FFF4D8]">
+              <div className="text-center">
+                <MapPin className="mx-auto mb-4 text-[#FFB000]" size={60} />
+                <h3 className="text-[34px] font-black text-[#082B63]">
+                  Global Academic Network
+                </h3>
+                <p className="mx-auto mt-3 max-w-md text-[15px] font-semibold leading-[1.7] text-[#5B6B83]">
+                  Connecting researchers, institutions and academic organizations worldwide.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="services"
-        className="relative overflow-hidden bg-gradient-to-br from-[#071C34] via-[#0C315E] to-[#111827] px-5 py-20"
-      >
-        <div className="absolute left-10 top-10 h-72 w-72 rounded-full bg-[#FFB000]/20 blur-3xl" />
-        <div className="absolute bottom-10 right-10 h-80 w-80 rounded-full bg-[#FF7A00]/20 blur-3xl" />
+      {/* TESTIMONIALS */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#071C34] via-[#083A7C] to-[#041B3D] px-5 py-20">
+        <div className="absolute -left-28 top-10 h-96 w-96 rounded-full bg-[#FFB000]/20 blur-3xl" />
+        <div className="absolute -right-28 bottom-10 h-96 w-96 rounded-full bg-[#4DA3FF]/20 blur-3xl" />
 
-        <div className="relative mx-auto max-w-[1200px]">
-          <div className="mb-12 text-center">
-            <span className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#FFD35A] backdrop-blur">
-              Our Services
+        <div className="relative mx-auto max-w-[1280px]">
+          <div className="mb-12 text-center fade-up">
+            <span className="text-[13px] font-black uppercase tracking-wider text-[#FFD35A]">
+              What Scholars Say
             </span>
-            <h2 className="mt-4 text-[38px] font-black text-white md:text-[48px]">
-              What We Provide
+            <h2 className="mt-3 text-[38px] font-black text-white">
+              Trusted by Researchers Worldwide
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-[15px] leading-[1.8] text-white/70">
-              Services cards are arranged in a creative mixed-size layout with
-              smooth hover, glass effect, and balanced spacing.
-            </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {serviceCards.map((card, index) => (
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((item) => (
               <div
-                key={card.title}
-                className={`glass-card group rounded-[30px] border border-white/15 bg-white/10 p-6 shadow-[0_24px_70px_rgba(0,0,0,.18)] backdrop-blur-xl transition duration-500 hover:-translate-y-3 hover:border-[#FFD35A]/80 hover:bg-white/15 hover:shadow-[0_30px_85px_rgba(255,157,0,.22)] ${card.span}`}
+                key={item.name}
+                className="glass-card rounded-[28px] border border-white/15 bg-white/10 p-7 shadow-[0_18px_55px_rgba(0,0,0,.20)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-[#FFB000] hover:bg-white/15"
               >
-                <div className="absolute right-5 top-5 h-20 w-20 rounded-full bg-[#FFB000]/15 blur-2xl transition duration-500 group-hover:bg-[#FFD35A]/35" />
-
-                <div className="relative flex items-start gap-4">
-                  <div className="pulse-glow flex h-15 w-15 shrink-0 items-center justify-center rounded-[22px] bg-gradient-to-br from-[#FF9D00] to-[#FFD35A] p-4 text-[#071C34] shadow-[0_16px_35px_rgba(255,157,0,.35)] transition duration-300 group-hover:rotate-6 group-hover:scale-110">
-                    {card.icon}
-                  </div>
-                  <div>
-                    <span className="text-[12px] font-black uppercase tracking-wider text-[#FFD35A]">
-                      0{index + 1}
-                    </span>
-                    <h3 className="mt-1 text-[21px] font-black leading-snug text-white">
-                      {card.title}
-                    </h3>
-                  </div>
-                </div>
-
-                <div
-                  className={`relative mt-6 grid gap-2 ${
-                    card.items.length > 8 ? "sm:grid-cols-2" : "grid-cols-1"
-                  }`}
-                >
-                  {card.items.map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.07] px-3 py-2.5 text-[13.5px] font-semibold leading-[1.55] text-white/82 transition duration-300 hover:translate-x-1 hover:border-[#FFD35A]/55 hover:bg-[#FFD35A]/15 hover:text-white"
-                    >
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FFD35A]" />
-                      <span>{item}</span>
-                    </div>
+                <Quote className="text-[#FFD35A]" size={34} />
+                <div className="mt-4 flex gap-1 text-[#FFB000]">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} size={16} fill="currentColor" />
                   ))}
+                </div>
+                <p className="mt-4 text-[15px] font-semibold leading-[1.8] text-white/78">
+                  {item.text}
+                </p>
+                <div className="mt-6">
+                  <h4 className="font-black text-white">{item.name}</h4>
+                  <p className="text-[13px] font-bold text-white/60">{item.role}</p>
                 </div>
               </div>
             ))}
@@ -427,78 +579,46 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-[#FFF8EA] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mb-12 text-center">
-            <span className="rounded-full bg-white px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#FF8A00] shadow-sm">
-              Stay Connected
+      {/* PARTNERS */}
+      
+{/* PARTNERS */}
+<section className="relative -mb-1 overflow-hidden bg-gradient-to-br from-[#FFF7E5] via-white to-[#EAF4FF] px-5 pt-8 pb-0">
+  <div className="mx-auto max-w-[1280px]">
+    <div className="glass-card rounded-t-[30px] border border-white/70 bg-white/75 px-6 py-6 shadow-[0_14px_45px_rgba(8,34,74,.10)] backdrop-blur-xl">
+      <div className="mb-5 text-center">
+        <span className="text-[12px] font-black uppercase tracking-wider text-[#FF9D00]">
+          Our Partners & Indexing
+        </span>
+        <h2 className="mt-2 text-[28px] font-black text-[#082B63]">
+          Academic Platforms We Support
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
+        {partners.map((item) => (
+          <div
+            key={item.name}
+            className="glass-card group flex h-[82px] items-center justify-center rounded-[18px] border border-[#DDE9F7] bg-white/90 p-3 shadow-[0_8px_24px_rgba(8,34,74,.07)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#FFB000] hover:bg-[#FFF7E5] hover:shadow-[0_12px_32px_rgba(255,157,0,.18)]"
+          >
+            <img
+              src={item.logo}
+              alt={item.name}
+              className="max-h-[42px] max-w-[105px] object-contain transition duration-300 group-hover:scale-110"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+                e.currentTarget.nextSibling.style.display = "block";
+              }}
+            />
+            <span className="hidden text-center text-[15px] font-black text-[#083A7C]">
+              {item.name}
             </span>
-            <h2 className="mt-4 text-[38px] font-black text-[#071C34]">
-              Connect with Edwin Services on Facebook
-            </h2>
           </div>
-
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {facebookLinks.map((item, index) => (
-              <a
-                key={item.title}
-                href={item.link}
-                className="glass-card group min-h-[135px] rounded-[26px] border border-white/80 bg-white/75 p-6 shadow-[0_18px_50px_rgba(97,54,0,.10)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-[#FFB000] hover:bg-gradient-to-br hover:from-white hover:to-[#FFF0C2]"
-              >
-                <span className="rounded-full bg-[#071C34] px-3 py-1 text-[11px] font-black text-[#FFD35A]">
-                  Link {index + 1}
-                </span>
-                <h3 className="mt-4 text-[16px] font-black leading-[1.5] text-[#172033] transition duration-200 group-hover:text-[#C46A00]">
-                  {item.title}
-                </h3>
-                <span className="mt-5 inline-flex items-center gap-2 text-[14px] font-black text-[#071C34]">
-                  Visit Page
-                  <ArrowRight
-                    size={16}
-                    className="transition duration-300 group-hover:translate-x-2"
-                  />
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
- <section className="relative overflow-hidden bg-[#FFF8EA] px-5 py-20">
-  <div className="absolute -right-32 top-10 h-96 w-96 rounded-full bg-[#FFD35A]/35 blur-3xl" />
-  <div className="absolute -left-32 bottom-10 h-96 w-96 rounded-full bg-[#FF8A00]/20 blur-3xl" />
-
-  <div className="relative mx-auto max-w-[1400px]">
-    <div className="mb-10 text-center">
-      <span className="rounded-full bg-white px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#FF8A00] shadow-sm">
-        Editorial Board
-      </span>
-
-      <h2 className="mt-4 text-[36px] font-black text-[#071C34]">
-        Editorial Board for Research Review
-      </h2>
-
-      <p className="mx-auto mt-3 max-w-4xl text-[15px] font-bold leading-[1.8] text-[#24346B]">
-        ISSN: 2394-4498, ISSN: 2348-0459, ISSN: 2395-1079, ISSN- 2394-3084 Many More
-      </p>
-    </div>
-
-    <div className="glass-card overflow-hidden rounded-[30px] border border-white/80 bg-white/75 p-4 shadow-[0_24px_70px_rgba(97,54,0,.12)] backdrop-blur-xl">
-      <div className="overflow-hidden rounded-[22px] border border-[#FFE4A8] bg-white shadow-[0_16px_45px_rgba(7,28,52,.08)]">
-        <iframe
-          title="Editorial Board for Research Review"
-          src="https://creatorapp.zohopublic.in/edwininc/editorial-board/report-embed/All_Contacts/OKBtwFgmpdN0qJPHh33DfX0eBwtpDwOjNMZY8AxMtqbUCEvU1rdzDpmgx3pBYOVkPttnPf7kMPG1PtuFdVhzGRw6FwjHyUvJEUYK"
-          width="100%"
-          height="560px"
-          frameBorder="0"
-          scrolling="auto"
-          allowTransparency="true"
-          style={{ border: "none" }}
-        />
+        ))}
       </div>
     </div>
   </div>
 </section>
+
 
     </div>
   );

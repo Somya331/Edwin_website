@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate, useLocation } from 'react-router-dom';
 import App from './App';
 import NotFound from './pages/NotFound';
 
@@ -103,12 +103,211 @@ import Press from './pages/Press/Press';
 // Contact
 import Contact from './pages/Contact/Contact';
 
+function HashRedirect({ hashMap, defaultTo }) {
+  const location = useLocation();
+  const redirectTo = hashMap[location.hash] || defaultTo;
+  return <Navigate to={redirectTo} replace />;
+}
+
+const simpleRedirects = [
+  ['404', '/'],
+  ['Apply-For-Grants', '/apply-for-grants', true],
+  ['BPO-Services', '/university-college', true],
+  ['bulk', '/Researchpaper'],
+  ['constructions', '/services-for-business'],
+  ['DEO', '/jobs', true],
+  ['doi-membership', '/doi-member'],
+  ['Editorial-Board', '/editorial-board-membership', true],
+  ['Edwin-journals', '/edwin-journal', true],
+  ['edwin-journals', '/edwin-journal'],
+  ['e-shodha-patra', '/online-membership-articles-accessing'],
+  ['FAQ', '/faq', true],
+  ['faq-for-bot', '/faq'],
+  ['Forms/Awards', '/awards', true],
+  ['Forms/education-services', '/educational', true],
+  ['Forms/research-and-development-services', '/rnd-ebi', true],
+  ['Forms/services-for-academicians', '/academicians', true],
+  ['Forms/services-for-business-supports', '/services-for-business', true],
+  ['Forms/Services-for-University-and-Colleges', '/university-college', true],
+  ['France', '/ConferenceApplyNow', true],
+  ['FS', '/apply-for-fellowship', true],
+  ['one', '/one-member'],
+  ['PAY2EDWIN', '/paynow', true],
+  ['ph-d-assistance', '/apply-now-writing-assistance'],
+  ['photo-gallery', '/gallery'],
+  ['press-media', '/press'],
+  ['public-image', '/gallery'],
+  ['Recruitment', '/jobs', true],
+  ['Services', '/', true],
+].map(([path, to, caseSensitive]) => ({
+  path,
+  ...(caseSensitive ? { caseSensitive: true } : {}),
+  element: <Navigate to={to} replace />,
+}));
+
+const hashRedirects = [
+  {
+    path: 'acadnews',
+    defaultTo: '/academic-news-channel',
+    hashMap: { '#news': '/apply-for-news' },
+  },
+  {
+    path: 'apply-for-award',
+    defaultTo: '/awards',
+    hashMap: { '#apply': '/awards', '#upcoming': '/awards' },
+  },
+  {
+    path: 'apply-for-conferences',
+    defaultTo: '/ConferenceApplyNow',
+    hashMap: {
+      '#conf': '/ConferenceApplyNow',
+      '#previous': '/conferences',
+      '#resourceperson': '/ConferenceApplyNow',
+      '#travelgrant': '/ConferenceApplyNow',
+    },
+  },
+  {
+    path: 'Apply-for-Edwin-Tour-s-N-Travel-s',
+    caseSensitive: true,
+    defaultTo: '/international-educational-tours',
+    hashMap: { '#International-Education-Tours': '/international-educational-tours' },
+  },
+  {
+    path: 'apply-for-free-degree-programe',
+    defaultTo: '/phd-programmes',
+    hashMap: { '#apply-now': '/phd-programmes', '#phd': '/phd-programmes' },
+  },
+  {
+    path: 'apply-for-minor-project',
+    defaultTo: '/ApplyForMajorMinorproject',
+    hashMap: { '#projects': '/ApplyForMajorMinorproject' },
+  },
+  {
+    path: 'apply-for-phd-assistancce',
+    defaultTo: '/apply-now-writing-assistance',
+    hashMap: { '#phd': '/apply-now-writing-assistance' },
+  },
+  {
+    path: 'apply-for-website',
+    defaultTo: '/services-for-business',
+    hashMap: { '#auto': '/business-automation', '#whatsapp': '/whatsapp-services' },
+  },
+  {
+    path: 'calculator',
+    defaultTo: '/apply-for-api-calculator',
+    hashMap: {
+      '#api': '/apply-for-api-calculator',
+      '#ugc': '/apply-for-api-calculator',
+    },
+  },
+  {
+    path: 'chhindwada_Conference',
+    defaultTo: '/ConferenceApplyNow',
+    hashMap: {
+      '#about': '/ConferenceApplyNow',
+      '#academicpartner': '/academic-institutional-partners',
+      '#themes': '/ConferenceApplyNow',
+    },
+  },
+  {
+    path: 'conference-management-board',
+    defaultTo: '/university-college',
+    hashMap: { '#cmb': '/university-college' },
+  },
+  {
+    path: 'doi',
+    defaultTo: '/doi-portal',
+    hashMap: { '#apply': '/doi-portal' },
+  },
+  {
+    path: 'edwin-book-distributors',
+    defaultTo: '/books-publication-services',
+    hashMap: {
+      '#article': '/online-membership-articles-accessing',
+      '#book': '/books-publication-services',
+      '#service': '/books-publication-services',
+    },
+  },
+  {
+    path: 'edwin-group-of-journal',
+    defaultTo: '/edwin-journal',
+    hashMap: { '#paper': '/Researchpaper' },
+  },
+  {
+    path: 'edwin-group-of-publications',
+    defaultTo: '/books-publication-services',
+    hashMap: {
+      '#become_editor': '/books-publication-services',
+      '#book': '/books-publication-services',
+    },
+  },
+  {
+    path: 'edwin-incorporation-corporate-training-0594pri',
+    defaultTo: '/ngo-support',
+    hashMap: { '#ngo': '/ngo-support' },
+  },
+  {
+    path: 'edwin-legal-services-for-education',
+    defaultTo: '/services-to-members',
+    hashMap: {
+      '#hr': '/apply-for-hr-support',
+      '#legal_app': '/services-to-members',
+      '#naac': '/naac-assistance',
+    },
+  },
+  {
+    path: 'hr',
+    defaultTo: '/jobs',
+    hashMap: { '#Apply_Now': '/jobs' },
+  },
+  {
+    path: 'jhb',
+    defaultTo: '/journal-help-board',
+    hashMap: { '#Help': '/journal-help-board' },
+  },
+  {
+    path: 'moo-c',
+    defaultTo: '/mooc-supports',
+    hashMap: { '#mooc': '/online-learning-mooc' },
+  },
+  {
+    path: 'plagiarism-detector',
+    defaultTo: '/apply-for-plagiarism-detector',
+    hashMap: {
+      '#apply-now': '/apply-for-plagiarism-detector',
+      '#plagiarism': '/apply-for-plagiarism-detector',
+    },
+  },
+  {
+    path: 'PM',
+    caseSensitive: true,
+    defaultTo: '/professional-member',
+    hashMap: { '#member': '/professional-member' },
+  },
+  {
+    path: 'PR',
+    caseSensitive: true,
+    defaultTo: '/apply-for-patent-registration',
+    hashMap: {
+      '#legal': '/services-to-members',
+      '#patent': '/apply-for-patent-registration',
+    },
+  },
+].map(({ path, hashMap, defaultTo, caseSensitive }) => ({
+  path,
+  ...(caseSensitive ? { caseSensitive: true } : {}),
+  element: <HashRedirect hashMap={hashMap} defaultTo={defaultTo} />,
+}));
+
+const redirectRoutes = [...hashRedirects, ...simpleRedirects];
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
       { index: true, element: <Home /> },
+      ...redirectRoutes,
       { path: 'about-us', element: <AboutUs /> },
       { path: 'jobs', element: <Jobs /> },
       { path: 'apply-schedule-meeting', element: <ApplyForScheduleMeeting /> },

@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaFacebookF,
   FaFileAlt,
+  FaFileSignature,
   FaHeart,
   FaPhoneAlt,
   FaRegFilePdf,
@@ -224,64 +225,74 @@ const ApiCalculator = () => {
             />
           </motion.div>
 
-          <motion.form
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.45 }}
-            className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-          >
-            <h3 className="mb-8 text-[18px] font-semibold text-[#1A1A2E]">
-              API Services
-            </h3>
+          
+           {/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-            <div className="mb-5">
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Select Your Location
-              </label>
-              <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                <option>-None-</option>
-                <option>India</option>
-                <option>International</option>
-              </select>
-              <p className="mt-2 text-[13px] text-[#5A6A85]">
-                Select Your Country
-              </p>
-            </div>
+  <div className="max-w-3xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+      
 
-            <div className="grid gap-5 md:grid-cols-2">
-              {formFields.map((label) => (
-                <div key={label}>
-                  <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                    {label}
-                  </label>
-                  <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-                </div>
-              ))}
-            </div>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+        API Services
+      </h2>
 
-            <div className="mt-6">
-              <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                <input type="checkbox" /> Terms & Condition * Read
-              </label>
-            </div>
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
+    </motion.div>
 
-            <div className="mt-6 flex gap-4">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
-          </motion.form>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[650px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">
+           API Services
+          </h3>
+         
+        </div>
+
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
+
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=6f8273084a7dd04b02ced9396ee186a76d6f4ceaf90d291b163298f7d2a689f272f216c5150f17f3a5da3f7df30863b5gidc7188c78441ead2a4b61016d0fbee5ab127f29893c89d55fb2369f48717fb5a5"
+            width="100%"
+            height="380"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+          
         </div>
       </section>
 

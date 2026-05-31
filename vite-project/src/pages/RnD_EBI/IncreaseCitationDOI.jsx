@@ -6,8 +6,10 @@ import {
   FaEye,
   FaPlus,
   FaSearch,
+  FaFileSignature,
   FaWhatsapp,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const IncreaseCitation = () => {
   const [search, setSearch] = useState("");
@@ -259,149 +261,149 @@ const IncreaseCitation = () => {
         </div>
       </section>
 
-      <section id="apply-now" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px] text-center">
-          <h2 className="mb-8 text-[28px] font-semibold text-[#1B3A6B]">
-            Apply Now
-          </h2>
+      {/* ZOHO FORM SECTION */}
+{/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-          <div className="mb-12 flex flex-wrap items-center justify-center gap-6 text-[15px]">
-            <a href="#google-citation" className="text-[#1B3A6B] hover:text-[#C89B3C]">
-              Click Here for Citation and DOI
-            </a>
-            <span className="text-[#1A1A2E]">III.</span>
-            <a href="#academic-jobs" className="text-[#1B3A6B] hover:text-[#C89B3C]">
-              Click here for Academic Jobs
-            </a>
-          </div>
+  <div className="max-w-3xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+    
 
-          <form
-            id="google-citation"
-            className="mx-auto max-w-4xl rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+       Google_Citation
+      </h2>
+
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
+
+      <p className="text-[15px] leading-[1.6] text-[#5A6A85] max-w-xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[650px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">
+            Application Form
+          </h3>
+         
+        </div>
+
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
+
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=5fcdb590772a039619d35d3e6c642d2d8e9ecc7d737e417d2acf8321edd3d485a83ccf8763dcd3c38dfaee51171de0b7gidc2daf2135f60d1f35ab40e5b382efc567f8174ae2a4407ef2ce40847f2c2f0d5"
+            width="100%"
+            height="330"
+            frameBorder="0"
+            scrolling="no"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+      {/* ZOHO FORM SECTION */}
+      <section className="relative py-24 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
+
+        <div className="max-w-5xl mx-auto px-5 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
           >
-            <h2 className="mb-8 text-center text-[28px] font-semibold text-[#1B3A6B]">
-              Apply for Google Citation
+           
+
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1B3A6B]">
+              Research Employment Support
             </h2>
-            <h3 className="mb-6 text-[18px] font-semibold text-[#1A1A2E]">
-              Google_Citation
-            </h3>
 
-            {["First Name", "Last Name *", "Designation with Inst.", "Email", "Mobile"].map(
-              (label) => (
-                <div
-                  key={label}
-                  className="mb-5 grid gap-4 md:grid-cols-[260px_1fr] md:items-center"
-                >
-                  <label className="text-[13px] text-[#5A6A85]">{label}</label>
-                  <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]" />
-                </div>
-              )
-            )}
+            <div className="w-24 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-5 mb-6 rounded-full" />
 
-            <div className="mt-6 flex gap-4 md:ml-[260px]">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+            <p className="text-[16px] leading-[1.7] text-[#5A6A85] max-w-2xl mx-auto">
+              Complete the application form below. Our team will contact you shortly.
+            </p>
+          </motion.div>
 
-      <section id="academic-jobs" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px] text-center">
-          <h2 className="mb-8 text-[28px] font-semibold text-[#1B3A6B]">
-            Academic Membership for Job
-          </h2>
-          <h2 className="mb-10 text-[28px] font-semibold text-[#1B3A6B]">
-            Apply Here
-          </h2>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="rounded-[28px] bg-white shadow-2xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
+          >
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-          <form className="mx-auto max-w-4xl rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <h3 className="mb-6 text-[18px] font-semibold text-[#1A1A2E]">
-              Research_Employment_Support
-            </h3>
-
-            <div className="mb-5 grid gap-4 md:grid-cols-[260px_1fr] md:items-center">
-              <label className="text-[13px] text-[#5A6A85]">
-                Select Your Location
-              </label>
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-5 flex items-center justify-between gap-4">
               <div>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>International</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  Select your Country
-                </p>
+                <h3 className="text-white text-xl font-bold">
+                  Research Employment Support
+                </h3>
+                
+              </div>
+
+              <div className="hidden sm:flex w-12 h-12 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-2xl" />
               </div>
             </div>
 
-            <div className="mb-5 grid gap-4 md:grid-cols-[260px_1fr] md:items-center">
-              <label className="text-[13px] text-[#5A6A85]">
-                Register as Research
-              </label>
-              <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                <option>-None-</option>
-                <option>Research Scholar</option>
-                <option>Faculty Member</option>
-                <option>Professor</option>
-                <option>Assistant Professor</option>
-              </select>
-            </div>
-
-            {[
-              "Preferred (Govt /Private",
-              "Subject",
-              "First Name *",
-              "Last Name *",
-              "Email",
-              "Mobile",
-              "Highest Qualification",
-              "Current Designation",
-            ].map((label) => (
-              <div
-                key={label}
-                className="mb-5 grid gap-4 md:grid-cols-[260px_1fr] md:items-center"
-              >
-                <label className="text-[13px] text-[#5A6A85]">{label}</label>
-                <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]" />
+            <div className="relative w-full bg-white p-3 sm:p-5">
+              <div className="rounded-[20px] border border-[#D6E0F0] overflow-hidden bg-[#F8FBFF] shadow-inner">
+                <iframe
+                  title="Zoho CRM Web Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=bd1afb2d5877bdf89dacc87e53ecd73d1fc4e8cf43d641caee6420e25d85465c0b6ca1cd272a5dca77c66f5ff32728cfgid267679a7cc517bf9ebef6725adf61817670ef2d60d532b48040517c66f3e6284"
+                  width="100%"
+                  height="620"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: 'none',
+                    width: '100%',
+                    maxWidth: '100%',
+                    display: 'block',
+                    backgroundColor: 'white'
+                  }}
+                />
               </div>
-            ))}
-
-            <div className="mt-6 flex gap-4 md:ml-[260px]">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
             </div>
-          </form>
+          </motion.div>
         </div>
       </section>
 
-      <a
-        href="https://wa.me/916262752167"
-        className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:bg-[#C89B3C]"
-      >
-        <FaWhatsapp />
-      </a>
+      
     </main>
   );
 };

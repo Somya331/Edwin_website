@@ -1,30 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const birthdayPhotos = Array.from(
+  { length: 30 },
+  (_, index) => `/images/birthdays/birthday-${String(index + 1).padStart(2, "0")}.jpg`
+);
+
 const birthdaySections = [
   {
     heading: "Birthday Highlights of Our Team",
     subheading: `" Birthdays are better when celebrated with a great team "`,
-    photos: [
-      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1481162854517-d9e353af153d?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80",
-    ],
+    photos: birthdayPhotos.slice(0, 15),
   },
   {
     heading: "Birthday Moments at Work",
     subheading: "",
-    photos: [
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80",
-    ],
+    photos: birthdayPhotos.slice(15),
   },
 ];
 
@@ -96,14 +87,6 @@ export default function BirthdaysPage() {
                     />
                   </div>
 
-                  <div className="p-5 text-center">
-                    <h3 className="text-[18px] font-semibold text-[#1A1A2E]">
-                      Title
-                    </h3>
-                    <p className="mt-2 text-[15px] leading-[1.7] text-[#5A6A85]">
-                      Caption
-                    </p>
-                  </div>
                 </motion.div>
               ))}
             </div>

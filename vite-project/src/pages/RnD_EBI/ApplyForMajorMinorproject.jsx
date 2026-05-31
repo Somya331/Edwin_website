@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+
 import { 
   FaPaperPlane, FaBuilding, FaUserTie, FaShieldAlt, 
   FaHandshake, FaSmile, FaChevronLeft, FaChevronRight, FaStar,
   FaQuoteLeft, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp,
   FaChalkboardTeacher, FaRegLightbulb, FaUsers, FaGraduationCap,
   FaBriefcase, FaChartLine, FaRegGem, FaClock, FaCheckCircle,
-  FaUniversity, FaFileAlt, FaPenFancy, FaProjectDiagram
+  FaUniversity, FaFileAlt, FaPenFancy,FaFileSignature, FaProjectDiagram
 } from 'react-icons/fa';
 import { motion, useTransform, useScroll, useSpring } from 'framer-motion';
 
@@ -530,330 +531,120 @@ const MajorProjects = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="bg-white py-24 px-5">
-        <div className="max-w-[1200px] mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <span className="bg-gradient-to-r from-[#1B3A6B]/10 to-[#C89B3C]/10 text-[#1B3A6B] px-6 py-2 rounded-full text-sm font-semibold inline-block mb-4">
-              Testimonials
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1B3A6B] mb-4">What Our Clients Say</h2>
-            <p className="text-[#5A6A85] text-lg max-w-2xl mx-auto">Success stories from academicians we've helped</p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                custom={index}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={cardVariants}
-                whileHover={{ y: -8 }}
-                className="group backdrop-blur-sm bg-[#EAF1FB] rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#D6E0F0] hover:border-[#C89B3C] relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#C89B3C]/10 to-transparent rounded-bl-full" />
-                <FaQuoteLeft className="text-[#C89B3C] text-4xl mb-5 opacity-60 group-hover:opacity-100 transition-opacity" />
-                <p className="text-[#1A1A2E] text-base leading-relaxed mb-5 italic">
-                  "{testimonial.text}"
-                </p>
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="text-[#C89B3C] w-5 h-5" />
-                  ))}
-                </div>
-                <div className="flex items-center gap-3">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover border-2 border-[#C89B3C] group-hover:scale-110 transition-transform"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = 'https://via.placeholder.com/50/1B3A6B/FFFFFF?text=User';
-                    }}
-                  />
-                  <div>
-                    <p className="font-bold text-[#1A1A2E] group-hover:text-[#C89B3C] transition-colors">{testimonial.name}</p>
-                    <p className="text-[#5A6A85] text-xs">{testimonial.role}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Registration Form Section */}
-      <section className="bg-gradient-to-br from-[#1B3A6B] via-[#1B3A6B] to-[#2A4A8A] py-24 px-5 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#C89B3C]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C89B3C]/10 rounded-full blur-3xl" />
-        
-        <div className="max-w-[1200px] mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center mb-10"
-            >
-              <span className="bg-[#C89B3C]/20 backdrop-blur-md text-[#C89B3C] px-6 py-2 rounded-full text-sm font-semibold inline-block mb-4 border border-[#C89B3C]/30">
-                Apply Now
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Apply For Minor/Major Projects</h2>
-              <p className="text-white/80 text-lg max-w-2xl mx-auto">Fill out the form below and our experts will contact you</p>
-            </motion.div>
-            
-            {isSubmitted && (
-              <motion.div 
-                initial={{ opacity: 0, y: -20, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                className="mb-6 p-5 bg-gradient-to-r from-[#2D7A4F] to-[#3A9B6A] text-white rounded-xl text-center shadow-2xl"
-              >
-                <FaCheckCircle className="inline-block mr-2 w-5 h-5" />
-                Application submitted successfully! We'll contact you soon.
-              </motion.div>
-            )}
 
-            <motion.form 
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              onSubmit={onSubmit} 
-              className="backdrop-blur-xl bg-white/95 rounded-2xl shadow-2xl p-8 md:p-10 border border-white/20"
-            >
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block text-[#5A6A85] text-sm font-semibold mb-2">Select Your Location</label>
-                  <select
-                    value={selectedLocation}
-                    onChange={(e) => setSelectedLocation(e.target.value)}
-                    name="location"
-                    className="w-full px-5 py-3 border-2 border-[#D6E0F0] rounded-xl focus:outline-none focus:border-[#1B3A6B] focus:ring-2 focus:ring-[#1B3A6B]/20 transition-all duration-300 text-[#1A1A2E] bg-white"
-                  >
-                    <option value="">Select Location</option>
-                    <option value="North">North India</option>
-                    <option value="South">South India</option>
-                    <option value="East">East India</option>
-                    <option value="West">West India</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-[#5A6A85] text-sm font-semibold mb-2">Select Your Country</label>
-                  <select
-                    value={selectedCountry}
-                    onChange={(e) => setSelectedCountry(e.target.value)}
-                    name="country"
-                    className="w-full px-5 py-3 border-2 border-[#D6E0F0] rounded-xl focus:outline-none focus:border-[#1B3A6B] focus:ring-2 focus:ring-[#1B3A6B]/20 transition-all duration-300 text-[#1A1A2E] bg-white"
-                  >
-                    <option value="">Select Country</option>
-                    <option value="India">India</option>
-                    <option value="USA">USA</option>
-                    <option value="UK">UK</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <label className="block text-[#5A6A85] text-sm font-semibold mb-2">Services For</label>
-                <select
-                  value={selectedService}
-                  onChange={(e) => setSelectedService(e.target.value)}
-                  name="service"
-                  className="w-full px-5 py-3 border-2 border-[#D6E0F0] rounded-xl focus:outline-none focus:border-[#1B3A6B] focus:ring-2 focus:ring-[#1B3A6B]/20 transition-all duration-300 text-[#1A1A2E] bg-white"
-                >
-                  <option value="">Select Service</option>
-                  <option value="Research Support">Research Support for Major</option>
-                  <option value="Patent Proposal">Patent Proposal Writing</option>
-                  <option value="Book Writing">Book Writing Assistance</option>
-                </select>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block text-[#5A6A85] text-sm font-semibold mb-2">First Name *</label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    required
-                    className="w-full px-5 py-3 border-2 border-[#D6E0F0] rounded-xl focus:outline-none focus:border-[#1B3A6B] focus:ring-2 focus:ring-[#1B3A6B]/20 transition-all duration-300 text-[#1A1A2E]"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[#5A6A85] text-sm font-semibold mb-2">Last Name *</label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    required
-                    className="w-full px-5 py-3 border-2 border-[#D6E0F0] rounded-xl focus:outline-none focus:border-[#1B3A6B] focus:ring-2 focus:ring-[#1B3A6B]/20 transition-all duration-300 text-[#1A1A2E]"
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block text-[#5A6A85] text-sm font-semibold mb-2">Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="w-full px-5 py-3 border-2 border-[#D6E0F0] rounded-xl focus:outline-none focus:border-[#1B3A6B] focus:ring-2 focus:ring-[#1B3A6B]/20 transition-all duration-300 text-[#1A1A2E]"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[#5A6A85] text-sm font-semibold mb-2">Mobile *</label>
-                  <input
-                    type="tel"
-                    name="mobile"
-                    required
-                    className="w-full px-5 py-3 border-2 border-[#D6E0F0] rounded-xl focus:outline-none focus:border-[#1B3A6B] focus:ring-2 focus:ring-[#1B3A6B]/20 transition-all duration-300 text-[#1A1A2E]"
-                    placeholder="+91 98765 43210"
-                  />
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <label className="block text-[#5A6A85] text-sm font-semibold mb-2">Upload a File (if Proposal have)</label>
-                <motion.div 
-                  whileHover={{ scale: 1.01 }}
-                  className="border-2 border-dashed border-[#D6E0F0] rounded-xl p-8 text-center hover:border-[#1B3A6B] transition-all duration-300 hover:bg-[#EAF1FB]/50 cursor-pointer bg-white"
-                >
-                  <input
-                    type="file"
-                    onChange={handleFileChange}
-                    className="hidden"
-                    id="fileUpload"
-                    accept=".pdf,.doc,.docx"
-                  />
-                  <label htmlFor="fileUpload" className="cursor-pointer">
-                    <motion.div 
-                      whileHover={{ y: -3 }}
-                      className="text-[#1B3A6B] mb-3"
-                    >
-                      <FaPaperPlane className="w-12 h-12 mx-auto" />
-                    </motion.div>
-                    <p className="text-[#5A6A85] font-medium">
-                      {selectedFile ? selectedFile : "Choose Files"}
-                    </p>
-                    <p className="text-[#A0AEC0] text-sm mt-2">PDF, DOC, DOCX up to 10MB</p>
-                  </label>
-                </motion.div>
-              </div>
-
-              <div className="flex items-start gap-3 mb-8">
-                <input
-                  type="checkbox"
-                  checked={termsAccepted}
-                  onChange={(e) => setTermsAccepted(e.target.checked)}
-                  className="mt-1 w-5 h-5 text-[#1B3A6B] border-2 border-[#D6E0F0] rounded focus:ring-[#1B3A6B] cursor-pointer"
-                />
-                <label className="text-[#1A1A2E]">
-                  I have read and agree to the <span className="text-[#C89B3C] font-semibold cursor-pointer hover:underline">Terms & Conditions</span> *
-                </label>
-              </div>
-
-              <div className="flex gap-5">
-                <motion.button
-                  whileHover={{ scale: 1.02, y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="submit"
-                  className="flex-1 bg-gradient-to-r from-[#1B3A6B] to-[#2A4A8A] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-                >
-                  Submit Application
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="reset"
-                  className="px-8 py-4 bg-white border-2 border-[#D6E0F0] text-[#1A1A2E] rounded-xl font-semibold hover:bg-[#EAF1FB] transition-all duration-300"
-                  onClick={() => {
-                    setSelectedLocation('');
-                    setSelectedCountry('');
-                    setSelectedService('');
-                    setSelectedFile(null);
-                    setTermsAccepted(false);
-                  }}
-                >
-                  Reset
-                </motion.button>
-              </div>
-            </motion.form>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Contact Info Section with Dr. Steve Austin */}
-      <section className="bg-gradient-to-r from-[#1B3A6B] via-[#2A4A8A] to-[#1B3A6B] py-20 px-5 relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Stay Connected with Us!</h2>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Follow us on Facebook for the latest <span className="text-[#C89B3C] font-semibold">Major & Minor Project Support</span>, updates & exclusive content.
-            </p>
-            <motion.a 
-              href="#"
-              whileHover={{ scale: 1.05 }}
-              className="inline-block mt-6 bg-[#C89B3C] text-[#1B3A6B] px-8 py-3 rounded-xl font-bold hover:bg-white transition-all duration-300 shadow-lg"
-            >
-              Follow us on Facebook
-            </motion.a>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
-            <motion.div
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="backdrop-blur-md bg-white/10 rounded-2xl p-6 text-center border border-white/20 hover:border-[#C89B3C] transition-all duration-300"
-            >
-              <div className="w-20 h-20 bg-[#C89B3C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaUserTie className="text-[#C89B3C] w-8 h-8" />
-              </div>
-              <h3 className="text-white text-xl font-bold mb-2">Dr. Steve Austin</h3>
-              <p className="text-white/80 flex items-center justify-center gap-2"><FaPhoneAlt className="w-3 h-3" /> Mobile: 6262752169</p>
-              <p className="text-white/80 flex items-center justify-center gap-2"><FaEnvelope className="w-3 h-3" /> care@edwinepc.com</p>
-            </motion.div>
-            
-            <motion.div
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="backdrop-blur-md bg-white/10 rounded-2xl p-6 text-center border border-white/20 hover:border-[#C89B3C] transition-all duration-300"
-            >
-              <div className="w-20 h-20 bg-[#C89B3C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaUserTie className="text-[#C89B3C] w-8 h-8" />
-              </div>
-              <h3 className="text-white text-xl font-bold mb-2">Dr. Steve Austin</h3>
-              <p className="text-white/80 flex items-center justify-center gap-2"><FaPhoneAlt className="w-3 h-3" /> Mobile: 6262752169</p>
-              <p className="text-white/80 flex items-center justify-center gap-2"><FaEnvelope className="w-3 h-3" /> care@edwinepc.com</p>
-            </motion.div>
+{/* Premium Contact Section with Image */}
+<section className="relative bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] py-28 px-5 overflow-hidden">
+  <div className="absolute top-10 left-10 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
+
+  <div className="max-w-[1200px] mx-auto relative z-10">
+    <div className="grid lg:grid-cols-2 gap-14 items-center bg-white/70 backdrop-blur-xl rounded-[36px] shadow-2xl border border-[#D6E0F0] p-8 md:p-14">
+      
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <span className="inline-block bg-[#1B3A6B]/10 text-[#1B3A6B] px-5 py-2 rounded-full text-sm font-semibold mb-5">
+          Need Assistance?
+        </span>
+
+        <h2 className="text-4xl md:text-5xl font-bold text-[#1B3A6B] leading-tight mb-6">
+          How may I assist you?
+        </h2>
+
+        <div className="w-24 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mb-8 rounded-full" />
+
+        <div className="space-y-5">
+          <div className="bg-white rounded-2xl p-5 shadow-md border border-[#D6E0F0]">
+            <p className="text-sm text-[#5A6A85] mb-1">Support Person</p>
+            <h3 className="text-2xl font-bold text-[#1B3A6B]">Dr. Steve Austin</h3>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-5 justify-center">
-            <motion.button 
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#C89B3C] to-[#D4AA50] text-[#1B3A6B] px-10 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
-              Apply For Minor/Major Projects
-            </motion.button>
+
+          <div className="bg-white rounded-2xl p-5 shadow-md border border-[#D6E0F0]">
+            <p className="text-sm text-[#5A6A85] mb-1">Mobile</p>
+            <h3 className="text-2xl font-bold text-[#1B3A6B]">6262752169</h3>
+          </div>
+
+          <div className="bg-white rounded-2xl p-5 shadow-md border border-[#D6E0F0]">
+            <p className="text-sm text-[#5A6A85] mb-1">Email</p>
+            <h3 className="text-2xl font-bold text-[#1B3A6B]">care@edwinepc.com</h3>
           </div>
         </div>
-      </section>
+      </motion.div>
 
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative flex justify-center"
+      >
+        <div className="absolute -top-6 -right-6 w-full h-full rounded-[32px] bg-[#C89B3C]/20" />
+        <div className="relative rounded-[32px] overflow-hidden shadow-2xl border-8 border-white">
+          <img
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=900&fit=crop"
+            alt="Dr. Steve Austin"
+            className="w-[430px] h-[500px] object-cover"
+          />
+        </div>
+
+        <div className="absolute -bottom-6 left-6 bg-[#1B3A6B] text-white px-6 py-4 rounded-2xl shadow-xl">
+          <p className="text-sm text-white/70">Available for</p>
+          <p className="font-bold text-lg">Project Guidance</p>
+        </div>
+      </motion.div>
+
+    </div>
+  </div>
+</section>
+
+ {/* ZOHO FORM SECTION */}
+<section className="relative py-12 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="max-w-3xl mx-auto px-4 relative z-10">
+    <div className="text-center mb-8">
+      <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-semibold mb-4 shadow-sm">
+        <FaFileSignature />
+        Application Form
+      </div>
+
+      <h2 className="text-4xl font-bold text-[#1B3A6B]">
+       Apply For Minor/Major Projects
+      </h2>
+
+      <p className="text-[16px] leading-[1.7] text-[#5A6A85] mt-3 max-w-xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </div>
+
+    <div className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[650px] mx-auto">
+      <div className="bg-gradient-to-r from-[#1B3A6B] to-[#2C5F8A] px-6 py-4">
+        <h3 className="text-white text-xl font-bold">Apply For Minor/Major Projects</h3>
+      </div>
+
+      <div className="w-full flex justify-center bg-white">
+        <iframe
+          title="Zoho CRM Web Form"
+          src="https://crm.zoho.in/crm/WebFormServeServlet?rid=a531f32547fa4dc8c10ed9b84d5e7884d5992f22435685e04ce37a2f0265c6381cadc6834824cc5d49cf3fcf8a81b3a4gid3a9a5f833a623ec528c2516db64a6696d1edb448afba3af3d7b0ca901b85a48f"
+          width="610"
+          height="500"
+          frameBorder="0"
+          scrolling="yes"
+          style={{
+            border: "none",
+            maxWidth: "100%",
+            display: "block",
+          }}
+        />
+      </div>
+    </div>
+  </div>
+</section>
       
     </div>
   );

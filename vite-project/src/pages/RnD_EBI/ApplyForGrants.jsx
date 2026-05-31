@@ -7,6 +7,7 @@ import {
   FaFileAlt,
   FaGlobeAsia,
   FaGraduationCap,
+  FaFileSignature ,
   FaHandshake,
   FaPhoneAlt,
   FaPlaneDeparture,
@@ -174,102 +175,75 @@ const ApplyForGrants = () => {
         </div>
       </section>
 
-      <section id="travel-grants" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <motion.div
-            className="mb-10 grid gap-8 lg:grid-cols-[0.7fr_1.3fr]"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.45 }}
-          >
-            <div>
-              <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
-                Apply for Travel Grants
-              </h2>
-              <p className="text-[15px] leading-[1.7]">
-                Travel_Grant application support for academicians, participants,
-                colleges, universities, and conference-related academic travel.
-              </p>
-            </div>
-            <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
-              alt="Academic travel"
-              className="h-[280px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            />
-          </motion.div>
+      {/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-          <motion.form
-            className="grid gap-6 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] md:grid-cols-2"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.45 }}
-          >
-            <h3 className="md:col-span-2 text-[18px] font-semibold">
-              Travel_Grant
-            </h3>
+  <div className="max-w-5xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+     
 
-            <div>
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Select Your Location
-              </label>
-              <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                <option>-None-</option>
-                <option>India</option>
-                <option>Foreign</option>
-              </select>
-              <p className="mt-2 text-[13px] text-[#5A6A85]">
-                Select Your Country
-              </p>
-            </div>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+       Travel _Grant
+      </h2>
 
-            {travelFields.map((label) => (
-              <div key={label}>
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  {label}
-                </label>
-                <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-              </div>
-            ))}
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
 
-            <div>
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Select Conference
-              </label>
-              <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                <option>-None-</option>
-                <option>National Conference</option>
-                <option>International Conference</option>
-                <option>Seminar / Webinar</option>
-              </select>
-            </div>
+      <p className="text-[15px] leading-[1.6] text-[#5A6A85] max-w-xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </motion.div>
 
-            <div className="md:col-span-2">
-              <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                <input type="checkbox" /> Terms & Condition * Read
-              </label>
-            </div>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-            <div className="flex gap-4 md:col-span-2">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
-          </motion.form>
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">
+           Travel _Grant
+          </h3>
+          
         </div>
-      </section>
+
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
+
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=cbb2918fcd12321f0bd34d702adf38b0f65f7a513d057e19d1e0dbdc6dca291416f6dcbff47dc43f7f051431e8ff6e86gid91f9a812ddc96919277ef52e497aeec4ed978eb4ece38148f4baeb33815c387d"
+            width="100%"
+            height="520"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       <section id="conference-grants" className="bg-[#EAF1FB] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
@@ -324,56 +298,79 @@ const ApplyForGrants = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h3 className="md:col-span-2 text-[18px] font-semibold">
-              CMB Sponsorship
-            </h3>
-
-            <div>
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Select Your Location
-              </label>
-              <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                <option>-None-</option>
-                <option>India</option>
-                <option>Foreign</option>
-              </select>
-              <p className="mt-2 text-[13px] text-[#5A6A85]">
-                Select Your Country
-              </p>
-            </div>
-
-            {conferenceFields.map((label) => (
-              <div key={label}>
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  {label}
-                </label>
-                <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-              </div>
-            ))}
-
-            <div className="md:col-span-2">
-              <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                <input type="checkbox" /> Terms & Condition * Read
-              </label>
-            </div>
-
-            <div className="flex gap-4 md:col-span-2">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
           </motion.form>
         </div>
       </section>
+
+      {/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
+
+  <div className="max-w-5xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+     
+
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+        CMB Sponsorship
+      </h2>
+
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
+
+      <p className="text-[15px] leading-[1.6] text-[#5A6A85] max-w-xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          
+          <p className="text-white/75 text-sm mt-1">
+            Fill all required details carefully
+          </p>
+        </div>
+
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
+
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=1cdea8afb94fbade68d3a23b646eb36f9110fc45495a6fd6333c6d10f531c983c0e40515c3dad61e98302dcbdfc3bc9agid03f4d8cafcd8360cdd176bb143ec11d6980949b6c075e7c693bd7b24a4b65ecb"
+            width="100%"
+            height="580"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       <section className="bg-[#FFFFFF] px-5 py-20">
         <div className="mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
@@ -418,46 +415,7 @@ const ApplyForGrants = () => {
         </div>
       </section>
 
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1200px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-        >
-          <FaGlobeAsia className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Need Help Applying for Grants?
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for support related to academic grants,
-            research grants, travel grants, and conference sponsorship applications.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-            <a
-              href="tel:+916262752167"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaPhoneAlt /> +91 6262752167
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
-      <a
-        href="https://wa.me/916262752167"
-        className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:bg-[#C89B3C]"
-      >
-        <FaWhatsapp />
-      </a>
+    
     </main>
   );
 };

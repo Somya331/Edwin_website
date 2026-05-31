@@ -9,6 +9,7 @@ import {
   FaShieldAlt,
   FaWhatsapp,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const PatentRegistration = () => {
   useEffect(() => {
@@ -152,158 +153,145 @@ const PatentRegistration = () => {
         </div>
       </section>
 
-      <section id="apply" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <h2 className="mb-10 text-center text-[28px] font-semibold text-[#1B3A6B]">
-            Apply Now
-          </h2>
+      {/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-          <form className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <h3 className="mb-8 text-[18px] font-semibold">
-              Patent Registration Form
-            </h3>
+  <div className="max-w-3xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+      
 
-            <div className="mb-5 grid gap-4 md:grid-cols-[280px_1fr] md:items-center">
-              <label className="text-[13px] text-[#5A6A85]">
-                Select Your Location
-              </label>
-              <div>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>International</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  Select Your Country
-                </p>
-              </div>
-            </div>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+       Patent Registration Form
+      </h2>
 
-            {patentFields.map((label) => (
-              <div
-                key={label}
-                className="mb-5 grid gap-4 md:grid-cols-[280px_1fr] md:items-center"
-              >
-                <label className="text-[13px] text-[#5A6A85]">{label}</label>
-                <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-              </div>
-            ))}
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
 
-            <div className="mb-6 grid gap-4 md:grid-cols-[280px_1fr] md:items-center">
-              <label className="text-[13px] text-[#5A6A85]">
-                Terms & Condition *
-              </label>
-              <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                <input type="checkbox" /> Read
-              </label>
-            </div>
+      <p className="text-[15px] leading-[1.6] text-[#5A6A85] max-w-xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </motion.div>
 
-            <div className="flex gap-4 md:ml-[280px]">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
-          </form>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[650px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">
+            Application Form
+          </h3>
+         
         </div>
-      </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <h2 className="mb-10 text-center text-[28px] font-semibold text-[#1B3A6B]">
-            Legal Services
-          </h2>
-
-          <form className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <h3 className="mb-8 text-[18px] font-semibold">
-              Legal Services to Members
-            </h3>
-
-            <div className="mb-5 grid gap-4 md:grid-cols-[280px_1fr] md:items-center">
-              <label className="text-[13px] text-[#5A6A85]">
-                Select Your Location
-              </label>
-              <div>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>International</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  Select Your Country
-                </p>
-              </div>
-            </div>
-
-            {legalFields.map((label) => (
-              <div
-                key={label}
-                className="mb-5 grid gap-4 md:grid-cols-[280px_1fr] md:items-center"
-              >
-                <label className="text-[13px] text-[#5A6A85]">{label}</label>
-                <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-              </div>
-            ))}
-
-            <div className="flex gap-4 md:ml-[280px]">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
-          </form>
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
         </div>
-      </section>
+      </div>
 
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <div className="mx-auto max-w-[1200px] text-center">
-          <FaShieldAlt className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Need Patent or Legal Support?
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for patent registration, certification,
-            intellectual property support, and legal services to members.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-            <a
-              href="tel:+916262752167"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaPhoneAlt /> +91 6262752167
-            </a>
-          </div>
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=20c9b266f60cf8a19de5dbb07b1994ab5babd7a77df93acf8c201badbf6d7272b372ee1dcbd8fd3406d273de124cace0gidbd1914a3fe25e90bdc39f073b478a71957e88ae23e7a9651e3c409fa3f6b6924"
+            width="100%"
+            height="430"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
         </div>
-      </section>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
-      <a
-        href="https://wa.me/916262752167"
-        className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:bg-[#C89B3C]"
-      >
-        <FaWhatsapp />
-      </a>
+{/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
+
+  <div className="max-w-3xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+   
+
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+        Legal Services to Members
+      </h2>
+
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
+
+      <p className="text-[15px] leading-[1.6] text-[#5A6A85] max-w-xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[650px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">
+            Legal Services to Members
+          </h3>
+         
+        </div>
+
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
+
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=7364943487a5e745851dc708061219d7757c0bc35fb0d843f57d5b1df3d551549f59f5506109844411411c6f0582a691gidff6f8122b6c2c4e30e1fb42a44a05efb92a5b6c14eacebcd1612d26247bd373c"
+            width="100%"
+            height="380"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
     </main>
   );
 };
