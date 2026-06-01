@@ -22,7 +22,6 @@ import {
   FaUserGraduate,
   FaUsers,
   FaVideo,
-  FaWhatsapp,
 } from "react-icons/fa";
 
 const HelpForEducation = () => {
@@ -243,11 +242,6 @@ const HelpForEducation = () => {
           </div>
         </div>
       </section>
-
-
-      <a href="https://wa.me/916262752167" className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:bg-[#C89B3C]">
-        <FaWhatsapp />
-      </a>
     </main>
   );
 };

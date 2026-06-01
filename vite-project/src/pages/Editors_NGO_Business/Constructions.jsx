@@ -10,7 +10,6 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaGlobe,
-  FaWhatsapp,
   FaArrowRight,
   FaCheckCircle,
   FaFileSignature,
@@ -385,16 +384,6 @@ export default function ConstructionsPage() {
           </div>
         </div>
       </section>
-
-      <a
-        href="https://wa.me/916262752168"
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[#FFFFFF] shadow-[0_14px_30px_rgba(27,58,107,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#C89B3C]"
-        aria-label="WhatsApp"
-      >
-        <FaWhatsapp className="text-[24px]" />
-      </a>
     </div>
   );
 }

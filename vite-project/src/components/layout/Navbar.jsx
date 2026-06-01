@@ -251,8 +251,6 @@ const MENU_STRUCTURE = [
   {
     label: 'Editors || NGO || Business',
     path: '/editors-ngo-business',
-    alignDropdown: 'right',
-    flyoutDirection: 'left',
     submenu: [
       { label: 'Edwin Journal', path: '/edwin-journal' },
       {
@@ -454,63 +452,65 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="main-navbar">
-      <div className="top-bar">
-        <div className="top-left">
-          <span><Mail size={16} /> care@edwinepc.com</span>
-          <span className="top-divider">|</span>
-          <span><Phone size={16} /> +91 6262752167</span>
+    <>
+      <header className="main-navbar">
+        <div className="top-bar">
+          <div className="top-left">
+            <span><Mail size={16} /> care@edwinepc.com</span>
+            <span className="top-divider">|</span>
+            <span><Phone size={16} /> +91 6262752167</span>
+          </div>
+         <div className="top-social">
+    
+    <div className="top-social">
+    <a href="https://www.facebook.com/edwinincorporation" target="_blank" rel="noreferrer"><FaFacebookF size={15} /></a>
+    <a href="https://x.com/inc_edwin43485https://x.com/" target="_blank" rel="noreferrer"><FaXTwitter size={15} /></a>
+    <a href="https://www.linkedin.com/company/edwin-inc/?viewAsMember=true" target="_blank" rel="noreferrer"><FaLinkedinIn size={15} /></a>
+    <a href="https://www.instagram.com/edwin__incorp/" target="_blank" rel="noreferrer"><FaInstagram size={15} /></a>
+    <a href="https://www.youtube.com/edwinincorp" target="_blank" rel="noreferrer"><FaYoutube size={16} /></a>
+    <a href="mailto:care@edwinepc.com"><FaEnvelope size={15} /></a>
+    <a href="https://wa.me/916262752167" target="_blank" rel="noreferrer"><FaWhatsapp size={16} /></a>
+  </div>
+  </div>
         </div>
-       <div className="top-social">
-  
-  <div className="top-social">
-  <a href="https://www.facebook.com/edwinincorporation" target="_blank" rel="noreferrer"><FaFacebookF size={15} /></a>
-  <a href="https://x.com/inc_edwin43485https://x.com/" target="_blank" rel="noreferrer"><FaXTwitter size={15} /></a>
-  <a href="https://www.linkedin.com/company/edwin-inc/?viewAsMember=true" target="_blank" rel="noreferrer"><FaLinkedinIn size={15} /></a>
-  <a href="https://www.instagram.com/edwin__incorp/" target="_blank" rel="noreferrer"><FaInstagram size={15} /></a>
-  <a href="https://www.youtube.com/edwinincorp" target="_blank" rel="noreferrer"><FaYoutube size={16} /></a>
-  <a href="mailto:care@edwinepc.com"><FaEnvelope size={15} /></a>
-  <a href="https://wa.me/916262752167" target="_blank" rel="noreferrer"><FaWhatsapp size={16} /></a>
-</div>
-</div>
-      </div>
 
-      <div className="logo-section">
-        <div className="brand-box">
-          <img
-            src="https://www.academichelpstore.com/logo.jpeg"
-            alt="Logo"
-            className="brand-logo"
-          />
-          <div>
-            <div className="brand-title">Edwin_Incorporation</div>
-            <div className="brand-subtitle">
-              Services for Academicians || Universities || Colleges || Journals Editors || Admission Services
+        <div className="logo-section">
+          <div className="brand-box">
+            <img
+              src="https://www.academichelpstore.com/logo.jpeg"
+              alt="Logo"
+              className="brand-logo"
+            />
+            <div>
+              <div className="brand-title">Edwin_Incorporation</div>
+              <div className="brand-subtitle">
+                Services for Academicians || Universities || Colleges || Journals Editors || Admission Services
+              </div>
             </div>
+          </div>
+
+          <div className="search-box">
+            <input type="text" placeholder="Search services..." />
+            <button type="button" aria-label="Search"><Search size={20} /></button>
           </div>
         </div>
 
-        <div className="search-box">
-          <input type="text" placeholder="Search services..." />
-          <button type="button" aria-label="Search"><Search size={20} /></button>
-        </div>
-      </div>
+        <button
+          type="button"
+          className="mobile-nav-toggle"
+          aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isMobileMenuOpen}
+          onClick={() => setIsMobileMenuOpen((current) => !current)}
+        >
+          {isMobileMenuOpen ? <X size={24} strokeWidth={2.6} /> : <Menu size={24} strokeWidth={2.6} />}
+        </button>
+      </header>
 
-      <button
-        type="button"
-        className="mobile-nav-toggle"
-        aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-        aria-expanded={isMobileMenuOpen}
-        onClick={() => setIsMobileMenuOpen((current) => !current)}
-      >
-        {isMobileMenuOpen ? <X size={24} strokeWidth={2.6} /> : <Menu size={24} strokeWidth={2.6} />}
-      </button>
-
-      <div className={`nav-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+      <nav className={`nav-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         {MENU_STRUCTURE.map((item, index) => (
           <NavItem key={index} item={item} onNavigate={() => setIsMobileMenuOpen(false)} />
         ))}
-      </div>
+      </nav>
 
       <style>{`
         .main-navbar {
@@ -793,7 +793,7 @@ const Navbar = () => {
         
       `}
       </style>
-    </nav>
+    </>
   );
 };
 

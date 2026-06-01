@@ -6,7 +6,6 @@ import {
   FaChevronLeft,
   FaChevronRight,
   FaImages,
-  FaWhatsapp,
 } from "react-icons/fa";
 
 const imageSeries = (prefix, length) =>
@@ -347,16 +346,6 @@ export default function ConferencesPage() {
       {conferenceSections.map((section, index) => (
         <GallerySection key={section.id} section={section} index={index} />
       ))}
-
-      <a
-        href="https://wa.me/916262752167"
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:bg-[#C89B3C]"
-        aria-label="WhatsApp"
-      >
-        <FaWhatsapp className="text-[24px]" />
-      </a>
     </div>
   );
 }

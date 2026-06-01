@@ -16,7 +16,6 @@ import {
   FaSearch,
   FaShieldAlt,
   FaStar,
-  FaWhatsapp,
 } from "react-icons/fa";
 
 const heroImages = {
@@ -638,16 +637,6 @@ export default function JournalsHelpBoardPage() {
           </div>
         </div>
       </section>
-
-      <a
-        href="https://wa.me/916262752167"
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-white shadow-[0_14px_30px_rgba(27,58,107,0.22)] transition duration-200 hover:bg-[#C89B3C]"
-        aria-label="Chat on WhatsApp"
-      >
-        <FaWhatsapp className="text-2xl" />
-      </a>
     </div>
   );
 }
