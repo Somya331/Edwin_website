@@ -119,6 +119,56 @@ const YouTubePlayer = ({ url, title, className = "h-[320px]" }) => {
     </div>
   );
 };
+
+const ZohoWebForm = () => {
+  useEffect(() => {
+    const wfa_pstMesgFrmFom = (evt) => {
+      if (
+        evt.origin === "https://crm.zoho.in" ||
+        evt.origin === "https://crm.zohopublic.in"
+      ) {
+        const loc_obj = JSON.stringify({
+          origin: window.location.origin,
+          pathname: window.location.pathname,
+          search: window.location.search,
+          hash: window.location.hash,
+        });
+
+        evt.source.postMessage(
+          "prnt_wnd_pg_lc_rc_frm_prwindow_" + loc_obj,
+          evt.origin
+        );
+      }
+    };
+
+    window.addEventListener("message", wfa_pstMesgFrmFom, false);
+
+    return () => {
+      window.removeEventListener("message", wfa_pstMesgFrmFom, false);
+    };
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 24 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45 }}
+      className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+    >
+      <iframe
+        title="Zoho Web Form"
+        width="100%"
+        height="830px"
+        src="https://crm.zoho.in/crm/WebFormServeServlet?rid=49c9091b7a226826c98e7c3ce2f97c3c4843dbe148af9b6f1f243c77e6170a4d700fd8258787a3b0e393bee4a0035bd9gid5a084fef777289e8846ffd50643ed8225b37cce79e38ea640de1fa3aa8bc806c"
+        frameBorder="0"
+        scrolling="auto"
+        style={{ border: "none", maxWidth: "100%" }}
+      />
+    </motion.div>
+  );
+};
+
 const AcademicNewsChannel = () => {
   useEffect(() => {
     const link = document.createElement("link");
@@ -160,15 +210,6 @@ const AcademicNewsChannel = () => {
     "Motivation and guidance for students and researchers",
     "Platform for academic achievements and insights",
     "Bridge between academic theory and real-world application",
-  ];
-
-  const formFields = [
-    "First Name",
-    "Last Name *",
-    "Designation with Institute Name",
-    "Email",
-    "Mobile",
-    "Enter the Captcha",
   ];
 
   const testimonials = [
@@ -518,102 +559,11 @@ const AcademicNewsChannel = () => {
             </div>
           </motion.div>
 
-          <motion.form
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.45 }}
-            className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-          >
-            <h3 className="mb-8 text-[18px] font-semibold text-[#1A1A2E]">
-              Apply for News
-            </h3>
-
-            <div className="mb-5">
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Select Your Location
-              </label>
-              <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                <option>-None-</option>
-                <option>India</option>
-                <option>International</option>
-              </select>
-              <p className="mt-2 text-[13px] text-[#5A6A85]">
-                Select Your Country
-              </p>
-            </div>
-
-            <div className="grid gap-5 md:grid-cols-2">
-              {formFields.map((label) => (
-                <div key={label}>
-                  <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                    {label}
-                  </label>
-                  <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6">
-              <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                <input type="checkbox" /> Terms & Condition * Read
-              </label>
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
-          </motion.form>
+          <ZohoWebForm />
         </div>
       </section>
-
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1200px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-        >
-          <FaGlobeAsia className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Connect with Academic News Channel
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for academic interviews, news coverage,
-            conferences, appointment booking, and educational features.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-            <a
-              href="tel:+916262752167"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              +91 6262752167
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
-      <a
+ 
+     <a
         href="https://wa.me/916262752167"
         className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:bg-[#C89B3C]"
       >

@@ -36,7 +36,16 @@ import {
   Menu,
   X,
 } from 'lucide-react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { 
+  FaFacebookF,
+  FaXTwitter,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+  FaYoutube,
+  FaEnvelope,
+  FaWhatsapp,
+} from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
 const COLORS = {
@@ -91,7 +100,7 @@ const MENU_STRUCTURE = [
           { label: 'Apply for Professional Membership', path: '/professional-member' },
           { label: 'Apply For DOI Membership', path: '/doi-member' },
           { label: 'Apply for One Membership - Edwin INC', path: '/one-member' },
-          { label: 'JMA (Jabalpur Management Association)', path: '/professional-member' },
+          { label: 'JMA (Jabalpur Management Association)', path: 'https://www.jmajabalpur.org/' },
         ]
       },
       {
@@ -452,11 +461,18 @@ const Navbar = () => {
           <span className="top-divider">|</span>
           <span><Phone size={16} /> +91 6262752167</span>
         </div>
-        <div className="top-social">
-          <span><FaFacebookF size={14} /></span>
-          <span><FaTwitter size={14} /></span>
-          <span><FaLinkedinIn size={14} /></span>
-        </div>
+       <div className="top-social">
+  
+  <div className="top-social">
+  <a href="https://www.facebook.com/edwinincorporation" target="_blank" rel="noreferrer"><FaFacebookF size={15} /></a>
+  <a href="https://x.com/inc_edwin43485https://x.com/" target="_blank" rel="noreferrer"><FaXTwitter size={15} /></a>
+  <a href="https://www.linkedin.com/company/edwin-inc/?viewAsMember=true" target="_blank" rel="noreferrer"><FaLinkedinIn size={15} /></a>
+  <a href="https://www.instagram.com/edwin__incorp/" target="_blank" rel="noreferrer"><FaInstagram size={15} /></a>
+  <a href="https://www.youtube.com/edwinincorp" target="_blank" rel="noreferrer"><FaYoutube size={16} /></a>
+  <a href="mailto:care@edwinepc.com"><FaEnvelope size={15} /></a>
+  <a href="https://wa.me/916262752167" target="_blank" rel="noreferrer"><FaWhatsapp size={16} /></a>
+</div>
+</div>
       </div>
 
       <div className="logo-section">
@@ -533,7 +549,7 @@ const Navbar = () => {
         .top-divider { opacity: 0.55; }
 
         .top-social { display: flex; gap: 10px; font-weight: 800; }
-        .top-social span {
+        .top-social a {
           width: 24px;
           height: 24px;
           display: flex;
@@ -545,7 +561,7 @@ const Navbar = () => {
           cursor: pointer;
           transition: all 0.25s ease;
         }
-        .top-social span:hover { background: ${COLORS.accentGold}; color: ${COLORS.deepBlue}; }
+        .top-social a:hover { background: ${COLORS.accentGold}; color: ${COLORS.deepBlue}; }
 
         .logo-section {
           background: ${COLORS.white};

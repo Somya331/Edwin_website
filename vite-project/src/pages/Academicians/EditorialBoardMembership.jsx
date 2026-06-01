@@ -18,6 +18,7 @@ import {
   FaShieldAlt,
   FaStar,
   FaUserEdit,
+  FaFileSignature,
   FaUsers,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -313,94 +314,66 @@ export default function EditorialBoardPage() {
           </div>
         </div>
       </section>
+<section className="relative py-16 bg-[#F5F8FC] overflow-hidden">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(27,58,107,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(244,180,0,0.20),transparent_35%)]" />
 
-      <section id="editorial-board" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+  <div className="relative z-10 max-w-7xl mx-auto px-4">
+    <div className="text-center mb-10">
+      <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 backdrop-blur border border-[#D6E0F0] text-[#1B3A6B] text-sm font-bold shadow-sm">
+        <span className="w-2 h-2 rounded-full bg-[#F4B400]" />
+        Editorial Board Members
+      </span>
+
+      <h2 className="mt-5 text-3xl md:text-5xl font-extrabold text-[#1B3A6B] tracking-tight">
+        Registered Editorial Board Contacts
+      </h2>
+
+      <p className="mt-4 text-[#5A6A85] max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+        Access live editorial board member records, applications, and contact information through Zoho Creator.
+      </p>
+    </div>
+
+    <div className="rounded-[34px] p-[1px] bg-gradient-to-br from-[#1B3A6B] via-[#D6E0F0] to-[#F4B400] shadow-[0_30px_80px_rgba(27,58,107,0.18)]">
+      <div className="bg-white rounded-[33px] overflow-hidden">
+        <div className="relative bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-6 md:px-8 py-5">
+          <div className="absolute inset-0 opacity-20 bg-[linear-gradient(135deg,transparent_25%,rgba(255,255,255,0.22)_25%,rgba(255,255,255,0.22)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.22)_75%)] bg-[length:22px_22px]" />
+
+          <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                Our Editorial Board
-              </p>
-              <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-                Member Details
-              </h2>
-              <p className="mt-4 max-w-2xl text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                Search editorial board members by name, designation, or university /
-                college name.
+              <h3 className="text-white text-xl md:text-2xl font-extrabold">
+                All Contacts Report
+              </h3>
+              <p className="text-white/75 text-sm mt-1">
+                Live Zoho Creator embedded report
               </p>
             </div>
 
-            <div className="relative">
-              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5A6A85]" />
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
-                placeholder="Search member..."
-                className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] py-3 pl-11 pr-4 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B] sm:w-[340px]"
-              />
-            </div>
-          </div>
-
-          <div className="mt-10 overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[850px] border-collapse">
-                <thead className="bg-[#1B3A6B]">
-                  <tr>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      Picture
-                    </th>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      Name
-                    </th>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      Designation
-                    </th>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      University/College Name
-                    </th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {filteredMembers.map((member, index) => (
-                    <tr
-                      key={member.name}
-                      className={`border-b border-[#D6E0F0] ${
-                        index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#EAF1FB]"
-                      }`}
-                    >
-                      <td className="px-5 py-4">
-                        <img
-                          src={member.picture}
-                          alt={member.name}
-                          className="h-20 w-20 rounded-[8px] border border-[#D6E0F0] object-cover"
-                        />
-                      </td>
-                      <td className="px-5 py-4 text-[15px] font-semibold text-[#1A1A2E]">
-                        {member.name}
-                      </td>
-                      <td className="px-5 py-4 text-[15px] font-normal text-[#1A1A2E]">
-                        {member.designation}
-                      </td>
-                      <td className="px-5 py-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                        {member.university}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="border-t border-[#D6E0F0] bg-[#FFFFFF] px-5 py-4">
-              <p className="text-[13px] font-normal text-[#5A6A85]">
-                Showing {filteredMembers.length} of {boardMembers.length} editorial
-                board members
-              </p>
+            <div className="flex items-center gap-3">
+              <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold">
+                Live Data
+              </span>
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-[#F4B400]" />
+                <span className="w-3 h-3 rounded-full bg-white/60" />
+                <span className="w-3 h-3 rounded-full bg-white/35" />
+              </div>
             </div>
           </div>
         </div>
-      </section>
+
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4 md:p-6">
+          <div className="rounded-[26px] bg-white border border-[#D6E0F0] shadow-inner overflow-hidden">
+            <iframe
+              title="Zoho Editorial Board Report"
+              className="w-full h-[680px] border-0"
+              src="https://creatorapp.zohopublic.in/edwininc/editorial-board/report-embed/All_Contacts/OKBtwFgmpdN0qJPHh33DfX0eBwtpDwOjNMZY8AxMtqbUCEvU1rdzDpmgx3pBYOVkPttnPf7kMPG1PtuFdVhzGRw6FwjHyUvJEUYK"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="bg-[#FFFFFF] px-5 py-20">
         <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
@@ -457,164 +430,73 @@ export default function EditorialBoardPage() {
         </div>
       </section>
 
-      <section id="apply-online" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-              Membership for Journals
-            </p>
-            <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-              Apply Online
-            </h2>
-            <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-              Fill the form below for editorial board membership application.
-            </p>
-          </div>
+     {/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-          <div className="mx-auto mt-10 max-w-4xl rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <form onSubmit={handleSubmit} className="grid gap-6">
-              <div className="grid gap-6 md:grid-cols-[0.45fr_1fr] md:items-start">
-                <label className="text-[13px] font-normal text-[#5A6A85]">
-                  Select Your Location <span className="text-[#C0392B]">*</span>
-                </label>
-                <div>
-                  <select
-                    required
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]"
-                  >
-                    <option value="">-None-</option>
-                    <option>India</option>
-                    <option>Other Country</option>
-                    <option>Mobile Number</option>
-                  </select>
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    You need to select the country name, your location, or your mobile
-                    number from the dropdown menu.
-                  </p>
-                </div>
-              </div>
+  <div className="max-w-3xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+     
 
-              <div className="grid gap-6 md:grid-cols-[0.45fr_1fr] md:items-center">
-                <label className="text-[13px] font-normal text-[#5A6A85]">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-              </div>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+        Membership for Journals
+      </h2>
 
-              <div className="grid gap-6 md:grid-cols-[0.45fr_1fr] md:items-center">
-                <label className="text-[13px] font-normal text-[#5A6A85]">
-                  Last Name <span className="text-[#C0392B]">*</span>
-                </label>
-                <input
-                  type="text"
-                  required
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-              </div>
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
 
-              <div className="grid gap-6 md:grid-cols-[0.45fr_1fr] md:items-start">
-                <label className="text-[13px] font-normal text-[#5A6A85]">
-                  Mobile
-                </label>
-                <div>
-                  <input
-                    type="tel"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    Do not use 0 (zero) as the initial digit
-                  </p>
-                </div>
-              </div>
+      <p className="text-[15px] leading-[1.6] text-[#5A6A85] max-w-xl mx-auto">
+        Complete the application form below. Our team will contact you shortly.
+      </p>
+    </motion.div>
 
-              <div className="grid gap-6 md:grid-cols-[0.45fr_1fr] md:items-center">
-                <label className="text-[13px] font-normal text-[#5A6A85]">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-              </div>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[22px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[720px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-              <div className="grid gap-6 md:grid-cols-[0.45fr_1fr] md:items-start">
-                <label className="text-[13px] font-normal text-[#5A6A85]">
-                  Designation
-                </label>
-                <div>
-                  <input
-                    type="text"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    With Complete Institute Name
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid gap-6 md:grid-cols-[0.45fr_1fr] md:items-start">
-                <label className="text-[13px] font-normal text-[#5A6A85]">
-                  Upload CV <span className="text-[#C0392B]">*</span>
-                </label>
-                <div>
-                  <input
-                    type="file"
-                    required
-                    multiple
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                  />
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    Please Upload CV or Scan your Document
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid gap-6 md:grid-cols-[0.45fr_1fr] md:items-center">
-                <label className="text-[13px] font-normal text-[#5A6A85]">
-                  Terms & Condition <span className="text-[#C0392B]">*</span>
-                </label>
-                <div className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    required
-                    className="h-4 w-4 rounded border-[#D6E0F0] accent-[#1B3A6B]"
-                  />
-                  <a
-                    href="#terms"
-                    className="text-[15px] font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:text-[#C89B3C]"
-                  >
-                    Read
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:justify-center">
-                <button
-                  type="submit"
-                  className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-                >
-                  Submit
-                </button>
-                <button
-                  type="reset"
-                  className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:bg-[#EAF1FB]"
-                >
-                  Reset
-                </button>
-              </div>
-
-              {formStatus && (
-                <p className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                  {formStatus}
-                </p>
-              )}
-            </form>
-          </div>
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold"> Membership for Journals</h3>
+        
         </div>
-      </section>
+
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
+
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=aed33fa3279a0f4c50ee2452c0f6cee27a838ac8e1fd5549229b0bfbfd63f44ed060f4d41756c6bf01ff81d6bcabfb82gid3ea2b8068e4dc1fcca4e63372241ecb336a467f770b4c09628e38ab105fff25f"
+            width="100%"
+            height="460"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       <section className="bg-[#FFFFFF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">

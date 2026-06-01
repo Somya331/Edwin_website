@@ -9,11 +9,13 @@ import AboutUs from './pages/Home/AboutUs';
 import Jobs from './pages/Home/Jobs';
 import ApplyForScheduleMeeting from './pages/Home/ApplyForScheduleMeeting';
 import PartnershipProgramme from './pages/Home/PartnershipProgramme';
-import Awards from './pages/Home/Awards';
+
 
 // Academicians
-import Academicians from './pages/Academicians/Academicians';
-import ResearchPaper from './pages/Academicians/Researchpaper';
+
+import Awards from './pages/Academicians/Awards';
+import ResearchPaper from './pages/Academicians/ResearchPaperPublicationServices';
+
 import EditorialBoardMembership from './pages/Academicians/EditorialBoardMembership';
 import MembershipOthers from './pages/Academicians/MembershipOthers';
 import ServicesToMembers from './pages/Academicians/ServicesToMembers';
@@ -314,7 +316,7 @@ const router = createBrowserRouter([
       { path: 'partnership-programme', element: <PartnershipProgramme /> },
       { path: 'awards', element: <Awards /> },
 
-      { path: 'academicians', element: <Academicians /> },
+      
       { path: 'Researchpaper', element: <ResearchPaper /> },
       { path: 'Onemember', element: <Onemember /> },
       { path: 'one-member', element: <Onemember /> },

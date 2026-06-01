@@ -7,6 +7,7 @@ import {
   FaDatabase,
   FaEnvelopeOpenText,
   FaFileAlt,
+  FaFileSignature,
   FaFilter,
   FaGlobe,
   FaGraduationCap,
@@ -339,96 +340,82 @@ const featureCards = [
 const inputClass =
   "w-full rounded-[14px] border border-[#D6E0F0] bg-white px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#8A98AD] focus:border-[#1B3A6B] focus:ring-4 focus:ring-[#1B3A6B]/10";
 
-function SubmitPaperForm({ status, onSubmit }) {
+function SubmitPaperForm() {
   return (
-    <motion.form
+    <section
       id="submit-paper-form"
-      onSubmit={onSubmit}
-      initial={{ opacity: 0, y: 22 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.35 }}
-      className="grid gap-5 rounded-[30px] border border-[#D6E0F0] bg-white p-6 shadow-[0_20px_55px_rgba(27,58,107,0.12)] lg:p-8"
+      className="relative overflow-hidden rounded-[30px] border border-[#D6E0F0] bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] p-4 shadow-[0_20px_55px_rgba(27,58,107,0.12)]"
     >
-      <div>
-        <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-          Submit Your Research Paper
-        </p>
-        <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-          Research Paper Submission Form
-        </h2>
-      </div>
+      <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#C89B3C]/10 blur-3xl" />
+      <div className="absolute -bottom-28 -right-28 h-96 w-96 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
 
-      <div className="grid gap-5 md:grid-cols-2">
-        <input required type="text" placeholder="Author Name *" className={inputClass} />
-        <input required type="email" placeholder="Email Address *" className={inputClass} />
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2">
-        <input required type="tel" placeholder="Mobile Number *" className={inputClass} />
-        <select required className={inputClass} defaultValue="">
-          <option value="" disabled>
-            Select Journal Category
-          </option>
-          {categories
-            .filter((item) => item !== "All")
-            .map((item) => (
-              <option key={item}>{item}</option>
-            ))}
-        </select>
-      </div>
-
-      <input type="text" placeholder="Paper / Article Title" className={inputClass} />
-
-      <select className={inputClass} defaultValue="">
-        <option value="" disabled>
-          Select Preferred Journal
-        </option>
-        {journals.map((journal) => (
-          <option key={journal.title}>{journal.title}</option>
-        ))}
-      </select>
-
-      <div className="grid gap-5 md:grid-cols-2">
-        <input type="text" placeholder="Institution / Affiliation" className={inputClass} />
-        <input type="text" placeholder="Country / City" className={inputClass} />
-      </div>
-
-      <input
-        type="file"
-        accept=".pdf,.doc,.docx"
-        className={`${inputClass} file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:text-white`}
-      />
-
-      <textarea
-        rows="4"
-        placeholder="Write abstract, subject area, publication requirement, or message"
-        className={`${inputClass} resize-none`}
-      />
-
-      <div className="flex flex-col gap-4 sm:flex-row">
-        <button
-          type="submit"
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1B3A6B] px-8 py-3 text-[15px] font-medium text-white transition duration-200 hover:bg-[#C89B3C]"
+      <div className="relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-7 text-center"
         >
-          Submit Paper
-          <FaArrowRight className="text-[13px]" />
-        </button>
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D6E0F0] bg-white px-5 py-2 text-sm font-semibold text-[#1B3A6B] shadow-sm">
+            <FaFileSignature className="text-[#C89B3C]" />
+            Application Form
+          </div>
 
-        <button
-          type="reset"
-          className="rounded-full border border-[#1B3A6B] px-8 py-3 text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
+          <h2 className="text-3xl font-bold text-[#1B3A6B] md:text-4xl">
+            Submit Your Application
+          </h2>
+
+          <div className="mx-auto mb-4 mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B]" />
+
+          <p className="mx-auto max-w-xl text-[15px] leading-[1.6] text-[#5A6A85]">
+            Complete the application form below. Our team will contact you shortly.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative mx-auto max-w-[950px] overflow-hidden rounded-[24px] border border-[#D6E0F0] bg-white shadow-xl"
         >
-          Reset
-        </button>
-      </div>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-      {status && (
-        <p className="rounded-[12px] border border-[#2D7A4F] bg-[#F4FFF8] px-4 py-3 text-center text-[15px] text-[#2D7A4F]">
-          {status}
-        </p>
-      )}
-    </motion.form>
+          <div className="relative flex items-center justify-between gap-4 bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4">
+            <div>
+              <h3 className="text-lg font-bold text-white">Application Form</h3>
+              <p className="mt-1 text-sm text-white/75">
+                Fill all required details carefully
+              </p>
+            </div>
+
+            <div className="hidden h-11 w-11 items-center justify-center rounded-2xl border border-white/20 bg-white/10 sm:flex">
+              <FaFileSignature className="text-xl text-[#C89B3C]" />
+            </div>
+          </div>
+
+          <div className="relative w-full bg-white p-3">
+            <div className="overflow-hidden rounded-[18px] border border-[#D6E0F0] bg-white shadow-inner">
+              <iframe
+                title="Zoho CRM Web Form"
+                src="https://crm.zoho.in/crm/WebFormServeServlet?rid=1292b335149c54949ec85c6ad8784dc095d9098d8b9016b80c00ef91749f82c33cba21def7cdef024b09c2e36bcbdb05gid1cd175b6c78bd79c314b009f4bfedfeef4920ddbedc63a40b516b5ffa562ca26"
+                width="100%"
+                height="620"
+                frameBorder="0"
+                scrolling="yes"
+                style={{
+                  border: "none",
+                  width: "100%",
+                  display: "block",
+                  backgroundColor: "white",
+                }}
+              />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
 

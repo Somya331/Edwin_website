@@ -432,34 +432,86 @@ export default function FacultyAndCoGuideRegistration() {
           </div>
         </section>
 
-        <section id="registration-form" className="bg-[#EAF1FB] px-5 py-20">
-          <div
-  id="submit-research-paper"
-  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+        <section
+  id="registration-form"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-14"
 >
-  <div className="mb-6">
-    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-      Research Paper Submission
-    </p>
+  <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#F4B400]/20 blur-3xl" />
 
-    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-      Submit Research Paper
-    </h2>
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <div className="lg:sticky lg:top-10">
+        <span className="inline-flex rounded-full border border-[#D6E0F0] bg-white/80 px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-[#1B3A6B] shadow-sm backdrop-blur">
+          Register Online
+        </span>
+
+        <h2 className="mt-5 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
+          Submit Research Paper
+        </h2>
+
+        <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+        <p className="mt-6 max-w-[520px] text-[17px] leading-[1.9] text-[#1A1A2E]">
+          Submit your research paper details, author information, manuscript file,
+          and publication requirement through the official online submission form.
+        </p>
+
+        <div className="mt-8 grid gap-4">
+          <div className="flex items-center gap-3 rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 shadow-sm backdrop-blur">
+            <FaEnvelope className="text-[#1B3A6B]" />
+            <span className="text-[15px] text-[#1A1A2E]">care@edwinepc.com</span>
+          </div>
+
+          <div className="flex items-center gap-3 rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 shadow-sm backdrop-blur">
+            <FaPhoneAlt className="text-[#1B3A6B]" />
+            <span className="text-[15px] text-[#1A1A2E]">+91 6262752167</span>
+          </div>
+
+          <div className="flex items-center gap-3 rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 shadow-sm backdrop-blur">
+            <FaGlobe className="text-[#1B3A6B]" />
+            <span className="text-[15px] text-[#1A1A2E]">
+              www.academichelpstore.com
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-[30px] border border-[#D6E0F0] bg-white shadow-[0_28px_80px_rgba(27,58,107,0.18)] overflow-hidden">
+        <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-5">
+          <div>
+            <h3 className="text-[26px] font-bold text-white">
+              Research Paper Submission Form
+            </h3>
+
+            <p className="mt-1 text-[14px] text-white/75">
+              Complete the research paper submission form below.
+            </p>
+          </div>
+
+          <div className="hidden h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[26px] text-[#F4B400] md:flex">
+            📄
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+          <div className="rounded-[22px] border border-[#D6E0F0] bg-white overflow-hidden">
+            <div className="max-h-[620px] overflow-y-auto overflow-x-hidden">
+              <iframe
+                title="Research Paper Submission Form"
+                className="block h-[1150px] w-full border-0"
+                scrolling="auto"
+                src="https://crm.zoho.in/crm/WebFormServeServlet?rid=239ce4717d98bdb242939a375e58cd737b562e9db84a8761c6058098b5779dc89bf437bb240483e78210cad3553629f0gid9541df1fe8b8b60011813264e5d12a98e81efdcd4d5ecf0a1b502d37968408a6"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <iframe
-    title="Submit Research Paper"
-    width="100%"
-    height="1150"
-    src="https://crm.zoho.in/crm/WebFormServeServlet?rid=19b346c275371c182386b8d862cbb94f145a3f8212e9c535be5bcc35b2a97113c01f7eb5de1c61578ee5f816e4c25f63gidb08d0d24bf5d4d6139ea227b24516344c89b3668cc28463acce6c87b78f7392d"
-    className="w-full border-0"
-    scrolling="auto"
-  />
-</div>
-        </section>
-
-
-        <section className="w-full bg-[#eef7fd] px-5 py-16">
+       <section className="w-full bg-[#eef7fd] px-5 py-16">
   <div className="mx-auto max-w-[1200px]">
     <h2 className="text-center text-[36px] font-bold text-[#2f356b] font-serif">
       Journals List -
@@ -497,21 +549,3 @@ export default function FacultyAndCoGuideRegistration() {
     </div>
   );
 }
-
-/* 
--- dropdown menus no showing on mobile view
--- navbar should having a toggle on mobile view but right now there is a slider fix it to a toggle bar
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-

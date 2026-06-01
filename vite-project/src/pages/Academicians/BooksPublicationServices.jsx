@@ -18,6 +18,7 @@ import {
   FaRocket,
   FaSearch,
   FaShoppingCart,
+  FaFileSignature,
   FaStar,
   FaUserEdit,
   FaWhatsapp,
@@ -781,75 +782,63 @@ export default function EdwinGroupPublicationsPage() {
             </div>
           </div>
 
-          <div className="mx-auto mt-14 max-w-3xl text-center">
-            <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-              Published Books
-            </p>
-            <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-              Book Published Report
-            </h2>
-            <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-              Published books report with cover page, title, publication date, and
-              publication type.
-            </p>
-          </div>
+          
 
-          <div className="mt-10 overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[850px] border-collapse">
-                <thead className="bg-[#1B3A6B]">
-                  <tr>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      Cover Page
-                    </th>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      Title of Book
-                    </th>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      Date of Publication
-                    </th>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      Publication Type
-                    </th>
-                  </tr>
-                </thead>
+           
+        <section className="relative py-16 bg-[#F5F8FC] overflow-hidden">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(27,58,107,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(244,180,0,0.20),transparent_35%)]" />
 
-                <tbody>
-                  {publishedBooksReport.map((book, index) => (
-                    <tr
-                      key={`${book.title}-${index}`}
-                      className={`border-b border-[#D6E0F0] ${
-                        index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#EAF1FB]"
-                      }`}
-                    >
-                      <td className="px-5 py-4">
-                        <img
-                          src={book.cover}
-                          alt={book.title}
-                          className="h-24 w-20 rounded-[8px] border border-[#D6E0F0] object-cover"
-                        />
-                      </td>
-                      <td className="px-5 py-4 text-[15px] font-semibold text-[#1A1A2E]">
-                        {book.title}
-                      </td>
-                      <td className="px-5 py-4 text-[15px] font-normal text-[#1A1A2E]">
-                        {book.date}
-                      </td>
-                      <td className="px-5 py-4 text-[15px] font-normal text-[#1A1A2E]">
-                        {book.type}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+  <div className="relative z-10 max-w-7xl mx-auto px-4">
+    <div className="text-center mb-10">
+    
+      <h2 className="mt-5 text-3xl md:text-5xl font-extrabold text-[#1B3A6B] tracking-tight">
+        Published Books Report
+      </h2>
 
-            <div className="border-t border-[#D6E0F0] bg-[#FFFFFF] px-5 py-4">
-              <p className="text-[13px] font-normal text-[#5A6A85]">
-                Showing {publishedBooksReport.length} published book records
+      
+    </div>
+
+    <div className="rounded-[34px] p-[1px] bg-gradient-to-br from-[#1B3A6B] via-[#D6E0F0] to-[#F4B400] shadow-[0_30px_80px_rgba(27,58,107,0.18)]">
+      <div className="bg-white rounded-[33px] overflow-hidden">
+        <div className="relative bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-6 md:px-8 py-5">
+          <div className="absolute inset-0 opacity-20 bg-[linear-gradient(135deg,transparent_25%,rgba(255,255,255,0.22)_25%,rgba(255,255,255,0.22)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.22)_75%)] bg-[length:22px_22px]" />
+
+          <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h3 className="text-white text-xl md:text-2xl font-extrabold">
+                Book Published Report
+              </h3>
+              <p className="text-white/75 text-sm mt-1">
+                Live Zoho Creator embedded report
               </p>
             </div>
+
+            <div className="flex items-center gap-3">
+              <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold">
+                Live Data
+              </span>
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-[#F4B400]" />
+                <span className="w-3 h-3 rounded-full bg-white/60" />
+                <span className="w-3 h-3 rounded-full bg-white/35" />
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4 md:p-6">
+          <div className="rounded-[26px] bg-white border border-[#D6E0F0] shadow-inner overflow-hidden">
+            <iframe
+              title="Zoho Book Published Report"
+              className="w-full h-[680px] border-0"
+              src="https://creatorapp.zohopublic.in/edwininc/book-published/report-embed/Book_Published_Report/1yBha3yMKajp4b41P848HeQRpX9m18BDB7T0tSD17N7h9R9EXEG5ahJbetu8mYhY9b2FqpkFVjyZ6vyZeNPNqjS31e8pZBT6pD0q"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         </div>
       </section>
 
@@ -1072,362 +1061,192 @@ export default function EdwinGroupPublicationsPage() {
               </div>
             </div>
 
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-              <form onSubmit={handlePublicationSubmit} className="grid gap-6">
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Select Your Location <span className="text-[#C0392B]">*</span>
-                    </label>
-                    <select
-                      required
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]"
-                    >
-                      <option value="">-None-</option>
-                      <option>India</option>
-                      <option>Other Country</option>
-                      <option>Mobile Number</option>
-                    </select>
-                  </div>
+{/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  {/* <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" /> */}
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Publication Type
-                    </label>
-                    <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]">
-                      {formTypes.map((type) => (
-                        <option key={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+  <div className="max-w-5xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+      
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+        Publication - Apply
+      </h2>
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
+    </motion.div>
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Last Name <span className="text-[#C0392B]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Mobile
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                    <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                      Do not use 0 (zero) as the initial digit
-                    </p>
-                  </div>
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">Application Form</h3>
+          <p className="text-white/75 text-sm mt-1">
+            Fill all required details carefully
+          </p>
+        </div>
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
 
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Book Title / Proposed Title
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter book title"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=2d4c9600411b19cedab53c92b22a373d316b3e9eb9e53d61ef198f09b77700cf8fcb7789849322362a7b25f8f7134ee6gidd7699f44fc389dae57d47b52c9faad5dfd2925bf4ad191ef9253bedd7f2857fd"
+            width="100%"
+            height="680"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
+               
 
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Upload Manuscript / Proposal{" "}
-                    <span className="text-[#C0392B]">*</span>
-                  </label>
-                  <input
-                    type="file"
-                    required
-                    multiple
-                    accept=".doc,.docx,.pdf"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                  />
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    Please upload manuscript, book proposal, CV, or relevant document.
-                  </p>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Message / Requirement
-                  </label>
-                  <textarea
-                    rows="4"
-                    placeholder="Write your book publication requirement"
-                    className="w-full resize-none rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    required
-                    className="h-4 w-4 rounded border-[#D6E0F0] accent-[#1B3A6B]"
-                  />
-                  <p className="text-[15px] font-normal text-[#1A1A2E]">
-                    I agree to the{" "}
-                    <a
-                      href="#terms"
-                      className="font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:text-[#C89B3C]"
-                    >
-                      Terms & Condition
-                    </a>
-                    <span className="text-[#C0392B]"> *</span>
-                  </p>
-                </div>
-
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <button
-                    type="submit"
-                    className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-                  >
-                    Apply Now
-                  </button>
-
-                  <button
-                    type="reset"
-                    className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:bg-[#EAF1FB]"
-                  >
-                    Reset
-                  </button>
-                </div>
+              
 
                 {publicationStatus && (
                   <p className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
                     {publicationStatus}
                   </p>
                 )}
-              </form>
-            </div>
+              
+            
           </div>
         </div>
       </section>
 
-      <section id="chapter-form" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-8">
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[#1B3A6B] text-[#FFFFFF]">
-                  <FaRegFileAlt />
-                </div>
+     <section id="chapter-form" className="relative bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] px-5 py-16 overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-                <div>
-                  <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                    Submit Chapter for Edited Book
-                  </p>
-                  <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-                    Chapter in Book
-                  </h2>
-                  <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Submit your chapter for edited book publication and upcoming edited
-                    book projects.
-                  </p>
-                </div>
-              </div>
+  <div className="relative z-10 mx-auto max-w-[1450px]">
+    <div className="mb-10 text-center">
+      <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-semibold mb-4 shadow-sm">
+        <FaFileSignature className="text-[#C89B3C]" />
+        Book Publication Forms
+      </div>
 
-              <form onSubmit={handleChapterSubmit} className="mt-8 grid gap-5">
-                <input
-                  type="text"
-                  placeholder="Author Name"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-                <input
-                  type="text"
-                  placeholder="Chapter Title"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-                <input
-                  type="file"
-                  required
-                  accept=".doc,.docx,.pdf"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                />
-                <button
-                  type="submit"
-                  className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-                >
-                  Chapter in Book
-                </button>
-                {chapterStatus && (
-                  <p className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {chapterStatus}
-                  </p>
-                )}
-              </form>
-            </div>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+        Submit Your Application
+      </h2>
 
-            <div
-              id="editor-form"
-              className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[#1B3A6B] text-[#FFFFFF]">
-                  <FaEdit />
-                </div>
+      <div className="w-24 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
 
-                <div>
-                  <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                    Become Editor in Edited Book
-                  </p>
-                  <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-                    Apply for Book Editor
-                  </h2>
-                  <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Apply as an editor for edited book projects. Only Science Background
-                    applies where required.
-                  </p>
-                </div>
-              </div>
+      <p className="text-[15px] leading-[1.7] text-[#5A6A85] max-w-2xl mx-auto">
+        Choose the relevant form below and submit your details. Our team will contact you shortly.
+      </p>
+    </div>
 
-              <form onSubmit={handleEditorSubmit} className="mt-8 grid gap-5">
-                <input
-                  type="text"
-                  placeholder="Editor Name"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-                <input
-                  type="text"
-                  placeholder="Subject Background"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                />
-                <input
-                  type="file"
-                  required
-                  accept=".doc,.docx,.pdf"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                />
-                <button
-                  type="submit"
-                  className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-                >
-                  Apply for Book Editor
-                </button>
-                {editorStatus && (
-                  <p className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {editorStatus}
-                  </p>
-                )}
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+    <div className="grid gap-8 lg:grid-cols-2">
+      {/* FORM 1 */}
+      <div className="group rounded-[28px] bg-white shadow-2xl border border-[#D6E0F0] overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(27,58,107,0.18)]">
+        <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-5 flex items-center justify-between gap-4">
           <div>
-            <p className="text-[13px] font-normal uppercase tracking-wide text-[#C89B3C]">
-              Keep in Touch with Us
+            <p className="text-[#C89B3C] text-xs font-semibold uppercase tracking-wider">
+              Edited Book
             </p>
-
-            <h2 className="mt-3 text-[28px] font-semibold text-[#FFFFFF]">
-              Need book publication support?
-            </h2>
-
-            <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#FFFFFF]">
-              Contact Edwin Incorporation for book publication, ISBN publication,
-              chapter submission, edited book, and international publishing support.
+            <h3 className="text-white text-xl font-bold mt-1">
+              Submit Chapter Form
+            </h3>
+            <p className="text-white/75 text-sm mt-1">
+              Submit your chapter details carefully
             </p>
-
-            <a
-              href="mailto:care@edwinepc.com"
-              className="mt-8 inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-            >
-              Email Now
-              <FaArrowRight />
-            </a>
           </div>
 
-          <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-            <div className="grid gap-5">
-              <div className="flex gap-3">
-                <FaMapMarkerAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi
-                  110019
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaPhoneAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  India: 011-66155019
-                  <br />
-                  Phone: +91 6262752167
-                  <br />
-                  Phone: +12792029553
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaEnvelope className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  care@edwinepc.com
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaGlobe className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  www.academichelpstore.com
-                </p>
-              </div>
-            </div>
+          <div className="flex w-12 h-12 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+            <FaFileSignature className="text-[#C89B3C] text-2xl" />
           </div>
         </div>
-      </section>
 
-      <a
-        href="https://wa.me/916262752167"
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-        aria-label="Chat on WhatsApp"
-      >
-        <FaWhatsapp className="text-2xl" />
-      </a>
+        <div className="p-4 bg-white">
+          <div className="rounded-[22px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+            <iframe
+              title="Submit Chapter Form"
+              src="https://crm.zoho.in/crm/WebFormServeServlet?rid=59f5d107dca4b0f839b2026f7f39a975b7a394acbe8fb32441aeff1e8dbb5aad606532c5d214efcda68c834591fc16d5gid18ece470846d52023cd2fec718c59de9afadf986a869ce9b747d09c934ef1425"
+              width="100%"
+              height="620"
+              frameBorder="0"
+              scrolling="yes"
+              style={{
+                border: "none",
+                width: "100%",
+                display: "block",
+                backgroundColor: "white",
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* FORM 2 */}
+      <div className="group rounded-[28px] bg-white shadow-2xl border border-[#D6E0F0] overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(27,58,107,0.18)]">
+        <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-5 flex items-center justify-between gap-4">
+          <div>
+            <p className="text-[#C89B3C] text-xs font-semibold uppercase tracking-wider">
+              Publication
+            </p>
+            <h3 className="text-white text-xl font-bold mt-1">
+              Membership Form
+            </h3>
+            <p className="text-white/75 text-sm mt-1">
+              Submit publication membership details
+            </p>
+          </div>
+
+          <div className="flex w-12 h-12 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+            <FaFileSignature className="text-[#C89B3C] text-2xl" />
+          </div>
+        </div>
+
+        <div className="p-4 bg-white">
+          <div className="rounded-[22px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+            <iframe
+              title="Publication Membership Form"
+              src="https://crm.zoho.in/crm/WebFormServeServlet?rid=82cf7987d7f963e7173d2d4d3fb0cc43284ca21d8bb48a7f2e375082b4d6dc795222d056098105626123c5b6b97a27cagid6777dacd25e36bf244b118ed5a921a9693dac68d5b1fdac8acbfaecac7f81901"
+              width="100%"
+              height="620"
+              frameBorder="0"
+              scrolling="yes"
+              style={{
+                border: "none",
+                width: "100%",
+                display: "block",
+                backgroundColor: "white",
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
     </div>
   );
 }

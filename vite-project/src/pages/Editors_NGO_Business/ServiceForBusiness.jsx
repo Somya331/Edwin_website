@@ -9,6 +9,7 @@ import {
   FaCode,
   FaDatabase,
   FaEnvelopeOpenText,
+  FaFileSignature,
   FaGoogle,
   FaHeadset,
   FaLaptopCode,
@@ -42,7 +43,7 @@ const serviceCards = [
     subtitle: "University and College Only",
     text: "Complete automation solutions for universities and colleges with CRM, software, workflow and digital system support.",
     icon: FaRobot,
-    link: "#website-application-form",
+    link: "/business-automation",
   },
   {
     title: "BPO Services",
@@ -56,14 +57,28 @@ const serviceCards = [
     subtitle: "Apply Now",
     text: "Digital marketing support for businesses, institutions and organizations with online promotion and branding.",
     icon: FaBullhorn,
-    link: "#website-application-form",
+    link: "/digital-marketing",
   },
   {
     title: "App Designing",
     subtitle: "Apply Now",
     text: "Application designing support for mobile app, business app, education app and customized digital platform.",
     icon: FaMobileAlt,
-    link: "#website-application-form",
+    link: "/apps-for-ios-and-android",
+  },
+  {
+    title: "Whatsapp Service",
+    subtitle: "Apply Now",
+    text: "Professional WhatsApp messaging services without banned numbers for business communication.",
+    icon: FaWhatsapp,
+    link: "/whatsapp-services",
+  },
+  {
+    title: "Constructions",
+    subtitle: "Apply Now",
+    text: "Professional construction services for institutional, commercial and residential projects with quality assurance.",
+    icon: FaUniversity,
+    link: "/constructions",
   },
   {
     title: "Website Development",
@@ -179,6 +194,7 @@ function WebsiteServiceForm({ status, onSubmit }) {
           <option>Website Development</option>
           <option>Web Hosting</option>
           <option>WhatsApp Messaging Without Banned Numbers</option>
+          <option>Constructions</option>
           <option>Custom Software Development</option>
           <option>Zoho CRM Automation</option>
           <option>Google Suite Support</option>
@@ -656,7 +672,50 @@ export default function ApplyForWebsitePage() {
             </p>
           </div>
 
-          <WebsiteServiceForm status={formStatus} onSubmit={submitForm} />
+          <motion.div
+            id="website-application-form"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="rounded-[22px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[720px] mx-auto relative"
+          >
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+              <div>
+                <h3 className="text-white text-lg font-bold">
+                  Website / Software Application Form
+                </h3>
+                <p className="text-white/75 text-sm mt-1">
+                  Fill all required details carefully
+                </p>
+              </div>
+
+              <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-xl" />
+              </div>
+            </div>
+
+            <div className="relative w-full bg-white p-3">
+              <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                <iframe
+                  title="Zoho CRM Web Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=4dce853cc76afc91d521e1508c8c45cff3c35c74637f1d6ac1fa35bcd0b85ae66f34f4572db28eb960e2a483c535b45egidb1b1113f234667cf2a899931190068e8f246b6b7928ad26cc53ed596ee79a515"
+                  width="100%"
+                  height="500"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    display: "block",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

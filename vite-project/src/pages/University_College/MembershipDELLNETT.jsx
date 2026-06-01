@@ -7,6 +7,7 @@ import {
   FaCheckCircle,
   FaEnvelope,
   FaFileAlt,
+  FaFileSignature,
   FaGlobeAsia,
   FaGraduationCap,
   FaLayerGroup,
@@ -239,11 +240,10 @@ const DigitalLibrary = () => {
                   key={item.title}
                   type="button"
                   onClick={() => setActiveSlide(index)}
-                  className={`h-3 rounded-full transition-all duration-200 ${
-                    activeSlide === index
-                      ? "w-8 bg-[#C89B3C]"
-                      : "w-3 bg-[#E2E8F0]"
-                  }`}
+                  className={`h-3 rounded-full transition-all duration-200 ${activeSlide === index
+                    ? "w-8 bg-[#C89B3C]"
+                    : "w-3 bg-[#E2E8F0]"
+                    }`}
                 />
               ))}
             </div>
@@ -301,16 +301,14 @@ const DigitalLibrary = () => {
               <motion.div
                 key={item}
                 whileHover={{ y: -6 }}
-                className={`rounded-[12px] border border-[#E2E8F0] p-5 shadow-[0_2px_8px_rgba(0,0,0,0.08)] ${
-                  index === 0
-                    ? "bg-[#1B3A6B] text-[#FFFFFF] sm:col-span-2"
-                    : "bg-[#F8FAFC] text-[#1A1A2E]"
-                }`}
+                className={`rounded-[12px] border border-[#E2E8F0] p-5 shadow-[0_2px_8px_rgba(0,0,0,0.08)] ${index === 0
+                  ? "bg-[#1B3A6B] text-[#FFFFFF] sm:col-span-2"
+                  : "bg-[#F8FAFC] text-[#1A1A2E]"
+                  }`}
               >
                 <FaCheckCircle
-                  className={`mb-4 text-[22px] ${
-                    index === 0 ? "text-[#C89B3C]" : "text-[#1B3A6B]"
-                  }`}
+                  className={`mb-4 text-[22px] ${index === 0 ? "text-[#C89B3C]" : "text-[#1B3A6B]"
+                    }`}
                 />
                 <p className="text-[15px] leading-[1.7]">{item}</p>
               </motion.div>
@@ -486,111 +484,66 @@ const DigitalLibrary = () => {
         </div>
       </section>
 
-      <section id="apply" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+      <section id="apply" className="bg-[#EAF1FB] px-5 py-20">
+        <div className="mx-auto max-w-[1200px]">
+          <motion.div
+            className="mb-10 text-center"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.45 }}
+          >
+            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+              Edwin Legal Services Application
+            </h2>
+            <p className="mx-auto max-w-3xl text-[15px] leading-[1.7]">
+              Fill the institutional membership form for University Services.
+            </p>
+          </motion.div>
+
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="rounded-[12px] bg-[#1B3A6B] p-8 text-[#FFFFFF]"
+            transition={{ duration: 0.45 }}
+            className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
           >
-            <FaLayerGroup className="mb-5 text-[44px] text-[#C89B3C]" />
-            <h2 className="mb-5 text-[30px] font-semibold text-[#FFFFFF]">
-              Apply Now
-            </h2>
-            <p className="mb-6 text-[15px] leading-[1.8]">
-              Submit your request for digital library membership, book
-              distribution, research paper access or journal/book addition
-              support.
-            </p>
-            <div className="rounded-[12px] border border-[#FFFFFF]/20 bg-[#FFFFFF]/10 p-5 backdrop-blur">
-              <p className="mb-3 flex items-center gap-3 text-[15px]">
-                <FaEnvelope className="text-[#C89B3C]" /> care@edwinepc.com
-              </p>
-              <p className="flex items-center gap-3 text-[15px]">
-                <FaPhoneAlt className="text-[#C89B3C]" /> +91 6262752167
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.form
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="rounded-[12px] border border-[#E2E8F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-          >
-            <h3 className="mb-8 text-[28px] font-semibold text-[#1B3A6B]">
-              Digital Library Application
-            </h3>
-
-            <div className="grid gap-5 md:grid-cols-2">
-              <div className="md:col-span-2">
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Select Your Location
-                </label>
-                <select className="w-full rounded-[8px] border border-[#E2E8F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>Europe</option>
-                  <option>South Asia</option>
-                  <option>Other</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  Select Your Country
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+              <div>
+                <h3 className="text-white text-lg font-bold">
+                  Digital Library Application Form
+                </h3>
+                <p className="text-white/75 text-sm mt-1">
+                  Fill all required details carefully
                 </p>
               </div>
 
-              <div>
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Service Required
-                </label>
-                <select className="w-full rounded-[8px] border border-[#E2E8F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>Digital Library Membership</option>
-                  <option>Book Distribution</option>
-                  <option>Add Research Paper</option>
-                  <option>Add Books</option>
-                  <option>Add Journals</option>
-                </select>
+              <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-xl" />
               </div>
+            </div>
 
-              {fields.map((label) => (
-                <div key={label}>
-                  <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                    {label}
-                  </label>
-                  <input className="w-full rounded-[8px] border border-[#E2E8F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-                </div>
-              ))}
-
-              <div className="md:col-span-2">
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Message
-                </label>
-                <textarea
-                  rows="4"
-                  className="w-full rounded-[8px] border border-[#E2E8F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]"
+            <div className="relative w-full bg-white p-3">
+              <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                <iframe
+                  title="Zoho CRM Web Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=d4dba4baaf42bc964cd0b0fff01b2fe05f7ac940287f9c60c58ef99dd649f94cbee9205586521402e2180b44fe5d3f50gid5c5161cf37ffd7557cfa7f33a848e98423a9533df300cd9b927c3dc0dd4cbc44"
+                  width="100%"
+                  height="520"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    display: "block",
+                    backgroundColor: "white",
+                  }}
                 />
               </div>
             </div>
-
-            <div className="mt-6 flex flex-wrap gap-4">
-              <button
-                type="button"
-                className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#F8FAFC]"
-              >
-                Reset
-              </button>
-            </div>
-          </motion.form>
+          </motion.div>
         </div>
       </section>
 
@@ -636,38 +589,7 @@ const DigitalLibrary = () => {
         </div>
       </section>
 
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1100px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <FaUniversity className="mx-auto mb-5 text-[44px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[30px] font-semibold text-[#FFFFFF]">
-            Start Your Digital Library Request
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.8] text-[#FFFFFF]">
-            Contact Edwin Incorporation for book distribution, digital library
-            membership and academic resource support.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-            <a
-              href="tel:+916262752167"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-            >
-              <FaPhoneAlt /> +91 6262752167
-            </a>
-          </div>
-        </motion.div>
-      </section>
+
 
       <a
         href="https://wa.me/916262752167"

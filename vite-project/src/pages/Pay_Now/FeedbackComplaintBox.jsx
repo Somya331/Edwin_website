@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import {
   FaQuestionCircle,
   FaComments,
@@ -12,6 +13,7 @@ import {
   FaSearch,
   FaCheckCircle,
   FaPaperPlane,
+  FaFileSignature,
 } from "react-icons/fa";
 
 const heroImages = {
@@ -190,87 +192,100 @@ export default function FeedbackComplaintBox() {
         </div>
       </section>
 
-      <section id="feedback" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div>
-            <p className="text-[13px] uppercase tracking-wide text-[#5A6A85]">Feedback and Complaints</p>
-            <h2 className="mt-3 text-[34px] font-semibold text-[#1B3A6B]">Submit Your Concern</h2>
-            <p className="mt-4 text-[15px] leading-[1.8] text-[#1A1A2E]">
-              Share your feedback, complaint, or service support request.
+      <section id="feedback" className="relative bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] px-5 py-20 overflow-hidden">
+        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
+
+        <div className="relative z-10 mx-auto max-w-[1200px]">
+          <div className="mb-10 text-center">
+            <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-semibold mb-4 shadow-sm">
+              <FaFileSignature className="text-[#C89B3C]" />
+              Feedback / Complaint Form
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+              Submit Your Concern
+            </h2>
+
+            <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
+
+            <p className="text-[15px] leading-[1.7] text-[#5A6A85] max-w-2xl mx-auto">
+              Share your feedback, complaint, or service support request. Our team will contact you shortly.
             </p>
-            <div className="mt-7 rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-6">
-              <FaCheckCircle className="text-[30px] text-[#2D7A4F]" />
-              <h3 className="mt-4 text-[18px] font-semibold text-[#1A1A2E]">Local Cities Services</h3>
-              <p className="mt-3 text-[15px] leading-[1.7] text-[#1A1A2E]">
+          </div>
+
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div className="rounded-[24px] border border-[#D6E0F0] bg-white p-7 shadow-[0_14px_35px_rgba(27,58,107,0.10)]">
+              <FaCheckCircle className="text-[34px] text-[#2D7A4F]" />
+              <h3 className="mt-4 text-[22px] font-semibold text-[#1B3A6B]">
+                Support Information
+              </h3>
+              <p className="mt-3 text-[15px] leading-[1.8] text-[#1A1A2E]">
                 Support is available for service-related questions, application concerns, payment confirmation, feedback, and complaint review.
               </p>
-            </div>
-          </div>
 
-          <form onSubmit={handleSubmit} className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <div className="grid gap-5 md:grid-cols-2">
-              <input required type="text" placeholder="Full Name *" className="rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-              <input required type="tel" placeholder="Mobile Number *" className="rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-            </div>
+              <div className="mt-6 space-y-4">
+                <div className="rounded-[16px] bg-[#EAF1FB] p-4">
+                  <p className="text-[14px] font-semibold text-[#1B3A6B]">
+                    Please keep ready:
+                  </p>
+                  <p className="mt-2 text-[14px] leading-[1.7] text-[#1A1A2E]">
+                    Registered mobile number, service name, payment/reference details, and clear issue description.
+                  </p>
+                </div>
 
-            <div className="mt-5 grid gap-5 md:grid-cols-2">
-              <input type="email" placeholder="Email Address" className="rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-              <select className="rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                <option>Feedback</option>
-                <option>Complaint</option>
-                <option>Payment Support</option>
-                <option>Service Query</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <input type="text" placeholder="Service Name / Reference ID" className="mt-5 w-full rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-            <textarea required rows="6" placeholder="Write your feedback or complaint details *" className="mt-5 w-full resize-none rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-
-            <button type="submit" className="mt-5 inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-6 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]">
-              Submit Details <FaPaperPlane className="text-[13px]" />
-            </button>
-
-            {status && <p className="mt-5 rounded-[8px] border border-[#2D7A4F] px-4 py-3 text-[15px] text-[#2D7A4F]">{status}</p>}
-          </form>
-        </div>
-      </section>
-
-      <section id="contact" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mb-8">
-            <p className="text-[13px] uppercase tracking-wide text-[#5A6A85]">Keep in Touch with Us</p>
-            <h2 className="mt-3 text-[34px] font-semibold text-[#1B3A6B]">Edwin Incorporation Support</h2>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-3">
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-              <FaMapMarkerAlt className="text-[28px] text-[#C89B3C]" />
-              <h3 className="mt-4 text-[18px] font-semibold text-[#1A1A2E]">Address</h3>
-              <p className="mt-3 text-[15px] leading-[1.7]">15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi 110019</p>
+                <div className="rounded-[16px] bg-[#1B3A6B] p-4 text-white">
+                  <p className="text-[14px] font-semibold text-white">
+                    Official Support
+                  </p>
+                  <p className="mt-2 text-[14px] leading-[1.7] text-white/85">
+                    Email: care@edwinepc.com<br />Phone: +91 6262752167
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-              <FaPhoneAlt className="text-[28px] text-[#C89B3C]" />
-              <h3 className="mt-4 text-[18px] font-semibold text-[#1A1A2E]">Phone</h3>
-              <p className="mt-3 text-[15px] leading-[1.7]">
-                India : 011-66155019
-                <br />
-                Phone: +91 6262752167
-                <br />
-                Phone: +12792029553
-              </p>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="rounded-[22px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[720px] mx-auto w-full relative"
+            >
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-              <FaEnvelope className="text-[28px] text-[#C89B3C]" />
-              <h3 className="mt-4 text-[18px] font-semibold text-[#1A1A2E]">Email & Website</h3>
-              <p className="mt-3 text-[15px] leading-[1.7]">
-                care@edwinepc.com
-                <br />
-                www.academichelpstore.com
-              </p>
-            </div>
+              <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-white text-lg font-bold">Application Form</h3>
+                  <p className="text-white/75 text-sm mt-1">
+                    Fill all required details carefully
+                  </p>
+                </div>
+
+                <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                  <FaFileSignature className="text-[#C89B3C] text-xl" />
+                </div>
+              </div>
+
+              <div className="relative w-full bg-white p-3">
+                <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                  <iframe
+                    title="Zoho CRM Feedback Complaint Form"
+                    src="https://crm.zoho.in/crm/WebFormServeServlet?rid=1379d25ac259e1673b912a61a6fe486eb96d7232c0d6039dba30c263db3b0640a2caacfc68cf23ff0f0a2852e193fa6fgid17a7d31d91c8cd244f08083f380951990ad2d9fd65dec6ce39cf81e0c06a79f8"
+                    width="100%"
+                    height="420"
+                    frameBorder="0"
+                    scrolling="yes"
+                    style={{
+                      border: "none",
+                      width: "100%",
+                      display: "block",
+                      backgroundColor: "white",
+                    }}
+                  />
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

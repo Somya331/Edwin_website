@@ -372,375 +372,190 @@ export default function DoiMembershipPage() {
         </div>
       </section>
 
-      <section id="doi-allocation" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-              DOI Allocation
-            </p>
+      <section
+  id="doi-allocation"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-10"
+>
+  <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#F4B400]/20 blur-3xl" />
 
-            <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-              DOI Allocation Details
-            </h2>
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="mx-auto max-w-3xl text-center">
+      
+      <h2 className="mt-3 text-[34px] font-bold text-[#1B3A6B] md:text-[44px]">
+        DOI Allocation Details
+      </h2>
 
-            <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-              Below is the DOI allocation record for research papers, article URLs,
-              and DOI status/details.
+     </div>
+
+    <div className="mt-8 rounded-[28px] border border-[#D6E0F0] bg-white shadow-[0_24px_70px_rgba(27,58,107,0.16)] overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-6 md:px-8 py-4">
+        <div className="absolute inset-0 opacity-15 bg-[linear-gradient(135deg,transparent_25%,rgba(255,255,255,0.22)_25%,rgba(255,255,255,0.22)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.22)_75%)] bg-[length:22px_22px]" />
+
+        <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h3 className="text-white text-xl md:text-2xl font-bold">
+              All Papers DOI Report
+            </h3>
+            <p className="text-white/75 text-sm mt-1">
+              Live Zoho Creator embedded report
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-5">
-              <p className="text-[13px] font-normal text-[#5A6A85]">
-                Total DOI Records
-              </p>
+          <span className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white">
+            Live Data
+          </span>
+        </div>
+      </div>
 
-              <p className="mt-2 text-[28px] font-semibold text-[#1B3A6B]">
-                {doiAllocationRows.length}
+      <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+        <div className="rounded-[22px] border border-[#D6E0F0] bg-white shadow-inner overflow-hidden">
+          <iframe
+            title="DOI Allocation Details Report"
+            className="block h-[560px] w-full border-0"
+            scrolling="auto"
+            src="https://creatorapp.zohopublic.in/edwininc/doi-allocation/report-embed/All_Papers/dK2ETPhZ6T2OOevd6E5AAM2uN5FFw0HW1HftrUnRQTj099MEZn0j0W8KKWxCZwJ8wxVU6tMyRUSSUXeyb8bEWMTBfbt5vuRtf6Rj"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  id="doi-allocation"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-10"
+>
+  <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#F4B400]/20 blur-3xl" />
+
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="mx-auto max-w-3xl text-center">
+      <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
+        DOI Allocation
+      </p>
+
+      <h2 className="mt-3 text-[34px] font-bold text-[#1B3A6B] md:text-[44px]">
+        Apply Now
+      </h2>
+
+      <div className="mx-auto mt-4 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+      <p className="mt-4 text-[16px] leading-[1.7] text-[#1A1A2E]">
+        Submit research paper details, paper URL, and required information for DOI allocation.
+      </p>
+    </div>
+
+    <div className="mt-8 rounded-[28px] border border-[#D6E0F0] bg-white shadow-[0_24px_70px_rgba(27,58,107,0.16)] overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-6 md:px-8 py-4">
+        <div className="absolute inset-0 opacity-15 bg-[linear-gradient(135deg,transparent_25%,rgba(255,255,255,0.22)_25%,rgba(255,255,255,0.22)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.22)_75%)] bg-[length:22px_22px]" />
+
+        <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h3 className="text-white text-xl md:text-2xl font-bold">
+              Submit Papers
+            </h3>
+            
+          </div>
+
+          <span className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white">
+            Secure Form
+          </span>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+        <div className="rounded-[22px] border border-[#D6E0F0] bg-white shadow-inner overflow-hidden">
+          <iframe
+            title="Submit Paper for DOI Allocation Form"
+            className="block h-[560px] w-full border-0"
+            scrolling="auto"
+            src="https://creatorapp.zohopublic.in/edwininc/doi-allocation/form-embed/Submit_Papers/CqfJ2tzxAq77GzSwsSwgCWSZpQytyk7FOaegz0vqMQy1t01QpUEQW31ymOuCHCsXXPHvCgu1SdXqPFT4AA9QaMhObF6eKDjfsYef"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+     <section
+  id="doi-application"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-12"
+>
+  <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#F4B400]/20 blur-3xl" />
+
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <div className="lg:sticky lg:top-10">
+        <span className="inline-flex rounded-full border border-[#D6E0F0] bg-white/80 px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-[#1B3A6B] shadow-sm backdrop-blur">
+          Apply Now
+        </span>
+
+        <h2 className="mt-5 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
+          DOI Membership Application Form
+        </h2>
+
+        <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+        <p className="mt-6 max-w-[520px] text-[17px] leading-[1.9] text-[#1A1A2E]">
+          Fill this form to apply for DOI membership, DOI allocation support, or
+          DOI portal assistance.
+        </p>
+
+        <div className="mt-8 grid gap-4">
+          {[
+            "Submit publisher, journal, institution, or conference publication details.",
+            "Upload required documents for DOI membership and allocation support.",
+            "Get assistance for metadata registration and DOI allocation workflow.",
+          ].map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-4 rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 shadow-sm backdrop-blur"
+            >
+              <FaCheckCircle className="mt-1 shrink-0 text-[#1B3A6B]" />
+              <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
+                {item}
               </p>
             </div>
+          ))}
+        </div>
+      </div>
 
-            <div className="relative">
-              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5A6A85]" />
+      <div className="rounded-[30px] border border-[#D6E0F0] bg-white shadow-[0_24px_65px_rgba(27,58,107,0.16)] overflow-hidden">
+        <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-4">
+          <div>
+            <h3 className="text-[24px] font-bold text-white">
+              DOI Application
+            </h3>
 
-              <input
-                type="text"
-                value={doiSearch}
-                onChange={(event) => setDoiSearch(event.target.value)}
-                placeholder="Search DOI allocation..."
-                className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] py-3 pl-11 pr-4 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B] sm:w-[360px]"
+            <p className="mt-1 text-[14px] text-white/75">
+              Complete the DOI membership form below.
+            </p>
+          </div>
+
+          <div className="hidden h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[24px] text-[#F4B400] md:flex">
+            🔗
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+          <div className="rounded-[22px] border border-[#D6E0F0] bg-white overflow-hidden">
+            <div className="max-h-[480px] overflow-y-auto overflow-x-hidden">
+              <iframe
+                title="DOI Membership Application Form"
+                className="block h-[730px] w-full border-0"
+                scrolling="auto"
+                src="https://crm.zoho.in/crm/WebFormServeServlet?rid=e041c73797fa7fc2be776faae2ec4eec981c753e6149f0d7c1eacd320424584ea0ebab7c8344917fbea69fd1ae6e1ab0gid4fd1ee833518e3ebc49e7e4cf05170f1405656c6081d36296111dc70e089f339"
               />
             </div>
           </div>
-
-          <div className="mt-8 overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[1000px] border-collapse">
-                <thead className="bg-[#1B3A6B]">
-                  <tr>
-                    <th className="w-[80px] px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      S.No.
-                    </th>
-                    <th className="px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      Title of Research Paper
-                    </th>
-                    <th className="w-[330px] px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      URL of Paper
-                    </th>
-                    <th className="w-[220px] px-5 py-4 text-left text-[13px] font-medium text-[#FFFFFF]">
-                      DOI
-                    </th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {filteredDoiAllocations.map((item, index) => (
-                    <tr
-                      key={`${item.no}-${item.title}`}
-                      className={`border-b border-[#D6E0F0] ${
-                        index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#EAF1FB]"
-                      }`}
-                    >
-                      <td className="px-5 py-4 text-[15px] font-semibold text-[#1B3A6B]">
-                        {item.no}
-                      </td>
-
-                      <td className="px-5 py-4 text-[15px] font-semibold leading-[1.7] text-[#1A1A2E]">
-                        {item.title}
-                      </td>
-
-                      <td className="px-5 py-4">
-                        {item.url.startsWith("http") ? (
-                          <a
-                            href={item.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 break-all text-[15px] font-normal leading-[1.7] text-[#1B3A6B] transition duration-200 ease-in-out hover:text-[#C89B3C]"
-                          >
-                            View Paper
-                            <FaExternalLinkAlt className="shrink-0 text-[12px]" />
-                          </a>
-                        ) : (
-                          <span className="text-[15px] font-normal text-[#1A1A2E]">
-                            {item.url}
-                          </span>
-                        )}
-                      </td>
-
-                      <td className="px-5 py-4">
-                        <span className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-3 py-1 text-[13px] font-normal text-[#2D7A4F]">
-                          {item.doi}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="border-t border-[#D6E0F0] bg-[#FFFFFF] px-5 py-4">
-              <p className="text-[13px] font-normal text-[#5A6A85]">
-                Showing {filteredDoiAllocations.length} of {doiAllocationRows.length} DOI
-                allocation records
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
-
-      <section id="doi-application" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-            <div className="lg:sticky lg:top-8">
-              <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                Apply Now
-              </p>
-
-              <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-                DOI Membership Application Form
-              </h2>
-
-              <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                Fill this form to apply for DOI membership, DOI allocation support, or
-                DOI portal assistance.
-              </p>
-
-              <div className="mt-8 grid gap-4">
-                <div className="flex items-start gap-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5">
-                  <FaCheckCircle className="mt-1 shrink-0 text-[#1B3A6B]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Submit publisher, journal, institution, or conference publication
-                    details.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5">
-                  <FaCheckCircle className="mt-1 shrink-0 text-[#1B3A6B]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Upload required documents for DOI membership and allocation support.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5">
-                  <FaCheckCircle className="mt-1 shrink-0 text-[#1B3A6B]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Get assistance for metadata registration and DOI allocation workflow.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-              <form onSubmit={handleSubmit} className="grid gap-6">
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Select Your Location <span className="text-[#C0392B]">*</span>
-                  </label>
-
-                  <select
-                    required
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]"
-                  >
-                    <option value="">-None-</option>
-                    <option>India</option>
-                    <option>Other Country</option>
-                    <option>Mobile Number</option>
-                  </select>
-
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    You need to select the country name, your location, or your mobile
-                    number from the dropdown menu.
-                  </p>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      First Name
-                    </label>
-
-                    <input
-                      type="text"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Last Name <span className="text-[#C0392B]">*</span>
-                    </label>
-
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Mobile
-                    </label>
-
-                    <input
-                      type="tel"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-
-                    <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                      Do not use 0 (zero) as the initial digit
-                    </p>
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Email
-                    </label>
-
-                    <input
-                      type="email"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Organization / Journal Name
-                    </label>
-
-                    <input
-                      type="text"
-                      placeholder="Enter publisher, journal, or institution name"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Service Type
-                    </label>
-
-                    <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]">
-                      <option value="">Select service type</option>
-                      <option>DOI Membership</option>
-                      <option>DOI Allocation</option>
-                      <option>DOI Portal</option>
-                      <option>Article DOI Support</option>
-                      <option>Conference Proceeding DOI</option>
-                      <option>Metadata Registration Support</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Designation
-                    </label>
-
-                    <input
-                      type="text"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-
-                    <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                      With complete institute or publisher name
-                    </p>
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Website / Journal URL
-                    </label>
-
-                    <input
-                      type="url"
-                      placeholder="https://"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Upload Document <span className="text-[#C0392B]">*</span>
-                  </label>
-
-                  <input
-                    type="file"
-                    required
-                    multiple
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                  />
-
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    Please upload publisher, journal, institution, or DOI-related
-                    document.
-                  </p>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Message / Requirement
-                  </label>
-
-                  <textarea
-                    rows="4"
-                    placeholder="Write your DOI membership or DOI allocation requirement"
-                    className="w-full resize-none rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    required
-                    className="h-4 w-4 rounded border-[#D6E0F0] accent-[#1B3A6B]"
-                  />
-
-                  <p className="text-[15px] font-normal text-[#1A1A2E]">
-                    I agree to the{" "}
-                    <a
-                      href="#terms"
-                      className="font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:text-[#C89B3C]"
-                    >
-                      Terms & Condition
-                    </a>
-                    <span className="text-[#C0392B]"> *</span>
-                  </p>
-                </div>
-
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <button
-                    type="submit"
-                    className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-                  >
-                    Submit
-                  </button>
-
-                  <button
-                    type="reset"
-                    className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:bg-[#EAF1FB]"
-                  >
-                    Reset
-                  </button>
-                </div>
-
-                {formStatus && (
-                  <p className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {formStatus}
-                  </p>
-                )}
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
       <section className="bg-[#1B3A6B] px-5 py-20">
         <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <div>

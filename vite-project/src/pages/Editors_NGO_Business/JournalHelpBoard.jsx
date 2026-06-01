@@ -8,6 +8,7 @@ import {
   FaDatabase,
   FaDigitalTachograph,
   FaFileAlt,
+  FaFileSignature,
   FaGlobe,
   FaIdCard,
   FaLayerGroup,
@@ -76,6 +77,7 @@ const portalFeatures = [
     label: "System",
     text: "Structured submission workflow for authors, editors, reviewers, and journal administrators.",
     icon: FaFileAlt,
+    FaFileSignature,
   },
   {
     title: "Editorial",
@@ -537,36 +539,102 @@ export default function JournalsHelpBoardPage() {
             </p>
           </div>
 
-          <div className="grid gap-8">
-            <ApplicationForm
+          <div className="grid gap-10">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
               id="opening-journal-services"
-              title="Apply For Opening Journal Services"
-              subtitle="Journal Service Application"
-              defaultType="Opening Journal Services"
-              status={openingStatus}
-              onSubmit={(event) =>
-                submitForm(
-                  event,
-                  setOpeningStatus,
-                  "Your journal service application has been prepared successfully."
-                )
-              }
-            />
+            >
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-            <ApplicationForm
+              <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-white text-lg font-bold">
+                    Opening Journal Services Application Form
+                  </h3>
+                  <p className="text-white/75 text-sm mt-1">
+                    Fill all required details carefully
+                  </p>
+                </div>
+
+                <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                  <FaFileSignature className="text-[#C89B3C] text-xl" />
+                </div>
+              </div>
+
+              <div className="relative w-full bg-white p-3">
+                <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                  <iframe
+                    title="Opening Journal Services Zoho CRM Web Form"
+                    src="https://crm.zoho.in/crm/WebFormServeServlet?rid=a58efddd82d2bd8d1b2f949ec81be9e7607d2b613584f9576f4a91f93fa3130ddbe906e561730fd77844bf73a930031agidc73c6b8a4ba259224e5f8a712a4ff055131563721160c3febc379eaac27caa0a"
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    scrolling="yes"
+                    width="100%"
+                    height="720"
+                    style={{
+                      border: "none",
+                      width: "100%",
+                      minWidth: "610px",
+                      display: "block",
+                      backgroundColor: "white",
+                    }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
               id="impact-factor"
-              title="Application for Impact Factors"
-              subtitle="Impact Factor Application"
-              defaultType="Impact Factor Services"
-              status={impactStatus}
-              onSubmit={(event) =>
-                submitForm(
-                  event,
-                  setImpactStatus,
-                  "Your impact factor application has been prepared successfully."
-                )
-              }
-            />
+            >
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+              <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-white text-lg font-bold">
+                    Impact Factor Application Form
+                  </h3>
+                  <p className="text-white/75 text-sm mt-1">
+                    Fill all required details carefully
+                  </p>
+                </div>
+
+                <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                  <FaFileSignature className="text-[#C89B3C] text-xl" />
+                </div>
+              </div>
+
+              <div className="relative w-full bg-white p-3">
+                <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                  <iframe
+                    title="Impact Factor Zoho CRM Web Form"
+                    src="https://crm.zoho.in/crm/WebFormServeServlet?rid=7a198ff8553fd9083c84064f3346ec18e84c9609b42bb1b497bffeaf36839012b20f3685d6127a8c22a6373c6c9ff199gid275f0e4fcfd2b5dab2554a1b8750dcc32228307f6dbf65da4f1beddf67e1bc54"
+                    width="100%"
+                    height="720"
+                    frameBorder="0"
+                    scrolling="yes"
+                    width="100%"
+                    height="720"
+                    style={{
+                      border: "none",
+                      width: "100%",
+                      minWidth: "610px",
+                      display: "block",
+                      backgroundColor: "white",
+                    }}
+                  />
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -583,18 +651,3 @@ export default function JournalsHelpBoardPage() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

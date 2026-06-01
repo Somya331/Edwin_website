@@ -7,6 +7,7 @@ import {
   FaCalendarAlt,
   FaCheckCircle,
   FaEnvelope,
+  FaFileSignature,
   FaFileAlt,
   FaGlobeAsia,
   FaHandshake,
@@ -569,7 +570,7 @@ const ConferenceManagement = () => {
       </section>
 
       <section id="apply" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="mx-auto grid max-w-[1300px] items-start gap-10 lg:grid-cols-[0.6fr_1.4fr]">
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -596,92 +597,50 @@ const ConferenceManagement = () => {
             </div>
           </motion.div>
 
-          <motion.form
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+            className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden w-full max-w-[950px] mx-auto relative"
           >
-            <h3 className="mb-8 text-[28px] font-semibold text-[#1B3A6B]">
-              CMB Sponsorship
-            </h3>
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-            <div className="grid gap-5 md:grid-cols-2">
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
               <div>
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Select Your Location
-                </label>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>Foreign</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  Select Your Country
+                <h3 className="text-white text-lg font-bold">
+                  Conference Application Form
+                </h3>
+                <p className="text-white/75 text-sm mt-1">
+                  Fill all required details carefully
                 </p>
               </div>
 
-              <div>
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Select Conference Service
-                </label>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  {services.map((service) => (
-                    <option key={service}>{service}</option>
-                  ))}
-                </select>
+              <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-xl" />
               </div>
-
-              {[
-                "Name of Events *",
-                "Last Name *",
-                "Email *",
-                "Mobile *",
-                "Postal Address *",
-                "Organisation / Institution Name",
-              ].map((label) => (
-                <div key={label}>
-                  <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                    {label}
-                  </label>
-                  <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-                </div>
-              ))}
             </div>
 
-            <div className="mt-5">
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Upload Conference Document
-              </label>
-              <input
-                type="file"
-                className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]"
-              />
+            <div className="relative w-full bg-white p-3">
+              <div className="rounded-[18px] border border-[#D6E0F0] overflow-x-auto bg-white shadow-inner flex justify-center">
+                <iframe
+                  title="Zoho CRM Web Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=bea0a0051dc394586bf45b7269d4187a1c4cb4c229fdf847229f83e0d0a36fd915abf897a200b8063df9dc3bc73d679bgid7ba4b474e0144674bfcc49076ad62a6adc601736796b81f8b69c49649ee8d979"
+                  width="910"
+                  height="580"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    width: "910px",
+                    maxWidth: "100%",
+                    display: "block",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
             </div>
-
-            <div className="mt-6">
-              <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                <input type="checkbox" /> Terms & Condition * Read
-              </label>
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-4">
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit <FaUpload />
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
-          </motion.form>
+          </motion.div>
         </div>
       </section>
 
@@ -725,59 +684,6 @@ const ConferenceManagement = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1200px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <FaBriefcase className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Keep in Touch with Us
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for conference sponsorship, speakers,
-            publication assistance, technical support and complete conference
-            management services.
-          </p>
-
-          <div className="mx-auto grid max-w-4xl gap-4 md:grid-cols-2">
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 text-left">
-              <FaMapMarkerAlt className="mb-3 text-[22px] text-[#C89B3C]" />
-              <p className="text-[15px] leading-[1.7] text-[#1B3A6B]">
-                15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi
-                110019
-              </p>
-            </div>
-
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 text-left">
-              <FaPhoneAlt className="mb-3 text-[22px] text-[#C89B3C]" />
-              <p className="mb-2 text-[15px] font-medium text-[#1B3A6B]">
-                India: 011-66155019
-              </p>
-              <p className="mb-2 text-[15px] font-medium text-[#1B3A6B]">
-                Phone: +91 6262752167
-              </p>
-              <p className="text-[15px] font-medium text-[#1B3A6B]">
-                Phone: +12792029553
-              </p>
-            </div>
-
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 text-left md:col-span-2">
-              <FaEnvelope className="mb-3 text-[22px] text-[#C89B3C]" />
-              <p className="mb-2 text-[15px] font-medium text-[#1B3A6B]">
-                Email: care@edwinepc.com
-              </p>
-              <p className="text-[15px] font-medium text-[#1B3A6B]">
-                Website: www.academichelpstore.com
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </section>
 
       <a

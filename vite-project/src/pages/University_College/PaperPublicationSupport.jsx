@@ -7,6 +7,7 @@ import {
   FaDownload,
   FaEnvelope,
   FaFileAlt,
+  FaFileSignature,
   FaGlobe,
   FaGraduationCap,
   FaPhoneAlt,
@@ -229,11 +230,10 @@ const PaperPublication = () => {
                       key={item.title}
                       type="button"
                       onClick={() => setActiveSlide(index)}
-                      className={`h-3 rounded-full transition duration-200 ${
-                        activeSlide === index
+                      className={`h-3 rounded-full transition duration-200 ${activeSlide === index
                           ? "w-8 bg-[#C89B3C]"
                           : "w-3 bg-[#D6E0F0]"
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
@@ -403,109 +403,61 @@ const PaperPublication = () => {
       </section>
 
       <section id="submit-paper" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+        <div className="mx-auto max-w-[1200px]">
+          <motion.div
+            className="mb-10 text-center"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+              Research Paper Submission Form
+            </h2>
+            <p className="mx-auto max-w-3xl text-[15px] leading-[1.7]">
+              Complete the application form below. Our team will contact you shortly.
+            </p>
+          </motion.div>
+
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="rounded-[12px] bg-[#1B3A6B] p-6 text-[#FFFFFF]"
+            className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
           >
-            <FaFileAlt className="mb-5 text-[38px] text-[#C89B3C]" />
-            <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-              Submit Research Paper
-            </h2>
-            <p className="mb-6 text-[15px] leading-[1.7] text-[#FFFFFF]">
-              Fill the details below for research paper submission. You need to
-              select the country name, your location, or your mobile number from
-              the dropdown menu.
-            </p>
-
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 text-[#1A1A2E]">
-              <p className="mb-3 flex items-center gap-3 text-[15px]">
-                <FaEnvelope className="text-[#C89B3C]" /> care@edwinepc.com
-              </p>
-              <p className="flex items-center gap-3 text-[15px]">
-                <FaPhoneAlt className="text-[#C89B3C]" /> +91 6262752167
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.form
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-          >
-            <h2 className="mb-6 text-[28px] font-semibold text-[#1B3A6B]">
-              Research Paper Form
-            </h2>
-
-            <div className="grid gap-5 md:grid-cols-2">
-              <div className="md:col-span-2">
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Select Your Location
-                </label>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>Foreign</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  Select Your Country
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+              <div>
+                <h3 className="text-white text-lg font-bold">Application Form</h3>
+                <p className="text-white/75 text-sm mt-1">
+                  Fill all required details carefully
                 </p>
               </div>
 
-              {[
-                "First Name *",
-                "Last Name *",
-                "Designation",
-                "Email *",
-                "Mobile *",
-                "Institute Name",
-                "Paper Title",
-                "Subject / Area",
-              ].map((label) => (
-                <div key={label}>
-                  <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                    {label}
-                  </label>
-                  <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-                  {label === "Designation" && (
-                    <p className="mt-2 text-[13px] text-[#5A6A85]">
-                      With Complete Institute Name
-                    </p>
-                  )}
-                </div>
-              ))}
-
-              <div className="md:col-span-2">
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Upload Paper
-                </label>
-                <input
-                  type="file"
-                  className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]"
-                />
+              <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-xl" />
               </div>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-4">
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit <FaUpload />
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
+            <div className="relative w-full bg-white p-3">
+              <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                <iframe
+                  title="Zoho CRM Web Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=1292b335149c54949ec85c6ad8784dc095d9098d8b9016b80c00ef91749f82c33cba21def7cdef024b09c2e36bcbdb05gid1cd175b6c78bd79c314b009f4bfedfeef4920ddbedc63a40b516b5ffa562ca26"
+                  width="100%"
+                  height="620"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    display: "block",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
             </div>
-          </motion.form>
+          </motion.div>
         </div>
       </section>
 
@@ -558,9 +510,8 @@ const PaperPublication = () => {
                   {journals.map((journal, index) => (
                     <tr
                       key={journal.name}
-                      className={`border-b border-[#D6E0F0] ${
-                        index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#EAF1FB]"
-                      }`}
+                      className={`border-b border-[#D6E0F0] ${index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#EAF1FB]"
+                        }`}
                     >
                       <td className="px-4 py-4 font-medium">{journal.name}</td>
                       <td className="px-4 py-4">{journal.indexed}</td>
@@ -626,38 +577,6 @@ const PaperPublication = () => {
         </div>
       </section>
 
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1100px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <FaGraduationCap className="mx-auto mb-5 text-[44px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Ready to Submit Your Research Paper?
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for publication assistance, journal
-            routing, submission guidance and communication support.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-            <a
-              href="tel:+916262752167"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-            >
-              <FaPhoneAlt /> +91 6262752167
-            </a>
-          </div>
-        </motion.div>
-      </section>
 
       <a
         href="https://wa.me/916262752167"

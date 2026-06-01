@@ -22,6 +22,19 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
+const slideImages = [
+  "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1900&q=90",
+  "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1900&q=90",
+];
+
 const conferences = [
   [52, "52nd International Conference — Philippines", "NEW", "In Association with Mahakoshal University, Jabalpur (M.P., India)", "Trends in Innovation, Education and Social Sciences", "19–21 Dec 2026", "University of the Philippines, Diliman (Metro Manila), Manila", "Scheduled", "52nd phillippines conference brochure 2026.pdf"],
   [51, "51st International Conference — Maldives", "NEW", "In Association with Mahakoshal University, Jabalpur (M.P., India)", "Global Research and Education Conclave", "12–14 Dec 2026", "The Maldives National University, Malé", "Scheduled", "51st conference maldives brochure.pdf"],
@@ -77,47 +90,6 @@ const conferences = [
   [1, "1st International Conference — India", "", "In Association with Partner Universities in India", "Innovative Technologies Driven by Multidisciplinary Research", "05 Jul 2014", "India", "Winner's List", "Download"],
 ];
 
-const conferenceHeroImageBase = "/images/apply-for-conferences";
-
-const conferenceHeroImageSequence = [
-  { no: 43, image: "WhatsApp_20Image_202026-05-12_20at_204.26.02_20PM.jpeg" },
-  { no: 43, image: "WhatsApp_20Image_202026-05-12_20at_204.36.08_20PM.jpeg" },
-  { no: 40, image: "40.png" },
-  { no: 39, image: "39.png" },
-  { no: 38, image: "38.png" },
-  { no: 37, image: "37.png" },
-  { no: 36, image: "36.png" },
-  { no: 35, image: "35.png" },
-  { no: 34, image: "34.png" },
-  { no: 33, image: "33.png" },
-  { no: 32, image: "32.png" },
-  { no: 31, image: "31.png" },
-  { no: 30, image: "WhatsApp_20Image_202026-03-07_20at_2011.54.18_20AM.jpeg" },
-  { no: 29, image: "29.png" },
-  { no: 28, image: "28.png" },
-  { no: 27, image: "27.jpeg" },
-  { no: 21, image: "21.png" },
-  { no: 18, image: "18.png" },
-  { no: 17, image: "17.jpeg" },
-  { no: 15, image: "WhatsApp_20Image_202022-01-31_20at_2015.57.52.jpeg" },
-  { no: 14, image: "14.jpeg" },
-  { no: 13, image: "WhatsApp_20Image_202026-03-07_20at_202.45.57_20PM.jpeg" },
-  { no: 12, image: "12.png" },
-  { no: 11, image: "11.png" },
-  { no: 10, image: "10.png" },
-  { no: 9, image: "9.jpg" },
-  { no: 8, image: "8.jpeg" },
-  { no: 7, image: "7.png" },
-  { no: 6, image: "6-2.jpg" },
-  { no: 5, image: "5.jpg" },
-  { no: 4, image: "4.jpg" },
-  { no: 3, image: "3.jpg" },
-  { no: 2, image: "2.jpeg" },
-  { no: 1, image: "1.jpg" },
-  { no: 16, image: "16.jpeg" },
-  { no: 44, image: "WhatsApp_20Image_202026-05-09_20at_202.59.15_20PM.jpeg" },
-];
-
 const applyCards = [
   { title: "Apply For Conference", subtitle: "Apply for Upcoming Conference", icon: FaFileAlt, link: "#conference-form" },
   { title: "Apply For Speaker/Resource Person", subtitle: "Speaker and Resource Person", icon: FaMicrophone, link: "#speaker-form" },
@@ -150,22 +122,22 @@ const previousGallery = [
   {
     title: "41st International Conference — Nepal",
     text: "Previous international conference record, participants, gallery images, and recognition details.",
-    image: "/images/apply-for-conferences/previous-nepal-01.jpg",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=90",
   },
   {
     title: "40th International Conference — U.S.A",
     text: "Conference highlights, research presentations, awards, and participant memories.",
-    image: "/images/apply-for-conferences/previous-usa-01.jpg",
+    image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=900&q=90",
   },
   {
     title: "39th International Conference — Vietnam",
     text: "Academic networking, multidisciplinary research, and sustainable development theme.",
-    image: "/images/apply-for-conferences/39.png",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=90",
   },
   {
     title: "38th International Conference — Malaysia",
     text: "Winner list, participant details, and conference recognition records.",
-    image: "/images/apply-for-conferences/38.png",
+    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=900&q=90",
   },
 ];
 
@@ -222,26 +194,14 @@ export default function ApplyForConferencesPage() {
   const [awardStatus, setAwardStatus] = useState("");
 
   const heroSlides = useMemo(() => {
-    const conferenceByNumber = new Map(conferences.map((item) => [item[0], item]));
-
-    return conferenceHeroImageSequence
-      .map((slide) => {
-        const item = conferenceByNumber.get(slide.no);
-
-        if (!item) {
-          return null;
-        }
-
-        return {
-          no: item[0],
-          title: item[1],
-          subject: item[4],
-          date: item[5],
-          venue: item[6],
-          image: `${conferenceHeroImageBase}/${slide.image}`,
-        };
-      })
-      .filter(Boolean);
+    return conferences.slice(0, 30).map((item, index) => ({
+      no: item[0],
+      title: item[1],
+      subject: item[4],
+      date: item[5],
+      venue: item[6],
+      image: slideImages[index % slideImages.length],
+    }));
   }, []);
 
   useEffect(() => {
@@ -295,13 +255,13 @@ export default function ApplyForConferencesPage() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 h-full w-full object-contain"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </AnimatePresence>
 
         <div className="absolute inset-x-0 top-0 flex items-center justify-between p-5">
           <span className="rounded-full bg-[#FFFFFF]/95 px-4 py-2 text-[13px] font-semibold text-[#1B3A6B] shadow-sm backdrop-blur">
-            Slide {activeSlide + 1} of {heroSlides.length}
+            Slide {activeSlide + 1} of 30
           </span>
 
           <span className="rounded-full bg-[#C89B3C] px-4 py-2 text-[13px] font-semibold text-[#FFFFFF] shadow-sm">
@@ -402,7 +362,7 @@ export default function ApplyForConferencesPage() {
           <div className="mt-5 flex max-w-full flex-wrap items-center gap-2">
             {heroSlides.map((slide, index) => (
               <button
-                key={`${slide.no}-${index}`}
+                key={slide.no}
                 type="button"
                 onClick={() => setActiveSlide(index)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
@@ -537,7 +497,7 @@ export default function ApplyForConferencesPage() {
         </div>
       </section>
 
-      <section id="conference-table" className="bg-[#FFFFFF] px-4 py-16 lg:px-8">
+    <section id="conference-table" className="bg-[#FFFFFF] px-4 py-14 lg:px-8">
   <div className="mx-auto max-w-[1500px]">
     <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -567,35 +527,19 @@ export default function ApplyForConferencesPage() {
       </div>
     </div>
 
-    <div className="overflow-hidden rounded-[18px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-      <div className="overflow-x-auto">
+    <div className="overflow-hidden rounded-[24px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_18px_50px_rgba(27,58,107,0.12)]">
+      <div className="max-h-[560px] overflow-auto">
         <table className="w-full min-w-[1260px] border-collapse">
-          <thead>
-            <tr className="bg-[#F4F6F9] text-left">
-              <th className="w-[60px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                S No.
-              </th>
-              <th className="w-[265px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                Conference Name
-              </th>
-              <th className="w-[240px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                Subject
-              </th>
-              <th className="w-[120px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                Date
-              </th>
-              <th className="w-[210px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                Venue
-              </th>
-              <th className="w-[150px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                Awards Status
-              </th>
-              <th className="w-[210px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                Participants
-              </th>
-              <th className="w-[130px] px-4 py-4 text-center text-[14px] font-bold text-[#111827]">
-                Download
-              </th>
+          <thead className="sticky top-0 z-20">
+            <tr className="bg-[#F4F6F9] text-left shadow-sm">
+              <th className="w-[60px] px-4 py-4 text-[14px] font-bold text-[#111827]">S No.</th>
+              <th className="w-[265px] px-4 py-4 text-[14px] font-bold text-[#111827]">Conference Name</th>
+              <th className="w-[240px] px-4 py-4 text-[14px] font-bold text-[#111827]">Subject</th>
+              <th className="w-[120px] px-4 py-4 text-[14px] font-bold text-[#111827]">Date</th>
+              <th className="w-[210px] px-4 py-4 text-[14px] font-bold text-[#111827]">Venue</th>
+              <th className="w-[150px] px-4 py-4 text-[14px] font-bold text-[#111827]">Awards Status</th>
+              <th className="w-[210px] px-4 py-4 text-[14px] font-bold text-[#111827]">Participants</th>
+              <th className="w-[130px] px-4 py-4 text-center text-[14px] font-bold text-[#111827]">Download</th>
             </tr>
           </thead>
 
@@ -607,13 +551,11 @@ export default function ApplyForConferencesPage() {
               return (
                 <tr
                   key={`${no}-${name}`}
-                  className={`border-t border-[#D6E0F0] ${
+                  className={`border-t border-[#D6E0F0] transition duration-200 hover:bg-[#FFF8E8] ${
                     index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F8FBFF]"
                   }`}
                 >
-                  <td className="align-top px-4 py-4 text-[15px] font-bold text-[#1B3A6B]">
-                    {no}
-                  </td>
+                  <td className="align-top px-4 py-4 text-[15px] font-bold text-[#1B3A6B]">{no}</td>
 
                   <td className="align-top px-4 py-4">
                     <div className="text-[15px] font-bold leading-[1.5] text-[#111827]">
@@ -635,17 +577,9 @@ export default function ApplyForConferencesPage() {
                     </span>
                   </td>
 
-                  <td className="align-top px-4 py-4 text-[15px] leading-[1.55] text-[#111827]">
-                    {subject}
-                  </td>
-
-                  <td className="align-top px-4 py-4 text-[15px] font-semibold leading-[1.5] text-[#1B3A6B]">
-                    {date}
-                  </td>
-
-                  <td className="align-top px-4 py-4 text-[15px] leading-[1.55] text-[#111827]">
-                    {venue}
-                  </td>
+                  <td className="align-top px-4 py-4 text-[15px] leading-[1.55] text-[#111827]">{subject}</td>
+                  <td className="align-top px-4 py-4 text-[15px] font-semibold leading-[1.5] text-[#1B3A6B]">{date}</td>
+                  <td className="align-top px-4 py-4 text-[15px] leading-[1.55] text-[#111827]">{venue}</td>
 
                   <td className="align-top px-4 py-4">
                     <div className="flex flex-col items-start gap-2">
@@ -656,7 +590,7 @@ export default function ApplyForConferencesPage() {
                       {isScheduled && (
                         <a
                           href="#award-form"
-                          className="inline-flex rounded-full border border-[#C3A6FF] bg-[#F0E9FF] px-3 py-1.5 text-[12px] font-semibold text-[#6633CC]"
+                          className="inline-flex rounded-full border border-[#C3A6FF] bg-[#F0E9FF] px-3 py-1.5 text-[12px] font-semibold text-[#6633CC] hover:bg-[#6633CC] hover:text-white"
                         >
                           Nominate Now
                         </a>
@@ -667,32 +601,20 @@ export default function ApplyForConferencesPage() {
                   <td className="align-top px-4 py-4">
                     {isScheduled ? (
                       <div className="flex flex-col items-start gap-2">
-                        <a
-                          href="#conference-form"
-                          className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC]"
-                        >
+                        <a href="#conference-form" className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC] hover:bg-[#1B3A6B] hover:text-white">
                           Apply as Participant
                         </a>
 
-                        <a
-                          href="#speaker-form"
-                          className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC]"
-                        >
+                        <a href="#speaker-form" className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC] hover:bg-[#1B3A6B] hover:text-white">
                           Apply for Resource Person
                         </a>
 
-                        <a
-                          href="#travel-grant-form"
-                          className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC]"
-                        >
+                        <a href="#travel-grant-form" className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC] hover:bg-[#1B3A6B] hover:text-white">
                           Apply for Travel Grant
                         </a>
                       </div>
                     ) : (
-                      <a
-                        href="#conference-table"
-                        className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-4 py-2 text-[12px] font-semibold text-[#3366CC]"
-                      >
+                      <a href="#conference-table" className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-4 py-2 text-[12px] font-semibold text-[#3366CC]">
                         List of Participants
                       </a>
                     )}
@@ -873,205 +795,305 @@ export default function ApplyForConferencesPage() {
         </div>
       </section>
 
-      <section id="conference-form" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div className="lg:sticky lg:top-8">
-              <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                Apply Online
-              </p>
-              <h2 className="mt-3 text-[34px] font-semibold text-[#1B3A6B]">
-                Conference Application Form
-              </h2>
-              <p className="mt-4 text-[15px] leading-[1.8] text-[#1A1A2E]">
-                Submit your application for upcoming international conferences, participant registration,
-                award nomination, speaker application, travel grant, or academic visit.
-              </p>
-            </div>
+    <section
+  id="conference-form"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-16"
+>
+  <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#F4B400]/20 blur-3xl" />
 
-            <BasicForm
-              title="Apply For Conference"
-              subtitle="Conference Registration"
-              buttonText="Submit Application"
-              status={conferenceStatus}
-              onSubmit={(event) =>
-                submitForm(
-                  event,
-                  setConferenceStatus,
-                  "Your conference application has been prepared successfully."
-                )
-              }
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+      <div className="lg:sticky lg:top-10">
+        <span className="inline-flex rounded-full border border-[#D6E0F0] bg-white/80 px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-[#1B3A6B] shadow-sm backdrop-blur">
+          Apply Online
+        </span>
+
+        <h2 className="mt-5 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
+          Conference Application Form
+        </h2>
+
+        <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+        <p className="mt-6 max-w-[520px] text-[17px] leading-[1.9] text-[#1A1A2E]">
+          Submit your application for upcoming international conferences, participant registration,
+          award nomination, speaker application, travel grant, or academic visit.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+          {[
+            "International Conference Registration",
+            "Speaker / Resource Person Application",
+            "Award Nomination",
+            "Travel Grant / Academic Visit",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 text-[15px] font-semibold text-[#1B3A6B] shadow-sm backdrop-blur"
             >
-              <div className="grid gap-5 md:grid-cols-2">
-                <input required type="text" placeholder="Full Name *" className={inputClass} />
-                <input type="email" placeholder="Email" className={inputClass} />
-              </div>
-              <div className="grid gap-5 md:grid-cols-2">
-                <input type="tel" placeholder="Mobile" className={inputClass} />
-                <select className={inputClass}>
-                  <option>Apply for Conference</option>
-                  <option>Apply as Participant</option>
-                  <option>Apply for Resource Person</option>
-                  <option>Apply for Travel Grant</option>
-                  <option>Apply Academic Visit</option>
-                  <option>Apply for Award</option>
-                </select>
-              </div>
-              <input type="text" placeholder="Designation with Institute" className={inputClass} />
-              <input type="text" placeholder="Conference / Country Preference" className={inputClass} />
-              <input
-                type="file"
-                multiple
-                accept=".doc,.docx,.pdf,.jpg,.png"
-                className={`${inputClass} file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:text-[#FFFFFF]`}
-              />
-              <textarea rows="4" placeholder="Message / Requirement" className={`${inputClass} resize-none`} />
-            </BasicForm>
-          </div>
+              {item}
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
-      <section id="speaker-form" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-2">
-          <BasicForm
-            title="Apply For Speaker / Resource Person"
-            subtitle="Speaker Application"
-            buttonText="Submit Speaker Profile"
-            status={speakerStatus}
-            onSubmit={(event) =>
-              submitForm(
-                event,
-                setSpeakerStatus,
-                "Your speaker/resource person application has been prepared successfully."
-              )
-            }
-          >
-            <input required type="text" placeholder="Speaker Name *" className={inputClass} />
-            <input type="email" placeholder="Email" className={inputClass} />
-            <input type="tel" placeholder="Mobile" className={inputClass} />
-            <input type="text" placeholder="Topic / Expertise" className={inputClass} />
-            <textarea rows="4" placeholder="Speaker Profile" className={`${inputClass} resize-none`} />
-          </BasicForm>
-
-          <BasicForm
-            title="Apply Travel Grant"
-            subtitle="Travel Grant Application"
-            buttonText="Submit Travel Grant"
-            status={travelStatus}
-            onSubmit={(event) =>
-              submitForm(
-                event,
-                setTravelStatus,
-                "Your travel grant application has been prepared successfully."
-              )
-            }
-          >
-            <input required type="text" placeholder="Applicant Name *" className={inputClass} />
-            <input type="email" placeholder="Email" className={inputClass} />
-            <input type="tel" placeholder="Mobile" className={inputClass} />
-            <input type="text" placeholder="City / Country" className={inputClass} />
-            <textarea rows="4" placeholder="Travel Grant Requirement" className={`${inputClass} resize-none`} />
-          </BasicForm>
-        </div>
-      </section>
-
-      <section id="academic-visit-form" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-2">
-          <BasicForm
-            title="Apply Academic Visit"
-            subtitle="Academic Visit Application"
-            buttonText="Submit Academic Visit"
-            status={visitStatus}
-            onSubmit={(event) =>
-              submitForm(
-                event,
-                setVisitStatus,
-                "Your academic visit application has been prepared successfully."
-              )
-            }
-          >
-            <input required type="text" placeholder="Applicant Name *" className={inputClass} />
-            <input type="email" placeholder="Email" className={inputClass} />
-            <input type="tel" placeholder="Mobile" className={inputClass} />
-            <input type="text" placeholder="Preferred Country / University" className={inputClass} />
-            <textarea rows="4" placeholder="Academic Visit Requirement" className={`${inputClass} resize-none`} />
-          </BasicForm>
-
-          <BasicForm
-            title="Apply For Award"
-            subtitle="Award Nomination"
-            buttonText="Submit Award Nomination"
-            status={awardStatus}
-            onSubmit={(event) =>
-              submitForm(
-                event,
-                setAwardStatus,
-                "Your award nomination has been prepared successfully."
-              )
-            }
-          >
-            <input required type="text" placeholder="Applicant Name *" className={inputClass} />
-            <input type="email" placeholder="Email" className={inputClass} />
-            <input type="tel" placeholder="Mobile" className={inputClass} />
-            <input type="text" placeholder="Award Category" className={inputClass} />
-            <textarea rows="4" placeholder="Award Profile / Achievement Details" className={`${inputClass} resize-none`} />
-          </BasicForm>
-        </div>
-      </section>
-
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+      <div className="rounded-[30px] border border-[#D6E0F0] bg-white shadow-[0_28px_80px_rgba(27,58,107,0.18)] overflow-hidden">
+        <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-5">
           <div>
-            <p className="text-[13px] font-normal uppercase tracking-wide text-[#C89B3C]">
-              Keep in Touch with Us
-            </p>
-            <h2 className="mt-3 text-[30px] font-semibold text-[#FFFFFF]">
-              Need conference support?
-            </h2>
-            <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#FFFFFF]">
-              Contact Edwin Incorporation for conference registration, resource person applications, travel grants,
-              academic visits, and award nominations.
-            </p>
-
-            <a
-              href="mailto:care@edwinepc.com"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#C89B3C] px-7 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-            >
-              Email Now
-              <FaArrowRight />
-            </a>
+            <h3 className="text-[26px] font-bold text-white">
+              Upcoming Conference
+            </h3>
+            
           </div>
 
-          <div className="rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-            <div className="grid gap-5">
-              <div className="flex gap-3">
-                <FaMapMarkerAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi 110019
-                </p>
-              </div>
+          <div className="hidden h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[26px] text-[#F4B400] md:flex">
+            ✍
+          </div>
+        </div>
 
-              <div className="flex gap-3">
-                <FaPhoneAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  India : 011-66155019
-                  <br />
-                  Phone: +91 6262752167
-                  <br />
-                  Phone: +12792029553
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaEnvelope className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  care@edwinepc.com
-                </p>
-              </div>
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+          <div className="rounded-[22px] border border-[#D6E0F0] bg-white overflow-hidden">
+            <div className="max-h-[610px] overflow-y-auto overflow-x-hidden">
+              <iframe
+                title="Upcoming Conference Application Form"
+                className="block h-[1080px] w-full border-0"
+                scrolling="auto"
+                src="https://crm.zoho.in/crm/WebFormServeServlet?rid=20f445b7c831f7886bce7a83dde6d4a33de4bf1791f8c9b02eeb574c53d6cb339c94ac3e89bcabfd7404f75b05b92751gidf049ebb99cb38fd6b269cd2ce7562d43c552c9c3105e85d946c9c7ed5833d49c"
+              />
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  id="application-form"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-16"
+>
+  <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#F4B400]/20 blur-3xl" />
+
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+      <div className="rounded-[30px] border border-[#D6E0F0] bg-white shadow-[0_28px_80px_rgba(27,58,107,0.18)] overflow-hidden">
+        <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-5">
+          <div>
+            <h3 className="text-[26px] font-bold text-white">
+              Apply For Academic Visit
+            </h3>
+
+            <p className="mt-1 text-[14px] text-white/75">
+              Complete the application form below. Our team will contact you shortly.
+            </p>
+          </div>
+
+          <div className="hidden h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[26px] text-[#F4B400] md:flex">
+            ✍
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+          <div className="rounded-[22px] border border-[#D6E0F0] bg-white overflow-hidden">
+            <iframe
+              title="Academic Visit Application Form"
+              className="block h-[720px] w-full border-0"
+              scrolling="auto"
+              src="https://crm.zoho.in/crm/WebFormServeServlet?rid=9a8f28248897d24ce72f39ce851095339804da29bb96d7f2fe95d1c37f122270999f8748d158b0c5b333a0e6ff861848gid8f268c553e63db42f40c3e51f82399f803efaed6ecdaed5f34c67dfe81742d9e"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:sticky lg:top-10">
+        <span className="inline-flex rounded-full border border-[#D6E0F0] bg-white/80 px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-[#1B3A6B] shadow-sm backdrop-blur">
+          Apply Online
+        </span>
+
+        <h2 className="mt-5 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
+          Academic Visit Application Form
+        </h2>
+
+        <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+        <p className="mt-6 max-w-[520px] text-[17px] leading-[1.9] text-[#1A1A2E]">
+          Submit your academic visit request, institutional details, accompanying person information,
+          reference details, and required documents through this secure online form.
+        </p>
+
+        <div className="mt-8 grid gap-4">
+          {[
+            "Academic Visit Request",
+            "Institute & Designation Details",
+            "Accommodation Requirement",
+            "Document Upload Support",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 text-[15px] font-semibold text-[#1B3A6B] shadow-sm backdrop-blur"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  id="travel-grant-form"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-14"
+>
+  <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#F4B400]/20 blur-3xl" />
+
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <div className="lg:sticky lg:top-10">
+        <span className="inline-flex rounded-full border border-[#D6E0F0] bg-white/80 px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-[#1B3A6B] shadow-sm backdrop-blur">
+          Apply Online
+        </span>
+
+        <h2 className="mt-5 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
+          Get Travel Grants
+        </h2>
+
+        <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+        <p className="mt-6 max-w-[520px] text-[17px] leading-[1.9] text-[#1A1A2E]">
+          Apply for travel grant support for academic conferences, research visits,
+          paper presentations, institutional programs, and international academic participation.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+          {[
+            "Conference Travel Support",
+            "Research Visit Assistance",
+            "Academic Participation Grant",
+            "Document Upload & Review",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 text-[15px] font-semibold text-[#1B3A6B] shadow-sm backdrop-blur"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="rounded-[30px] border border-[#D6E0F0] bg-white shadow-[0_28px_80px_rgba(27,58,107,0.18)] overflow-hidden">
+        <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-5">
+          <div>
+            <h3 className="text-[26px] font-bold text-white">
+              Travel Grant Application
+            </h3>
+
+            <p className="mt-1 text-[14px] text-white/75">
+              Complete the travel grant form below.
+            </p>
+          </div>
+
+          <div className="hidden h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[26px] text-[#F4B400] md:flex">
+            ✈️
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+          <div className="rounded-[22px] border border-[#D6E0F0] bg-white overflow-hidden">
+            <div className="max-h-[520px] overflow-y-auto overflow-x-hidden">
+              <iframe
+                title="Travel Grant Application Form"
+                className="block h-[940px] w-full border-0"
+                scrolling="auto"
+                src="https://crm.zoho.in/crm/WebFormServeServlet?rid=dadb991ae3c1fd81b43c402591cd9d805d19fd1b3967049954240dfe6b47ab27542826775beaea0de9b1bf2cceb3c8b7gidfd3f97cd840b43fc49c35d521b52c84b42f3fdd178116ca065b52cc88f1b67c8"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  id="award-form"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-14"
+>
+  <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#F4B400]/20 blur-3xl" />
+
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <div className="rounded-[30px] border border-[#D6E0F0] bg-white shadow-[0_28px_80px_rgba(27,58,107,0.18)] overflow-hidden">
+        <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-5">
+          <div>
+            <h3 className="text-[26px] font-bold text-white">
+              Award Application Form
+            </h3>
+
+            <p className="mt-1 text-[14px] text-white/75">
+              Complete the award application form below.
+            </p>
+          </div>
+
+          <div className="hidden h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[26px] text-[#F4B400] md:flex">
+            🏆
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+          <div className="rounded-[22px] border border-[#D6E0F0] bg-white overflow-hidden">
+            <div className="max-h-[520px] overflow-y-auto overflow-x-hidden">
+              <iframe
+                title="Award Application Form"
+                className="block h-[1080px] w-full border-0"
+                scrolling="auto"
+                src="https://crm.zoho.in/crm/WebFormServeServlet?rid=b017f14ce01d6069078d8a476eaa4cd8947c8a3c25340adc11b1feb8c68f7245b227d60c49b68dc3140ffc3e234ea723gidfc49e8a9052a5e4249f555acafb3282e3d61b7459cad821af0751993c1846f38"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:sticky lg:top-10">
+        <span className="inline-flex rounded-full border border-[#D6E0F0] bg-white/80 px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-[#1B3A6B] shadow-sm backdrop-blur">
+          Apply Online
+        </span>
+
+        <h2 className="mt-5 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
+          Apply for Award
+        </h2>
+
+        <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+        <p className="mt-6 max-w-[520px] text-[17px] leading-[1.9] text-[#1A1A2E]">
+          Submit your award nomination or application for academic excellence,
+          research contribution, professional achievement, innovation, and institutional recognition.
+        </p>
+
+        <div className="mt-8 grid gap-4">
+          {[
+            "Academic Excellence Award",
+            "Research Contribution Recognition",
+            "Professional Achievement Award",
+            "Profile & Document Review",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 text-[15px] font-semibold text-[#1B3A6B] shadow-sm backdrop-blur"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+     
 
       <a
         href="https://wa.me/916262752167"

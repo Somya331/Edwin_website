@@ -164,9 +164,8 @@ const HelpForEducation = () => {
                   key={tab}
                   type="button"
                   onClick={() => setActiveTab(tab)}
-                  className={`rounded-[8px] px-5 py-[10px] text-[15px] font-medium ${
-                    activeTab === tab ? "bg-[#1B3A6B] text-[#FFFFFF]" : "border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B]"
-                  }`}
+                  className={`rounded-[8px] px-5 py-[10px] text-[15px] font-medium ${activeTab === tab ? "bg-[#1B3A6B] text-[#FFFFFF]" : "border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B]"
+                    }`}
                 >
                   {tab}
                 </button>
@@ -245,25 +244,6 @@ const HelpForEducation = () => {
         </div>
       </section>
 
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div className="mx-auto max-w-[1200px] text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-          <FaGraduationCap className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Need Educational Guidance?
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Connect with Edwin Incorporation for academic support, research assistance, training programmes and educational consultancy.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+916262752167" className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]">
-              <FaPhoneAlt /> Call Now
-            </a>
-            <a href="mailto:care@edwinepc.com" className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]">
-              <FaEnvelope /> Email Us
-            </a>
-          </div>
-        </motion.div>
-      </section>
 
       <a href="https://wa.me/916262752167" className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:bg-[#C89B3C]">
         <FaWhatsapp />

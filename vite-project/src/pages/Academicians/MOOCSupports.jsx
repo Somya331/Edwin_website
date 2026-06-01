@@ -16,6 +16,7 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaPlayCircle,
+  FaFileSignature,
   FaRocket,
   FaSchool,
   FaStar,
@@ -635,403 +636,76 @@ export default function MoocSupportPage() {
               </div>
             </div>
 
-            <div className="rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-              <form onSubmit={handleStudentSubmit} className="grid gap-6">
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Select Your Location <span className="text-[#C0392B]">*</span>
-                  </label>
-                  <select
-                    required
-                    className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 focus:border-[#1B3A6B]"
-                  >
-                    <option value="">-None-</option>
-                    <option>India</option>
-                    <option>Other Country</option>
-                    <option>Mobile Number</option>
-                  </select>
-                </div>
+            
+            {/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
+  <div className="max-w-5xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+      
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Last Name <span className="text-[#C0392B]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+        Edwin Online Professional Accredited Certifications
+      </h2>
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Mobile
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                    <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                      Do not use 0 (zero) as the initial digit
-                    </p>
-                  </div>
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
+      
+    </motion.div>
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Course Type
-                    </label>
-                    <select className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 focus:border-[#1B3A6B]">
-                      <option value="">Select course</option>
-                      {courseTypes.map((type) => (
-                        <option key={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Qualification
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Enter qualification"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">Application Form</h3>
+          
+        </div>
 
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Upload Document
-                  </label>
-                  <input
-                    type="file"
-                    multiple
-                    accept=".doc,.docx,.pdf,.jpg,.jpeg,.png"
-                    className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                  />
-                </div>
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
 
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Message / Requirement
-                  </label>
-                  <textarea
-                    rows="4"
-                    placeholder="Write your MOOC learning requirement"
-                    className="w-full resize-none rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <button
-                    type="submit"
-                    className="rounded-full bg-[#1B3A6B] px-8 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-                  >
-                    Submit
-                  </button>
-
-                  <button
-                    type="reset"
-                    className="rounded-full border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-3 text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-                  >
-                    Reset
-                  </button>
-                </div>
-
-                {studentStatus && (
-                  <p className="rounded-[12px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {studentStatus}
-                  </p>
-                )}
-              </form>
-            </div>
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=51496e8467522a508ca49294a61785e3c2517596e46921b93054b514805a1660cfdbd1bbfa28501b68a509697e44dd66gid41caee201d162c9da439879c6adebc3f0ca91b6eb556f0139c3f01799d60d6cc"
+            width="100%"
+            height="500"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
           </div>
         </div>
       </section>
 
-      <section id="creator-form" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-            <div className="rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-              <form onSubmit={handleCreatorSubmit} className="grid gap-6">
-                <div>
-                  <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                    Register as Course Creator
-                  </p>
-
-                  <h2 className="mt-3 text-[30px] font-semibold text-[#1B3A6B]">
-                    Become Course Creator
-                  </h2>
-
-                  <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Register and create your course through Edwin Incorporation online
-                    education learning platform.
-                  </p>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Full Name <span className="text-[#C0392B]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Mobile
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Course Topic
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Enter course topic"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Course Description
-                  </label>
-                  <textarea
-                    rows="5"
-                    placeholder="Write course description"
-                    className="w-full resize-none rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Upload Profile / Course File
-                  </label>
-                  <input
-                    type="file"
-                    multiple
-                    accept=".doc,.docx,.pdf,.ppt,.pptx"
-                    className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <button
-                    type="submit"
-                    className="rounded-full bg-[#1B3A6B] px-8 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-                  >
-                    Register as Course Creator
-                  </button>
-
-                  <button
-                    type="reset"
-                    className="rounded-full border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-3 text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-                  >
-                    Reset
-                  </button>
-                </div>
-
-                {creatorStatus && (
-                  <p className="rounded-[12px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {creatorStatus}
-                  </p>
-                )}
-              </form>
-            </div>
-
-            <div className="lg:sticky lg:top-8">
-              <div className="overflow-hidden rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-                <img
-                  src={creatorImage}
-                  alt="Course creator registration"
-                  className="h-[380px] w-full object-cover"
-                />
-
-                <div className="p-6">
-                  <h3 className="text-[20px] font-semibold text-[#1A1A2E]">
-                    Create Your Course
-                  </h3>
-                  <p className="mt-3 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Course creators can get registered and create their courses through
-                    Edwin Online Education Learning Course support.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="institution-form" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <div className="lg:sticky lg:top-8">
-              <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                University or Colleges
-              </p>
-
-              <h2 className="mt-3 text-[30px] font-semibold text-[#1B3A6B]">
-                Online Platform University or Colleges
-              </h2>
-
-              <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                Apply for online platform support for universities and colleges.
-              </p>
-
-              <div className="mt-8 overflow-hidden rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-                <img
-                  src={institutionImage}
-                  alt="University online platform"
-                  className="h-[300px] w-full object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-              <form onSubmit={handleInstitutionSubmit} className="grid gap-6">
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Institution Name <span className="text-[#C0392B]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Contact Person
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Mobile
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Requirement
-                  </label>
-                  <textarea
-                    rows="5"
-                    placeholder="Write your university or college online platform requirement"
-                    className="w-full resize-none rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <button
-                    type="submit"
-                    className="rounded-full bg-[#1B3A6B] px-8 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-                  >
-                    Submit
-                  </button>
-
-                  <button
-                    type="reset"
-                    className="rounded-full border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-3 text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-                  >
-                    Reset
-                  </button>
-                </div>
-
-                {institutionStatus && (
-                  <p className="rounded-[12px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {institutionStatus}
-                  </p>
-                )}
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-     
-
-      <a
-        href="https://wa.me/916262752167"
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:bg-[#C89B3C]"
-        aria-label="Chat on WhatsApp"
-      >
-        <FaWhatsapp className="text-2xl" />
-      </a>
-    </div>
+   </div>
   );
 }

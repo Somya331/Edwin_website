@@ -6,20 +6,19 @@ import {
   FaBookOpen,
   FaCheckCircle,
   FaEnvelope,
+  FaFileSignature,
   FaGraduationCap,
   FaPhoneAlt,
   FaQuoteLeft,
   FaSchool,
   FaStar,
   FaUniversity,
-  FaUpload,
   FaUserGraduate,
   FaWhatsapp,
 } from "react-icons/fa";
 
 const AdmissionServices = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [activeForm, setActiveForm] = useState("freeDegree");
 
   useEffect(() => {
     const link = document.createElement("link");
@@ -63,7 +62,7 @@ const AdmissionServices = () => {
 
   const admissionCards = [
     {
-      title: "Foreign Universities",
+      title: "Foreign Universities ",
       image:
         "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
     },
@@ -154,15 +153,6 @@ const AdmissionServices = () => {
     },
   ];
 
-  const formFields = [
-    "Select Area(ex-Science,Arts ,Commerce)",
-    "First Name",
-    "Last Name *",
-    "Email *",
-    "Mobile *",
-    "Designation / Qualification",
-  ];
-
   const fadeUp = {
     hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0 },
@@ -179,9 +169,8 @@ const AdmissionServices = () => {
           {slides.map((slide, index) => (
             <div
               key={slide.title}
-              className={`absolute inset-0 transition duration-200 ${
-                index === activeSlide ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 transition duration-200 ${index === activeSlide ? "opacity-100" : "opacity-0"
+                }`}
             >
               <img
                 src={slide.image}
@@ -246,17 +235,20 @@ const AdmissionServices = () => {
             </p>
 
             <div className="grid gap-4 md:grid-cols-2">
-              {["Foreign Universities", "Indian Universities", "Free Degree", "Diploma"].map(
-                (item) => (
-                  <div
-                    key={item}
-                    className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-5 transition duration-200 hover:border-[#C89B3C]"
-                  >
-                    <FaCheckCircle className="mb-3 text-[20px] text-[#2D7A4F]" />
-                    <p className="text-[15px] font-medium">{item}</p>
-                  </div>
-                )
-              )}
+              {[
+                "Foreign Universities",
+                "Indian Universities",
+                "Free Degree",
+                "Diploma",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-5 transition duration-200 hover:border-[#C89B3C]"
+                >
+                  <FaCheckCircle className="mb-3 text-[20px] text-[#2D7A4F]" />
+                  <p className="text-[15px] font-medium">{item}</p>
+                </div>
+              ))}
             </div>
 
             <div className="mt-6 flex items-center justify-between">
@@ -265,9 +257,8 @@ const AdmissionServices = () => {
                   <button
                     key={slide.title}
                     onClick={() => setActiveSlide(index)}
-                    className={`h-3 w-3 rounded-full border border-[#1B3A6B] transition duration-200 ${
-                      index === activeSlide ? "bg-[#C89B3C]" : "bg-[#FFFFFF]"
-                    }`}
+                    className={`h-3 w-3 rounded-full border border-[#1B3A6B] transition duration-200 ${index === activeSlide ? "bg-[#C89B3C]" : "bg-[#FFFFFF]"
+                      }`}
                   />
                 ))}
               </div>
@@ -443,7 +434,7 @@ const AdmissionServices = () => {
       </section>
 
       <section id="apply" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] items-start gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="mx-auto grid max-w-[1300px] items-start gap-10 lg:grid-cols-[0.6fr_1.4fr]">
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -487,108 +478,51 @@ const AdmissionServices = () => {
             </div>
           </motion.div>
 
-          <motion.form
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
-            className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+            className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden w-full max-w-[950px] mx-auto relative"
           >
-            <div className="mb-6 flex flex-wrap gap-3">
-              <button
-                type="button"
-                onClick={() => setActiveForm("freeDegree")}
-                className={`rounded-[8px] px-5 py-[10px] text-[15px] font-medium transition duration-200 ${
-                  activeForm === "freeDegree"
-                    ? "bg-[#1B3A6B] text-[#FFFFFF]"
-                    : "border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B] hover:bg-[#EAF1FB]"
-                }`}
-              >
-                Apply For Free Degree Programme
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveForm("admission")}
-                className={`rounded-[8px] px-5 py-[10px] text-[15px] font-medium transition duration-200 ${
-                  activeForm === "admission"
-                    ? "bg-[#1B3A6B] text-[#FFFFFF]"
-                    : "border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B] hover:bg-[#EAF1FB]"
-                }`}
-              >
-                Admission Higher Studies
-              </button>
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+              <div>
+                <h3 className="text-white text-lg font-bold">
+                  Admission Application Form
+                </h3>
+                <p className="text-white/75 text-sm mt-1">
+                  Fill all required details carefully
+                </p>
+              </div>
+
+              <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-xl" />
+              </div>
             </div>
 
-            <h3 className="mb-8 text-[18px] font-semibold text-[#1A1A2E]">
-              {activeForm === "freeDegree"
-                ? "Apply For Free Degree Programme"
-                : "Admission Higher Studies"}
-            </h3>
-
-            <div className="mb-5">
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Select Your Location
-              </label>
-              <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                <option>-None-</option>
-                <option>India</option>
-                <option>Foreign</option>
-              </select>
-              <p className="mt-2 text-[13px] text-[#5A6A85]">
-                Select Your Country
-              </p>
+            <div className="relative w-full bg-white p-3">
+              <div className="rounded-[18px] border border-[#D6E0F0] overflow-x-auto bg-white shadow-inner flex justify-center">
+                <iframe
+                  title="Zoho CRM Web Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=d6d80a9e1b20660e52bfd153f4f4b521033147dd326e5ffc260e1f9f9c7033d9dea7267b300f32db7d9a3080ae01bca1gidf815c616118be556b1556cabbbb64e3b8c65a89f77904eb705a07fd2d5502e81"
+                  width="910"
+                  height="560"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    width: "910px",
+                    maxWidth: "100%",
+                    display: "block",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
             </div>
-
-            <div className="mb-5">
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Select Course -for Study
-              </label>
-              <select
-                multiple
-                className="h-[100px] w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]"
-              >
-                <option>Ph.D (All Discipline )</option>
-                <option>Post Doctoral (All Discipline )</option>
-                <option>MBA</option>
-                <option>Diploma and Certificate Programme</option>
-                <option>Distance Degree Programme</option>
-                <option>Free Degree Programme</option>
-              </select>
-            </div>
-
-            <div className="grid gap-5 md:grid-cols-2">
-              {formFields.map((label) => (
-                <div key={label}>
-                  <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                    {label}
-                  </label>
-                  <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6">
-              <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                <input type="checkbox" /> Terms & Condition * Read
-              </label>
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit <FaUpload />
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                Reset
-              </button>
-            </div>
-          </motion.form>
+          </motion.div>
         </div>
       </section>
 
@@ -666,41 +600,6 @@ const AdmissionServices = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1200px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-        >
-          <FaGraduationCap className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Need Admission Support?
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for admission services, free degree
-            programme, distance degree programme, diploma, certificate, Ph.D,
-            and higher studies guidance.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-            <a
-              href="tel:+916262752167"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaPhoneAlt /> +91 6262752167
-            </a>
-          </div>
-        </motion.div>
       </section>
 
       <a

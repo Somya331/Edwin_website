@@ -4,9 +4,9 @@ import {
   FaArrowLeft,
   FaArrowRight,
   FaBusAlt,
-  FaCalendarAlt,
   FaCheckCircle,
   FaEnvelope,
+  FaFileSignature,
   FaGlobeAsia,
   FaGraduationCap,
   FaMapMarkedAlt,
@@ -14,15 +14,11 @@ import {
   FaPlaneDeparture,
   FaQuoteLeft,
   FaStar,
-  FaUniversity,
-  FaUpload,
-  FaUsers,
-  FaWhatsapp,
 } from "react-icons/fa";
 
 const EducationalTours = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [activeCategory, setActiveCategory] = useState("delhi");
+  const [activeCategory, setActiveCategory] = useState("travel");
 
   useEffect(() => {
     const link = document.createElement("link");
@@ -84,24 +80,6 @@ const EducationalTours = () => {
     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=700&q=80",
   ];
 
-  const travelFields = [
-    "Name of Participant",
-    "Last Name *",
-    "Name of College of University",
-    "Email *",
-    "Mobile *",
-    "Select Conference",
-  ];
-
-  const delhiFields = [
-    "Name",
-    "Last Name *",
-    "Email *",
-    "Mobile *",
-    "Institute / School / College Name",
-    "Number of Participants",
-  ];
-
   const benefits = [
     "Educational Tours in India and Foreign",
     "Industrial Visit in India and Foreign",
@@ -126,6 +104,13 @@ const EducationalTours = () => {
     },
   ];
 
+  const formLinks = {
+    travel:
+      "https://crm.zoho.in/crm/WebFormServeServlet?rid=2f863ab3466466178ebae319aaf7b0f269387a29242d8405aa8909088f5e85920d157b56b1313fffd286e546cc122a72gided38a7bcffcd85ddcbea9d4f55a970265b0daa75184b3c2aaf3678059513dfad",
+    delhi:
+      "https://crm.zoho.in/crm/WebFormServeServlet?rid=f1420ee806ce233e55e99be6778f3e3015a7f215bbaa689ad0f606b7b47f551cd97947a230f4a1088883504de1588f3fgid4d7fc7126b8a0ed7f4bb013865c714ef13fa99aa6a62993d8879cb8d50a73793",
+  };
+
   const fadeUp = {
     hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0 },
@@ -134,8 +119,6 @@ const EducationalTours = () => {
   const nextSlide = () => setActiveSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
     setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
-
-  const currentFields = activeCategory === "delhi" ? delhiFields : travelFields;
 
   return (
     <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
@@ -403,7 +386,10 @@ const EducationalTours = () => {
         </div>
       </section>
 
-      <section id="apply" className="bg-[#FFFFFF] px-5 py-20">
+      <section
+        id="apply"
+        className="relative bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] px-5 py-20"
+      >
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -413,11 +399,17 @@ const EducationalTours = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D6E0F0] bg-white px-5 py-2 text-[14px] font-semibold text-[#1B3A6B] shadow-sm">
+              <FaFileSignature />
+              Application Form
+            </div>
+
+            <h2 className="mb-4 text-[34px] font-bold text-[#1B3A6B]">
               Education Tours Application
             </h2>
-            <p className="mx-auto max-w-3xl text-[15px] leading-[1.7]">
-              Fill the form for Travel_Grant or Delhi Tours registration.
+            <p className="mx-auto max-w-3xl text-[15px] leading-[1.7] text-[#5A6A85]">
+              Select the application type and submit your details through the
+              official form below.
             </p>
           </motion.div>
 
@@ -431,7 +423,7 @@ const EducationalTours = () => {
                   : "border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B] hover:bg-[#EAF1FB]"
               }`}
             >
-              Travel_Grant
+              Travel Grant
             </button>
             <button
               type="button"
@@ -446,31 +438,32 @@ const EducationalTours = () => {
             </button>
           </div>
 
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
             <motion.div
-              key={activeCategory}
+              key={`${activeCategory}-info`}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.4 }}
-              className="rounded-[12px] border border-[#D6E0F0] bg-[#1B3A6B] p-6 text-[#FFFFFF]"
+              className="rounded-[20px] border border-[#D6E0F0] bg-[#1B3A6B] p-7 text-[#FFFFFF] shadow-xl"
             >
               <FaMapMarkedAlt className="mb-5 text-[42px] text-[#C89B3C]" />
               <h3 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
                 {activeCategory === "delhi"
                   ? "Yatra Registration - Delhi Flight 13-14 Nov"
-                  : "Travel_Grant"}
+                  : "Travel Grant Application"}
               </h3>
               <p className="mb-6 text-[15px] leading-[1.7] text-[#FFFFFF]">
                 {activeCategory === "delhi"
                   ? "Submit your details for Delhi Tours 13-14 November 2025 registration and travel support."
                   : "Submit your details for educational tour, industrial visit and travel grant support."}
               </p>
+
               <div className="space-y-4">
                 {[
-                  "Select Country",
-                  "Participant Details",
-                  "Terms & Condition",
+                  "Official Zoho CRM form",
+                  "Secure application submission",
+                  "Team will contact after review",
                 ].map((item) => (
                   <div
                     key={item}
@@ -483,80 +476,46 @@ const EducationalTours = () => {
               </div>
             </motion.div>
 
-            <motion.form
-              key={`${activeCategory}-form`}
+            <motion.div
+              key={`${activeCategory}-iframe`}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.4 }}
-              className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+              className="overflow-hidden rounded-[24px] border border-[#D6E0F0] bg-white shadow-xl"
             >
-              <h3 className="mb-8 text-[18px] font-semibold text-[#1A1A2E]">
-                {activeCategory === "delhi"
-                  ? "Yatra Registration - Delhi Flight 13-14 Nov"
-                  : "Travel_Grant"}
-              </h3>
-
-              <div className="mb-5">
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
+              <div className="bg-gradient-to-r from-[#1B3A6B] to-[#2C5F8A] px-6 py-4">
+                <h3 className="text-xl font-bold text-white">
                   {activeCategory === "delhi"
-                    ? "Select Country"
-                    : "Select Your Location"}
-                </label>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>Foreign</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  {activeCategory === "delhi"
-                    ? "Select your travel country"
-                    : "Select Your Country"}
-                </p>
+                    ? "Delhi Tour Application Form"
+                    : "Travel Grant Application Form"}
+                </h3>
               </div>
 
-              <div className="grid gap-5 md:grid-cols-2">
-                {currentFields.map((label) => (
-                  <div key={label}>
-                    <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                      {label}
-                    </label>
-                    {label === "Select Conference" ? (
-                      <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                        <option>-None-</option>
-                        <option>Educational Tours in India</option>
-                        <option>Educational Tours in Foreign</option>
-                        <option>Industrial Visit in India</option>
-                        <option>Industrial Visit for Foreign</option>
-                      </select>
-                    ) : (
-                      <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-                    )}
-                  </div>
-                ))}
+              <div className="flex w-full justify-center bg-white">
+                <iframe
+                  title={
+                    activeCategory === "delhi"
+                      ? "Delhi Tour Zoho Form"
+                      : "Travel Grant Zoho Form"
+                  }
+                  src={
+                    activeCategory === "delhi"
+                      ? formLinks.delhi
+                      : formLinks.travel
+                  }
+                  width={activeCategory === "delhi" ? "610" : "910"}
+                  height={activeCategory === "delhi" ? "590" : "560"}
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    maxWidth: "100%",
+                    display: "block",
+                  }}
+                />
               </div>
-
-              <div className="mt-6">
-                <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                  <input type="checkbox" /> Terms & Condition * Read
-                </label>
-              </div>
-
-              <div className="mt-6 flex gap-4">
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-                >
-                  Submit <FaUpload />
-                </button>
-                <button
-                  type="reset"
-                  className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
-                >
-                  Reset
-                </button>
-              </div>
-            </motion.form>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -636,47 +595,6 @@ const EducationalTours = () => {
           </div>
         </div>
       </section>
-
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1200px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-        >
-          <FaGlobeAsia className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Need Educational Tour Support?
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for educational tours, industrial visits,
-            Delhi tours, travel grant, foreign tours and student visit support.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-            <a
-              href="tel:+916262752166"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaPhoneAlt /> 6262752166
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
-      <a
-        href="https://wa.me/916262752166"
-        className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:bg-[#C89B3C]"
-      >
-        <FaWhatsapp />
-      </a>
     </main>
   );
 };

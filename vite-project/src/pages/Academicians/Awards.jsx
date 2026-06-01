@@ -554,409 +554,302 @@ export default function ApplyForAwardPage() {
         </div>
       </section>
 
-<section className="bg-[#EAF1FB] px-4 py-16 lg:px-8">
-  <div className="mx-auto max-w-[1500px]">
-    <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-      <div>
-        <p className="text-[13px] uppercase tracking-wide text-[#5A6A85]">
-          Award Records
-        </p>
-        <h2 className="mt-2 text-[32px] font-semibold text-[#1B3A6B]">
-          Winners Details Report
-        </h2>
+<section
+  id="award-winners-report"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-10"
+>
+  <div className="absolute left-0 top-0 h-60 w-60 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#F4B400]/20 blur-3xl" />
+
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="mb-6 text-center">
+      <h2 className="text-[34px] font-bold leading-tight text-[#1B3A6B] md:text-[44px]">
+        Winners Details Report
+      </h2>
+
+      <div className="mx-auto mt-4 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+      <p className="mx-auto mt-4 max-w-[720px] text-[16px] leading-[1.7] text-[#1A1A2E]">
+        View award winner records, winner details, recognition information, and related award
+        data through the live Zoho Creator report.
+      </p>
+    </div>
+
+    <div className="rounded-[28px] border border-[#D6E0F0] bg-white shadow-[0_24px_70px_rgba(27,58,107,0.16)] overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-6 md:px-8 py-4">
+        <div className="absolute inset-0 opacity-15 bg-[linear-gradient(135deg,transparent_25%,rgba(255,255,255,0.22)_25%,rgba(255,255,255,0.22)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.22)_75%)] bg-[length:22px_22px]" />
+
+        <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h3 className="text-white text-xl md:text-2xl font-bold">
+              Award Winners Report
+            </h3>
+            <p className="text-white/75 text-sm mt-1">
+              Live Zoho Creator embedded report
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold">
+              Live Data
+            </span>
+            <div className="hidden md:flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[24px] text-[#F4B400]">
+              🏆
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="flex gap-2">
-        <button className="flex h-10 w-10 items-center justify-center border border-[#D6E0F0] bg-[#FFFFFF] text-[#1B3A6B]">
-          <FaSearch />
-        </button>
-        <button className="flex h-10 w-10 items-center justify-center bg-[#C89B3C] text-[#FFFFFF]">
-          <FaPlus />
-        </button>
-        <button className="flex h-10 w-10 items-center justify-center border border-[#D6E0F0] bg-[#FFFFFF] text-[#1B3A6B]">
-          <FaBars />
-        </button>
+      <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+        <div className="rounded-[22px] bg-white border border-[#D6E0F0] shadow-inner overflow-hidden">
+          <iframe
+            title="Award Winners Details Report"
+            className="w-full h-[560px] border-0 block"
+            scrolling="auto"
+            src="https://creatorapp.zohopublic.in/edwininc/award-winner/report-embed/Winners_Details_Report/Qs4UPyEjE40m70wbAQv9rnxgu0BzunUAtqqZbNsqt9v5Nq9Kk9wuzbUJKT7keuuZgAJAfSXY8Mmg5U37pvBMTfZ83aDk2XZTwW7F"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section id="conference-table" className="bg-[#FFFFFF] px-4 py-14 lg:px-8">
+  <div className="mx-auto max-w-[1500px]">
+    <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
+          Conferences - 2026-27
+        </p>
+
+        <h2 className="mt-3 text-[32px] font-semibold text-[#1B3A6B]">
+          International Conferences
+        </h2>
+
+        <p className="mt-3 max-w-2xl text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
+          Upcoming and previous conferences with subject, date, venue, awards status,
+          participants, and brochure download.
+        </p>
+      </div>
+
+      <div className="relative">
+        <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5A6A85]" />
+        <input
+          type="text"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+          placeholder="Search conference..."
+          className="w-full rounded-full border border-[#D6E0F0] bg-[#FFFFFF] py-3 pl-11 pr-4 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B] sm:w-[360px]"
+        />
       </div>
     </div>
 
-    <div className="overflow-hidden rounded-[18px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[1100px] border-collapse">
-          <thead>
-            <tr className="bg-[#F8FBFF] text-left">
-              <th className="w-[55px] px-4 py-4 text-[14px] font-bold text-[#1A1A2E]">
-                <FaEye />
-              </th>
-              <th className="w-[300px] px-4 py-4 text-[14px] font-bold text-[#1A1A2E]">
-                Name
-              </th>
-              <th className="px-4 py-4 text-[14px] font-bold text-[#1A1A2E]">
-                Designation
-              </th>
-              <th className="w-[360px] px-4 py-4 text-[14px] font-bold text-[#1A1A2E]">
-                Award Name
-              </th>
+    <div className="overflow-hidden rounded-[24px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_18px_50px_rgba(27,58,107,0.12)]">
+      <div className="max-h-[560px] overflow-auto">
+        <table className="w-full min-w-[1260px] border-collapse">
+          <thead className="sticky top-0 z-20">
+            <tr className="bg-[#F4F6F9] text-left shadow-sm">
+              <th className="w-[60px] px-4 py-4 text-[14px] font-bold text-[#111827]">S No.</th>
+              <th className="w-[265px] px-4 py-4 text-[14px] font-bold text-[#111827]">Conference Name</th>
+              <th className="w-[240px] px-4 py-4 text-[14px] font-bold text-[#111827]">Subject</th>
+              <th className="w-[120px] px-4 py-4 text-[14px] font-bold text-[#111827]">Date</th>
+              <th className="w-[210px] px-4 py-4 text-[14px] font-bold text-[#111827]">Venue</th>
+              <th className="w-[150px] px-4 py-4 text-[14px] font-bold text-[#111827]">Awards Status</th>
+              <th className="w-[210px] px-4 py-4 text-[14px] font-bold text-[#111827]">Participants</th>
+              <th className="w-[130px] px-4 py-4 text-center text-[14px] font-bold text-[#111827]">Download</th>
             </tr>
           </thead>
 
           <tbody>
-            {winnerDetails.map((item, index) => (
-              <tr
-                key={index}
-                className="border-t border-[#D6E0F0] transition duration-200 hover:bg-[#EAF1FB]"
-              >
-                <td className="px-4 py-4 align-top">
-                  <input type="checkbox" className="h-4 w-4" />
-                </td>
-                <td className="px-4 py-4 align-top text-[14px] font-semibold leading-[1.6] text-[#1A1A2E]">
-                  {item.name}
-                </td>
-                <td className="px-4 py-4 align-top text-[14px] leading-[1.7] text-[#1A1A2E]">
-                  {item.designation || "-"}
-                </td>
-                <td className="px-4 py-4 align-top text-[14px] font-medium leading-[1.6] text-[#1A1A2E]">
-                  {item.award || "-"}
-                </td>
-              </tr>
-            ))}
+            {filteredConferences.map((item, index) => {
+              const [no, name, badge, association, subject, date, venue, status, download] = item;
+              const isScheduled = status === "Scheduled";
+
+              return (
+                <tr
+                  key={`${no}-${name}`}
+                  className={`border-t border-[#D6E0F0] transition duration-200 hover:bg-[#FFF8E8] ${
+                    index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F8FBFF]"
+                  }`}
+                >
+                  <td className="align-top px-4 py-4 text-[15px] font-bold text-[#1B3A6B]">{no}</td>
+
+                  <td className="align-top px-4 py-4">
+                    <div className="text-[15px] font-bold leading-[1.5] text-[#111827]">
+                      {name}
+                      {badge === "NEW" && (
+                        <span className="ml-2 inline-flex rounded-full bg-gradient-to-r from-[#13C2C2] to-[#1677FF] px-2 py-1 text-[9px] font-bold uppercase text-[#FFFFFF]">
+                          NEW
+                        </span>
+                      )}
+                      {badge === "Scheduled" && (
+                        <span className="ml-2 inline-flex rounded-full bg-[#F0F0F0] px-2 py-1 text-[10px] font-bold text-[#444444]">
+                          Scheduled
+                        </span>
+                      )}
+                    </div>
+
+                    <span className="mt-2 block text-[12px] italic leading-[1.5] text-[#5A6A85]">
+                      {association}
+                    </span>
+                  </td>
+
+                  <td className="align-top px-4 py-4 text-[15px] leading-[1.55] text-[#111827]">{subject}</td>
+                  <td className="align-top px-4 py-4 text-[15px] font-semibold leading-[1.5] text-[#1B3A6B]">{date}</td>
+                  <td className="align-top px-4 py-4 text-[15px] leading-[1.55] text-[#111827]">{venue}</td>
+
+                  <td className="align-top px-4 py-4">
+                    <div className="flex flex-col items-start gap-2">
+                      <span className="inline-flex rounded-full bg-[#F0F0F0] px-3 py-1.5 text-[12px] font-semibold text-[#555555]">
+                        {status}
+                      </span>
+
+                      {isScheduled && (
+                        <a
+                          href="#award-form"
+                          className="inline-flex rounded-full border border-[#C3A6FF] bg-[#F0E9FF] px-3 py-1.5 text-[12px] font-semibold text-[#6633CC] hover:bg-[#6633CC] hover:text-white"
+                        >
+                          Nominate Now
+                        </a>
+                      )}
+                    </div>
+                  </td>
+
+                  <td className="align-top px-4 py-4">
+                    {isScheduled ? (
+                      <div className="flex flex-col items-start gap-2">
+                        <a href="#conference-form" className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC] hover:bg-[#1B3A6B] hover:text-white">
+                          Apply as Participant
+                        </a>
+
+                        <a href="#speaker-form" className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC] hover:bg-[#1B3A6B] hover:text-white">
+                          Apply for Resource Person
+                        </a>
+
+                        <a href="#travel-grant-form" className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC] hover:bg-[#1B3A6B] hover:text-white">
+                          Apply for Travel Grant
+                        </a>
+                      </div>
+                    ) : (
+                      <a href="#conference-table" className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-4 py-2 text-[12px] font-semibold text-[#3366CC]">
+                        List of Participants
+                      </a>
+                    )}
+                  </td>
+
+                  <td className="align-top px-4 py-4 text-center">
+                    <a
+                      href={download === "Download" ? "#" : download}
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-[#F0C6A0] bg-[#FDF0E9] px-4 py-2 text-[12px] font-bold text-[#CC5200] transition duration-200 hover:bg-[#C89B3C] hover:text-[#FFFFFF]"
+                    >
+                      <FaDownload className="text-[12px]" />
+                      Download
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
 
       <div className="border-t border-[#D6E0F0] bg-[#FFFFFF] px-5 py-4">
-        <p className="text-[13px] font-semibold text-[#1A1A2E]">
-          Showing 490 of 490
+        <p className="text-[13px] font-normal text-[#5A6A85]">
+          Showing {filteredConferences.length} conference records
         </p>
       </div>
     </div>
   </div>
 </section>
 
-      <section id="award-table" className="bg-[#FFFFFF] px-4 py-16 lg:px-8">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                Year-Wise Award Ceremonies and Programs
-              </p>
-
-              <h2 className="mt-3 text-[32px] font-semibold text-[#1B3A6B]">
-                International Conferences
-              </h2>
-
-              <p className="mt-3 max-w-2xl text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                Award ceremonies are organized with international conferences. View
-                schedule, venue, nomination status, participants, and brochure download.
-              </p>
-            </div>
-
-            <div className="relative">
-              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5A6A85]" />
-              <input
-                type="text"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search award ceremony..."
-                className="w-full rounded-full border border-[#D6E0F0] bg-[#FFFFFF] py-3 pl-11 pr-4 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#A0AEC0] focus:border-[#1B3A6B] sm:w-[360px]"
-              />
-            </div>
-          </div>
-
-          <div className="overflow-hidden rounded-[18px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[1260px] border-collapse">
-                <thead>
-                  <tr className="bg-[#F4F6F9] text-left">
-                    <th className="w-[60px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                      S No.
-                    </th>
-                    <th className="w-[265px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                      Conference Name
-                    </th>
-                    <th className="w-[240px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                      Subject
-                    </th>
-                    <th className="w-[120px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                      Date
-                    </th>
-                    <th className="w-[210px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                      Venue
-                    </th>
-                    <th className="w-[150px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                      Awards Status
-                    </th>
-                    <th className="w-[210px] px-4 py-4 text-[14px] font-bold text-[#111827]">
-                      Participants
-                    </th>
-                    <th className="w-[130px] px-4 py-4 text-center text-[14px] font-bold text-[#111827]">
-                      <a
-                        href={actionLinks.venueDetails}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center justify-center rounded-full border border-[#F0C6A0] bg-[#FDF0E9] px-4 py-2 text-[12px] font-bold text-[#CC5200] transition duration-200 hover:bg-[#C89B3C] hover:text-[#FFFFFF]"
-                      >
-                        Download
-                      </a>
-                    </th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {filteredConferences.map((item, index) => {
-                    const [
-                      no,
-                      name,
-                      badge,
-                      association,
-                      subject,
-                      date,
-                      venue,
-                      status,
-                      download,
-                    ] = item;
-
-                    const isScheduled = status === "Scheduled";
-                    const statusLink = getStatusLink(no);
-                    const downloadLink = getDownloadLink(no, download);
-
-                    return (
-                      <tr
-                        key={`${no}-${name}`}
-                        className={`border-t border-[#D6E0F0] ${
-                          index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F8FBFF]"
-                        }`}
-                      >
-                        <td className="align-top px-4 py-4 text-[15px] font-bold text-[#1B3A6B]">
-                          {no}
-                        </td>
-
-                        <td className="align-top px-4 py-4">
-                          <div className="text-[15px] font-bold leading-[1.5] text-[#111827]">
-                            {name}
-
-                            {badge === "NEW" && (
-                              <span className="ml-2 inline-flex rounded-full bg-gradient-to-r from-[#13C2C2] to-[#1677FF] px-2 py-1 text-[9px] font-bold uppercase text-[#FFFFFF]">
-                                NEW
-                              </span>
-                            )}
-
-                            {badge === "Scheduled" && (
-                              <a
-                                href={statusLink || "#"}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="ml-2 inline-flex rounded-full bg-[#F0F0F0] px-2 py-1 text-[10px] font-bold text-[#444444]"
-                              >
-                                Scheduled
-                              </a>
-                            )}
-                          </div>
-
-                          <span className="mt-2 block text-[12px] italic leading-[1.5] text-[#5A6A85]">
-                            {association}
-                          </span>
-                        </td>
-
-                        <td className="align-top px-4 py-4 text-[15px] leading-[1.55] text-[#111827]">
-                          {subject}
-                        </td>
-
-                        <td className="align-top px-4 py-4 text-[15px] font-semibold leading-[1.5] text-[#1B3A6B]">
-                          {date}
-                        </td>
-
-                        <td className="align-top px-4 py-4 text-[15px] leading-[1.55] text-[#111827]">
-                          {venue}
-                        </td>
-
-                        <td className="align-top px-4 py-4">
-                          <div className="flex flex-col items-start gap-2">
-                            {isScheduled ? (
-                              statusLink ? (
-                                <a
-                                  href={statusLink}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="inline-flex rounded-full bg-[#F0F0F0] px-3 py-1.5 text-[12px] font-semibold text-[#555555]"
-                                >
-                                  Scheduled
-                                </a>
-                              ) : (
-                                <span className="inline-flex rounded-full bg-[#F0F0F0] px-3 py-1.5 text-[12px] font-semibold text-[#555555]">
-                                  Scheduled
-                                </span>
-                              )
-                            ) : (
-                              <span className="inline-flex rounded-full bg-[#F0E9FF] px-3 py-1.5 text-[12px] font-semibold text-[#6633CC]">
-                                {status}
-                              </span>
-                            )}
-
-                            {isScheduled && (
-                              <a
-                                href={actionLinks.award}
-                                className="inline-flex rounded-full border border-[#C3A6FF] bg-[#F0E9FF] px-3 py-1.5 text-[12px] font-semibold text-[#6633CC]"
-                              >
-                                Nominate Now
-                              </a>
-                            )}
-                          </div>
-                        </td>
-
-                        <td className="align-top px-4 py-4">
-                          {isScheduled ? (
-                            <div className="flex flex-col items-start gap-2">
-                              <a
-                                href={actionLinks.participant}
-                                className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC]"
-                              >
-                                Apply as Participant
-                              </a>
-
-                              <a
-                                href={actionLinks.speaker}
-                                className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC]"
-                              >
-                                Apply for Resource Person
-                              </a>
-
-                              <a
-                                href={actionLinks.travelGrant}
-                                className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-3 py-1.5 text-[12px] font-semibold text-[#3366CC]"
-                              >
-                                Apply for Travel Grant
-                              </a>
-                            </div>
-                          ) : (
-                            <span className="inline-flex rounded-full border border-[#B3C7E6] bg-[#E9F0FB] px-4 py-2 text-[12px] font-semibold text-[#3366CC]">
-                              List of Participants
-                            </span>
-                          )}
-                        </td>
-
-                        <td className="align-top px-4 py-4 text-center">
-                          {downloadLink !== "#" ? (
-                            <a
-                              href={downloadLink}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#F0C6A0] bg-[#FDF0E9] px-4 py-2 text-[12px] font-bold text-[#CC5200] transition duration-200 hover:bg-[#C89B3C] hover:text-[#FFFFFF]"
-                            >
-                              <FaDownload className="text-[12px]" />
-                              Download
-                            </a>
-                          ) : (
-                            <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#F0C6A0] bg-[#FDF0E9] px-4 py-2 text-[12px] font-bold text-[#CC5200]">
-                              <FaDownload className="text-[12px]" />
-                              Download
-                            </span>
-                          )}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="border-t border-[#D6E0F0] bg-[#FFFFFF] px-5 py-4">
-              <p className="text-[13px] font-normal text-[#5A6A85]">
-                Showing {filteredConferences.length} ceremony records
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
     
-      <section id="award-form" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div>
-            <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-              Application Form
-            </p>
-            <h2 className="mt-3 text-[34px] font-semibold text-[#1B3A6B]">
-              Apply-for-award
-            </h2>
-            <p className="mt-4 text-[15px] leading-[1.8] text-[#1A1A2E]">
-              Submit your award application with profile details, designation,
-              achievements, award category, and supporting documents.
-            </p>
+     <section
+  id="award-form"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-14"
+>
+  <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#F4B400]/20 blur-3xl" />
 
-            <div className="mt-7 rounded-[26px] border border-[#D6E0F0] bg-[#EAF1FB] p-6">
-              <h3 className="text-[22px] font-semibold text-[#1B3A6B]">
-                Contact for Award Support
-              </h3>
-              <div className="mt-5 space-y-4">
-                <div className="flex gap-3">
-                  <FaMapMarkerAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                  <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
-                    15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi 110019
-                  </p>
-                </div>
-                <div className="flex gap-3">
-                  <FaPhoneAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                  <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
-                    India : 011-66155019
-                    <br />
-                    Phone: +91 6262752167
-                  </p>
-                </div>
-                <div className="flex gap-3">
-                  <FaEnvelope className="mt-1 shrink-0 text-[#C89B3C]" />
-                  <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
-                    care@edwinepc.com
-                  </p>
-                </div>
-              </div>
-            </div>
+  <div className="relative z-10 mx-auto grid max-w-[1250px] gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+    <div>
+      <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
+        Application Form
+      </p>
+
+      <h2 className="mt-3 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
+        Apply-for-award
+      </h2>
+
+      <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+      <p className="mt-6 max-w-[520px] text-[17px] leading-[1.9] text-[#1A1A2E]">
+        Submit your award application with profile details, designation,
+        achievements, award category, and supporting documents.
+      </p>
+
+      <div className="mt-7 rounded-[26px] border border-[#D6E0F0] bg-white/80 p-6 shadow-sm backdrop-blur">
+        <h3 className="text-[22px] font-semibold text-[#1B3A6B]">
+          Contact for Award Support
+        </h3>
+
+        <div className="mt-5 space-y-4">
+          <div className="flex gap-3">
+            <FaMapMarkerAlt className="mt-1 shrink-0 text-[#C89B3C]" />
+            <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
+              15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi 110019
+            </p>
           </div>
 
-          <BasicForm
-            title="Apply-for-award"
-            subtitle="Award Application"
-            buttonText="Submit Award Application"
-            status={awardStatus}
-            onSubmit={(event) =>
-              submitForm(
-                event,
-                setAwardStatus,
-                "Your award application has been prepared successfully."
-              )
-            }
-          >
-            <div className="grid gap-5 md:grid-cols-2">
-              <input required type="text" placeholder="Full Name *" className={inputClass} />
-              <input type="email" placeholder="Email" className={inputClass} />
-            </div>
+          <div className="flex gap-3">
+            <FaPhoneAlt className="mt-1 shrink-0 text-[#C89B3C]" />
+            <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
+              India : 011-66155019
+              <br />
+              Phone: +91 6262752167
+            </p>
+          </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
-              <input type="tel" placeholder="Mobile Number" className={inputClass} />
-              <select className={inputClass}>
-                <option>Awards for Students</option>
-                <option>Awards for Scientist</option>
-                <option>Awards for Industries</option>
-                <option>Awards For Academicians</option>
-                <option>Awards for Schools and Colleges</option>
-                <option>Awards for Research Scholar</option>
-              </select>
-            </div>
-
-            <input type="text" placeholder="Designation / Institution / Organization" className={inputClass} />
-            <input type="text" placeholder="Award Category / Nomination Title" className={inputClass} />
-
-            <input
-              type="file"
-              multiple
-              accept=".doc,.docx,.pdf,.jpg,.png"
-              className={`${inputClass} file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:text-[#FFFFFF]`}
-            />
-
-            <textarea rows="5" placeholder="Achievement / Profile / Award Justification" className={`${inputClass} resize-none`} />
-          </BasicForm>
+          <div className="flex gap-3">
+            <FaEnvelope className="mt-1 shrink-0 text-[#C89B3C]" />
+            <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
+              care@edwinepc.com
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
 
+    <div className="rounded-[30px] border border-[#D6E0F0] bg-white shadow-[0_28px_80px_rgba(27,58,107,0.18)] overflow-hidden">
+      <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-5">
+        <div>
+          <h3 className="text-[26px] font-bold text-white">
+            Award Application Form
+          </h3>
+
+          <p className="mt-1 text-[14px] text-white/75">
+            Complete the award application form below.
+          </p>
+        </div>
+
+        <div className="hidden h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[26px] text-[#F4B400] md:flex">
+          🏆
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+        <div className="rounded-[22px] border border-[#D6E0F0] bg-white overflow-hidden">
+          <div className="max-h-[560px] overflow-y-auto overflow-x-hidden">
+            <iframe
+              title="Award Application Form"
+              className="block h-[1080px] w-full border-0"
+              scrolling="auto"
+              src="https://crm.zoho.in/crm/WebFormServeServlet?rid=41356a0f93652588f20b5b6d2e6ab735455ca5cc057f728d160f6795d7acc9ab6370603d2e20d8ab5eaa9249826e322cgidfeaf2f684d37a692f628e4f389ebdbe2264aa7ecd400fb19b7c1a091ef675833"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <a
         href="https://wa.me/916262752167"

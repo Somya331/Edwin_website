@@ -13,6 +13,7 @@ import {
   FaGlobe,
   FaHandshake,
   FaMapMarkerAlt,
+  FaFileSignature,
   FaNewspaper,
   FaPhoneAlt,
   FaRocket,
@@ -543,381 +544,80 @@ export default function FellowshipSupportPage() {
               </div>
             </div>
 
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-              <form onSubmit={handleFellowshipSubmit} className="grid gap-6">
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Select Your Location <span className="text-[#C0392B]">*</span>
-                  </label>
-                  <select
-                    required
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]"
-                  >
-                    <option value="">-None-</option>
-                    <option>India</option>
-                    <option>Other Country</option>
-                    <option>Mobile Number</option>
-                  </select>
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    You need to select the country name, your location, or your mobile
-                    number from the dropdown menu.
-                  </p>
-                </div>
+           {/* ZOHO FORM SECTION */}
+<section className="relative py-10 bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF1FB] overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#C89B3C]/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-3xl" />
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
+  <div className="max-w-5xl mx-auto px-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-7"
+    >
+     
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A6B]">
+        Journals - Fellowship
+      </h2>
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Last Name <span className="text-[#C0392B]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
+      <div className="w-20 h-1 bg-gradient-to-r from-[#C89B3C] to-[#1B3A6B] mx-auto mt-4 mb-4 rounded-full" />
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Mobile
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                    <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                      Do not use 0 (zero) as the initial digit
-                    </p>
-                  </div>
+      
+    </motion.div>
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Designation
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                    <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                      With complete institute name
-                    </p>
-                  </div>
+      <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+        <div>
+          <h3 className="text-white text-lg font-bold">Application Form</h3>
+          
+        </div>
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Fellowship Type
-                    </label>
-                    <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]">
-                      <option value="">Select type</option>
-                      {fellowshipTypes.map((type) => (
-                        <option key={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+        <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+          <FaFileSignature className="text-[#C89B3C] text-xl" />
+        </div>
+      </div>
 
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Research Area / Subject
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your research area"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
+      <div className="relative w-full bg-white p-3">
+        <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+          <iframe
+            title="Zoho CRM Web Form"
+            src="https://crm.zoho.in/crm/WebFormServeServlet?rid=d33efea6fa48ab84f235899ccf35b8d4db0652ae9efed3e0a655b93dc19c2ae45e4f548c580c8b37c182201b0a5b6990gid56c541f624d6b283ed61c47888fa51826120a939226ca9d4a624a2b934cce8ca"
+            width="100%"
+            height="500"
+            frameBorder="0"
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              display: "block",
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section> 
 
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Upload CV / Academic Document{" "}
-                    <span className="text-[#C0392B]">*</span>
-                  </label>
-                  <input
-                    type="file"
-                    required
-                    multiple
-                    accept=".doc,.docx,.pdf"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                  />
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    Please upload CV, fellowship profile, or academic document.
-                  </p>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Message / Fellowship Requirement
-                  </label>
-                  <textarea
-                    rows="4"
-                    placeholder="Write your fellowship requirement"
-                    className="w-full resize-none rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    required
-                    className="h-4 w-4 rounded border-[#D6E0F0] accent-[#1B3A6B]"
-                  />
-                  <p className="text-[15px] font-normal text-[#1A1A2E]">
-                    I agree to the{" "}
-                    <a
-                      href="#terms"
-                      className="font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:text-[#C89B3C]"
-                    >
-                      Terms & Condition
-                    </a>
-                    <span className="text-[#C0392B]"> *</span>
-                  </p>
-                </div>
-
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <button
-                    type="submit"
-                    className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-                  >
-                    Apply for Fellowship
-                  </button>
-
-                  <button
-                    type="reset"
-                    className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:bg-[#EAF1FB]"
-                  >
-                    Reset
-                  </button>
-                </div>
-
-                {fellowshipStatus && (
-                  <p className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {fellowshipStatus}
-                  </p>
-                )}
-              </form>
-            </div>
+{/* fellowship */}
+                  
+               
+           
           </div>
         </div>
       </section>
 
-      <section id="academic-news-form" className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-              <form onSubmit={handleNewsSubmit} className="grid gap-6">
-                <div>
-                  <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                    Applications
-                  </p>
-                  <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-                    Book Slot for Academic News
-                  </h2>
-                  <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Submit your news details for academic news slot booking.
-                  </p>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Name <span className="text-[#C0392B]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Mobile
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      News Slot Type
-                    </label>
-                    <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]">
-                      <option value="">Select news slot type</option>
-                      {newsSlotTypes.map((type) => (
-                        <option key={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    News Title / Achievement
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter news title"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Preferred Date
-                  </label>
-                  <div className="relative">
-                    <FaCalendarAlt className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5A6A85]" />
-                    <input
-                      type="date"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] py-3 pl-11 pr-4 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Upload News Document / Image
-                  </label>
-                  <input
-                    type="file"
-                    multiple
-                    accept=".doc,.docx,.pdf,.jpg,.jpeg,.png"
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    News Details
-                  </label>
-                  <textarea
-                    rows="5"
-                    placeholder="Write academic news details"
-                    className="w-full resize-none rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <button
-                    type="submit"
-                    className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-                  >
-                    Book Slot
-                  </button>
-
-                  <button
-                    type="reset"
-                    className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:bg-[#EAF1FB]"
-                  >
-                    Reset
-                  </button>
-                </div>
-
-                {newsStatus && (
-                  <p className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {newsStatus}
-                  </p>
-                )}
-              </form>
-            </div>
-
-            <div className="lg:sticky lg:top-8">
-              <div className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                <img
-                  src={academicNewsImage}
-                  alt="Book academic news slot"
-                  className="h-[360px] w-full object-cover"
-                />
-
-                <div className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[#1B3A6B] text-[#FFFFFF]">
-                      <FaNewspaper />
-                    </div>
-
-                    <div>
-                      <h3 className="text-[18px] font-semibold text-[#1A1A2E]">
-                        Book Slot for Academic News
-                      </h3>
-                      <p className="mt-3 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                        Share academic achievements, fellowship announcements, research
-                        success stories, institutional activities, and publication
-                        updates.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 grid gap-3">
-                    {[
-                      "Fellowship announcement",
-                      "Academic achievement news",
-                      "Research and publication updates",
-                    ].map((item) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-3 rounded-[8px] bg-[#EAF1FB] px-4 py-3"
-                      >
-                        <FaCheckCircle className="text-[#1B3A6B]" />
-                        <span className="text-[15px] font-normal text-[#1A1A2E]">
-                          {item}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-  
-      <a
-        href="https://wa.me/916262752167"
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1B3A6B] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-        aria-label="Chat on WhatsApp"
-      >
-        <FaWhatsapp className="text-2xl" />
-      </a>
+    
     </div>
   );
 }

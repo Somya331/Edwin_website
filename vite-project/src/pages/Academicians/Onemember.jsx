@@ -305,219 +305,83 @@ export default function OneMembershipPage() {
         </div>
       </section>
 
-      <section id="membership-form" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div>
-              <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-                Apply Now
+      <section
+  id="membership-form"
+  className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#FFF8E8] px-5 py-14"
+>
+  <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#F4B400]/20 blur-3xl" />
+
+  <div className="relative z-10 mx-auto max-w-[1250px]">
+    <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <div className="lg:sticky lg:top-10">
+        <span className="inline-flex rounded-full border border-[#D6E0F0] bg-white/80 px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-[#1B3A6B] shadow-sm backdrop-blur">
+          Apply Now
+        </span>
+
+        <h2 className="mt-5 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
+          One Membership Application Form
+        </h2>
+
+        <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />
+
+        <p className="mt-6 max-w-[520px] text-[17px] leading-[1.9] text-[#1A1A2E]">
+          Submit your details to apply for Edwin INC One Membership and access
+          discounted academic, research, and professional services.
+        </p>
+
+        <div className="mt-8 grid gap-4">
+          {[
+            "Get discounted access to book publication, journal publication, API scorecard, and conference registrations.",
+            "Get free editorial board membership certificate, digital library access, Shodhparta access, and website support.",
+            "Get free assistance and consultation for MOOC & SHYAM UGC online refresher courses.",
+          ].map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-4 rounded-2xl border border-[#D6E0F0] bg-white/80 px-5 py-4 shadow-sm backdrop-blur"
+            >
+              <FaCheckCircle className="mt-1 shrink-0 text-[#1B3A6B]" />
+              <p className="text-[15px] leading-[1.7] text-[#1A1A2E]">
+                {item}
               </p>
-              <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-                One Membership Application Form
-              </h2>
-              <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                Submit your details to apply for Edwin INC One Membership and access
-                discounted academic, research, and professional services.
-              </p>
-
-              <div className="mt-8 grid gap-4">
-                <div className="flex items-start gap-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5">
-                  <FaCheckCircle className="mt-1 shrink-0 text-[#1B3A6B]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Get discounted access to book publication, journal publication,
-                    API scorecard, and conference registrations.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5">
-                  <FaCheckCircle className="mt-1 shrink-0 text-[#1B3A6B]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Get free editorial board membership certificate, digital library
-                    access, Shodhparta access, and website support.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5">
-                  <FaCheckCircle className="mt-1 shrink-0 text-[#1B3A6B]" />
-                  <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                    Get free assistance and consultation for MOOC & SHYAM UGC online
-                    refresher courses.
-                  </p>
-                </div>
-              </div>
             </div>
+          ))}
+        </div>
+      </div>
 
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-              <form onSubmit={handleSubmit} className="grid gap-6">
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Select Your Location <span className="text-[#C0392B]">*</span>
-                  </label>
-                  <select
-                    required
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]"
-                  >
-                    <option value="">-None-</option>
-                    <option>India</option>
-                    <option>Other Country</option>
-                    <option>Mobile Number</option>
-                  </select>
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    You need to select the country name, your location, or your mobile
-                    number from the dropdown menu.
-                  </p>
-                </div>
+      <div className="rounded-[30px] border border-[#D6E0F0] bg-white shadow-[0_28px_80px_rgba(27,58,107,0.18)] overflow-hidden">
+        <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-5">
+          <div>
+            <h3 className="text-[26px] font-bold text-white">
+              One Membership Form
+            </h3>
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
+            <p className="mt-1 text-[14px] text-white/75">
+              Complete the one membership application form below.
+            </p>
+          </div>
 
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Last Name <span className="text-[#C0392B]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
+          <div className="hidden h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-[26px] text-[#F4B400] md:flex">
+            🎓
+          </div>
+        </div>
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Mobile
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                    <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                      Do not use 0 (zero) as the initial digit
-                    </p>
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Designation
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                    />
-                    <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                      With complete institute name
-                    </p>
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                      Membership Interest
-                    </label>
-                    <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out focus:border-[#1B3A6B]">
-                      <option value="">Select membership interest</option>
-                      <option>One Membership - Edwin INC</option>
-                      <option>Book Publication Discount</option>
-                      <option>Journal Publication Discount</option>
-                      <option>API Calculator and Scorecard</option>
-                      <option>Editorial Board Membership Certificate</option>
-                      <option>Digital Library Portal Access</option>
-                      <option>Conference Registration Discount</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Upload CV / Document <span className="text-[#C0392B]">*</span>
-                  </label>
-                  <input
-                    type="file"
-                    required
-                    multiple
-                    className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] file:mr-4 file:rounded-[8px] file:border-0 file:bg-[#1B3A6B] file:px-4 file:py-2 file:text-[13px] file:font-medium file:text-[#FFFFFF]"
-                  />
-                  <p className="mt-2 text-[13px] font-normal leading-[1.7] text-[#5A6A85]">
-                    Please upload CV or scan your document.
-                  </p>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-[13px] font-normal text-[#5A6A85]">
-                    Message / Requirement
-                  </label>
-                  <textarea
-                    rows="4"
-                    placeholder="Write your One Membership requirement"
-                    className="w-full resize-none rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 ease-in-out placeholder:text-[#A0AEC0] focus:border-[#1B3A6B]"
-                  />
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    required
-                    className="h-4 w-4 rounded border-[#D6E0F0] accent-[#1B3A6B]"
-                  />
-                  <p className="text-[15px] font-normal text-[#1A1A2E]">
-                    I agree to the{" "}
-                    <a
-                      href="#terms"
-                      className="font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:text-[#C89B3C]"
-                    >
-                      Terms & Condition
-                    </a>
-                    <span className="text-[#C0392B]"> *</span>
-                  </p>
-                </div>
-
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <button
-                    type="submit"
-                    className="rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#C89B3C]"
-                  >
-                    Submit
-                  </button>
-
-                  <button
-                    type="reset"
-                    className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 ease-in-out hover:bg-[#EAF1FB]"
-                  >
-                    Reset
-                  </button>
-                </div>
-
-                {formStatus && (
-                  <p className="rounded-[8px] border border-[#2D7A4F] bg-[#FFFFFF] px-4 py-3 text-center text-[15px] font-normal text-[#2D7A4F]">
-                    {formStatus}
-                  </p>
-                )}
-              </form>
+        <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-4">
+          <div className="rounded-[22px] border border-[#D6E0F0] bg-white overflow-hidden">
+            <div className="max-h-[540px] overflow-y-auto overflow-x-hidden">
+              <iframe
+                title="One Membership Application Form"
+                className="block h-[800px] w-full border-0"
+                scrolling="auto"
+                src="https://crm.zoho.in/crm/WebFormServeServlet?rid=2f17454868bf09341e5c89e93cae5c66098771aeab69c15061acc1a9f452e91219bc76ddaa3e3d1bde018056644ae4dfgide3b6acdb98e0676c62b30909c9429d61100792d88191375e0a0726ee04a37a6c"
+              />
             </div>
           </div>
         </div>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
       <a
         href="https://wa.me/916262752168"
         target="_blank"

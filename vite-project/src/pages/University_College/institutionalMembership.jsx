@@ -6,12 +6,12 @@ import {
   FaCheckCircle,
   FaEnvelope,
   FaFileAlt,
+  FaFileSignature,
   FaHandshake,
   FaPhoneAlt,
   FaQuoteLeft,
   FaStar,
   FaUniversity,
-  FaUpload,
   FaUsers,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -91,88 +91,88 @@ const InstitutionalMembership = () => {
 
   return (
     <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
-<section className="relative overflow-hidden bg-[#1B3A6B] px-5 py-20">
-  <div className="absolute right-0 top-20 h-72 w-72 rounded-full bg-[#C89B3C]/20 blur-3xl" />
-  <div className="absolute left-0 bottom-10 h-72 w-72 rounded-full bg-[#EAF1FB]/20 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#1B3A6B] px-5 py-20">
+        <div className="absolute right-0 top-20 h-72 w-72 rounded-full bg-[#C89B3C]/20 blur-3xl" />
+        <div className="absolute left-0 bottom-10 h-72 w-72 rounded-full bg-[#EAF1FB]/20 blur-3xl" />
 
-  <div className="relative mx-auto grid min-h-[620px] max-w-[1200px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 0.5 }}
-      className="relative z-10"
-    >
-      <p className="mb-5 inline-flex rounded-[8px] border border-[#C89B3C] bg-[#FFFFFF] px-4 py-2 text-[13px] text-[#5A6A85] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-        Institutional Membership
-      </p>
-
-      <h1 className="mb-6 text-[42px] font-bold leading-tight text-[#FFFFFF] md:text-[58px]">
-        Edwin Legal Services For Education
-      </h1>
-
-      <p className="mb-8 max-w-2xl text-[16px] leading-[1.8] text-[#FFFFFF]">
-        Edwin Services For Educational Support, University Services, NAAC/MOU
-        Sign, NIRF, NBA, approval documentation, campus expansion and
-        institutional membership support.
-      </p>
-
-      <div className="flex flex-wrap gap-4">
-        <a
-          href="#apply"
-          className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-        >
-          Apply Now
-        </a>
-        <a
-          href="https://wa.me/916262752168"
-          className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] bg-[#FFFFFF]/10 px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-        >
-          Instant Chat
-        </a>
-      </div>
-    </motion.div>
-
-    <motion.div
-      initial={{ opacity: 0, x: 35 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      className="relative z-10"
-    >
-      <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="overflow-hidden rounded-[12px] sm:col-span-2">
-            <img
-              src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80"
-              alt="Institutional Membership"
-              className="h-[280px] w-full object-cover"
-            />
-          </div>
-
-          <div className="rounded-[12px] bg-[#EAF1FB] p-5">
-            <FaUniversity className="mb-3 text-[28px] text-[#1B3A6B]" />
-            <h3 className="mb-2 text-[18px] font-semibold text-[#1B3A6B]">
-              University Services
-            </h3>
-            <p className="text-[14px] leading-[1.6] text-[#1A1A2E]">
-              NAAC, NIRF, NBA and documentation support.
+        <div className="relative mx-auto grid min-h-[620px] max-w-[1200px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5 }}
+            className="relative z-10"
+          >
+            <p className="mb-5 inline-flex rounded-[8px] border border-[#C89B3C] bg-[#FFFFFF] px-4 py-2 text-[13px] text-[#5A6A85] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+              Institutional Membership
             </p>
-          </div>
 
-          <div className="rounded-[12px] bg-[#1B3A6B] p-5 text-[#FFFFFF]">
-            <FaHandshake className="mb-3 text-[28px] text-[#C89B3C]" />
-            <h3 className="mb-2 text-[18px] font-semibold text-[#FFFFFF]">
-              MOU & Tie-ups
-            </h3>
-            <p className="text-[14px] leading-[1.6] text-[#FFFFFF]">
-              Industrial tie-ups and institutional collaboration.
+            <h1 className="mb-6 text-[42px] font-bold leading-tight text-[#FFFFFF] md:text-[58px]">
+              Edwin Legal Services For Education
+            </h1>
+
+            <p className="mb-8 max-w-2xl text-[16px] leading-[1.8] text-[#FFFFFF]">
+              Edwin Services For Educational Support, University Services, NAAC/MOU
+              Sign, NIRF, NBA, approval documentation, campus expansion and
+              institutional membership support.
             </p>
-          </div>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#apply"
+                className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
+              >
+                Apply Now
+              </a>
+              <a
+                href="https://wa.me/916262752168"
+                className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] bg-[#FFFFFF]/10 px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
+              >
+                Instant Chat
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 35 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative z-10"
+          >
+            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="overflow-hidden rounded-[12px] sm:col-span-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80"
+                    alt="Institutional Membership"
+                    className="h-[280px] w-full object-cover"
+                  />
+                </div>
+
+                <div className="rounded-[12px] bg-[#EAF1FB] p-5">
+                  <FaUniversity className="mb-3 text-[28px] text-[#1B3A6B]" />
+                  <h3 className="mb-2 text-[18px] font-semibold text-[#1B3A6B]">
+                    University Services
+                  </h3>
+                  <p className="text-[14px] leading-[1.6] text-[#1A1A2E]">
+                    NAAC, NIRF, NBA and documentation support.
+                  </p>
+                </div>
+
+                <div className="rounded-[12px] bg-[#1B3A6B] p-5 text-[#FFFFFF]">
+                  <FaHandshake className="mb-3 text-[28px] text-[#C89B3C]" />
+                  <h3 className="mb-2 text-[18px] font-semibold text-[#FFFFFF]">
+                    MOU & Tie-ups
+                  </h3>
+                  <p className="text-[14px] leading-[1.6] text-[#FFFFFF]">
+                    Industrial tie-ups and institutional collaboration.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
-    </motion.div>
-  </div>
-</section>
+      </section>
 
       <section className="bg-[#EAF1FB] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
@@ -214,11 +214,10 @@ const InstitutionalMembership = () => {
                     key={service}
                     type="button"
                     onClick={() => setActiveService(service)}
-                    className={`w-full rounded-[8px] px-4 py-3 text-left text-[15px] font-medium transition duration-200 ${
-                      activeService === service
+                    className={`w-full rounded-[8px] px-4 py-3 text-left text-[15px] font-medium transition duration-200 ${activeService === service
                         ? "bg-[#1B3A6B] text-[#FFFFFF]"
                         : "bg-[#EAF1FB] text-[#1B3A6B] hover:bg-[#D6E0F0]"
-                    }`}
+                      }`}
                   >
                     {service}
                   </button>
@@ -332,95 +331,50 @@ const InstitutionalMembership = () => {
             </p>
           </motion.div>
 
-          <motion.form
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
-            className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+            className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[950px] mx-auto relative"
           >
-            <div className="grid gap-5 md:grid-cols-2">
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
               <div>
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Select Your Location
-                </label>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  <option>India</option>
-                  <option>Foreign</option>
-                </select>
-                <p className="mt-2 text-[13px] text-[#5A6A85]">
-                  Select Your Country
+                <h3 className="text-white text-lg font-bold">
+                  Institutional Membership Application Form
+                </h3>
+                <p className="text-white/75 text-sm mt-1">
+                  Fill all required details carefully
                 </p>
               </div>
 
-              <div>
-                <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                  Select Service
-                </label>
-                <select className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]">
-                  <option>-None-</option>
-                  {mainServices.map((service) => (
-                    <option key={service}>{service}</option>
-                  ))}
-                  {otherServices.map((service) => (
-                    <option key={service}>{service}</option>
-                  ))}
-                </select>
+              <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-xl" />
               </div>
-
-              {[
-                "Name of College / University*/NGO *",
-                "Email *",
-                "Mobile *",
-                "Chairperson Name",
-                "Contact Person Name",
-                "City",
-              ].map((label) => (
-                <div key={label}>
-                  <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                    {label}
-                  </label>
-                  <input className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]" />
-                </div>
-              ))}
             </div>
 
-            <div className="mt-5">
-              <label className="mb-2 block text-[13px] text-[#5A6A85]">
-                Upload Document
-              </label>
-              <input
-                type="file"
-                className="w-full rounded-[8px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] outline-none focus:border-[#1B3A6B]"
-              />
+            <div className="relative w-full bg-white p-3">
+              <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                <iframe
+                  title="Zoho CRM Web Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=d4dba4baaf42bc964cd0b0fff01b2fe05f7ac940287f9c60c58ef99dd649f94cbee9205586521402e2180b44fe5d3f50gid5c5161cf37ffd7557cfa7f33a848e98423a9533df300cd9b927c3dc0dd4cbc44"
+                  width="100%"
+                  height="520"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    display: "block",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
             </div>
-
-            <div className="mt-6">
-              <label className="flex items-center gap-3 text-[15px] text-[#1B3A6B]">
-                <input type="checkbox" /> Terms & Condition * Read
-              </label>
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-4">
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-8 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
-              >
-                Submit <FaUpload />
-              </button>
-              <button
-                type="reset"
-                className="rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-8 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#FFFFFF]"
-              >
-                Reset
-              </button>
-            </div>
-          </motion.form>
+          </motion.div>
         </div>
       </section>
-
       <section className="bg-[#FFFFFF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
@@ -462,40 +416,6 @@ const InstitutionalMembership = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="bg-[#1B3A6B] px-5 py-20">
-        <motion.div
-          className="mx-auto max-w-[1200px] text-center"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-        >
-          <FaHandshake className="mx-auto mb-5 text-[42px] text-[#C89B3C]" />
-          <h2 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
-            Need Institutional Membership Support?
-          </h2>
-          <p className="mx-auto mb-8 max-w-3xl text-[15px] leading-[1.7] text-[#FFFFFF]">
-            Contact Edwin Incorporation for institutional membership, university
-            services, legal services for education and documentation support.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="tel:+916262752168"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaPhoneAlt /> 6262752168
-            </a>
-            <a
-              href="mailto:care@edwinepc.com"
-              className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF]"
-            >
-              <FaEnvelope /> care@edwinepc.com
-            </a>
-          </div>
-        </motion.div>
       </section>
 
       <a

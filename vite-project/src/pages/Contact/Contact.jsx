@@ -6,11 +6,10 @@ import {
   FaEnvelope,
   FaGlobe,
   FaWhatsapp,
-  FaPaperPlane,
   FaBuilding,
   FaHeadset,
-  FaClock,
   FaArrowRight,
+  FaFileSignature,
 } from "react-icons/fa";
 
 const offices = [
@@ -57,8 +56,6 @@ const contactCards = [
 ];
 
 export default function ContactPage() {
-  const [status, setStatus] = useState("");
-
   useEffect(() => {
     const fontLink = document.createElement("link");
     fontLink.href =
@@ -71,11 +68,6 @@ export default function ContactPage() {
     };
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setStatus("Your contact request has been prepared successfully.");
-    e.currentTarget.reset();
-  };
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
@@ -213,71 +205,48 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <motion.form
-            onSubmit={handleSubmit}
+          <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35 }}
-            className="rounded-[18px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+            className="rounded-[24px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden w-full max-w-[950px] mx-auto relative"
           >
-            <div className="grid gap-5 md:grid-cols-2">
-              <input
-                required
-                type="text"
-                placeholder="Full Name *"
-                className="rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none transition duration-200 focus:border-[#1B3A6B]"
-              />
-              <input
-                required
-                type="tel"
-                placeholder="Mobile Number *"
-                className="rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none transition duration-200 focus:border-[#1B3A6B]"
-              />
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4 flex items-center justify-between gap-4">
+              <div>
+                <h3 className="text-white text-lg font-bold">
+                  Contact Application Form
+                </h3>
+                <p className="text-white/75 text-sm mt-1">
+                  Fill all required details carefully
+                </p>
+              </div>
+
+              <div className="hidden sm:flex w-11 h-11 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-xl" />
+              </div>
             </div>
 
-            <div className="mt-5 grid gap-5 md:grid-cols-2">
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none transition duration-200 focus:border-[#1B3A6B]"
-              />
-              <select className="rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none transition duration-200 focus:border-[#1B3A6B]">
-                <option>General Query</option>
-                <option>Research Paper Publication</option>
-                <option>Journal Support</option>
-                <option>Conference Query</option>
-                <option>Payment Support</option>
-                <option>Institutional Services</option>
-              </select>
+            <div className="relative w-full bg-white p-3">
+              <div className="rounded-[18px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                <iframe
+                  title="Zoho CRM Web Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=1379d25ac259e1673b912a61a6fe486eb96d7232c0d6039dba30c263db3b0640a2caacfc68cf23ff0f0a2852e193fa6fgid17a7d31d91c8cd244f08083f380951990ad2d9fd65dec6ce39cf81e0c06a79f8"
+                  width="100%"
+                  height="420"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    minWidth: "610px",
+                    display: "block",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
             </div>
-
-            <input
-              type="text"
-              placeholder="Subject"
-              className="mt-5 w-full rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none transition duration-200 focus:border-[#1B3A6B]"
-            />
-
-            <textarea
-              required
-              rows="6"
-              placeholder="Write your message *"
-              className="mt-5 w-full resize-none rounded-[8px] border border-[#D6E0F0] px-4 py-3 text-[15px] outline-none transition duration-200 focus:border-[#1B3A6B]"
-            />
-
-            <button
-              type="submit"
-              className="mt-5 inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-6 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:-translate-y-1 hover:bg-[#C89B3C]"
-            >
-              Submit Message <FaPaperPlane className="text-[13px]" />
-            </button>
-
-            {status && (
-              <p className="mt-5 rounded-[8px] border border-[#2D7A4F] px-4 py-3 text-[15px] text-[#2D7A4F]">
-                {status}
-              </p>
-            )}
-          </motion.form>
+          </motion.div>
         </div>
       </section>
 

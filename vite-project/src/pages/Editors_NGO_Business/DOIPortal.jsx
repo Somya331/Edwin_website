@@ -7,6 +7,7 @@ import {
   FaClipboardCheck,
   FaDatabase,
   FaFileAlt,
+  FaFileSignature,
   FaHashtag,
   FaLink,
   FaQuestionCircle,
@@ -389,14 +390,14 @@ export default function DoiPage() {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.25, delay: index * 0.05 }}
                   className={`group rounded-[24px] border border-[#D6E0F0] p-6 shadow-[0_10px_30px_rgba(27,58,107,0.08)] transition duration-300 hover:-translate-y-1 hover:border-[#C89B3C] ${index === 0
-                      ? "bg-[#1B3A6B] text-white md:col-span-2"
-                      : "bg-white"
+                    ? "bg-[#1B3A6B] text-white md:col-span-2"
+                    : "bg-white"
                     }`}
                 >
                   <div
                     className={`flex h-12 w-12 items-center justify-center rounded-[16px] transition duration-300 ${index === 0
-                        ? "bg-[#C89B3C] text-white"
-                        : "bg-[#EAF1FB] text-[#1B3A6B] group-hover:bg-[#C89B3C] group-hover:text-white"
+                      ? "bg-[#C89B3C] text-white"
+                      : "bg-[#EAF1FB] text-[#1B3A6B] group-hover:bg-[#C89B3C] group-hover:text-white"
                       }`}
                   >
                     <FaCheckCircle />
@@ -626,8 +627,8 @@ export default function DoiPage() {
         </div>
       </section>
 
-      <section className="bg-[#F6F9FD] px-5 py-20">
-        <div className="mx-auto max-w-[900px]">
+      <section id="submit-doi" className="bg-[#F6F9FD] px-5 py-20">
+        <div className="mx-auto max-w-[1200px]">
           <div className="mb-10 text-center">
             <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
               Submit Papers for DOI
@@ -639,12 +640,52 @@ export default function DoiPage() {
 
             <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#1A1A2E]">
               Submit your paper and publication details. Our team will review your
-              requirement and guide you regarding DOI registration assistance, metadata
-              preparation, publication review, and journal support.
+              requirement and guide you regarding DOI registration assistance and support.
             </p>
           </div>
 
-          <DoiForm status={formStatus} onSubmit={submitForm} />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="rounded-[22px] bg-white shadow-xl border border-[#D6E0F0] overflow-hidden max-w-[720px] mx-auto relative"          >
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#C89B3C]/5 via-transparent to-[#1B3A6B]/5" />
+
+            <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-5 flex items-center justify-between gap-4">
+              <div>
+                <h3 className="text-white text-xl font-bold">
+                  DOI Registration Assistance Form
+                </h3>
+                <p className="text-white/75 text-sm mt-1">
+                  Fill all required details carefully
+                </p>
+              </div>
+
+              <div className="hidden sm:flex w-12 h-12 rounded-2xl bg-white/10 border border-white/20 items-center justify-center">
+                <FaFileSignature className="text-[#C89B3C] text-2xl" />
+              </div>
+            </div>
+
+            <div className="relative w-full bg-white p-4 sm:p-6">
+              <div className="rounded-[20px] border border-[#D6E0F0] overflow-hidden bg-white shadow-inner">
+                <iframe
+                  title="DOI Registration Form"
+                  src="https://crm.zoho.in/crm/WebFormServeServlet?rid=e639355228678de75411d6d254b98d70de877ce17221c9afba7642cfc8300664d19835e1c517f7df2859b7b222f43fc3gidd41e813e7ef20bdb317c1adc29443978d8bebac396c12b4f896257e8aa82d4d3"
+                  width="100%"
+                  height="460"
+                  frameBorder="0"
+                  scrolling="yes"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    display: "block",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
