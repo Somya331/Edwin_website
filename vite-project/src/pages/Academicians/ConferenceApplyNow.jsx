@@ -21,18 +21,51 @@ import {
   FaUsers,
 } from "react-icons/fa";
 
-const slideImages = [
-  "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1900&q=90",
-  "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1900&q=90",
+const conferenceHeroImageBase = "/images/apply-for-conferences";
+
+const conferenceHeroImageSequence = [
+  { no: 43, image: "WhatsApp_20Image_202026-05-12_20at_204.26.02_20PM.jpeg" },
+  { no: 43, image: "WhatsApp_20Image_202026-05-12_20at_204.36.08_20PM.jpeg" },
+  { no: 40, image: "40.png" },
+  { no: 39, image: "39.png" },
+  { no: 38, image: "38.png" },
+  { no: 37, image: "37.png" },
+  { no: 36, image: "36.png" },
+  { no: 35, image: "35.png" },
+  { no: 34, image: "34.png" },
+  { no: 33, image: "33.png" },
+  { no: 32, image: "32.png" },
+  { no: 31, image: "31.png" },
+  { no: 30, image: "WhatsApp_20Image_202026-03-07_20at_2011.54.18_20AM.jpeg" },
+  { no: 29, image: "29.png" },
+  { no: 28, image: "28.png" },
+  { no: 27, image: "27.jpeg" },
+  { no: 21, image: "21.png" },
+  { no: 18, image: "18.png" },
+  { no: 17, image: "17.jpeg" },
+  { no: 15, image: "WhatsApp_20Image_202022-01-31_20at_2015.57.52.jpeg" },
+  { no: 14, image: "14.jpeg" },
+  { no: 13, image: "WhatsApp_20Image_202026-03-07_20at_202.45.57_20PM.jpeg" },
+  { no: 12, image: "12.png" },
+  { no: 11, image: "11.png" },
+  { no: 10, image: "10.png" },
+  { no: 9, image: "9.jpg" },
+  { no: 8, image: "8.jpeg" },
+  { no: 7, image: "7.png" },
+  { no: 6, image: "6-2.jpg" },
+  { no: 5, image: "5.jpg" },
+  { no: 4, image: "4.jpg" },
+  { no: 3, image: "3.jpg" },
+  { no: 2, image: "2.jpeg" },
+  { no: 1, image: "1.jpg" },
+  { no: 16, image: "16.jpeg" },
+  { no: 44, image: "WhatsApp_20Image_202026-05-09_20at_202.59.15_20PM.jpeg" },
 ];
+
+const slideImages = conferenceHeroImageSequence.map(
+  ({ image }) => `${conferenceHeroImageBase}/${image}`
+);
+
 
 const conferences = [
   [52, "52nd International Conference — Philippines", "NEW", "In Association with Mahakoshal University, Jabalpur (M.P., India)", "Trends in Innovation, Education and Social Sciences", "19–21 Dec 2026", "University of the Philippines, Diliman (Metro Manila), Manila", "Scheduled", "52nd phillippines conference brochure 2026.pdf"],
@@ -121,22 +154,22 @@ const previousGallery = [
   {
     title: "41st International Conference — Nepal",
     text: "Previous international conference record, participants, gallery images, and recognition details.",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=90",
+    image: "/images/apply-for-conferences/previous-nepal-01.jpg",
   },
   {
     title: "40th International Conference — U.S.A",
     text: "Conference highlights, research presentations, awards, and participant memories.",
-    image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=900&q=90",
+    image: "/images/apply-for-conferences/previous-usa-01.jpg",
   },
   {
     title: "39th International Conference — Vietnam",
     text: "Academic networking, multidisciplinary research, and sustainable development theme.",
-    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=90",
+    image: "/images/apply-for-conferences/39.png",
   },
   {
     title: "38th International Conference — Malaysia",
     text: "Winner list, participant details, and conference recognition records.",
-    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=900&q=90",
+    image: "/images/apply-for-conferences/38.png",
   },
 ];
 
@@ -238,13 +271,13 @@ export default function ApplyForConferencesPage() {
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
-      <section className="relative overflow-hidden bg-[#F6F9FD] px-4 py-8 lg:px-8 lg:py-10">
+      <section className="relative overflow-hidden bg-[#F6F9FD] px-4 py-5 lg:px-8 lg:py-6">
   <div className="absolute left-0 top-0 h-60 w-60 rounded-full bg-[#C89B3C]/10 blur-3xl" />
   <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
 
   <div className="relative mx-auto max-w-[1420px]">
-    <div className="grid overflow-hidden rounded-[30px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_18px_55px_rgba(27,58,107,0.12)] lg:grid-cols-[0.95fr_1.05fr]">
-      <div className="relative min-h-[360px] overflow-hidden bg-[#071B35] lg:min-h-[430px]">
+    <div className="grid overflow-hidden rounded-[30px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_18px_55px_rgba(27,58,107,0.12)] lg:grid-cols-[1.25fr_0.75fr]">
+      <div className="relative min-h-[250px] overflow-hidden bg-[#071B35] lg:min-h-[300px]">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentSlide.image + activeSlide}
@@ -258,27 +291,27 @@ export default function ApplyForConferencesPage() {
           />
         </AnimatePresence>
 
-        <div className="absolute inset-x-0 top-0 flex items-center justify-between p-5">
-          <span className="rounded-full bg-[#FFFFFF]/95 px-4 py-2 text-[13px] font-semibold text-[#1B3A6B] shadow-sm backdrop-blur">
+        <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
+          <span className="rounded-full bg-[#FFFFFF]/95 px-3 py-1.5 text-[12px] font-semibold text-[#1B3A6B] shadow-sm backdrop-blur">
             Slide {activeSlide + 1} of 30
           </span>
 
-          <span className="rounded-full bg-[#C89B3C] px-4 py-2 text-[13px] font-semibold text-[#FFFFFF] shadow-sm">
+          <span className="rounded-full bg-[#C89B3C] px-3 py-1.5 text-[12px] font-semibold text-[#FFFFFF] shadow-sm">
             Auto Slide
           </span>
         </div>
 
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071B35]/90 via-[#071B35]/40 to-transparent p-6">
-          <div className="flex flex-wrap gap-3">
-            <span className="rounded-full bg-[#FFFFFF] px-4 py-2 text-[12px] font-semibold text-[#1B3A6B]">
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071B35]/90 via-[#071B35]/40 to-transparent p-4">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-full bg-[#FFFFFF] px-3 py-1.5 text-[11px] font-semibold text-[#1B3A6B]">
               Conference {currentSlide.no}
             </span>
-            <span className="rounded-full bg-[#C89B3C] px-4 py-2 text-[12px] font-semibold text-[#FFFFFF]">
+            <span className="rounded-full bg-[#C89B3C] px-3 py-1.5 text-[11px] font-semibold text-[#FFFFFF]">
               {currentSlide.date}
             </span>
           </div>
 
-          <h3 className="mt-4 max-w-2xl text-[24px] font-bold leading-tight text-[#FFFFFF] lg:text-[30px]">
+          <h3 className="mt-3 max-w-2xl text-[20px] font-bold leading-tight text-[#FFFFFF] lg:text-[24px]">
             {currentSlide.title}
           </h3>
         </div>
@@ -288,7 +321,7 @@ export default function ApplyForConferencesPage() {
           onClick={() =>
             setActiveSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
           }
-          className="absolute left-5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#FFFFFF]/50 bg-[#FFFFFF]/20 text-[#FFFFFF] backdrop-blur transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
+          className="absolute left-4 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#FFFFFF]/50 bg-[#FFFFFF]/20 text-[#FFFFFF] backdrop-blur transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
         >
           <FaChevronLeft />
         </button>
@@ -296,55 +329,55 @@ export default function ApplyForConferencesPage() {
         <button
           type="button"
           onClick={() => setActiveSlide((prev) => (prev + 1) % heroSlides.length)}
-          className="absolute right-5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#FFFFFF]/50 bg-[#FFFFFF]/20 text-[#FFFFFF] backdrop-blur transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
+          className="absolute right-4 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#FFFFFF]/50 bg-[#FFFFFF]/20 text-[#FFFFFF] backdrop-blur transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
         >
           <FaChevronRight />
         </button>
       </div>
 
-      <div className="flex min-h-[360px] flex-col justify-between bg-[#FFFFFF] p-7 lg:min-h-[430px] lg:p-10">
+      <div className="flex min-h-[300px] flex-col justify-between bg-[#FFFFFF] p-5 lg:min-h-[300px] lg:p-6">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#D6E0F0] bg-[#EAF1FB] px-4 py-2 text-[13px] font-semibold text-[#1B3A6B]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#D6E0F0] bg-[#EAF1FB] px-3 py-1.5 text-[12px] font-semibold text-[#1B3A6B]">
             <FaGlobeAsia className="text-[#C89B3C]" />
             International Conference Applications
           </span>
 
-          <h1 className="mt-5 text-[34px] font-extrabold leading-tight text-[#1B3A6B] lg:text-[46px]">
+          <h1 className="mt-3 text-[28px] font-extrabold leading-tight text-[#1B3A6B] lg:text-[34px]">
             Apply For International Conferences
           </h1>
 
-          <p className="mt-4 text-[15px] leading-[1.8] text-[#1A1A2E]">
+          <p className="mt-3 text-[13px] leading-[1.6] text-[#1A1A2E]">
             Attending conferences organized by Edwin Incorporation, both nationally and internationally,
             is highly beneficial for academicians. These events provide a platform for sharing research,
             networking with peers and experts, and staying updated with the latest developments in their fields.
           </p>
 
-          <div className="mt-5 grid gap-4 lg:grid-cols-2">
-            <div className="rounded-[18px] border border-[#D6E0F0] bg-[#F8FBFF] p-4">
-              <p className="text-[12px] uppercase tracking-wide text-[#5A6A85]">
+          <div className="mt-4 grid gap-3 lg:grid-cols-2">
+            <div className="rounded-[16px] border border-[#D6E0F0] bg-[#F8FBFF] p-3">
+              <p className="text-[11px] uppercase tracking-wide text-[#5A6A85]">
                 Current Theme
               </p>
-              <p className="mt-2 text-[14px] font-semibold leading-[1.6] text-[#1B3A6B]">
+              <p className="mt-1.5 text-[13px] font-semibold leading-[1.45] text-[#1B3A6B]">
                 {currentSlide.subject}
               </p>
             </div>
 
-            <div className="rounded-[18px] border border-[#D6E0F0] bg-[#F8FBFF] p-4">
-              <p className="text-[12px] uppercase tracking-wide text-[#5A6A85]">
+            <div className="rounded-[16px] border border-[#D6E0F0] bg-[#F8FBFF] p-3">
+              <p className="text-[11px] uppercase tracking-wide text-[#5A6A85]">
                 Venue
               </p>
-              <p className="mt-2 text-[14px] font-semibold leading-[1.6] text-[#1B3A6B]">
+              <p className="mt-1.5 text-[13px] font-semibold leading-[1.45] text-[#1B3A6B]">
                 {currentSlide.venue}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-6">
-          <div className="flex flex-col gap-3 sm:flex-row">
+        <div className="mt-4">
+          <div className="flex flex-col gap-2 sm:flex-row">
             <a
               href="#conference-form"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1B3A6B] px-7 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1B3A6B] px-5 py-2.5 text-[13px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
             >
               Apply Now
               <FaArrowRight className="text-[13px]" />
@@ -352,22 +385,22 @@ export default function ApplyForConferencesPage() {
 
             <a
               href="#conference-table"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1B3A6B] px-7 py-3 text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1B3A6B] px-5 py-2.5 text-[13px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
             >
               View Conferences
             </a>
           </div>
 
-          <div className="mt-5 flex max-w-full flex-wrap items-center gap-2">
+          <div className="mt-4 flex max-w-full flex-wrap items-center gap-1.5">
             {heroSlides.map((slide, index) => (
               <button
                 key={slide.no}
                 type="button"
                 onClick={() => setActiveSlide(index)}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   activeSlide === index
-                    ? "w-10 bg-[#C89B3C]"
-                    : "w-2.5 bg-[#CBD6E5] hover:bg-[#1B3A6B]"
+                    ? "w-8 bg-[#C89B3C]"
+                    : "w-2 bg-[#CBD6E5] hover:bg-[#1B3A6B]"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -880,7 +913,7 @@ export default function ApplyForConferencesPage() {
         <div className="flex items-center justify-between bg-gradient-to-r from-[#173765] via-[#244B86] to-[#173765] px-7 py-5">
           <div>
             <h3 className="text-[26px] font-bold text-white">
-              Apply For Academic Visit
+              Register as a Resource person
             </h3>
 
             <p className="mt-1 text-[14px] text-white/75">
@@ -911,7 +944,7 @@ export default function ApplyForConferencesPage() {
         </span>
 
         <h2 className="mt-5 text-[38px] font-bold leading-tight text-[#1B3A6B] md:text-[48px]">
-          Academic Visit Application Form
+          Register Now as Resource Person
         </h2>
 
         <div className="mt-5 h-[4px] w-[82px] rounded-full bg-gradient-to-r from-[#F4B400] to-[#1B3A6B]" />

@@ -87,6 +87,7 @@ import AppsForIOSAndAndroid from './pages/Editors_NGO_Business/AppsForIOSAndAndr
 import WhatsappServices from './pages/Editors_NGO_Business/WhatsappServices';
 import HRSupportForBusiness from './pages/Editors_NGO_Business/HRSupportForBusiness';
 import EdwinJournal from './pages/Editors_NGO_Business/EdwinJournal';
+import Constructions from './pages/Editors_NGO_Business/Constructions';
 
 // Pay_Now
 import Paynow from './pages/Pay_Now/Paynow';
@@ -116,7 +117,6 @@ const simpleRedirects = [
   ['Apply-For-Grants', '/apply-for-grants', true],
   ['BPO-Services', '/university-college', true],
   ['bulk', '/Researchpaper'],
-  ['constructions', '/services-for-business'],
   ['DEO', '/jobs', true],
   ['doi-membership', '/doi-member'],
   ['Editorial-Board', '/editorial-board-membership', true],
@@ -318,6 +318,7 @@ const router = createBrowserRouter([
 
       
       { path: 'Researchpaper', element: <ResearchPaper /> },
+      { path: 'researchpaper', element: <ResearchPaper /> },
       { path: 'Onemember', element: <Onemember /> },
       { path: 'one-member', element: <Onemember /> },
       { path: 'Doimember', element: <Doimember /> },
@@ -388,6 +389,7 @@ const router = createBrowserRouter([
       { path: 'whatsapp-services', element: <WhatsappServices /> },
       { path: 'hr-support-for-business', element: <HRSupportForBusiness /> },
       { path: 'edwin-journal', element: <EdwinJournal /> },
+      { path: 'constructions', element: <Constructions /> },
 
       { path: 'pay-now', element: <Paynow /> },
       { path: 'paynow', element: <Paynow /> },

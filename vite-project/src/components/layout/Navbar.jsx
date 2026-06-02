@@ -82,15 +82,15 @@ const MENU_STRUCTURE = [
         label: 'Research Paper Publication - Services',
         path: '/Researchpaper',
         submenu: [
-          { label: 'Submit Paper Online', path: '/researchpaper#registration-form' },
-          { label: 'Bulk Paper Submission', path: '/research-paper-publication-services' },
+          { label: 'Submit Paper Online', path: '/Researchpaper#registration-form' },
+          { label: 'Bulk Paper Submission', path: '/Researchpaper#registration-form' },
         ]
       },
       {
         label: 'Editorial Board Membership',
         path: '/editorial-board-membership',
         submenu: [
-          { label: 'Apply Now - Editorial Board Membership', path: '/editorial-board-membership' }
+          { label: 'Apply Now - Editorial Board Membership', path: '/editorial-board-membership#editorial-board-form' }
         ]
       },
       {
@@ -107,9 +107,9 @@ const MENU_STRUCTURE = [
         label: 'Books Publication Services',
         path: '/books-publication-services',
         submenu: [
-          { label: 'Apply Now - Book Publication', path: '/books-publication-services' },
-          { label: 'Submit Chapter for Edited Book', path: '/books-publication-services' },
-          { label: 'Become Editor of Book', path: '/books-publication-services' },
+          { label: 'Apply Now - Book Publication', path: '/books-publication-services#book-publication-form' },
+          { label: 'Submit Chapter for Edited Book', path: '/books-publication-services#chapter-form' },
+          { label: 'Become Editor of Book', path: '/books-publication-services#book-editor-form' },
         ]
       },
       { label: 'Apply for Fellowship', path: '/apply-for-fellowship' },
@@ -125,18 +125,18 @@ const MENU_STRUCTURE = [
         label: 'Conference - Apply Now',
         path: '/ConferenceApplyNow',
         submenu: [
-          { label: 'Register Now For Upcoming Conference', path: '/ConferenceApplyNow' },
-          { label: 'Previous Conference', path: '/ConferenceApplyNow' },
-          { label: 'Register as a Resourse Person', path: '/ConferenceApplyNow' },
-          { label: 'Apply For Travel Grant', path: '/ConferenceApplyNow' },
+          { label: 'Register Now For Upcoming Conference', path: '/ConferenceApplyNow#conference-form' },
+          { label: 'Previous Conference', path: '/ConferenceApplyNow#conference-table' },
+          { label: 'Register as a Resourse Person', path: '/ConferenceApplyNow#application-form' },
+          { label: 'Apply For Travel Grant', path: '/ConferenceApplyNow#travel-grant-form' },
         ]
       },
       {
         label: 'Awards',
         path: '/awards',
         submenu: [
-          { label: 'Upcoming Awards Ceremony', path: '/awards' },
-          { label: 'Apply online for Award', path: '/awards' },
+          { label: 'Upcoming Awards Ceremony', path: '/awards#conference-table' },
+          { label: 'Apply online for Award', path: '/awards#award-form' },
         ]
       }
     ]
@@ -150,7 +150,7 @@ const MENU_STRUCTURE = [
         label: 'Writing Assistance',
         path: '/apply-now-writing-assistance',
         submenu: [
-          { label: 'Apply Now - Writing Assistance', path: '/apply-now-writing-assistance' }
+          { label: 'Apply Now - Writing Assistance', path: '/apply-now-writing-assistance#writing-assistance-form' }
         ]
       },
       { label: 'Faculty & Co-Guide Registration', path: '/faculty-co-guide-registration' },
@@ -158,7 +158,7 @@ const MENU_STRUCTURE = [
         label: 'Apply For Major/Minor project',
         path: '/ApplyForMajorMinorproject',
         submenu: [
-          { label: 'Apply Online For Support', path: '/ApplyForMajorMinorproject' }
+          { label: 'Apply Online For Support', path: '/ApplyForMajorMinorproject#major-minor-form' }
         ]
       },
       { label: 'Increase Citation & DOI', path: '/increase-citation-doi' },
@@ -168,15 +168,15 @@ const MENU_STRUCTURE = [
         label: 'Plagiarism Detector',
         path: '/apply-for-plagiarism-detector',
         submenu: [
-          { label: 'Apply For Plagiarism Detector', path: '/apply-for-plagiarism-detector' },
-          { label: 'Apply For Turnitin Support', path: '/apply-for-turnitin-support' },
+          { label: 'Apply For Plagiarism Detector', path: '/apply-for-plagiarism-detector#plagiarism-form' },
+          { label: 'Apply For Turnitin Support', path: '/apply-for-turnitin-support#plagiarism-form' },
         ]
       },
       {
         label: 'API Calculator',
         path: '/apply-for-api-calculator',
         submenu: [
-          { label: 'Apply For API Calculator', path: '/apply-for-api-calculator' },
+          { label: 'Apply For API Calculator', path: '/apply-for-api-calculator#api-form' },
         ]
       }
     ]
@@ -189,26 +189,25 @@ const MENU_STRUCTURE = [
         label: 'Academic News Channel',
         path: '/academic-news-channel',
         submenu: [
-          { label: 'Apply For News', path: '/academic-news-channel' }
+          { label: 'Apply For News', path: '/academic-news-channel#apply' }
         ]
       },
       {
         label: 'Education Tours',
         path: '/international-educational-tours',
         submenu: [
-          { label: 'Apply for International Educational Tours', path: '/international-educational-tours' }
+          { label: 'Apply for International Educational Tours', path: '/international-educational-tours#apply' }
         ]
       },
       {
         label: 'Admission Services',
         path: '/phd-programmes',
         submenu: [
-          { label: 'Apply for PhD Programmes', path: '/phd-programmes' },
-          { label: 'Apply for PG Programmes', path: '/pg-programmes' },
-          { label: 'Apply for UG Programmes', path: '/ug-programmes' },
+          { label: 'Apply for PhD Programmes', path: '/phd-programmes#apply' },
+          { label: 'Apply for PG Programmes', path: '/pg-programmes#apply' },
+          { label: 'Apply for UG Programmes', path: '/ug-programmes#apply' },
         ]
       },
-      { label: 'Online Learning Mooc', path: '/online-learning-mooc' },
       { label: 'Help for Education', path: '/help-for-education' },
     ]
   },
@@ -220,29 +219,28 @@ const MENU_STRUCTURE = [
         label: 'University/College Services',
         path: '/university-college',
         submenu: [
-          { label: 'Institutional Membership/Sign MOU', path: '/institutionalMembership' },
+          { label: 'Institutional Membership/Sign MOU', path: '/institutionalMembership#apply' },
           { label: 'NAAC Assistance', path: '/naac-assistance' },
-          { label: 'Apply For NAAC Support', path: '/apply-for-naac-support' },
-          { label: 'Apply For HR Support', path: '/apply-for-hr-support' },
-          { label: 'Apply For NBA and Training Support', path: '/apply-for-nba-training-support' },
+          { label: 'Apply For NAAC Support', path: '/naac-assistance#apply' },
+          { label: 'Apply For HR Support', path: '/naac-assistance#apply' },
+          { label: 'Apply For NBA and Training Support', path: '/apply-for-nba-training-support#apply' },
         ]
       },
       {
         label: 'Conference Management Board',
-        path: '/university-college',
+        path: '/support-for-proceeding-printing',
         submenu: [
-          { label: 'Support For Proceeding Printing', path: '/support-for-proceeding-printing' },
-          { label: 'Paper Publication Support', path: '/paper-publication-support' },
-          { label: 'Sponsorship for Organizing Conference', path: '/sponsorship-for-organizing-conference' },
-          { label: 'Need Resource person', path: '/need-resource-person' },
-          { label: 'Get Advertisement Support', path: '/advertisement-support' },
+          { label: 'Support For Proceeding Printing', path: '/support-for-proceeding-printing#apply' },
+          { label: 'Sponsorship for Organizing Conference', path: '/sponsorship-for-organizing-conference#apply' },
+          { label: 'Need Resource person', path: '/need-resource-person#apply' },
+          { label: 'Get Advertisement Support', path: '/advertisement-support#apply' },
         ]
       },
       {
         label: 'Digital Library',
         path: '/membership-dellnett',
         submenu: [
-          { label: 'Apply For Membership DELLNETT', path: '/membership-dellnett' }
+          { label: 'Apply For Membership DELLNETT', path: '/membership-dellnett#apply' }
         ]
       },
 
@@ -250,44 +248,45 @@ const MENU_STRUCTURE = [
   },
   {
     label: 'Editors || NGO || Business',
-    path: '/editors-ngo-business',
+    path: '/',
     submenu: [
       { label: 'Edwin Journal', path: '/edwin-journal' },
       {
         label: 'Journals Help Board',
         path: '/journal-help-board',
         submenu: [
-          { label: 'Apply For Opening Journal Services', path: '/opening-journal-services' },
-          { label: 'Technical Support For Indexing', path: '/technical-support-for-indexing' },
-          { label: 'Apply for Print and E ISSN Allotment Support', path: '/print-eissn-allotment-support' },
-          { label: 'Free DOI', path: '/free-doi' },
-          { label: 'Paid DOI - Crossref', path: '/paid-doi-crossref' },
+          { label: 'Apply For Opening Journal Services', path: '/journal-help-board#opening-journal-services' },
+          { label: 'Technical Support For Indexing', path: '/journal-help-board#opening-journal-services' },
+          { label: 'Apply for Print and E ISSN Allotment Support', path: '/journal-help-board#opening-journal-services' },
+          { label: 'Free DOI', path: '/journal-help-board#opening-journal-services' },
+          { label: 'Paid DOI - Crossref', path: '/journal-help-board#opening-journal-services' },
         ]
       },
       {
         label: 'DOI Portal',
         path: '/doi-portal',
         submenu: [
-          { label: 'Apply Now - DOI Portal', path: '/doi-portal' }
+          { label: 'Apply Now - DOI Portal', path: '/doi-portal#submit-doi' }
         ]
       },
       {
         label: 'Services for NGO',
-        path: '/membership-portal',
+        path: '/ngo-support',
         submenu: [
-          { label: 'Membership portal', path: '/membership-portal' },
-          { label: 'CSR Funding Assistant', path: '/csr-funding-assistant' },
+          { label: 'Membership portal', path: '/ngo-support#ngo-support-form' },
+          { label: 'CSR Funding Assistant', path: '/ngo-support#ngo-support-form' },
         ]
       },
       {
         label: 'Services for Business',
         path: '/services-for-business',
         submenu: [
-          { label: 'Services For Business Automation', path: '/business-automation' },
-          { label: 'Digital Marketing', path: '/digital-marketing' },
-          { label: 'Apps for IOS and Android', path: '/apps-for-ios-and-android' },
-          { label: 'Whatsapp Services', path: '/whatsapp-services' },
-          { label: 'HR Support for Business', path: '/hr-support-for-business' },
+          { label: 'Services For Business Automation', path: '/services-for-business#website-application-form' },
+          { label: 'Digital Marketing', path: '/services-for-business#website-application-form' },
+          { label: 'Apps for IOS and Android', path: '/services-for-business#website-application-form' },
+          { label: 'Whatsapp Services', path: '/services-for-business#website-application-form' },
+          { label: 'HR Support for Business', path: '/hr-support-for-business#form' },
+          { label: "Edwin's Constructions", path: '/constructions' },
         ]
       }
     ]
@@ -297,13 +296,13 @@ const MENU_STRUCTURE = [
     path: '/pay-now',
     submenu: [
       { label: 'Paynow', path: '/paynow' },
-      { label: 'FAQ', path: '/faq' },
+      { label: 'FAQ', path: 'https://edwinincorp.zohodesk.in/portal/en/home' },
       { label: 'Feedback/Complaint Box', path: '/feedback-complaint-box' },
     ]
   },
   {
     label: 'Photo Gallery',
-    path: '/gallery',
+    path: '/',
     submenu: [
       { label: 'Conferences', path: '/conferences' },
       { label: 'Birthdays', path: '/birthdays' },
@@ -388,6 +387,7 @@ const NavItem = ({ item, depth = 0, onNavigate, flyoutDirection = 'right' }) => 
   const [isOpen, setIsOpen] = useState(false);
   const hasSubmenu = item.submenu && item.submenu.length > 0;
   const Icon = getMenuIcon(item.label);
+  const isExternal = item.path?.startsWith('http');
   const childFlyoutDirection = depth === 0 ? item.flyoutDirection || 'right' : flyoutDirection;
   const dropdownClasses = [
     'dropdown-menu',
@@ -398,6 +398,7 @@ const NavItem = ({ item, depth = 0, onNavigate, flyoutDirection = 'right' }) => 
 
   const handleClick = (event) => {
     const isMobile = typeof window !== 'undefined' && window.innerWidth <= 992;
+    const targetHash = item.path?.includes('#') ? item.path.split('#')[1] : '';
 
     if (hasSubmenu && isMobile) {
       event.preventDefault();
@@ -406,6 +407,15 @@ const NavItem = ({ item, depth = 0, onNavigate, flyoutDirection = 'right' }) => 
     }
 
     if (onNavigate) onNavigate();
+
+    if (targetHash) {
+      window.setTimeout(() => {
+        document.getElementById(targetHash)?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 120);
+    }
   };
 
   return (
@@ -414,11 +424,31 @@ const NavItem = ({ item, depth = 0, onNavigate, flyoutDirection = 'right' }) => 
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <Link
-        to={item.path}
-        className={depth === 0 ? 'nav-link-top' : 'nav-link-sub'}
-        onClick={handleClick}
-      >
+      {isExternal ? (
+        <a
+          href={item.path}
+          className={depth === 0 ? 'nav-link-top' : 'nav-link-sub'}
+          onClick={handleClick}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="nav-link-content">
+            {depth === 0 && item.label === 'Home' && <Icon size={18} strokeWidth={2.5} />}
+            {depth > 0 && <Icon className="submenu-icon" size={18} strokeWidth={2.3} />}
+            <span>{item.label}</span>
+          </span>
+          {hasSubmenu && (
+            depth === 0
+              ? <ChevronDown className="chevron" size={16} strokeWidth={2.5} />
+              : <ChevronRight className="chevron-right" size={16} strokeWidth={2.5} />
+          )}
+        </a>
+      ) : (
+        <Link
+          to={item.path}
+          className={depth === 0 ? 'nav-link-top' : 'nav-link-sub'}
+          onClick={handleClick}
+        >
         <span className="nav-link-content">
           {depth === 0 && item.label === 'Home' && <Icon size={18} strokeWidth={2.5} />}
           {depth > 0 && <Icon className="submenu-icon" size={18} strokeWidth={2.3} />}
@@ -429,7 +459,8 @@ const NavItem = ({ item, depth = 0, onNavigate, flyoutDirection = 'right' }) => 
             ? <ChevronDown className="chevron" size={16} strokeWidth={2.5} />
             : <ChevronRight className="chevron-right" size={16} strokeWidth={2.5} />
         )}
-      </Link>
+        </Link>
+      )}
 
       {hasSubmenu && isOpen && (
         <div className={dropdownClasses}>

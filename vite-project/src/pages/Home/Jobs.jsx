@@ -65,6 +65,29 @@ const roleOptions = [
 const inputClass =
   "w-full rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] px-4 py-3 text-[15px] text-[#1A1A2E] outline-none transition duration-200 placeholder:text-[#8A98AD] focus:border-[#1B3A6B] focus:ring-4 focus:ring-[#1B3A6B]/10";
 
+function ZohoFormCard({ id, kicker, title, children }) {
+  return (
+    <div
+      id={id}
+      className="mx-auto w-full max-w-[950px] overflow-hidden rounded-[24px] border border-[#D6E0F0] bg-white shadow-xl"
+    >
+      <div className="bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4">
+        <p className="text-[13px] font-semibold uppercase tracking-wide text-white/75">
+          {kicker}
+        </p>
+
+        <h2 className="mt-1 text-[26px] font-bold text-white">{title}</h2>
+      </div>
+
+      <div className="bg-white p-3">
+        <div className="overflow-hidden rounded-[18px] border border-[#D6E0F0] bg-white shadow-inner">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ApplicationForm({ id, title, subtitle, type, status, onSubmit }) {
   return (
     <motion.form
@@ -398,8 +421,8 @@ export default function JobsPage() {
         </div>
       </section>
 
-      <section className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
+      <section className="bg-[#FFFFFF] px-5 py-10">
+        <div className="mx-auto max-w-[1250px]">
           <div className="mb-12 grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
             <div>
               <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
@@ -420,101 +443,70 @@ export default function JobsPage() {
               className="h-[260px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_14px_38px_rgba(27,58,107,0.10)]"
             />
           </div>
-         <div className="grid gap-8">
-         <div
+         <div className="grid gap-6">
+         <ZohoFormCard
   id="career-with-edwin-inc"
-  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+  kicker="Career Application"
+  title="Career with Edwin INC"
 >
-  <div className="mb-6">
-    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-      Career Application
-    </p>
-
-    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-      Career with Edwin INC
-    </h2>
-  </div>
 
   <iframe
     title="Career with Edwin INC"
     width="100%"
-    height="1010"
+    height="500"
     src="https://crm.zoho.in/crm/WebFormServeServlet?rid=26de158348063c1edfc9ad6d9b57f6013cfc563a93e3a947e8c7a579ef58a5861996ceaefe1a0ec211dd26e8e9cf1b5fgid563201e6b42013857924a77e1873d2135f199456df88f061c1cd4ff3586038c3"
-    className="w-full border-0"
+    className="block w-full border-0"
     scrolling="auto"
   />
-</div>
+</ZohoFormCard>
           
-            <div
+            <ZohoFormCard
   id="partnership-programme"
-  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+  kicker="Partnership Application"
+  title="Partnership Programme"
 >
-  <div className="mb-6">
-    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-      Partnership Application
-    </p>
-    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-      Partnership Programme
-    </h2>
-  </div>
 
   <iframe
     title="Partnership Programme Zoho CRM Form"
     width="100%"
-    height="870"
+    height="500"
     src="https://crm.zoho.in/crm/WebFormServeServlet?rid=a443df8d74518c14977077abce953612a7854b09c207d158fba80bc413b8efa1ab558ea3c27686320ccb2a46cb61bdaegid2d2e02378a105e7a856119d245aa96c14d8c47b009f59a111afc8184e24b2811"
-    className="w-full border-0"
+    className="block w-full border-0"
     scrolling="auto"
   />
-</div>
+</ZohoFormCard>
 
-            <div
+            <ZohoFormCard
   id="internship-application"
-  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+  kicker="Internship Application"
+  title="Application for Internship"
 >
-  <div className="mb-6">
-    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-      Internship Application
-    </p>
-
-    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-      Application for Internship
-    </h2>
-  </div>
 
   <iframe
     title="Application for Internship"
     width="100%"
-    height="1010"
+    height="500"
     src="https://crm.zoho.in/crm/WebFormServeServlet?rid=51112abc98f271a6263dd1fd29565976fa602534a4908959c69abb1f87ba1a3d3cbf6408e31181bda780c28e59585ae2gid81e615699b36668458c9dfaef197d543fec8c64e6e2aa6e20992204e1a6cd988"
-    className="w-full border-0"
+    className="block w-full border-0"
     scrolling="auto"
   />
-   </div>
+   </ZohoFormCard>
 
-   <div
+   <ZohoFormCard
   id="schedule-meeting"
-  className="rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_14px_38px_rgba(27,58,107,0.10)] lg:p-8"
+  kicker="Meeting Application"
+  title="Schedule Meeting"
 >
-  <div className="mb-6">
-    <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
-      Meeting Application
-    </p>
-
-    <h2 className="mt-3 text-[28px] font-semibold text-[#1B3A6B]">
-      Schedule Meeting
-    </h2>
-  </div>
 
   <iframe
     title="Schedule Meeting"
     width="100%"
-    height="660"
+    height="500"
     src="https://crm.zoho.in/crm/WebFormServeServlet?rid=09c1ba8807a47da8593d7e5cef940856613db46cd890907d627fe190e9c64175f0badb869d7f41d1481a730090ddb372gidf6805627c413a1d9346818821e3c81fe75b92f9fbaf81e434d986bb1b5f07c2d"
-    className="w-full border-0"
+    className="block w-full border-0"
     scrolling="auto"
   />
-</div>
+</ZohoFormCard>
 
    </div>
         </div>

@@ -1204,7 +1204,7 @@ export default function EdwinGroupPublicationsPage() {
       </div>
 
       {/* FORM 2 */}
-      <div className="group rounded-[28px] bg-white shadow-2xl border border-[#D6E0F0] overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(27,58,107,0.18)]">
+      <div id="book-editor-form" className="group rounded-[28px] bg-white shadow-2xl border border-[#D6E0F0] overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(27,58,107,0.18)]">
         <div className="relative bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-5 flex items-center justify-between gap-4">
           <div>
             <p className="text-[#C89B3C] text-xs font-semibold uppercase tracking-wider">
