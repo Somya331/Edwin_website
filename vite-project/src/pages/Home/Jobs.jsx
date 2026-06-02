@@ -69,18 +69,18 @@ function ZohoFormCard({ id, kicker, title, children }) {
   return (
     <div
       id={id}
-      className="mx-auto w-full max-w-[950px] overflow-hidden rounded-[24px] border border-[#D6E0F0] bg-white shadow-xl"
+      className="glass-card mx-auto w-full max-w-[950px] overflow-hidden rounded-[30px] border border-white/70 bg-white/85 shadow-[0_30px_90px_rgba(7,28,52,.16)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#FFD35A]/80"
     >
-      <div className="bg-gradient-to-r from-[#1B3A6B] via-[#254F80] to-[#2C5F8A] px-6 py-4">
-        <p className="text-[13px] font-semibold uppercase tracking-wide text-white/75">
+      <div className="bg-gradient-to-r from-[#031329] via-[#073B86] to-[#051B3B] px-6 py-4">
+        <p className="text-[13px] font-black uppercase tracking-wide text-[#FFD35A]">
           {kicker}
         </p>
 
-        <h2 className="mt-1 text-[26px] font-bold text-white">{title}</h2>
+        <h2 className="mt-1 text-[26px] font-black text-white">{title}</h2>
       </div>
 
-      <div className="bg-white p-3">
-        <div className="overflow-hidden rounded-[18px] border border-[#D6E0F0] bg-white shadow-inner">
+      <div className="bg-gradient-to-br from-[#F8FBFF] to-white p-3">
+        <div className="overflow-hidden rounded-[20px] border border-[#D6E0F0] bg-white shadow-inner">
           {children}
         </div>
       </div>
@@ -200,10 +200,40 @@ export default function JobsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
-      <section className="relative overflow-hidden bg-[#F6F9FD] px-5 py-12 lg:px-8 lg:py-16">
-        <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-[#C89B3C]/15 blur-3xl" />
-        <div className="absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+    <div className="min-h-screen overflow-hidden bg-[#EEF5FF] font-['Plus_Jakarta_Sans',sans-serif] text-[#08224A]">
+      <style>{`
+        @keyframes shineMove {
+          0% { transform: translateX(-180%) rotate(18deg); opacity: 0; }
+          35% { opacity: .9; }
+          100% { transform: translateX(260%) rotate(18deg); opacity: 0; }
+        }
+
+        .glass-card {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .glass-card::before {
+          content: "";
+          position: absolute;
+          top: -70%;
+          left: -80%;
+          width: 28%;
+          height: 260%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), rgba(255,210,80,.38), rgba(255,255,255,.18), transparent);
+          filter: blur(16px);
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .glass-card:hover::before {
+          animation: shineMove 1.45s ease;
+        }
+      `}</style>
+
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#031329] via-[#073B86] to-[#051B3B] px-5 py-12 lg:px-8 lg:py-16">
+        <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-[#FFB000]/25 blur-3xl" />
+        <div className="absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-[#4DA3FF]/25 blur-3xl" />
 
         <div className="relative mx-auto max-w-[1300px]">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
@@ -212,16 +242,16 @@ export default function JobsPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.45 }}
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#D6E0F0] bg-[#FFFFFF] px-5 py-2 text-[13px] font-semibold text-[#1B3A6B] shadow-[0_8px_24px_rgba(27,58,107,0.08)]">
-                <FaBriefcase className="text-[#C89B3C]" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-[13px] font-black text-[#FFD35A] shadow-[0_8px_24px_rgba(0,0,0,0.16)] backdrop-blur-md">
+                <FaBriefcase className="text-[#FFD35A]" />
                 Jobs at Edwin INC
               </span>
 
-              <h1 className="mt-6 text-[42px] font-extrabold leading-tight text-[#1B3A6B] lg:text-[64px]">
+              <h1 className="mt-6 text-[42px] font-black leading-tight text-white lg:text-[64px]">
                 Build Your Career With Edwin Incorporation
               </h1>
 
-              <p className="mt-5 max-w-2xl text-[16px] leading-[1.9] text-[#1A1A2E]">
+              <p className="mt-5 max-w-2xl text-[16px] font-semibold leading-[1.9] text-white/82">
                 Apply online for jobs, internship opportunities, and partnership programmes.
                 Edwin Incorporation works across academic services, universities, colleges,
                 journals editors, and admission services.
@@ -230,7 +260,7 @@ export default function JobsPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#job-application"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1B3A6B] px-7 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FF9D00] to-[#FFD35A] px-7 py-3 text-[15px] font-black text-[#071C34] shadow-[0_16px_42px_rgba(255,176,0,.35)] transition duration-300 hover:-translate-y-1"
                 >
                   Apply Now
                   <FaArrowRight className="text-[13px]" />
@@ -238,29 +268,29 @@ export default function JobsPage() {
 
                 <a
                   href="#application-options"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1B3A6B] px-7 py-3 text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3 text-[15px] font-black text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#071C34]"
                 >
                   View Options
                 </a>
               </div>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 shadow-[0_8px_24px_rgba(27,58,107,0.07)]">
-                  <FaUsers className="text-[24px] text-[#C89B3C]" />
-                  <p className="mt-3 text-[24px] font-extrabold text-[#1B3A6B]">Team</p>
-                  <p className="mt-1 text-[13px] text-[#5A6A85]">Professional Culture</p>
+                <div className="glass-card rounded-[22px] border border-white/15 bg-white/10 p-5 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#FFD35A]/70 hover:bg-white/15">
+                  <FaUsers className="text-[24px] text-[#FFD35A]" />
+                  <p className="mt-3 text-[24px] font-black text-white">Team</p>
+                  <p className="mt-1 text-[13px] text-white/65">Professional Culture</p>
                 </div>
 
-                <div className="rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 shadow-[0_8px_24px_rgba(27,58,107,0.07)]">
-                  <FaUserGraduate className="text-[24px] text-[#C89B3C]" />
-                  <p className="mt-3 text-[24px] font-extrabold text-[#1B3A6B]">Internship</p>
-                  <p className="mt-1 text-[13px] text-[#5A6A85]">Students & Freshers</p>
+                <div className="glass-card rounded-[22px] border border-white/15 bg-white/10 p-5 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#FFD35A]/70 hover:bg-white/15">
+                  <FaUserGraduate className="text-[24px] text-[#FFD35A]" />
+                  <p className="mt-3 text-[24px] font-black text-white">Internship</p>
+                  <p className="mt-1 text-[13px] text-white/65">Students & Freshers</p>
                 </div>
 
-                <div className="rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 shadow-[0_8px_24px_rgba(27,58,107,0.07)]">
-                  <FaHandshake className="text-[24px] text-[#C89B3C]" />
-                  <p className="mt-3 text-[24px] font-extrabold text-[#1B3A6B]">Partner</p>
-                  <p className="mt-1 text-[13px] text-[#5A6A85]">Programme</p>
+                <div className="glass-card rounded-[22px] border border-white/15 bg-white/10 p-5 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#FFD35A]/70 hover:bg-white/15">
+                  <FaHandshake className="text-[24px] text-[#FFD35A]" />
+                  <p className="mt-3 text-[24px] font-black text-white">Partner</p>
+                  <p className="mt-1 text-[13px] text-white/65">Programme</p>
                 </div>
               </div>
             </motion.div>
@@ -271,10 +301,10 @@ export default function JobsPage() {
               transition={{ duration: 0.45, delay: 0.08 }}
               className="relative"
             >
-              <div className="absolute -right-5 -top-5 hidden h-24 w-24 rounded-[28px] bg-[#C89B3C]/20 lg:block" />
+              <div className="absolute -right-5 -top-5 hidden h-24 w-24 rounded-[28px] bg-[#FFB000]/25 lg:block" />
 
               <div className="relative grid gap-4">
-                <div className="overflow-hidden rounded-[34px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_22px_60px_rgba(27,58,107,0.14)]">
+                <div className="glass-card overflow-hidden rounded-[34px] border border-white/20 bg-white/10 p-4 shadow-[0_30px_90px_rgba(0,0,0,.32)] backdrop-blur-md">
                   <img
                     src={heroImages.main}
                     alt="Jobs at Edwin INC"

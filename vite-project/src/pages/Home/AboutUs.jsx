@@ -52,7 +52,7 @@ export default function AboutUsStrictPremiumDesign() {
   ];
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#FFF8EA] font-['Plus_Jakarta_Sans',sans-serif] text-[#172033]">
+    <div className="min-h-screen overflow-hidden bg-[#EEF5FF] font-['Plus_Jakarta_Sans',sans-serif] text-[#08224A]">
       <style>{`
         @keyframes floatSoft {
           0%,100% { transform: translateY(0); }
@@ -79,9 +79,9 @@ export default function AboutUsStrictPremiumDesign() {
           background: linear-gradient(
             90deg,
             transparent,
-            rgba(223,163,33,.08),
+            rgba(255,176,0,.10),
             rgba(255,255,255,.16),
-            rgba(223,163,33,.08),
+            rgba(255,211,90,.14),
             transparent
           );
           filter: blur(18px);
@@ -99,20 +99,20 @@ export default function AboutUsStrictPremiumDesign() {
         }
       `}</style>
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#071C34] via-[#0C315E] to-[#111827] px-5 py-24 text-white">
-        <div className="absolute left-10 top-10 h-80 w-80 rounded-full bg-[#C46A00]/18 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#DFA321]/16 blur-3xl" />
-        <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(#DFA321_1.2px,transparent_1.2px)] [background-size:28px_28px]" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#031329] via-[#073B86] to-[#051B3B] px-5 py-24 text-white">
+        <div className="absolute left-10 top-10 h-80 w-80 rounded-full bg-[#FFB000]/25 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#4DA3FF]/25 blur-3xl" />
+        <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(#FFD35A_1.2px,transparent_1.2px)] [background-size:28px_28px]" />
 
         <div className="relative z-10 mx-auto max-w-[1200px] text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#DFA321]/35 bg-white/10 px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#DFA321] backdrop-blur-md">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#FFD35A]/35 bg-white/10 px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#FFD35A] backdrop-blur-md">
             <Sparkles size={16} />
             Edwin Incorporation
           </span>
 
           <h1 className="mt-6 text-[42px] font-black leading-tight md:text-[58px]">
             About{" "}
-            <span className="bg-gradient-to-r from-[#C46A00] to-[#DFA321] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#FFB000] to-[#FFD35A] bg-clip-text text-transparent">
               Us
             </span>
           </h1>
@@ -125,13 +125,13 @@ export default function AboutUsStrictPremiumDesign() {
         </div>
       </section>
 
-      <section className="relative bg-[#FFF8EA] px-5 py-20">
-        <div className="absolute -right-28 top-10 h-96 w-96 rounded-full bg-[#DFA321]/30 blur-3xl" />
-        <div className="absolute -left-28 bottom-10 h-96 w-96 rounded-full bg-[#C46A00]/16 blur-3xl" />
+      <section className="relative bg-[#EEF5FF] px-5 py-20">
+        <div className="absolute -right-28 top-10 h-96 w-96 rounded-full bg-[#FFD35A]/25 blur-3xl" />
+        <div className="absolute -left-28 bottom-10 h-96 w-96 rounded-full bg-[#073B86]/12 blur-3xl" />
 
         <div className="relative mx-auto max-w-[1200px]">
           <div className="mb-12 text-center">
-            <span className="rounded-full bg-white px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#C46A00] shadow-sm">
+            <span className="rounded-full bg-white px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#073B86] shadow-sm">
               Director Message
             </span>
             <h2 className="mt-4 text-[34px] font-black text-[#071C34]">
