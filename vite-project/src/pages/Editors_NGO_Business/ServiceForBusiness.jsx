@@ -280,10 +280,10 @@ export default function ApplyForWebsitePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
-      <section className="relative overflow-hidden bg-[#F6F9FD] px-5 py-12 lg:px-8 lg:py-16">
-        <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-[#C89B3C]/15 blur-3xl" />
-        <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#1B3A6B]/10 blur-3xl" />
+    <div className="min-h-screen overflow-hidden bg-[#EEF5FF] font-['Plus_Jakarta_Sans',sans-serif] text-[#08224A]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#031329] via-[#073B86] to-[#051B3B] px-5 py-16 lg:px-8 lg:py-20">
+        <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-[#FFB000]/25 blur-3xl" />
+        <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#4DA3FF]/25 blur-3xl" />
 
         <div className="relative mx-auto max-w-[1320px]">
           <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
@@ -292,16 +292,16 @@ export default function ApplyForWebsitePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.45 }}
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#D6E0F0] bg-white px-5 py-2 text-[13px] font-semibold text-[#1B3A6B] shadow-[0_8px_24px_rgba(27,58,107,0.08)]">
-                <FaLaptopCode className="text-[#C89B3C]" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-[13px] font-black text-[#FFD35A] shadow-sm backdrop-blur-md">
+                <FaLaptopCode className="text-[#FFD35A]" />
                 Website, Software & Automation Services
               </span>
 
-              <h1 className="mt-6 text-[42px] font-extrabold leading-tight text-[#1B3A6B] lg:text-[62px]">
+              <h1 className="mt-6 text-[36px] font-black leading-tight text-white lg:text-[52px]">
                 Apply For Website & Business Automation Services
               </h1>
 
-              <p className="mt-5 max-w-2xl text-[16px] leading-[1.9] text-[#1A1A2E]">
+              <p className="mt-5 max-w-2xl text-[16px] font-semibold leading-[1.9] text-white/82">
                 Edwin Incorporation provides website development, custom software,
                 business automation, digital marketing, app designing, hosting and
                 BPO support for institutions, businesses, universities and colleges.
@@ -310,7 +310,7 @@ export default function ApplyForWebsitePage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#website-application-form"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1B3A6B] px-7 py-3 text-[15px] font-medium text-white transition duration-200 hover:bg-[#C89B3C]"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0B66C3] to-[#315BC7] px-7 py-3 text-[15px] font-black text-white shadow-[0_16px_42px_rgba(11,102,195,.28)] transition duration-300 hover:-translate-y-1"
                 >
                   Apply Now
                   <FaArrowRight className="text-[13px]" />
@@ -318,7 +318,7 @@ export default function ApplyForWebsitePage() {
 
                 <a
                   href="#services"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1B3A6B] px-7 py-3 text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-7 py-3 text-[15px] font-black text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#071C34]"
                 >
                   View Services
                 </a>
@@ -332,10 +332,10 @@ export default function ApplyForWebsitePage() {
                 ].map(([title, sub, Icon]) => (
                   <div
                     key={title}
-                    className="rounded-[22px] border border-[#D6E0F0] bg-white p-5 shadow-[0_8px_24px_rgba(27,58,107,0.07)]"
+                    className="rounded-[22px] border border-white/70 bg-white/95 p-5 shadow-[0_14px_40px_rgba(8,34,74,.10)] transition duration-300 hover:-translate-y-1 hover:border-[#FFB000]"
                   >
-                    <Icon className="text-[24px] text-[#C89B3C]" />
-                    <p className="mt-3 text-[24px] font-extrabold text-[#1B3A6B]">
+                    <Icon className="text-[24px] text-[#FFB000]" />
+                    <p className="mt-3 text-[24px] font-black text-[#082B63]">
                       {title}
                     </p>
                     <p className="mt-1 text-[13px] text-[#5A6A85]">{sub}</p>
@@ -353,7 +353,7 @@ export default function ApplyForWebsitePage() {
               <div className="absolute -right-5 -top-5 hidden h-24 w-24 rounded-[28px] bg-[#C89B3C]/20 lg:block" />
 
               <div className="relative grid gap-4">
-                <div className="overflow-hidden rounded-[34px] border border-[#D6E0F0] bg-white p-4 shadow-[0_22px_60px_rgba(27,58,107,0.14)]">
+                <div className="overflow-hidden rounded-[34px] border border-white/20 bg-white/10 p-4 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md">
                   <img
                     src={heroImages.main}
                     alt="Website and software development"
@@ -389,7 +389,7 @@ export default function ApplyForWebsitePage() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20">
+      <section className="bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF4FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div className="lg:sticky lg:top-8">
@@ -464,7 +464,7 @@ export default function ApplyForWebsitePage() {
         </div>
       </section>
 
-      <section id="services" className="bg-[#EAF1FB] px-5 py-20">
+      <section id="services" className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -539,7 +539,7 @@ export default function ApplyForWebsitePage() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20">
+      <section className="bg-gradient-to-br from-white via-[#F8FBFF] to-[#EAF4FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="overflow-hidden rounded-[30px] border border-[#D6E0F0] bg-[#F6F9FD] p-6 shadow-[0_18px_42px_rgba(27,58,107,0.10)]">
@@ -597,7 +597,7 @@ export default function ApplyForWebsitePage() {
         </div>
       </section>
 
-      <section className="bg-[#F6F9FD] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
@@ -655,7 +655,7 @@ export default function ApplyForWebsitePage() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20">
+      <section className="bg-gradient-to-br from-white via-[#F8FBFF] to-[#EAF4FF] px-5 py-20">
         <div className="mx-auto max-w-[900px]">
           <div className="mb-10 text-center">
             <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">

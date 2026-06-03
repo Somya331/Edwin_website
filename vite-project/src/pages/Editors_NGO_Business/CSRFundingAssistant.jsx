@@ -1,11 +1,11 @@
 import React from 'react';
+import SimpleThemedPage from './SimpleThemedPage';
 
 const CSRFundingAssistant = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">CSR Funding Assistant</h1>
+    <SimpleThemedPage title="CSR Funding Assistant">
       <p>Welcome to the CSR Funding Assistant page.</p>
-    </div>
+    </SimpleThemedPage>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
+import SimpleThemedPage from './SimpleThemedPage';
 
 const MembershipPortal = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Membership Portal</h1>
+    <SimpleThemedPage title="Membership Portal">
       <p>Welcome to the Membership Portal page.</p>
-    </div>
+    </SimpleThemedPage>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
+import SimpleThemedPage from './SimpleThemedPage';
 
 const OpeningJournalServices = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Opening Journal Services</h1>
+    <SimpleThemedPage title="Opening Journal Services">
       <p>Welcome to the Opening Journal Services page.</p>
-    </div>
+    </SimpleThemedPage>
   );
 };
 

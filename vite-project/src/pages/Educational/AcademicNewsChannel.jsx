@@ -81,8 +81,8 @@ const YouTubePlayer = ({ url, title, className = "h-[320px]" }) => {
 
   if (!videoId) {
     return (
-      <div className="flex h-[260px] items-center justify-center rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 text-center shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-        <p className="text-[15px] text-[#1A1A2E]">
+      <div className="flex h-[260px] items-center justify-center rounded-[24px] border border-[#DDE9F7] bg-white p-6 text-center shadow-[0_18px_55px_rgba(8,34,74,.10)]">
+        <p className="text-[15px] text-[#08224A]">
           Please add a valid YouTube link.
         </p>
       </div>
@@ -92,11 +92,11 @@ const YouTubePlayer = ({ url, title, className = "h-[320px]" }) => {
   return (
     <div
       onClick={showControlAgain}
-      className="relative overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+      className="relative overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-white p-4 shadow-[0_18px_55px_rgba(8,34,74,.10)]"
     >
       <iframe
         ref={iframeRef}
-        className={`${className} w-full rounded-[12px]`}
+        className={`${className} w-full rounded-[24px]`}
         src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&rel=0&modestbranding=1`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -110,7 +110,7 @@ const YouTubePlayer = ({ url, title, className = "h-[320px]" }) => {
             e.stopPropagation();
             toggleVideo();
           }}
-          className="absolute left-1/2 top-1/2 z-10 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#1B3A6B] text-[24px] text-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:bg-[#C89B3C]"
+          className="absolute left-1/2 top-1/2 z-10 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#082B63] text-[24px] text-[#FFFFFF] shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:bg-[#FFB000]"
         >
           {isPlaying ? <FaPause /> : <FaPlay />}
         </button>
@@ -153,7 +153,7 @@ const ZohoWebForm = () => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45 }}
-      className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+      className="overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-white p-4 shadow-[0_18px_55px_rgba(8,34,74,.10)]"
     >
       <iframe
         title="Zoho Web Form"
@@ -227,8 +227,10 @@ const AcademicNewsChannel = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
-      <section className="relative overflow-hidden bg-[#FFFFFF] px-5 py-20">
+    <main className="min-h-screen bg-[#EEF5FF] font-['Plus_Jakarta_Sans'] text-[#08224A]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#031329] via-[#073B86] to-[#051B3B] px-5 py-20">
+        <div className="absolute -left-24 top-8 h-[300px] w-[300px] rounded-full bg-[#FFB000]/30 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[360px] w-[360px] rounded-full bg-[#4DA3FF]/25 blur-3xl" />
         <div className="mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-[1fr_1fr]">
           <motion.div
             variants={fadeUp}
@@ -236,13 +238,13 @@ const AcademicNewsChannel = () => {
             animate="visible"
             transition={{ duration: 0.5 }}
           >
-            <p className="mb-4 inline-flex rounded-[8px] border border-[#C89B3C] px-4 py-2 text-[13px] text-[#5A6A85]">
+            <p className="mb-4 inline-flex rounded-xl border border-[#FFB000] bg-white/95 px-4 py-2 text-[13px] text-[#5A6A85]">
               Academic News Channel
             </p>
-            <h1 className="mb-5 text-[40px] font-bold leading-tight text-[#1B3A6B]">
+            <h1 className="mb-5 text-[40px] font-bold leading-tight text-white">
               Learning for Life with Academic News
             </h1>
-            <p className="mb-6 text-[15px] leading-[1.7] text-[#1A1A2E]">
+            <p className="mb-6 text-[15px] leading-[1.7] text-white/82">
               Academic News Channel is a platform focusing on educational and
               academic content. It provides valuable insights into the lives and
               careers of academicians and intellectuals, sharing their
@@ -251,13 +253,13 @@ const AcademicNewsChannel = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#apply"
-                className="inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#082B63] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-300 hover:bg-[#FFB000]"
               >
                 Book Your Appointment <FaArrowRight />
               </a>
               <a
                 href="#videos"
-                className="inline-flex items-center gap-2 rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/35 bg-white/10 px-6 py-[10px] text-[15px] font-medium text-white transition duration-300 hover:bg-white hover:text-[#082B63]"
               >
                 Watch Videos
               </a>
@@ -278,7 +280,7 @@ const AcademicNewsChannel = () => {
         </div>
       </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -288,12 +290,12 @@ const AcademicNewsChannel = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-5 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-5 text-[28px] font-semibold text-[#082B63]">
               About News Channel
             </h2>
             <a
               href="#apply"
-              className="inline-flex rounded-[8px] bg-[#1B3A6B] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+              className="inline-flex rounded-xl bg-[#082B63] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-300 hover:bg-[#FFB000]"
             >
               Book Your Appointment
             </a>
@@ -306,10 +308,10 @@ const AcademicNewsChannel = () => {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.45 }}
-              className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+              className="rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)]"
             >
-              <FaMicrophoneAlt className="mb-5 text-[42px] text-[#1B3A6B]" />
-              <h3 className="mb-3 text-[18px] font-semibold text-[#1A1A2E]">
+              <FaMicrophoneAlt className="mb-5 text-[42px] text-[#082B63]" />
+              <h3 className="mb-3 text-[18px] font-semibold text-[#08224A]">
                 Academic Interviews & Features
               </h3>
               <p className="text-[15px] leading-[1.7]">
@@ -325,7 +327,7 @@ const AcademicNewsChannel = () => {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.45 }}
-              className="space-y-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+              className="space-y-4 rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)]"
             >
               <p className="text-[15px] leading-[1.7]">
                 Academic News Channel is a platform focusing on educational and
@@ -350,7 +352,7 @@ const AcademicNewsChannel = () => {
         </div>
       </section>
 
-      <section className="bg-[#FFFFFF] px-5 py-20">
+      <section className="bg-white px-5 py-20">
         <div className="mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-[1fr_1fr]">
           <motion.div
             variants={fadeUp}
@@ -359,7 +361,7 @@ const AcademicNewsChannel = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-5 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-5 text-[28px] font-semibold text-[#082B63]">
               Academic News Intro
             </h2>
             <p className="mb-6 text-[15px] leading-[1.7]">
@@ -371,7 +373,7 @@ const AcademicNewsChannel = () => {
               href="https://youtu.be/pkC-KOtQxSU"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#082B63] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-300 hover:bg-[#FFB000]"
             >
               <FaYoutube /> Watch Videos
             </a>
@@ -392,7 +394,7 @@ const AcademicNewsChannel = () => {
         </div>
       </section>
 
-      <section id="videos" className="bg-[#EAF1FB] px-5 py-20">
+      <section id="videos" className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -402,7 +404,7 @@ const AcademicNewsChannel = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">
               Featured Academic Videos
             </h2>
             <p className="mx-auto max-w-3xl text-[15px] leading-[1.7]">
@@ -421,10 +423,10 @@ const AcademicNewsChannel = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:border-[#C89B3C]"
+                className="overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-white shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:border-[#FFB000]"
               >
                 <div className="p-6">
-                  <h3 className="mb-3 text-[18px] font-semibold text-[#1A1A2E]">
+                  <h3 className="mb-3 text-[18px] font-semibold text-[#08224A]">
                     {video.title}
                   </h3>
                   <p className="text-[15px] leading-[1.7] text-[#5A6A85]">
@@ -442,7 +444,7 @@ const AcademicNewsChannel = () => {
         </div>
       </section>
 
-      <section className="bg-[#FFFFFF] px-5 py-20">
+      <section className="bg-white px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -452,7 +454,7 @@ const AcademicNewsChannel = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">
               Benefits of Academic News Channel
             </h2>
           </motion.div>
@@ -467,7 +469,7 @@ const AcademicNewsChannel = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
                 whileHover={{ y: -5 }}
-                className="flex gap-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:border-[#C89B3C]"
+                className="flex gap-4 rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:border-[#FFB000]"
               >
                 <FaCheckCircle className="mt-1 text-[20px] text-[#2D7A4F]" />
                 <p className="text-[15px] leading-[1.7]">{item}</p>
@@ -477,7 +479,7 @@ const AcademicNewsChannel = () => {
         </div>
       </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -487,7 +489,7 @@ const AcademicNewsChannel = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">
               Testimonials
             </h2>
           </motion.div>
@@ -502,10 +504,10 @@ const AcademicNewsChannel = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
                 whileHover={{ y: -5 }}
-                className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:border-[#C89B3C]"
+                className="rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:border-[#FFB000]"
               >
-                <FaQuoteLeft className="mb-4 text-[22px] text-[#C89B3C]" />
-                <div className="mb-4 flex gap-1 text-[#C89B3C]">
+                <FaQuoteLeft className="mb-4 text-[22px] text-[#FFB000]" />
+                <div className="mb-4 flex gap-1 text-[#FFB000]">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <FaStar key={star} />
                   ))}
@@ -518,7 +520,7 @@ const AcademicNewsChannel = () => {
         </div>
       </section>
 
-      <section id="apply" className="bg-[#FFFFFF] px-5 py-20">
+      <section id="apply" className="bg-white px-5 py-20">
         <div className="mx-auto grid max-w-[1200px] items-start gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <motion.div
             variants={fadeUp}
@@ -527,7 +529,7 @@ const AcademicNewsChannel = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-5 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-5 text-[28px] font-semibold text-[#082B63]">
               Apply for News
             </h2>
             <p className="mb-6 text-[15px] leading-[1.7]">
@@ -535,8 +537,8 @@ const AcademicNewsChannel = () => {
               interviews, features, academic coverage, and appointment booking.
             </p>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
-              <div className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-6">
-                <FaCalendarCheck className="mb-4 text-[26px] text-[#1B3A6B]" />
+              <div className="rounded-[24px] border border-[#DDE9F7] bg-[#EEF5FF] p-6">
+                <FaCalendarCheck className="mb-4 text-[26px] text-[#082B63]" />
                 <h3 className="mb-3 text-[18px] font-semibold">
                   Book Your Appointment
                 </h3>
@@ -545,8 +547,8 @@ const AcademicNewsChannel = () => {
                   discussions.
                 </p>
               </div>
-              <div className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-6">
-                <FaVideo className="mb-4 text-[26px] text-[#1B3A6B]" />
+              <div className="rounded-[24px] border border-[#DDE9F7] bg-[#EEF5FF] p-6">
+                <FaVideo className="mb-4 text-[26px] text-[#082B63]" />
                 <h3 className="mb-3 text-[18px] font-semibold">
                   Academic Coverage
                 </h3>

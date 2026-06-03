@@ -160,20 +160,62 @@ export default function PressMediaPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
-      <section className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D6E0F0] bg-[#FFFFFF] px-5 py-2 text-[13px] font-semibold text-[#1B3A6B]">
+    <div className="min-h-screen overflow-hidden bg-[#EEF5FF] font-['Plus_Jakarta_Sans',sans-serif] text-[#08224A]">
+      <style>{`
+        @keyframes pressFadeUp {
+          from { opacity: 0; transform: translateY(26px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pressShine {
+          0% { transform: translateX(-180%) rotate(18deg); opacity: 0; }
+          35% { opacity: .8; }
+          100% { transform: translateX(260%) rotate(18deg); opacity: 0; }
+        }
+
+        .press-fade-up { animation: pressFadeUp .85s ease both; }
+
+        .press-card {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .press-card::before {
+          content: "";
+          position: absolute;
+          top: -70%;
+          left: -85%;
+          width: 28%;
+          height: 260%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), rgba(255,211,90,.34), rgba(255,255,255,.14), transparent);
+          filter: blur(16px);
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .press-card:hover::before {
+          animation: pressShine 1.4s ease;
+        }
+      `}</style>
+
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#031329] via-[#073B86] to-[#051B3B] px-5 py-16 md:py-20">
+        <div className="absolute inset-0 opacity-45">
+          <div className="absolute -left-24 top-10 h-[300px] w-[300px] rounded-full bg-[#FFB000]/35 blur-3xl" />
+          <div className="absolute right-0 top-0 h-[360px] w-[360px] rounded-full bg-[#4DA3FF]/30 blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="press-fade-up">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-[12px] font-black uppercase tracking-wide text-[#FFD35A] backdrop-blur-md">
               <FaNewspaper className="text-[#C89B3C]" />
               NEWSPAPER COVERAGE
             </div>
 
-            <h1 className="mt-6 text-[42px] font-bold leading-tight text-[#1B3A6B] lg:text-[56px]">
+            <h1 className="mt-6 max-w-3xl text-[36px] font-black leading-tight text-white md:text-[46px] lg:text-[52px]">
               Press and Media Coverage of Edwin Incorporation
             </h1>
 
-            <p className="mt-5 max-w-2xl text-[15px] leading-[1.8] text-[#1A1A2E]">
+            <p className="mt-5 max-w-2xl text-[15px] font-semibold leading-[1.8] text-white/78">
               Explore newspaper highlights, press mentions, conference
               visibility, academic event coverage, and media recognition
               associated with Edwin Incorporation and its research-driven
@@ -183,7 +225,7 @@ export default function PressMediaPage() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
                 href="#coverage"
-                className="inline-flex items-center justify-center gap-2 rounded-[8px] bg-[#1B3A6B] px-6 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#FF9D00] to-[#FFD35A] px-6 py-3 text-[14px] font-black text-[#071C34] shadow-[0_16px_42px_rgba(255,176,0,.28)] transition duration-300 hover:-translate-y-1"
               >
                 View Coverage <FaArrowRight className="text-[12px]" />
               </a>
@@ -191,54 +233,57 @@ export default function PressMediaPage() {
                 href="https://www.academichelpstore.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] px-6 py-3 text-[15px] font-medium text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-6 py-3 text-[14px] font-black text-white shadow-sm backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#071C34]"
               >
                 Visit Website <FaExternalLinkAlt className="text-[12px]" />
               </a>
             </div>
           </div>
 
-          <div className="grid gap-5">
+          <div className="grid gap-5 press-fade-up [animation-delay:.12s]">
             <img
               src={heroImages[0]}
               alt="Press media coverage"
-              className="h-[330px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+              className="h-[330px] w-full rounded-[26px] border border-white/20 object-cover p-2 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md"
             />
             <div className="grid gap-5 sm:grid-cols-2">
               <img
                 src={heroImages[1]}
                 alt="Newspaper coverage"
-                className="h-[160px] w-full rounded-[18px] border border-[#D6E0F0] object-cover"
+                className="h-[160px] w-full rounded-[20px] border border-white/20 object-cover shadow-[0_16px_42px_rgba(0,0,0,.18)]"
               />
               <img
                 src={heroImages[2]}
                 alt="Media press"
-                className="h-[160px] w-full rounded-[18px] border border-[#D6E0F0] object-cover"
+                className="h-[160px] w-full rounded-[20px] border border-white/20 object-cover shadow-[0_16px_42px_rgba(0,0,0,.18)]"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#FFFFFF] px-5 py-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#F7FBFF] to-[#EAF4FF] px-5 py-16">
+        <div className="absolute -right-28 top-10 h-80 w-80 rounded-full bg-[#4DA3FF]/18 blur-3xl" />
         <div className="mx-auto max-w-[1200px]">
-          <div className="mb-8">
-            <p className="text-[13px] uppercase tracking-wide text-[#5A6A85]">
+          <div className="relative mb-8 press-fade-up">
+            <p className="text-[12px] font-black uppercase tracking-wide text-[#FF9D00]">
               Featured In
             </p>
-            <h2 className="mt-3 text-[34px] font-semibold text-[#1B3A6B]">
+            <h2 className="mt-3 text-[30px] font-black leading-tight text-[#082B63] md:text-[36px]">
               Media Locations & Press Highlights
             </h2>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {featuredPress.map((item) => (
               <div
                 key={item}
-                className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 transition duration-200 hover:border-[#C89B3C]"
+                className="press-card rounded-[22px] border border-white/70 bg-white p-5 shadow-[0_14px_40px_rgba(8,34,74,.09)] transition duration-300 hover:-translate-y-2 hover:border-[#FFB000] hover:shadow-[0_20px_55px_rgba(11,102,195,.14)]"
               >
-                <FaNewspaper className="text-[26px] text-[#1B3A6B]" />
-                <h3 className="mt-4 text-[18px] font-semibold text-[#1A1A2E]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0B66C3] to-[#083A7C] text-white shadow-lg">
+                  <FaNewspaper className="text-[21px]" />
+                </div>
+                <h3 className="mt-4 text-[17px] font-black text-[#08224A]">
                   {item}
                 </h3>
               </div>
@@ -247,16 +292,18 @@ export default function PressMediaPage() {
         </div>
       </section>
 
-      <section id="coverage" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-[13px] uppercase tracking-wide text-[#5A6A85]">
+      <section id="coverage" className="relative overflow-hidden bg-gradient-to-br from-[#EAF4FF] via-[#F8FBFF] to-[#FFF7E5] px-5 py-20">
+        <div className="absolute -left-28 top-14 h-96 w-96 rounded-full bg-[#FFD35A]/22 blur-3xl" />
+        <div className="absolute -right-28 bottom-14 h-96 w-96 rounded-full bg-[#4DA3FF]/20 blur-3xl" />
+        <div className="relative mx-auto max-w-[1200px]">
+          <div className="mb-10 max-w-3xl press-fade-up">
+            <p className="text-[12px] font-black uppercase tracking-wide text-[#FF9D00]">
               Conference and Press Coverage
             </p>
-            <h2 className="mt-3 text-[34px] font-semibold text-[#1B3A6B]">
+            <h2 className="mt-3 text-[30px] font-black leading-tight text-[#082B63] md:text-[36px]">
               Academic Event Coverage Gallery
             </h2>
-            <p className="mt-4 text-[15px] leading-[1.8] text-[#1A1A2E]">
+            <p className="mt-4 text-[15px] font-semibold leading-[1.8] text-[#52647B]">
               This section highlights newspaper coverage and media recognition
               of conferences, academic activities, and research-related
               initiatives conducted under Edwin Incorporation.
@@ -267,39 +314,41 @@ export default function PressMediaPage() {
             {coverageSections.map((section, sectionIndex) => (
               <div
                 key={section.heading}
-                className="rounded-[18px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 lg:p-7"
+                className="press-card rounded-[26px] border border-white/70 bg-white p-5 shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-500 hover:-translate-y-2 hover:border-[#FFB000] hover:shadow-[0_24px_70px_rgba(8,34,74,.14)] lg:p-7"
               >
                 <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
                   <div>
-                    <p className="text-[13px] font-semibold uppercase tracking-wide text-[#C89B3C]">
+                    <p className="text-[12px] font-black uppercase tracking-wide text-[#D97706]">
                       Section {sectionIndex + 1}
                     </p>
-                    <h3 className="mt-2 text-[26px] font-semibold text-[#1B3A6B]">
+                    <h3 className="mt-2 text-[24px] font-black text-[#082B63] md:text-[28px]">
                       {section.heading}
                     </h3>
-                    <p className="mt-2 max-w-3xl text-[15px] leading-[1.7] text-[#1A1A2E]">
+                    <p className="mt-2 max-w-3xl text-[15px] font-semibold leading-[1.7] text-[#52647B]">
                       {section.text}
                     </p>
                   </div>
-                  <FaCameraRetro className="text-[34px] text-[#C89B3C]" />
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FFF4D8] text-[#D97706]">
+                    <FaCameraRetro className="text-[28px]" />
+                  </div>
                 </div>
 
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {section.items.map((item) => (
                     <div
                       key={item.title}
-                      className="overflow-hidden rounded-[18px] border border-[#D6E0F0] bg-[#FFFFFF] transition duration-200 hover:border-[#C89B3C]"
+                      className="group overflow-hidden rounded-[20px] border border-[#DDE9F7] bg-white shadow-[0_10px_28px_rgba(8,34,74,.07)] transition duration-300 hover:-translate-y-2 hover:border-[#FFB000] hover:shadow-[0_18px_48px_rgba(11,102,195,.14)]"
                     >
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="h-[260px] w-full object-cover transition duration-200 hover:scale-105"
+                        className="h-[260px] w-full object-cover transition duration-500 group-hover:scale-105"
                       />
                       <div className="p-4">
-                        <h4 className="text-[16px] font-semibold text-[#1B3A6B]">
+                        <h4 className="text-[16px] font-black text-[#082B63]">
                           {item.title}
                         </h4>
-                        <p className="mt-1 text-[13px] text-[#5A6A85]">
+                        <p className="mt-1 text-[13px] font-semibold text-[#65758C]">
                           Press and media coverage
                         </p>
                       </div>
@@ -312,27 +361,30 @@ export default function PressMediaPage() {
         </div>
       </section>
 
-      <section className="bg-[#FFFFFF] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-          <div className="rounded-[24px] border border-[#D6E0F0] bg-[#EAF1FB] p-8">
-            <FaVideo className="text-[46px] text-[#C89B3C]" />
-            <h2 className="mt-5 text-[34px] font-semibold text-[#1B3A6B]">
+      <section className="relative overflow-hidden bg-white px-5 py-20">
+        <div className="absolute -left-28 bottom-8 h-80 w-80 rounded-full bg-[#4DA3FF]/14 blur-3xl" />
+        <div className="relative mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div className="press-card rounded-[26px] border border-white/70 bg-gradient-to-br from-[#F8FBFF] via-[#EAF4FF] to-[#FFF7E5] p-8 shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-500 hover:-translate-y-2 hover:border-[#FFB000]">
+            <div className="flex h-16 w-16 items-center justify-center rounded-[22px] bg-gradient-to-br from-[#0B66C3] to-[#083A7C] text-white shadow-lg">
+              <FaVideo className="text-[31px]" />
+            </div>
+            <h2 className="mt-5 text-[30px] font-black leading-tight text-[#082B63] md:text-[34px]">
               Video Media Coverage
             </h2>
-            <p className="mt-4 text-[15px] leading-[1.8] text-[#1A1A2E]">
+            <p className="mt-4 text-[15px] font-semibold leading-[1.8] text-[#52647B]">
               Watch media and event-related video coverage associated with Edwin
               Incorporation and its academic presence.
             </p>
           </div>
 
-          <div className="rounded-[18px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <div className="flex h-[300px] items-center justify-center rounded-[14px] border border-[#D6E0F0] bg-[#EAF1FB]">
+          <div className="press-card rounded-[26px] border border-white/70 bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-500 hover:-translate-y-2 hover:border-[#FFB000]">
+            <div className="flex h-[300px] items-center justify-center rounded-[20px] border border-[#DDE9F7] bg-gradient-to-br from-[#EAF4FF] via-white to-[#FFF7E5]">
               <div className="text-center">
-                <FaVideo className="mx-auto text-[54px] text-[#1B3A6B]" />
-                <h3 className="mt-4 text-[22px] font-semibold text-[#1B3A6B]">
+                <FaVideo className="mx-auto text-[54px] text-[#0B66C3]" />
+                <h3 className="mt-4 text-[22px] font-black text-[#082B63]">
                   Conference & Media Video Coverage
                 </h3>
-                <p className="mx-auto mt-3 max-w-md text-[15px] leading-[1.7] text-[#1A1A2E]">
+                <p className="mx-auto mt-3 max-w-md text-[15px] font-semibold leading-[1.7] text-[#52647B]">
                   Official video glimpse of event and media visibility
                   associated with academic and research initiatives.
                 </p>
@@ -342,31 +394,32 @@ export default function PressMediaPage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[#EAF1FB] px-5 py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mb-8">
-            <p className="text-[13px] uppercase tracking-wide text-[#5A6A85]">
+      <section id="contact" className="relative overflow-hidden bg-gradient-to-br from-[#EAF4FF] via-[#F8FBFF] to-white px-5 py-20">
+        <div className="absolute -right-28 top-10 h-96 w-96 rounded-full bg-[#FFD35A]/18 blur-3xl" />
+        <div className="relative mx-auto max-w-[1200px]">
+          <div className="mb-8 press-fade-up">
+            <p className="text-[12px] font-black uppercase tracking-wide text-[#FF9D00]">
               Keep in Touch with Us
             </p>
-            <h2 className="mt-3 text-[34px] font-semibold text-[#1B3A6B]">
+            <h2 className="mt-3 text-[30px] font-black leading-tight text-[#082B63] md:text-[36px]">
               Edwin Incorporation Support
             </h2>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-              <FaMapMarkerAlt className="text-[28px] text-[#C89B3C]" />
-              <h3 className="mt-4 text-[18px] font-semibold">Address</h3>
-              <p className="mt-3 text-[15px] leading-[1.7]">
+            <div className="press-card rounded-[22px] border border-white/70 bg-white p-6 shadow-[0_14px_40px_rgba(8,34,74,.09)] transition duration-300 hover:-translate-y-2 hover:border-[#FFB000]">
+              <FaMapMarkerAlt className="text-[28px] text-[#D97706]" />
+              <h3 className="mt-4 text-[18px] font-black text-[#082B63]">Address</h3>
+              <p className="mt-3 text-[15px] font-semibold leading-[1.7] text-[#52647B]">
                 15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi
                 110019
               </p>
             </div>
 
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-              <FaPhoneAlt className="text-[28px] text-[#C89B3C]" />
-              <h3 className="mt-4 text-[18px] font-semibold">Phone</h3>
-              <p className="mt-3 text-[15px] leading-[1.7]">
+            <div className="press-card rounded-[22px] border border-white/70 bg-white p-6 shadow-[0_14px_40px_rgba(8,34,74,.09)] transition duration-300 hover:-translate-y-2 hover:border-[#FFB000]">
+              <FaPhoneAlt className="text-[28px] text-[#D97706]" />
+              <h3 className="mt-4 text-[18px] font-black text-[#082B63]">Phone</h3>
+              <p className="mt-3 text-[15px] font-semibold leading-[1.7] text-[#52647B]">
                 India : 011-66155019
                 <br />
                 Phone: +91 6262752167
@@ -375,12 +428,12 @@ export default function PressMediaPage() {
               </p>
             </div>
 
-            <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-              <FaEnvelope className="text-[28px] text-[#C89B3C]" />
-              <h3 className="mt-4 text-[18px] font-semibold">
+            <div className="press-card rounded-[22px] border border-white/70 bg-white p-6 shadow-[0_14px_40px_rgba(8,34,74,.09)] transition duration-300 hover:-translate-y-2 hover:border-[#FFB000]">
+              <FaEnvelope className="text-[28px] text-[#D97706]" />
+              <h3 className="mt-4 text-[18px] font-black text-[#082B63]">
                 Email & Website
               </h3>
-              <p className="mt-3 text-[15px] leading-[1.7]">
+              <p className="mt-3 text-[15px] font-semibold leading-[1.7] text-[#52647B]">
                 care@edwinepc.com
                 <br />
                 www.academichelpstore.com
@@ -388,15 +441,15 @@ export default function PressMediaPage() {
             </div>
           </div>
 
-          <div className="mt-8 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
+          <div className="press-card mt-8 rounded-[22px] border border-white/70 bg-white p-6 shadow-[0_14px_40px_rgba(8,34,74,.09)] transition duration-300 hover:-translate-y-2 hover:border-[#FFB000]">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-start gap-4">
-                <FaGlobe className="mt-1 text-[26px] text-[#C89B3C]" />
+                <FaGlobe className="mt-1 text-[26px] text-[#D97706]" />
                 <div>
-                  <h3 className="text-[18px] font-semibold text-[#1B3A6B]">
+                  <h3 className="text-[18px] font-black text-[#082B63]">
                     Visit Website
                   </h3>
-                  <p className="mt-1 text-[15px] text-[#1A1A2E]">
+                  <p className="mt-1 text-[15px] font-semibold text-[#52647B]">
                     www.academichelpstore.com
                   </p>
                 </div>
@@ -406,7 +459,7 @@ export default function PressMediaPage() {
                 href="https://www.academichelpstore.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-[8px] bg-[#1B3A6B] px-6 py-3 text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0B66C3] to-[#315BC7] px-6 py-3 text-[14px] font-black text-white shadow-[0_16px_42px_rgba(11,102,195,.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(11,102,195,.32)]"
               >
                 Open Website <FaExternalLinkAlt className="text-[12px]" />
               </a>

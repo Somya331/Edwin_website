@@ -117,8 +117,8 @@ export default function HRPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
-      <section className="relative h-[540px] overflow-hidden bg-[#1B3A6B]">
+    <div className="min-h-screen overflow-hidden bg-[#EEF5FF] font-['Plus_Jakarta_Sans',sans-serif] text-[#08224A]">
+      <section className="relative h-[540px] overflow-hidden bg-gradient-to-br from-[#031329] via-[#073B86] to-[#051B3B]">
         {heroImages.map((image, index) => (
           <div
             key={image}
@@ -127,14 +127,14 @@ export default function HRPage() {
             }`}
           >
             <img src={image} alt="HR support" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A6B]/95 via-[#1B3A6B]/80 to-[#1B3A6B]/25" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#031329]/95 via-[#073B86]/82 to-[#051B3B]/25" />
           </div>
         ))}
 
         <div className="relative z-10 mx-auto flex h-full max-w-[1200px] items-center px-5">
           <div className="max-w-3xl rounded-[26px] border border-white/20 bg-white/10 p-8 backdrop-blur-md shadow-[0_18px_55px_rgba(0,0,0,0.25)]">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#C89B3C]/50 bg-white/15 px-5 py-2 text-[13px] font-bold uppercase tracking-wide text-[#FFFFFF]">
-              <FaBriefcase className="text-[#C89B3C]" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-[13px] font-black uppercase tracking-wide text-[#FFD35A]">
+              <FaBriefcase className="text-[#FFD35A]" />
               Jobs for Academicians
             </span>
 
@@ -152,7 +152,7 @@ export default function HRPage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#apply"
-                className="inline-flex items-center gap-2 rounded-[10px] bg-[#C89B3C] px-7 py-3 text-[15px] font-bold text-[#FFFFFF] transition duration-300 hover:-translate-y-1 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#0B66C3] to-[#315BC7] px-7 py-3 text-[15px] font-black text-[#FFFFFF] shadow-[0_16px_42px_rgba(11,102,195,.28)] transition duration-300 hover:-translate-y-1"
               >
                 Apply Now <FaArrowRight />
               </a>
@@ -180,7 +180,7 @@ export default function HRPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#FFFFFF] px-5 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] via-white to-[#EAF4FF] px-5 py-20">
         <div className="absolute -right-24 top-10 h-80 w-80 rounded-full bg-[#EAF1FB] blur-3xl" />
         <div className="absolute -left-24 bottom-10 h-80 w-80 rounded-full bg-[#C89B3C]/10 blur-3xl" />
 
@@ -236,7 +236,7 @@ export default function HRPage() {
         </div>
       </section>
 
-      <section id="apply" className="bg-[#EAF1FB] px-5 py-20">
+      <section id="apply" className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-10 text-center">
             <p className="text-[13px] font-bold uppercase tracking-wide text-[#C89B3C]">
@@ -285,7 +285,7 @@ export default function HRPage() {
         </div>
       </section>
 
-      <section id="services" className="bg-[#FFFFFF] px-5 py-20">
+      <section id="services" className="bg-gradient-to-br from-white via-[#F8FBFF] to-[#EAF4FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-10 text-center">
             <p className="text-[13px] font-bold uppercase tracking-wide text-[#C89B3C]">
@@ -329,7 +329,7 @@ export default function HRPage() {
         </div>
       </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-10 text-center">
             <p className="text-[13px] font-bold uppercase tracking-wide text-[#C89B3C]">
@@ -358,7 +358,7 @@ export default function HRPage() {
         </div>
       </section>
 
-      <section className="bg-[#FFFFFF] px-5 py-20">
+      <section className="bg-gradient-to-br from-white via-[#F8FBFF] to-[#EAF4FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-10 text-center">
             <p className="text-[13px] font-bold uppercase tracking-wide text-[#C89B3C]">

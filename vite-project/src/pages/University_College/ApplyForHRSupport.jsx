@@ -117,7 +117,7 @@ export default function HRPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
+    <div className="uc-theme min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
       <section className="relative h-[540px] overflow-hidden bg-[#1B3A6B]">
         {heroImages.map((image, index) => (
           <div

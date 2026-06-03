@@ -76,12 +76,13 @@ const HelpForEducation = () => {
   };
 
   return (
-    <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
-      <section className="relative overflow-hidden bg-[#EAF1FB] px-5 py-20">
-        <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-br from-[#1B3A6B] via-[#1B3A6B] to-[#EAF1FB]" />
+    <main className="min-h-screen bg-[#EEF5FF] font-['Plus_Jakarta_Sans'] text-[#08224A]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#031329] via-[#073B86] to-[#051B3B] px-5 py-20">
+        <div className="absolute -left-24 top-8 h-[300px] w-[300px] rounded-full bg-[#FFB000]/30 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[360px] w-[360px] rounded-full bg-[#4DA3FF]/25 blur-3xl" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 lg:grid-cols-[1fr_1fr]">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.5 }}>
-            <span className="mb-5 inline-flex rounded-[8px] border border-[#C89B3C] bg-[#FFFFFF] px-4 py-2 text-[13px] text-[#5A6A85]">
+            <span className="mb-5 inline-flex rounded-xl border border-[#FFB000] bg-white px-4 py-2 text-[13px] text-[#5A6A85]">
               Help for Education
             </span>
             <h1 className="mb-6 text-[42px] font-bold leading-tight text-[#FFFFFF] md:text-[58px]">
@@ -91,10 +92,10 @@ const HelpForEducation = () => {
               Empowering students, researchers, educators and institutions through quality educational guidance, training and academic support.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="tel:+916262752167" className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#1B3A6B]">
+              <a href="tel:+916262752167" className="inline-flex items-center gap-2 rounded-xl bg-[#FFB000] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] hover:bg-white hover:text-[#082B63]">
                 <FaPhoneAlt /> Get Consultation
               </a>
-              <a href="#services" className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#1B3A6B]">
+              <a href="#services" className="inline-flex items-center gap-2 rounded-xl border border-[#FFFFFF] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] hover:bg-white hover:text-[#082B63]">
                 View Services <FaArrowRight />
               </a>
             </div>
@@ -102,18 +103,18 @@ const HelpForEducation = () => {
 
           <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="grid grid-cols-2 gap-5">
             {heroImages.map((img, index) => (
-              <div key={img} className={`${index === 0 ? "col-span-2 h-[260px]" : "h-[220px]"} overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-2 shadow-[0_2px_8px_rgba(0,0,0,0.08)]`}>
-                <img src={img} alt="education" className="h-full w-full rounded-[8px] object-cover" />
+              <div key={img} className={`${index === 0 ? "col-span-2 h-[260px]" : "h-[220px]"} overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-white p-2 shadow-[0_18px_55px_rgba(8,34,74,.10)]`}>
+                <img src={img} alt="education" className="h-full w-full rounded-xl object-cover" />
               </div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      <section id="services" className="bg-[#FFFFFF] px-5 py-20">
+      <section id="services" className="bg-white px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div className="mb-12 text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">Our Educational Services</h2>
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">Our Educational Services</h2>
             <p className="mx-auto max-w-3xl text-[15px] leading-[1.7]">
               Professional educational support services for learners, researchers, faculty members and institutions.
             </p>
@@ -129,12 +130,12 @@ const HelpForEducation = () => {
                 variants={fadeUp}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
                 whileHover={{ y: -8 }}
-                className="group rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:border-[#C89B3C]"
+                className="group rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] hover:border-[#FFB000]"
               >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-[12px] bg-[#EAF1FB] text-[26px] text-[#1B3A6B] group-hover:bg-[#1B3A6B] group-hover:text-[#FFFFFF]">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-[24px] bg-[#EEF5FF] text-[26px] text-[#082B63] group-hover:bg-[#082B63] group-hover:text-[#FFFFFF]">
                   {service.icon}
                 </div>
-                <h3 className="mb-3 text-[18px] font-semibold text-[#1B3A6B]">{service.title}</h3>
+                <h3 className="mb-3 text-[18px] font-semibold text-[#082B63]">{service.title}</h3>
                 <p className="text-[15px] leading-[1.7]">{service.text}</p>
               </motion.div>
             ))}
@@ -142,13 +143,13 @@ const HelpForEducation = () => {
         </div>
       </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <span className="mb-4 inline-flex rounded-[8px] border border-[#C89B3C] bg-[#FFFFFF] px-4 py-2 text-[13px] text-[#5A6A85]">
+            <span className="mb-4 inline-flex rounded-xl border border-[#FFB000] bg-white px-4 py-2 text-[13px] text-[#5A6A85]">
               Support Categories
             </span>
-            <h2 className="mb-5 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-5 text-[28px] font-semibold text-[#082B63]">
               Who Can Benefit?
             </h2>
             <p className="text-[15px] leading-[1.7]">
@@ -156,14 +157,14 @@ const HelpForEducation = () => {
             </p>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)]">
             <div className="mb-6 flex flex-wrap gap-3">
               {Object.keys(tabs).map((tab) => (
                 <button
                   key={tab}
                   type="button"
                   onClick={() => setActiveTab(tab)}
-                  className={`rounded-[8px] px-5 py-[10px] text-[15px] font-medium ${activeTab === tab ? "bg-[#1B3A6B] text-[#FFFFFF]" : "border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B]"
+                  className={`rounded-xl px-5 py-[10px] text-[15px] font-medium ${activeTab === tab ? "bg-[#082B63] text-[#FFFFFF]" : "border border-[#082B63] bg-white text-[#082B63]"
                     }`}
                 >
                   {tab}
@@ -173,7 +174,7 @@ const HelpForEducation = () => {
 
             <div className="grid gap-4 md:grid-cols-2">
               {tabs[activeTab].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-5">
+                <div key={item} className="flex items-center gap-3 rounded-[24px] border border-[#DDE9F7] bg-[#EEF5FF] p-5">
                   <FaCheckCircle className="text-[#2D7A4F]" />
                   <p className="text-[15px] font-medium">{item}</p>
                 </div>
@@ -183,10 +184,10 @@ const HelpForEducation = () => {
         </div>
       </section>
 
-      <section className="bg-[#FFFFFF] px-5 py-20">
+      <section className="bg-white px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div className="mb-10 text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">Educational Resources</h2>
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">Educational Resources</h2>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -199,22 +200,22 @@ const HelpForEducation = () => {
                 variants={fadeUp}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
                 whileHover={{ y: -6 }}
-                className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-6 text-center hover:border-[#C89B3C]"
+                className="rounded-[24px] border border-[#DDE9F7] bg-[#EEF5FF] p-6 text-center hover:border-[#FFB000]"
               >
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-[12px] bg-[#FFFFFF] text-[26px] text-[#1B3A6B] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-[24px] bg-white text-[26px] text-[#082B63] shadow-[0_18px_55px_rgba(8,34,74,.10)]">
                   {item.icon}
                 </div>
-                <h3 className="text-[18px] font-semibold text-[#1B3A6B]">{item.title}</h3>
+                <h3 className="text-[18px] font-semibold text-[#082B63]">{item.title}</h3>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div className="mb-10 text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">Testimonials</h2>
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">Testimonials</h2>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -227,16 +228,16 @@ const HelpForEducation = () => {
                 variants={fadeUp}
                 transition={{ duration: 0.4, delay: index * 0.07 }}
                 whileHover={{ y: -5 }}
-                className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:border-[#C89B3C]"
+                className="rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] hover:border-[#FFB000]"
               >
-                <FaQuoteLeft className="mb-4 text-[22px] text-[#C89B3C]" />
-                <div className="mb-4 flex gap-1 text-[#C89B3C]">
+                <FaQuoteLeft className="mb-4 text-[22px] text-[#FFB000]" />
+                <div className="mb-4 flex gap-1 text-[#FFB000]">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <FaStar key={star} />
                   ))}
                 </div>
                 <p className="mb-5 text-[15px] leading-[1.7]">{item.text}</p>
-                <h3 className="text-[18px] font-semibold text-[#1B3A6B]">{item.name}</h3>
+                <h3 className="text-[18px] font-semibold text-[#082B63]">{item.name}</h3>
               </motion.div>
             ))}
           </div>

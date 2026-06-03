@@ -128,7 +128,7 @@ const NaacSupport = () => {
     setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
+    <main className="uc-theme min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
       <section className="relative overflow-hidden bg-[#FFFFFF] px-5 py-20">
         <div className="mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <motion.div

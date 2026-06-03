@@ -173,7 +173,7 @@ const ConferenceManagement = () => {
   };
 
   return (
-    <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
+    <main className="uc-theme min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
       <section className="relative overflow-hidden bg-[#FFFFFF] px-5 py-20">
         <div className="absolute left-0 top-0 h-full w-[58%] bg-[#1B3A6B]" />
         <div className="absolute right-0 top-0 h-full w-[42%] bg-[#EAF1FB]" />

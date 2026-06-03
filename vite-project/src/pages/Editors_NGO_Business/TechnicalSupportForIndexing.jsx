@@ -1,11 +1,11 @@
 import React from 'react';
+import SimpleThemedPage from './SimpleThemedPage';
 
 const TechnicalSupportForIndexing = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Technical Support For Indexing</h1>
+    <SimpleThemedPage title="Technical Support For Indexing">
       <p>Welcome to the Technical Support For Indexing page.</p>
-    </div>
+    </SimpleThemedPage>
   );
 };
 

@@ -121,12 +121,12 @@ const EducationalTours = () => {
     setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
+    <main className="min-h-screen bg-[#EEF5FF] font-['Plus_Jakarta_Sans'] text-[#08224A]">
       <section className="relative min-h-[650px] overflow-hidden">
         {slides.map((slide, index) => (
           <div
             key={slide.title}
-            className={`absolute inset-0 transition duration-200 ${
+            className={`absolute inset-0 transition duration-300 ${
               index === activeSlide ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -135,7 +135,7 @@ const EducationalTours = () => {
               alt={slide.title}
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-[#1B3A6B]/75" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#031329]/90 via-[#073B86]/82 to-[#051B3B]/88" />
           </div>
         ))}
 
@@ -146,7 +146,7 @@ const EducationalTours = () => {
             animate="visible"
             transition={{ duration: 0.5 }}
           >
-            <p className="mb-4 inline-flex rounded-[8px] border border-[#C89B3C] bg-[#FFFFFF]/95 px-4 py-2 text-[13px] text-[#5A6A85]">
+            <p className="mb-4 inline-flex rounded-xl border border-[#FFB000] bg-white/95 px-4 py-2 text-[13px] text-[#5A6A85]">
               Educational Tours
             </p>
             <h1 className="mb-5 max-w-3xl text-[48px] font-bold leading-tight text-[#FFFFFF]">
@@ -160,13 +160,13 @@ const EducationalTours = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#apply"
-                className="inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#FFB000] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-300 hover:bg-white hover:text-[#082B63]"
               >
                 Apply Now <FaArrowRight />
               </a>
               <a
                 href="#experience"
-                className="inline-flex items-center gap-2 rounded-[8px] border border-[#FFFFFF] bg-[#FFFFFF]/10 px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
+                className="inline-flex items-center gap-2 rounded-xl border border-[#FFFFFF] bg-white/10 px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-300 hover:bg-white hover:text-[#082B63]"
               >
                 Our Experience
               </a>
@@ -177,9 +177,9 @@ const EducationalTours = () => {
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF]/95 p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+            className="rounded-[24px] border border-[#DDE9F7] bg-white/95 p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)]"
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">
               {slides[activeSlide].title}
             </h2>
             <p className="mb-6 text-[15px] leading-[1.7]">
@@ -195,7 +195,7 @@ const EducationalTours = () => {
               ].map((item) => (
                 <div
                   key={item}
-                  className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-5 transition duration-200 hover:border-[#C89B3C]"
+                  className="rounded-[24px] border border-[#DDE9F7] bg-[#EEF5FF] p-5 transition duration-300 hover:border-[#FFB000]"
                 >
                   <FaCheckCircle className="mb-3 text-[20px] text-[#2D7A4F]" />
                   <p className="text-[15px] font-medium">{item}</p>
@@ -209,8 +209,8 @@ const EducationalTours = () => {
                   <button
                     key={slide.title}
                     onClick={() => setActiveSlide(index)}
-                    className={`h-3 w-3 rounded-full border border-[#1B3A6B] transition duration-200 ${
-                      index === activeSlide ? "bg-[#C89B3C]" : "bg-[#FFFFFF]"
+                    className={`h-3 w-3 rounded-full border border-[#082B63] transition duration-300 ${
+                      index === activeSlide ? "bg-[#FFB000]" : "bg-white"
                     }`}
                   />
                 ))}
@@ -219,13 +219,13 @@ const EducationalTours = () => {
               <div className="flex gap-3">
                 <button
                   onClick={prevSlide}
-                  className="flex h-10 w-10 items-center justify-center rounded-[8px] border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B] transition duration-200 hover:bg-[#EAF1FB]"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#082B63] bg-white text-[#082B63] transition duration-300 hover:bg-[#EEF5FF]"
                 >
                   <FaArrowLeft />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#1B3A6B] text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#082B63] text-[#FFFFFF] transition duration-300 hover:bg-[#FFB000]"
                 >
                   <FaArrowRight />
                 </button>
@@ -235,7 +235,7 @@ const EducationalTours = () => {
         </div>
       </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -245,7 +245,7 @@ const EducationalTours = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">
               Apply Now
             </h2>
             <p className="mx-auto max-w-3xl text-[15px] leading-[1.7]">
@@ -264,9 +264,9 @@ const EducationalTours = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.07 }}
                 whileHover={{ y: -6 }}
-                className="group rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:border-[#C89B3C]"
+                className="group rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:border-[#FFB000]"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-[8px] bg-[#1B3A6B] text-[22px] text-[#FFFFFF] transition duration-200 group-hover:bg-[#C89B3C]">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#082B63] text-[22px] text-[#FFFFFF] transition duration-300 group-hover:bg-[#FFB000]">
                   {index % 3 === 0 ? (
                     <FaGraduationCap />
                   ) : index % 3 === 1 ? (
@@ -275,12 +275,12 @@ const EducationalTours = () => {
                     <FaPlaneDeparture />
                   )}
                 </div>
-                <h3 className="mb-5 text-[18px] font-semibold text-[#1A1A2E]">
+                <h3 className="mb-5 text-[18px] font-semibold text-[#08224A]">
                   {item}
                 </h3>
                 <a
                   href="#apply"
-                  className="inline-flex items-center gap-2 rounded-[8px] bg-[#1B3A6B] px-5 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 hover:bg-[#C89B3C]"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#082B63] px-5 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-300 hover:bg-[#FFB000]"
                 >
                   Apply Now <FaArrowRight />
                 </a>
@@ -290,7 +290,7 @@ const EducationalTours = () => {
         </div>
       </section>
 
-      <section id="experience" className="bg-[#FFFFFF] px-5 py-20">
+      <section id="experience" className="bg-white px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -300,7 +300,7 @@ const EducationalTours = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">
               Our Experience
             </h2>
             <p className="mx-auto max-w-3xl text-[15px] leading-[1.7]">
@@ -318,14 +318,14 @@ const EducationalTours = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 whileHover={{ y: -6 }}
-                className={`overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] ${
+                className={`overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-white shadow-[0_18px_55px_rgba(8,34,74,.10)] ${
                   index === 0 || index === 5 ? "lg:row-span-2" : ""
                 }`}
               >
                 <img
                   src={image}
                   alt={`Educational tour experience ${index + 1}`}
-                  className={`w-full object-cover transition duration-200 hover:scale-105 ${
+                  className={`w-full object-cover transition duration-300 hover:scale-105 ${
                     index === 0 || index === 5 ? "h-[420px]" : "h-[230px]"
                   }`}
                 />
@@ -335,19 +335,19 @@ const EducationalTours = () => {
         </div>
       </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
-            className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+            className="rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)]"
           >
-            <h2 className="mb-5 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-5 text-[28px] font-semibold text-[#082B63]">
               Dr. Prashant Mishra
             </h2>
-            <div className="space-y-4 text-[22px] font-semibold text-[#1B3A6B]">
+            <div className="space-y-4 text-[22px] font-semibold text-[#082B63]">
               <p>Call: 6262752166</p>
               <p>Email: care@edwinepc.com</p>
             </div>
@@ -360,10 +360,10 @@ const EducationalTours = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <p className="mb-4 inline-flex rounded-[8px] border border-[#C89B3C] bg-[#FFFFFF] px-4 py-2 text-[13px] text-[#5A6A85]">
+            <p className="mb-4 inline-flex rounded-xl border border-[#FFB000] bg-white px-4 py-2 text-[13px] text-[#5A6A85]">
               Education Tours
             </p>
-            <h2 className="mb-5 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-5 text-[28px] font-semibold text-[#082B63]">
               Education Tours Categories
             </h2>
             <p className="mb-6 text-[15px] leading-[1.7]">
@@ -375,7 +375,7 @@ const EducationalTours = () => {
               {benefits.slice(0, 4).map((item) => (
                 <div
                   key={item}
-                  className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 transition duration-200 hover:border-[#C89B3C]"
+                  className="rounded-[24px] border border-[#DDE9F7] bg-white p-5 transition duration-300 hover:border-[#FFB000]"
                 >
                   <FaCheckCircle className="mb-3 text-[20px] text-[#2D7A4F]" />
                   <p className="text-[15px] leading-[1.7]">{item}</p>
@@ -399,12 +399,12 @@ const EducationalTours = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D6E0F0] bg-white px-5 py-2 text-[14px] font-semibold text-[#1B3A6B] shadow-sm">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#DDE9F7] bg-white px-5 py-2 text-[14px] font-semibold text-[#082B63] shadow-sm">
               <FaFileSignature />
               Application Form
             </div>
 
-            <h2 className="mb-4 text-[34px] font-bold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[34px] font-bold text-[#082B63]">
               Education Tours Application
             </h2>
             <p className="mx-auto max-w-3xl text-[15px] leading-[1.7] text-[#5A6A85]">
@@ -417,10 +417,10 @@ const EducationalTours = () => {
             <button
               type="button"
               onClick={() => setActiveCategory("travel")}
-              className={`rounded-[8px] px-6 py-[10px] text-[15px] font-medium transition duration-200 ${
+              className={`rounded-xl px-6 py-[10px] text-[15px] font-medium transition duration-300 ${
                 activeCategory === "travel"
-                  ? "bg-[#1B3A6B] text-[#FFFFFF]"
-                  : "border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B] hover:bg-[#EAF1FB]"
+                  ? "bg-[#082B63] text-[#FFFFFF]"
+                  : "border border-[#082B63] bg-white text-[#082B63] hover:bg-[#EEF5FF]"
               }`}
             >
               Travel Grant
@@ -428,10 +428,10 @@ const EducationalTours = () => {
             <button
               type="button"
               onClick={() => setActiveCategory("delhi")}
-              className={`rounded-[8px] px-6 py-[10px] text-[15px] font-medium transition duration-200 ${
+              className={`rounded-xl px-6 py-[10px] text-[15px] font-medium transition duration-300 ${
                 activeCategory === "delhi"
-                  ? "bg-[#1B3A6B] text-[#FFFFFF]"
-                  : "border border-[#1B3A6B] bg-[#FFFFFF] text-[#1B3A6B] hover:bg-[#EAF1FB]"
+                  ? "bg-[#082B63] text-[#FFFFFF]"
+                  : "border border-[#082B63] bg-white text-[#082B63] hover:bg-[#EEF5FF]"
               }`}
             >
               Delhi Tours 13-14 November 2025
@@ -445,15 +445,15 @@ const EducationalTours = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.4 }}
-              className="rounded-[20px] border border-[#D6E0F0] bg-[#1B3A6B] p-7 text-[#FFFFFF] shadow-xl"
+              className="rounded-[20px] border border-[#DDE9F7] bg-white p-7 text-[#08224A] shadow-xl"
             >
-              <FaMapMarkedAlt className="mb-5 text-[42px] text-[#C89B3C]" />
-              <h3 className="mb-4 text-[28px] font-semibold text-[#FFFFFF]">
+              <FaMapMarkedAlt className="mb-5 text-[42px] text-[#FFB000]" />
+              <h3 className="mb-4 text-[28px] font-semibold text-[#082B63]">
                 {activeCategory === "delhi"
                   ? "Yatra Registration - Delhi Flight 13-14 Nov"
                   : "Travel Grant Application"}
               </h3>
-              <p className="mb-6 text-[15px] leading-[1.7] text-[#FFFFFF]">
+              <p className="mb-6 text-[15px] leading-[1.7] text-[#5A6A85]">
                 {activeCategory === "delhi"
                   ? "Submit your details for Delhi Tours 13-14 November 2025 registration and travel support."
                   : "Submit your details for educational tour, industrial visit and travel grant support."}
@@ -467,7 +467,7 @@ const EducationalTours = () => {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-5 text-[#1A1A2E]"
+                    className="rounded-[24px] border border-[#DDE9F7] bg-white p-5 text-[#08224A]"
                   >
                     <FaCheckCircle className="mb-3 text-[20px] text-[#2D7A4F]" />
                     <p className="text-[15px]">{item}</p>
@@ -482,7 +482,7 @@ const EducationalTours = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.4 }}
-              className="overflow-hidden rounded-[24px] border border-[#D6E0F0] bg-white shadow-xl"
+              className="overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-white shadow-xl"
             >
               <div className="bg-gradient-to-r from-[#1B3A6B] to-[#2C5F8A] px-6 py-4">
                 <h3 className="text-xl font-bold text-white">
@@ -520,7 +520,7 @@ const EducationalTours = () => {
         </div>
       </section>
 
-      <section className="bg-[#EAF1FB] px-5 py-20">
+      <section className="bg-[#EEF5FF] px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -530,7 +530,7 @@ const EducationalTours = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">
               Benefits
             </h2>
           </motion.div>
@@ -545,7 +545,7 @@ const EducationalTours = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
                 whileHover={{ y: -5 }}
-                className="flex gap-4 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:border-[#C89B3C]"
+                className="flex gap-4 rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:border-[#FFB000]"
               >
                 <FaCheckCircle className="mt-1 text-[20px] text-[#2D7A4F]" />
                 <p className="text-[15px] leading-[1.7]">{item}</p>
@@ -555,7 +555,7 @@ const EducationalTours = () => {
         </div>
       </section>
 
-      <section className="bg-[#FFFFFF] px-5 py-20">
+      <section className="bg-white px-5 py-20">
         <div className="mx-auto max-w-[1200px]">
           <motion.div
             className="mb-10 text-center"
@@ -565,7 +565,7 @@ const EducationalTours = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="mb-4 text-[28px] font-semibold text-[#1B3A6B]">
+            <h2 className="mb-4 text-[28px] font-semibold text-[#082B63]">
               Testimonials
             </h2>
           </motion.div>
@@ -580,10 +580,10 @@ const EducationalTours = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
                 whileHover={{ y: -5 }}
-                className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:border-[#C89B3C]"
+                className="rounded-[24px] border border-[#DDE9F7] bg-white p-6 shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:border-[#FFB000]"
               >
-                <FaQuoteLeft className="mb-4 text-[22px] text-[#C89B3C]" />
-                <div className="mb-4 flex gap-1 text-[#C89B3C]">
+                <FaQuoteLeft className="mb-4 text-[22px] text-[#FFB000]" />
+                <div className="mb-4 flex gap-1 text-[#FFB000]">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <FaStar key={star} />
                   ))}

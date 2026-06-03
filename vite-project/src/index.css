@@ -1,1 +1,162 @@
 @import "tailwindcss";
+
+@keyframes ucFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.uc-theme {
+  background: #eef5ff !important;
+  color: #08224a !important;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+.uc-theme > section {
+  background: #ffffff !important;
+  color: #08224a !important;
+}
+
+.uc-theme > section:nth-of-type(even) {
+  background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 68%, #fff8e8 100%) !important;
+}
+
+.uc-theme > section:first-of-type {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(255, 176, 0, 0.2), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(77, 163, 255, 0.24), transparent 32%),
+    linear-gradient(135deg, #031329 0%, #073b86 55%, #051b3b 100%) !important;
+}
+
+.uc-theme > section:first-of-type h1,
+.uc-theme > section:first-of-type > div > div > h1,
+.uc-theme > section:first-of-type > div > div > p:not([class*="bg-[#FFFFFF]"]) {
+  color: #ffffff !important;
+}
+
+.uc-theme > section:first-of-type h1 {
+  font-size: clamp(2.35rem, 5vw, 3.75rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+}
+
+.uc-theme h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  color: #082b63 !important;
+}
+
+.uc-theme h3 {
+  color: #082b63 !important;
+}
+
+.uc-theme p,
+.uc-theme li {
+  color: #31445f;
+}
+
+.uc-theme [class*="rounded"][class*="border"] {
+  border-color: #dbe8f7 !important;
+  border-radius: 24px !important;
+  box-shadow: 0 18px 55px rgba(8, 34, 74, 0.1) !important;
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease, background-color 240ms ease !important;
+}
+
+.uc-theme > section:not(:first-of-type) [class*="rounded"][class*="border"],
+.uc-theme > section:not(:first-of-type) [class*="rounded"][class*="shadow"] {
+  background-color: #ffffff !important;
+}
+
+.uc-theme > section:not(:first-of-type) div[class*="bg-[#1B3A6B]"]:not([class*="h-"]):not([class*="w-"]),
+.uc-theme > section:not(:first-of-type) div[class*="bg-[#F8FAFC]"],
+.uc-theme > section:not(:first-of-type) div[class*="bg-[#EAF1FB]"]:not([class*="h-"]):not([class*="w-"]) {
+  background: #ffffff !important;
+  color: #08224a !important;
+  border: 1px solid #dbe8f7;
+  border-radius: 24px;
+  box-shadow: 0 18px 55px rgba(8, 34, 74, 0.1);
+}
+
+.uc-theme > section:not(:first-of-type) div[class*="bg-[#1B3A6B]"]:not([class*="h-"]):not([class*="w-"]) h2,
+.uc-theme > section:not(:first-of-type) div[class*="bg-[#1B3A6B]"]:not([class*="h-"]):not([class*="w-"]) h3,
+.uc-theme > section:not(:first-of-type) div[class*="bg-[#1B3A6B]"]:not([class*="h-"]):not([class*="w-"]) p {
+  color: #08224a !important;
+}
+
+.uc-theme [class*="text-[#C89B3C]"],
+.uc-theme [class*="text-[#F4B400]"] {
+  color: #ffb000 !important;
+}
+
+.uc-theme [class*="border-[#C89B3C]"] {
+  border-color: #ffb000 !important;
+}
+
+.uc-theme a,
+.uc-theme button {
+  border-radius: 999px !important;
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, color 220ms ease, border-color 220ms ease !important;
+}
+
+.uc-theme a:hover,
+.uc-theme button:hover,
+.uc-theme [class*="rounded"][class*="border"]:hover {
+  transform: translateY(-4px);
+  border-color: #ffb000 !important;
+  box-shadow: 0 24px 70px rgba(8, 34, 74, 0.16) !important;
+}
+
+.uc-theme a[class*="bg-[#1B3A6B]"],
+.uc-theme a[class*="bg-[#C89B3C]"],
+.uc-theme button[class*="bg-[#1B3A6B]"],
+.uc-theme button[class*="bg-[#C89B3C]"] {
+  background: linear-gradient(135deg, #0b66c3, #083a7c) !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 36px rgba(11, 102, 195, 0.22);
+}
+
+.uc-theme a[class*="bg-[#C89B3C]"]:hover,
+.uc-theme button[class*="bg-[#C89B3C]"]:hover {
+  background: linear-gradient(135deg, #ff9d00, #ffd35a) !important;
+  color: #071c34 !important;
+}
+
+.uc-theme [class*="bg-gradient-to-r"] {
+  background: linear-gradient(135deg, #082b63, #0b66c3) !important;
+}
+
+.uc-theme [class*="bg-gradient-to-r"] h3,
+.uc-theme [class*="bg-gradient-to-r"] p,
+.uc-theme > section:first-of-type [class*="text-[#FFFFFF]"],
+.uc-theme > section:first-of-type [class*="text-white"] {
+  color: #ffffff !important;
+}
+
+.uc-theme iframe {
+  background: #ffffff !important;
+}
+
+.uc-theme > section > div {
+  animation: ucFadeUp 0.75s ease both;
+}
+
+@media (max-width: 768px) {
+  .uc-theme > section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .uc-theme h1 {
+    font-size: clamp(2rem, 10vw, 2.75rem) !important;
+  }
+
+  .uc-theme h2 {
+    font-size: clamp(1.55rem, 7vw, 2rem) !important;
+  }
+}

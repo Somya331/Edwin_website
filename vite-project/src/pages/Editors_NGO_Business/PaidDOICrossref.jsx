@@ -1,11 +1,11 @@
 import React from 'react';
+import SimpleThemedPage from './SimpleThemedPage';
 
 const PaidDOICrossref = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Paid DOI - Crossref</h1>
+    <SimpleThemedPage title="Paid DOI - Crossref">
       <p>Welcome to the Paid DOI - Crossref page.</p>
-    </div>
+    </SimpleThemedPage>
   );
 };
 

@@ -89,7 +89,7 @@ const InstitutionalMembership = () => {
   };
 
   return (
-    <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
+    <main className="uc-theme min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
       <section className="relative overflow-hidden bg-[#1B3A6B] px-5 py-20">
         <div className="absolute right-0 top-20 h-72 w-72 rounded-full bg-[#C89B3C]/20 blur-3xl" />
         <div className="absolute left-0 bottom-10 h-72 w-72 rounded-full bg-[#EAF1FB]/20 blur-3xl" />

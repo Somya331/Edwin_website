@@ -1,11 +1,11 @@
 import React from 'react';
+import SimpleThemedPage from './SimpleThemedPage';
 
 const WhatsappServices = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Whatsapp Services</h1>
+    <SimpleThemedPage title="Whatsapp Services">
       <p>Welcome to the Whatsapp Services page.</p>
-    </div>
+    </SimpleThemedPage>
   );
 };
 
