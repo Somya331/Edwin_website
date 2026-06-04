@@ -173,17 +173,7 @@ export default function JobsPage() {
   const [partnerStatus, setPartnerStatus] = useState("");
   const [internshipStatus, setInternshipStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredCards = useMemo(() => {
     const value = query.toLowerCase().trim();
@@ -305,24 +295,18 @@ export default function JobsPage() {
 
               <div className="relative grid gap-4">
                 <div className="glass-card overflow-hidden rounded-[34px] border border-white/20 bg-white/10 p-4 shadow-[0_30px_90px_rgba(0,0,0,.32)] backdrop-blur-md">
-                  <img
-                    src={heroImages.main}
+                  <img src={heroImages.main}
                     alt="Jobs at Edwin INC"
-                    className="h-[360px] w-full rounded-[26px] object-cover lg:h-[430px]"
-                  />
+                    className="h-[360px] w-full rounded-[26px] object-cover lg:h-[430px]" loading="lazy" width="600" height="400" />
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <img
-                    src={heroImages.team}
+                  <img src={heroImages.team}
                     alt="Team work"
-                    className="h-[180px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_10px_28px_rgba(27,58,107,0.10)]"
-                  />
-                  <img
-                    src={heroImages.office}
+                    className="h-[180px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_10px_28px_rgba(27,58,107,0.10)]" loading="lazy" width="600" height="400" />
+                  <img src={heroImages.office}
                     alt="Office culture"
-                    className="h-[180px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_10px_28px_rgba(27,58,107,0.10)]"
-                  />
+                    className="h-[180px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_10px_28px_rgba(27,58,107,0.10)]" loading="lazy" width="600" height="400" />
                 </div>
               </div>
             </motion.div>
@@ -467,11 +451,9 @@ export default function JobsPage() {
               </p>
             </div>
 
-            <img
-              src={heroImages.interview}
+            <img src={heroImages.interview}
               alt="Interview application"
-              className="h-[260px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_14px_38px_rgba(27,58,107,0.10)]"
-            />
+              className="h-[260px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_14px_38px_rgba(27,58,107,0.10)]" loading="lazy" width="600" height="400" />
           </div>
          <div className="grid gap-6">
          <ZohoFormCard

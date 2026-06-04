@@ -1,110 +1,110 @@
 import React from 'react';
 import { createBrowserRouter, Navigate, useLocation } from 'react-router-dom';
 import App from './App';
-import NotFound from './pages/NotFound';
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 // Home
-import Home from './pages/Home/Home';
-import AboutUs from './pages/Home/AboutUs';
-import Jobs from './pages/Home/Jobs';
-import ApplyForScheduleMeeting from './pages/Home/ApplyForScheduleMeeting';
-import PartnershipProgramme from './pages/Home/PartnershipProgramme';
+const Home = React.lazy(() => import('./pages/Home/Home'));
+const AboutUs = React.lazy(() => import('./pages/Home/AboutUs'));
+const Jobs = React.lazy(() => import('./pages/Home/Jobs'));
+const ApplyForScheduleMeeting = React.lazy(() => import('./pages/Home/ApplyForScheduleMeeting'));
+const PartnershipProgramme = React.lazy(() => import('./pages/Home/PartnershipProgramme'));
 
 
 // Academicians
 
-import Awards from './pages/Academicians/Awards';
-import ResearchPaper from './pages/Academicians/ResearchPaperPublicationServices';
+const Awards = React.lazy(() => import('./pages/Academicians/Awards'));
+const ResearchPaper = React.lazy(() => import('./pages/Academicians/ResearchPaperPublicationServices'));
 
-import EditorialBoardMembership from './pages/Academicians/EditorialBoardMembership';
-import MembershipOthers from './pages/Academicians/MembershipOthers';
-import ServicesToMembers from './pages/Academicians/ServicesToMembers';
-import BooksPublicationServices from './pages/Academicians/BooksPublicationServices';
-import ApplyForFellowship from './pages/Academicians/ApplyForFellowship';
-import ApplyForPatentRegistration from './pages/Academicians/ApplyForPatentRegistration';
-import MOOCSupports from './pages/Academicians/MOOCSupports';
-import ConferenceApplyNow from './pages/Academicians/ConferenceApplyNow';
-import Doimember from './pages/Academicians/Doimember';
-import Professionalmember from './pages/Academicians/Professionalmember';
-import Onemember from './pages/Academicians/Onemember';
-import AcademicInstitutionalPartners from './pages/Academicians/AcademicInstitutionalPartners';
+const EditorialBoardMembership = React.lazy(() => import('./pages/Academicians/EditorialBoardMembership'));
+const MembershipOthers = React.lazy(() => import('./pages/Academicians/MembershipOthers'));
+const ServicesToMembers = React.lazy(() => import('./pages/Academicians/ServicesToMembers'));
+const BooksPublicationServices = React.lazy(() => import('./pages/Academicians/BooksPublicationServices'));
+const ApplyForFellowship = React.lazy(() => import('./pages/Academicians/ApplyForFellowship'));
+const ApplyForPatentRegistration = React.lazy(() => import('./pages/Academicians/ApplyForPatentRegistration'));
+const MOOCSupports = React.lazy(() => import('./pages/Academicians/MOOCSupports'));
+const ConferenceApplyNow = React.lazy(() => import('./pages/Academicians/ConferenceApplyNow'));
+const Doimember = React.lazy(() => import('./pages/Academicians/Doimember'));
+const Professionalmember = React.lazy(() => import('./pages/Academicians/Professionalmember'));
+const Onemember = React.lazy(() => import('./pages/Academicians/Onemember'));
+const AcademicInstitutionalPartners = React.lazy(() => import('./pages/Academicians/AcademicInstitutionalPartners'));
 
 // RnD_EBI
-import RnD_EBI from './pages/RnD_EBI/RnD_EBI';
-import EdwinAcademicImmigrationSolutions from './pages/RnD_EBI/EdwinAcademicImmigrationSolutions';
-import OnlineMembershipArticlesAccessing from './pages/RnD_EBI/OnlineMembershipArticlesAccessing';
-import ApplyNowWritingAssistance from './pages/RnD_EBI/ApplyNowWritingAssistance';
-import FacultyCoGuideRegistration from './pages/RnD_EBI/FacultyCoGuideRegistration';
-import ApplyForMajorMinorproject from './pages/RnD_EBI/ApplyForMajorMinorproject';
-import IncreaseCitationDOI from './pages/RnD_EBI/IncreaseCitationDOI';
-import ApplyForPatentSupport from './pages/RnD_EBI/ApplyForPatentSupport';
-import ApplyForGrants from './pages/RnD_EBI/ApplyForGrants';
-import ApplyForPlagiarismDetector from './pages/RnD_EBI/ApplyForPlagiarismDetector';
-import ApplyForTurnitinSupport from './pages/RnD_EBI/ApplyForTurnitinSupport';
-import ApplyForAPICalculator from './pages/RnD_EBI/ApplyForAPICalculator';
+const RnD_EBI = React.lazy(() => import('./pages/RnD_EBI/RnD_EBI'));
+const EdwinAcademicImmigrationSolutions = React.lazy(() => import('./pages/RnD_EBI/EdwinAcademicImmigrationSolutions'));
+const OnlineMembershipArticlesAccessing = React.lazy(() => import('./pages/RnD_EBI/OnlineMembershipArticlesAccessing'));
+const ApplyNowWritingAssistance = React.lazy(() => import('./pages/RnD_EBI/ApplyNowWritingAssistance'));
+const FacultyCoGuideRegistration = React.lazy(() => import('./pages/RnD_EBI/FacultyCoGuideRegistration'));
+const ApplyForMajorMinorproject = React.lazy(() => import('./pages/RnD_EBI/ApplyForMajorMinorproject'));
+const IncreaseCitationDOI = React.lazy(() => import('./pages/RnD_EBI/IncreaseCitationDOI'));
+const ApplyForPatentSupport = React.lazy(() => import('./pages/RnD_EBI/ApplyForPatentSupport'));
+const ApplyForGrants = React.lazy(() => import('./pages/RnD_EBI/ApplyForGrants'));
+const ApplyForPlagiarismDetector = React.lazy(() => import('./pages/RnD_EBI/ApplyForPlagiarismDetector'));
+const ApplyForTurnitinSupport = React.lazy(() => import('./pages/RnD_EBI/ApplyForTurnitinSupport'));
+const ApplyForAPICalculator = React.lazy(() => import('./pages/RnD_EBI/ApplyForAPICalculator'));
 
 // Educational
-import Educational from './pages/Educational/Educational';
-import AcademicNewsChannel from './pages/Educational/AcademicNewsChannel';
-import ApplyForNews from './pages/Educational/ApplyForNews';
-import NGOSupport from './pages/Educational/NGOSupport';
-import InternationalEducationalTours from './pages/Educational/InternationalEducationalTours';
-import PhDProgrammes from './pages/Educational/PhDProgrammes';
-import PGProgrammes from './pages/Educational/PGProgrammes';
-import UGProgrammes from './pages/Educational/UGProgrammes';
-import OnlineLearningMooc from './pages/Educational/OnlineLearningMooc';
-import HelpForEducation from './pages/Educational/HelpForEducation';
+const Educational = React.lazy(() => import('./pages/Educational/Educational'));
+const AcademicNewsChannel = React.lazy(() => import('./pages/Educational/AcademicNewsChannel'));
+const ApplyForNews = React.lazy(() => import('./pages/Educational/ApplyForNews'));
+const NGOSupport = React.lazy(() => import('./pages/Educational/NGOSupport'));
+const InternationalEducationalTours = React.lazy(() => import('./pages/Educational/InternationalEducationalTours'));
+const PhDProgrammes = React.lazy(() => import('./pages/Educational/PhDProgrammes'));
+const PGProgrammes = React.lazy(() => import('./pages/Educational/PGProgrammes'));
+const UGProgrammes = React.lazy(() => import('./pages/Educational/UGProgrammes'));
+const OnlineLearningMooc = React.lazy(() => import('./pages/Educational/OnlineLearningMooc'));
+const HelpForEducation = React.lazy(() => import('./pages/Educational/HelpForEducation'));
 
 // University_College
-import University_College from './pages/University_College/University_College';
-import InstitutionalMembership from './pages/University_College/institutionalMembership';
-import ApplyForNAACSupport from './pages/University_College/ApplyForNAACSupport';
-import ApplyForHRSupport from './pages/University_College/ApplyForHRSupport';
-import ApplyForNBATrainingSupport from './pages/University_College/ApplyForNBATrainingSupport';
-import SupportForProceedingPrinting from './pages/University_College/SupportForProceedingPrinting';
-import PaperPublicationSupport from './pages/University_College/PaperPublicationSupport';
-import SponsorshipForOrganizingConference from './pages/University_College/SponsorshipForOrganizingConference';
-import NeedResourcePerson from './pages/University_College/NeedResourcePerson';
-import AdvertisementSupport from './pages/University_College/AdvertisementSupport';
-import MembershipDELLNETT from './pages/University_College/MembershipDELLNETT';
-import NAACAssistance from './pages/University_College/NAACAssistance';
+const University_College = React.lazy(() => import('./pages/University_College/University_College'));
+const InstitutionalMembership = React.lazy(() => import('./pages/University_College/institutionalMembership'));
+const ApplyForNAACSupport = React.lazy(() => import('./pages/University_College/ApplyForNAACSupport'));
+const ApplyForHRSupport = React.lazy(() => import('./pages/University_College/ApplyForHRSupport'));
+const ApplyForNBATrainingSupport = React.lazy(() => import('./pages/University_College/ApplyForNBATrainingSupport'));
+const SupportForProceedingPrinting = React.lazy(() => import('./pages/University_College/SupportForProceedingPrinting'));
+const PaperPublicationSupport = React.lazy(() => import('./pages/University_College/PaperPublicationSupport'));
+const SponsorshipForOrganizingConference = React.lazy(() => import('./pages/University_College/SponsorshipForOrganizingConference'));
+const NeedResourcePerson = React.lazy(() => import('./pages/University_College/NeedResourcePerson'));
+const AdvertisementSupport = React.lazy(() => import('./pages/University_College/AdvertisementSupport'));
+const MembershipDELLNETT = React.lazy(() => import('./pages/University_College/MembershipDELLNETT'));
+const NAACAssistance = React.lazy(() => import('./pages/University_College/NAACAssistance'));
 
 // Editors_NGO_Business
-import Editors_NGO_Business from './pages/Editors_NGO_Business/Editors_NGO_Business';
-import JournalHelpBoard from './pages/Editors_NGO_Business/JournalHelpBoard';
-import OpeningJournalServices from './pages/Editors_NGO_Business/OpeningJournalServices';
-import TechnicalSupportForIndexing from './pages/Editors_NGO_Business/TechnicalSupportForIndexing';
-import PrintEISSNAllotmentSupport from './pages/Editors_NGO_Business/PrintEISSNAllotmentSupport';
-import FreeDOI from './pages/Editors_NGO_Business/FreeDOI';
-import PaidDOICrossref from './pages/Editors_NGO_Business/PaidDOICrossref';
-import DOIPortal from './pages/Editors_NGO_Business/DOIPortal';
-import MembershipPortal from './pages/Editors_NGO_Business/MembershipPortal';
-import CSRFundingAssistant from './pages/Editors_NGO_Business/CSRFundingAssistant';
-import ServiceForBusiness from './pages/Editors_NGO_Business/ServiceForBusiness';
-import BusinessAutomation from './pages/Editors_NGO_Business/BusinessAutomation';
-import DigitalMarketing from './pages/Editors_NGO_Business/DigitalMarketing';
-import AppsForIOSAndAndroid from './pages/Editors_NGO_Business/AppsForIOSAndAndroid';
-import WhatsappServices from './pages/Editors_NGO_Business/WhatsappServices';
-import HRSupportForBusiness from './pages/Editors_NGO_Business/HRSupportForBusiness';
-import EdwinJournal from './pages/Editors_NGO_Business/EdwinJournal';
-import Constructions from './pages/Editors_NGO_Business/Constructions';
+const Editors_NGO_Business = React.lazy(() => import('./pages/Editors_NGO_Business/Editors_NGO_Business'));
+const JournalHelpBoard = React.lazy(() => import('./pages/Editors_NGO_Business/JournalHelpBoard'));
+const OpeningJournalServices = React.lazy(() => import('./pages/Editors_NGO_Business/OpeningJournalServices'));
+const TechnicalSupportForIndexing = React.lazy(() => import('./pages/Editors_NGO_Business/TechnicalSupportForIndexing'));
+const PrintEISSNAllotmentSupport = React.lazy(() => import('./pages/Editors_NGO_Business/PrintEISSNAllotmentSupport'));
+const FreeDOI = React.lazy(() => import('./pages/Editors_NGO_Business/FreeDOI'));
+const PaidDOICrossref = React.lazy(() => import('./pages/Editors_NGO_Business/PaidDOICrossref'));
+const DOIPortal = React.lazy(() => import('./pages/Editors_NGO_Business/DOIPortal'));
+const MembershipPortal = React.lazy(() => import('./pages/Editors_NGO_Business/MembershipPortal'));
+const CSRFundingAssistant = React.lazy(() => import('./pages/Editors_NGO_Business/CSRFundingAssistant'));
+const ServiceForBusiness = React.lazy(() => import('./pages/Editors_NGO_Business/ServiceForBusiness'));
+const BusinessAutomation = React.lazy(() => import('./pages/Editors_NGO_Business/BusinessAutomation'));
+const DigitalMarketing = React.lazy(() => import('./pages/Editors_NGO_Business/DigitalMarketing'));
+const AppsForIOSAndAndroid = React.lazy(() => import('./pages/Editors_NGO_Business/AppsForIOSAndAndroid'));
+const WhatsappServices = React.lazy(() => import('./pages/Editors_NGO_Business/WhatsappServices'));
+const HRSupportForBusiness = React.lazy(() => import('./pages/Editors_NGO_Business/HRSupportForBusiness'));
+const EdwinJournal = React.lazy(() => import('./pages/Editors_NGO_Business/EdwinJournal'));
+const Constructions = React.lazy(() => import('./pages/Editors_NGO_Business/Constructions'));
 
 // Pay_Now
-import Paynow from './pages/Pay_Now/Paynow';
-import FAQ from './pages/Pay_Now/FAQ';
-import FeedbackComplaintBox from './pages/Pay_Now/FeedbackComplaintBox';
+const Paynow = React.lazy(() => import('./pages/Pay_Now/Paynow'));
+const FAQ = React.lazy(() => import('./pages/Pay_Now/FAQ'));
+const FeedbackComplaintBox = React.lazy(() => import('./pages/Pay_Now/FeedbackComplaintBox'));
 
 // Gallery
-import Gallery from './pages/Gallery/Gallery';
-import Conferences from './pages/Gallery/Conferences';
-import Birthdays from './pages/Gallery/Birthdays';
-import NationalCelebrations from './pages/Gallery/NationalCelebrations';
+const Gallery = React.lazy(() => import('./pages/Gallery/Gallery'));
+const Conferences = React.lazy(() => import('./pages/Gallery/Conferences'));
+const Birthdays = React.lazy(() => import('./pages/Gallery/Birthdays'));
+const NationalCelebrations = React.lazy(() => import('./pages/Gallery/NationalCelebrations'));
 
 // Press
-import Press from './pages/Press/Press';
+const Press = React.lazy(() => import('./pages/Press/Press'));
 
 // Contact
-import Contact from './pages/Contact/Contact';
+const Contact = React.lazy(() => import('./pages/Contact/Contact'));
 
 function HashRedirect({ hashMap, defaultTo }) {
   const location = useLocation();

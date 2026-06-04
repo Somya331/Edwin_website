@@ -121,17 +121,7 @@ export default function EditorialBoardPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [formStatus, setFormStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredMembers = useMemo(() => {
     const query = searchTerm.toLowerCase().trim();
@@ -203,11 +193,9 @@ export default function EditorialBoardPage() {
             className="relative"
           >
             <div className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-              <img
-                src={heroImage}
+              <img src={heroImage}
                 alt="Editorial board academic review"
-                className="h-[460px] w-full object-cover"
-              />
+                className="h-[460px] w-full object-cover" loading="lazy" width="600" height="400" />
             </div>
 
             <div className="absolute -bottom-8 left-6 right-6 rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">

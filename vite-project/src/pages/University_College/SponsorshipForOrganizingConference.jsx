@@ -24,14 +24,7 @@ const ConferenceManagement = () => {
   const [activeHero, setActiveHero] = useState(0);
   const [activeService, setActiveService] = useState("Sponsorship for your Conference");
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const heroSlides = [
     {
@@ -249,11 +242,9 @@ const ConferenceManagement = () => {
                   transition={{ duration: 0.55 }}
                   className="relative overflow-hidden rounded-[12px]"
                 >
-                  <img
-                    src={heroSlides[activeHero].image}
+                  <img src={heroSlides[activeHero].image}
                     alt={heroSlides[activeHero].title}
-                    className="h-[380px] w-full object-cover"
-                  />
+                    className="h-[380px] w-full object-cover" loading="lazy" width="600" height="400" />
                   <div className="absolute inset-0 bg-[#1B3A6B]/55" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h2 className="mb-3 text-[28px] font-semibold text-[#FFFFFF]">
@@ -415,11 +406,9 @@ const ConferenceManagement = () => {
                 whileHover={{ y: -7 }}
                 className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:border-[#C89B3C]"
               >
-                <img
-                  src={speaker.image}
+                <img src={speaker.image}
                   alt={speaker.name}
-                  className="h-[230px] w-full object-cover"
-                />
+                  className="h-[230px] w-full object-cover" loading="lazy" width="600" height="400" />
                 <div className="p-5">
                   <h3 className="mb-2 text-[18px] font-semibold text-[#1B3A6B]">
                     {speaker.name}
@@ -448,11 +437,9 @@ const ConferenceManagement = () => {
                 whileHover={{ y: -7 }}
                 className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 hover:border-[#C89B3C]"
               >
-                <img
-                  src={speaker.image}
+                <img src={speaker.image}
                   alt={speaker.name}
-                  className="h-[260px] w-full object-cover"
-                />
+                  className="h-[260px] w-full object-cover" loading="lazy" width="600" height="400" />
                 <div className="p-5">
                   <h3 className="mb-2 text-[18px] font-semibold text-[#1B3A6B]">
                     {speaker.name}
@@ -474,11 +461,9 @@ const ConferenceManagement = () => {
             transition={{ duration: 0.45 }}
             className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
           >
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
               alt="Conference management"
-              className="h-[430px] w-full rounded-[12px] object-cover"
-            />
+              className="h-[430px] w-full rounded-[12px] object-cover" loading="lazy" width="600" height="400" />
           </motion.div>
 
           <motion.div

@@ -81,11 +81,7 @@ export default function ConstructionsPage() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
+    
 
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroImages.length);
@@ -93,7 +89,7 @@ export default function ConstructionsPage() {
 
     return () => {
       clearInterval(timer);
-      document.head.removeChild(fontLink);
+      
     };
   }, []);
 
@@ -107,11 +103,9 @@ export default function ConstructionsPage() {
               activeSlide === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
             }`}
           >
-            <img
-              src={image}
+            <img src={image}
               alt="Edwin Construction"
-              className="h-full w-full object-cover"
-            />
+              className="h-full w-full object-cover" loading="lazy" width="600" height="400" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#031329]/95 via-[#073B86]/80 to-[#051B3B]/20" />
           </div>
         ))}
@@ -170,11 +164,9 @@ export default function ConstructionsPage() {
 
         <div className="relative mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="overflow-hidden rounded-[26px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_18px_50px_rgba(27,58,107,0.12)]">
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1100&q=90"
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1100&q=90"
               alt="Construction work"
-              className="h-[420px] w-full rounded-[20px] object-cover"
-            />
+              className="h-[420px] w-full rounded-[20px] object-cover" loading="lazy" width="600" height="400" />
           </div>
 
           <div>
@@ -287,11 +279,9 @@ export default function ConstructionsPage() {
                 className="group overflow-hidden rounded-[20px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_10px_28px_rgba(27,58,107,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#C89B3C]"
               >
                 <div className="overflow-hidden">
-                  <img
-                    src={item.image}
+                  <img src={item.image}
                     alt={item.title}
-                    className="h-[260px] w-full object-cover transition duration-500 group-hover:scale-110"
-                  />
+                    className="h-[260px] w-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="600" height="400" />
                 </div>
                 <div className="p-5">
                   <h3 className="text-[17px] font-extrabold text-[#1B3A6B]">

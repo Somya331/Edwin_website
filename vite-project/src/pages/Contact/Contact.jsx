@@ -55,17 +55,7 @@ const contactCards = [
 ];
 
 export default function ContactPage() {
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
 
   return (
@@ -144,11 +134,9 @@ export default function ContactPage() {
             transition={{ duration: 0.45, delay: 0.1 }}
             className="contact-card rounded-[28px] border border-white/20 bg-white/10 p-3 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md"
           >
-            <img
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=90"
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=90"
               alt="Contact support"
-              className="h-[320px] w-full rounded-[22px] object-cover md:h-[390px]"
-            />
+              className="h-[320px] w-full rounded-[22px] object-cover md:h-[390px]" loading="lazy" width="600" height="400" />
           </motion.div>
         </div>
       </section>

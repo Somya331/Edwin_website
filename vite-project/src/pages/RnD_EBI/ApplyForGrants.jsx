@@ -16,14 +16,7 @@ import {
 } from "react-icons/fa";
 
 const ApplyForGrants = () => {
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const travelFields = [
     "Name of Participant",
@@ -113,21 +106,15 @@ const ApplyForGrants = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80"
               alt="Grant meeting"
-              className="col-span-2 h-[250px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=600&q=80"
+              className="col-span-2 h-[250px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]" loading="lazy" width="600" height="400" />
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=600&q=80"
               alt="Conference"
-              className="h-[180px] w-full rounded-[12px] border border-[#D6E0F0] object-cover"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80"
+              className="h-[180px] w-full rounded-[12px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80"
               alt="Research"
-              className="h-[180px] w-full rounded-[12px] border border-[#D6E0F0] object-cover"
-            />
+              className="h-[180px] w-full rounded-[12px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
           </motion.div>
         </div>
       </section>

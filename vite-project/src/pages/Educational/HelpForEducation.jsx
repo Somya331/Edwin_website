@@ -27,14 +27,7 @@ import {
 const HelpForEducation = () => {
   const [activeTab, setActiveTab] = useState("Students");
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const heroImages = [
     "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
@@ -104,7 +97,7 @@ const HelpForEducation = () => {
           <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="grid grid-cols-2 gap-5">
             {heroImages.map((img, index) => (
               <div key={img} className={`${index === 0 ? "col-span-2 h-[260px]" : "h-[220px]"} overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-white p-2 shadow-[0_18px_55px_rgba(8,34,74,.10)]`}>
-                <img src={img} alt="education" className="h-full w-full rounded-xl object-cover" />
+                <img src={img} alt="education" className="h-full w-full rounded-xl object-cover" loading="lazy" width="600" height="400" />
               </div>
             ))}
           </motion.div>

@@ -17,14 +17,7 @@ import {
 } from "react-icons/fa";
 
 const ApiCalculator = () => {
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const formFields = [
     "First Name *",
@@ -88,11 +81,9 @@ const ApiCalculator = () => {
             transition={{ duration: 0.5 }}
             className="grid gap-6"
           >
-            <img
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
               alt="API calculator academic work"
-              className="h-[300px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            />
+              className="h-[300px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]" loading="lazy" width="600" height="400" />
             <div className="grid gap-6 md:grid-cols-2">
               <div className="rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-6">
                 <FaCalculator className="mb-4 text-[26px] text-[#1B3A6B]" />
@@ -217,11 +208,9 @@ const ApiCalculator = () => {
               Submit your details for API Services and academic performance
               indicator calculation support.
             </p>
-            <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80"
               alt="API application"
-              className="h-[360px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            />
+              className="h-[360px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]" loading="lazy" width="600" height="400" />
           </motion.div>
 
           

@@ -107,14 +107,7 @@ const PaperPublication = () => {
     },
   ];
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -207,11 +200,9 @@ const PaperPublication = () => {
                   transition={{ duration: 0.45 }}
                   className="overflow-hidden rounded-[12px]"
                 >
-                  <img
-                    src={heroSlides[activeSlide].image}
+                  <img src={heroSlides[activeSlide].image}
                     alt={heroSlides[activeSlide].title}
-                    className="h-[430px] w-full object-cover"
-                  />
+                    className="h-[430px] w-full object-cover" loading="lazy" width="600" height="400" />
                 </motion.div>
               </AnimatePresence>
 

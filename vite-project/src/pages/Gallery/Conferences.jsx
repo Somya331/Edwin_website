@@ -109,14 +109,12 @@ function SectionCarousel({ images, title }) {
     <div className="relative overflow-hidden rounded-[18px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_20px_60px_rgba(27,58,107,0.14)]">
       <div className="relative h-[260px] bg-[#F7FAFE] sm:h-[360px] lg:h-[460px]">
         {images.map((image, index) => (
-          <img
-            key={image}
+          <img key={image}
             src={image}
             alt={`${title} carousel ${index + 1}`}
             className={`absolute inset-0 h-full w-full object-contain p-3 transition duration-700 ${
               activeIndex === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
-            }`}
-          />
+            }`} loading="lazy" width="600" height="400" />
         ))}
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/60 via-transparent to-transparent" />
@@ -216,11 +214,9 @@ function GallerySection({ section, index }) {
               className="group overflow-hidden rounded-[16px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_12px_28px_rgba(27,58,107,0.08)] transition duration-300 hover:-translate-y-1 hover:border-[#C89B3C] hover:shadow-[0_18px_38px_rgba(27,58,107,0.16)]"
             >
               <div className="relative flex h-[300px] items-center justify-center overflow-hidden bg-[#F7FAFE] p-2">
-                <img
-                  src={image}
+                <img src={image}
                   alt={`${section.title} ${photoIndex + 1}`}
-                  className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]"
-                />
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]" loading="lazy" width="600" height="400" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A6B]/35 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
               </div>
             </motion.div>
@@ -261,11 +257,9 @@ export default function ConferencesPage() {
                 activeSlide === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
               }`}
             >
-              <img
-                src={slide.image}
+              <img src={slide.image}
                 alt={slide.title}
-                className="h-full w-full object-contain"
-              />
+                className="h-full w-full object-contain" loading="lazy" width="600" height="400" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/92 via-[#1B3A6B]/70 to-[#07182F]/35" />
             </div>
           ))}

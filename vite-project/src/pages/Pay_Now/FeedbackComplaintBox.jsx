@@ -24,17 +24,7 @@ export default function FeedbackComplaintBox() {
   const [openIndex, setOpenIndex] = useState(0);
   const [status, setStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const faqItems = [
     {
@@ -144,10 +134,10 @@ export default function FeedbackComplaintBox() {
           </div>
 
           <div className="feedback-card grid gap-5 rounded-[28px] border border-white/20 bg-white/10 p-3 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md">
-            <img src={heroImages.support} alt="FAQ support" className="h-[330px] w-full rounded-[22px] border border-white/20 object-cover" />
+            <img src={heroImages.support} alt="FAQ support" className="h-[330px] w-full rounded-[22px] border border-white/20 object-cover" loading="lazy" width="600" height="400" />
             <div className="grid gap-5 sm:grid-cols-2">
-              <img src={heroImages.faq} alt="Customer support" className="h-[160px] w-full rounded-[18px] border border-white/20 object-cover" />
-              <img src={heroImages.help} alt="Online help" className="h-[160px] w-full rounded-[18px] border border-white/20 object-cover" />
+              <img src={heroImages.faq} alt="Customer support" className="h-[160px] w-full rounded-[18px] border border-white/20 object-cover" loading="lazy" width="600" height="400" />
+              <img src={heroImages.help} alt="Online help" className="h-[160px] w-full rounded-[18px] border border-white/20 object-cover" loading="lazy" width="600" height="400" />
             </div>
           </div>
         </div>

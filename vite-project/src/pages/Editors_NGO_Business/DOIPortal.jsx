@@ -228,17 +228,7 @@ function DoiForm({ status, onSubmit }) {
 export default function DoiPage() {
   const [formStatus, setFormStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const submitForm = (event) => {
     event.preventDefault();
@@ -321,34 +311,28 @@ export default function DoiPage() {
 
               <div className="relative grid gap-4">
                 <div className="overflow-hidden rounded-[34px] border border-white/20 bg-white/10 p-4 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md">
-                  <img
-                    src={heroImages.main}
+                  <img src={heroImages.main}
                     alt="DOI Registration Assistance"
                     className="h-[360px] w-full rounded-[26px] object-cover lg:h-[430px]"
                     onError={(event) => {
                       event.currentTarget.src = fallbackImages.main;
-                    }}
-                  />
+                    }} loading="lazy" width="600" height="400" />
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <img
-                    src={heroImages.metadata}
+                  <img src={heroImages.metadata}
                     alt="Metadata preparation"
                     className="h-[180px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_10px_28px_rgba(27,58,107,0.10)]"
                     onError={(event) => {
                       event.currentTarget.src = fallbackImages.metadata;
-                    }}
-                  />
+                    }} loading="lazy" width="600" height="400" />
 
-                  <img
-                    src={heroImages.research}
+                  <img src={heroImages.research}
                     alt="Research visibility"
                     className="h-[180px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_10px_28px_rgba(27,58,107,0.10)]"
                     onError={(event) => {
                       event.currentTarget.src = fallbackImages.research;
-                    }}
-                  />
+                    }} loading="lazy" width="600" height="400" />
                 </div>
               </div>
             </motion.div>

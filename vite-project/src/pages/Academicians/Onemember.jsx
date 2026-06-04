@@ -82,17 +82,7 @@ const membershipSteps = [
 export default function OneMembershipPage() {
   const [formStatus, setFormStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -103,11 +93,9 @@ export default function OneMembershipPage() {
   return (
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
       <header className="relative min-h-[680px] overflow-hidden bg-[#1B3A6B]">
-        <img
-          src={heroImage}
+        <img src={heroImage}
           alt="One Membership for Discounted Services"
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
-        />
+          className="absolute inset-0 h-full w-full object-cover opacity-30" loading="lazy" width="600" height="400" />
         <div className="absolute inset-0 bg-[#1B3A6B]/75" />
 
         <div className="relative mx-auto flex min-h-[680px] max-w-[1200px] items-center px-5 py-20">
@@ -222,11 +210,9 @@ export default function OneMembershipPage() {
               </p>
 
               <div className="mt-8 overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                <img
-                  src={sideImage}
+                <img src={sideImage}
                   alt="Academic membership support"
-                  className="h-[280px] w-full object-cover"
-                />
+                  className="h-[280px] w-full object-cover" loading="lazy" width="600" height="400" />
               </div>
             </div>
 

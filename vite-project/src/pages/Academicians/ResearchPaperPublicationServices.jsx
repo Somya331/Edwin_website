@@ -153,11 +153,9 @@ export default function FacultyAndCoGuideRegistration() {
 
       <header className="relative overflow-hidden bg-[#FFFFFF]">
         <div className="absolute inset-0">
-          <img
-            src={currentSlide.image}
+          <img src={currentSlide.image}
             alt={currentSlide.title}
-            className="h-full w-full object-cover opacity-20"
-          />
+            className="h-full w-full object-cover opacity-20" loading="lazy" width="600" height="400" />
           <div className="absolute inset-0 bg-[#FFFFFF]/80" />
         </div>
 

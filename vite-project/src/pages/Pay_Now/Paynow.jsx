@@ -41,17 +41,7 @@ const paymentOptions = [
 ];
 
 export default function Pay2Edwin() {
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#EEF5FF] font-['Plus_Jakarta_Sans',sans-serif] text-[#08224A]">
@@ -115,11 +105,9 @@ export default function Pay2Edwin() {
           </div>
 
           <div className="paynow-card rounded-[28px] border border-white/20 bg-white/10 p-3 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md">
-            <img
-              src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=900&q=80"
               alt="Online payment"
-              className="h-[320px] w-full rounded-[22px] object-cover md:h-[390px]"
-            />
+              className="h-[320px] w-full rounded-[22px] object-cover md:h-[390px]" loading="lazy" width="600" height="400" />
           </div>
         </div>
       </section>
@@ -229,11 +217,9 @@ export default function Pay2Edwin() {
         <div className="absolute -right-24 top-10 h-72 w-72 rounded-full bg-[#4DA3FF]/12 blur-3xl" />
         <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.8fr_1fr] lg:items-center">
           <div className="paynow-card rounded-[26px] border border-white/80 bg-white/90 p-6 backdrop-blur-xl">
-            <img
-              src="https://www.academichelpstore.com/Wed%20Jul%2012%202023-2.png"
+            <img src="https://www.academichelpstore.com/Wed%20Jul%2012%202023-2.png"
               alt="UPI QR Payment"
-              className="mx-auto max-h-[420px] w-full max-w-[360px] object-contain"
-            />
+              className="mx-auto max-h-[420px] w-full max-w-[360px] object-contain" loading="lazy" width="600" height="400" />
           </div>
 
           <div className="paynow-fade-up">

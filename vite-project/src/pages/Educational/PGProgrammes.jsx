@@ -19,14 +19,7 @@ import {
 const AdmissionServices = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const slides = useMemo(
     () => [
@@ -171,11 +164,9 @@ const AdmissionServices = () => {
               className={`absolute inset-0 transition duration-300 ${index === activeSlide ? "opacity-100" : "opacity-0"
                 }`}
             >
-              <img
-                src={slide.image}
+              <img src={slide.image}
                 alt={slide.title}
-                className="h-full w-full object-cover"
-              />
+                className="h-full w-full object-cover" loading="lazy" width="600" height="400" />
               <div className="absolute inset-0 bg-[#031329]/78" />
             </div>
           ))}
@@ -313,11 +304,9 @@ const AdmissionServices = () => {
                 className="group overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-white shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:border-[#FFB000]"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-[#EEF5FF]">
-                  <img
-                    src={card.image}
+                  <img src={card.image}
                     alt={card.title}
-                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                  />
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" width="600" height="400" />
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="mb-5 text-[18px] font-semibold text-[#082B63]">
@@ -416,11 +405,9 @@ const AdmissionServices = () => {
                 className="rounded-[24px] border border-[#DDE9F7] bg-white p-6 text-center shadow-[0_18px_55px_rgba(8,34,74,.10)] transition duration-300 hover:border-[#FFB000]"
               >
                 <div className="mx-auto mb-5 aspect-square w-[160px] overflow-hidden rounded-[24px] border border-[#DDE9F7] bg-[#EEF5FF]">
-                  <img
-                    src={client.image}
+                  <img src={client.image}
                     alt={client.name}
-                    className="h-full w-full object-cover"
-                  />
+                    className="h-full w-full object-cover" loading="lazy" width="600" height="400" />
                 </div>
                 <h3 className="mb-2 text-[18px] font-semibold text-[#082B63]">
                   {client.name}

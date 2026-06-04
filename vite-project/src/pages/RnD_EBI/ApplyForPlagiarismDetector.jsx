@@ -23,14 +23,7 @@ const PlagiarismDetector = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeTab, setActiveTab] = useState("submit");
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const slides = useMemo(
     () => [
@@ -145,11 +138,9 @@ const PlagiarismDetector = () => {
               index === activeSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img
-              src={slide.image}
+            <img src={slide.image}
               alt={slide.title}
-              className="h-full w-full object-cover"
-            />
+              className="h-full w-full object-cover" loading="lazy" width="600" height="400" />
             <div className="absolute inset-0 bg-[#1B3A6B]/80" />
           </div>
         ))}
@@ -345,22 +336,16 @@ const PlagiarismDetector = () => {
             transition={{ duration: 0.45 }}
             className="grid gap-6"
           >
-            <img
-              src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=900&q=80"
               alt="Document checking"
-              className="h-[260px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            />
+              className="h-[260px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]" loading="lazy" width="600" height="400" />
             <div className="grid gap-6 md:grid-cols-2">
-              <img
-                src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80"
+              <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80"
                 alt="Research paper"
-                className="h-[180px] w-full rounded-[12px] border border-[#D6E0F0] object-cover"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80"
+                className="h-[180px] w-full rounded-[12px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
+              <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80"
                 alt="Academic checking"
-                className="h-[180px] w-full rounded-[12px] border border-[#D6E0F0] object-cover"
-              />
+                className="h-[180px] w-full rounded-[12px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
             </div>
           </motion.div>
         </div>
@@ -460,11 +445,9 @@ const PlagiarismDetector = () => {
                   ? "Submit your paper or thesis details for plagiarism checking support and certificate assistance."
                   : "Apply for institutional membership for ongoing plagiarism checking and academic document support."}
               </p>
-              <img
-                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80"
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80"
                 alt="Plagiarism checking service"
-                className="h-[260px] w-full rounded-[12px] border border-[#D6E0F0] object-cover"
-              />
+                className="h-[260px] w-full rounded-[12px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
             </motion.div>
 
           {/* ZOHO FORM SECTION */}

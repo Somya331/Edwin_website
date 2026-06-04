@@ -80,11 +80,7 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
+    
 
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
@@ -92,7 +88,7 @@ export default function Home() {
 
     return () => {
       clearInterval(timer);
-      document.head.removeChild(fontLink);
+      
     };
   }, []);
 
@@ -232,16 +228,14 @@ export default function Home() {
     <div className="relative slide-left">
       <div className="glass-card relative h-[390px] overflow-hidden rounded-[28px] border border-white/20 bg-white/10 p-3 shadow-[0_30px_90px_rgba(0,0,0,.32)] backdrop-blur-md">
         {carouselSlides.map((image, index) => (
-          <img
-            key={image}
+          <img key={image}
             src={image}
             alt="Edwin Incorporation"
             className={`absolute inset-3 h-[calc(100%-24px)] w-[calc(100%-24px)] rounded-[22px] object-cover transition-all duration-[1200ms] ${
               index === currentSlide
                 ? "scale-100 opacity-100"
                 : "scale-105 opacity-0"
-            }`}
-          />
+            }`} loading="lazy" width="600" height="400" />
         ))}
 
         <button className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#082B63]/80 text-[#FFD35A] shadow-lg backdrop-blur-md">
@@ -433,11 +427,9 @@ export default function Home() {
 
         <div className="relative mx-auto grid max-w-[1280px] items-center gap-10 lg:grid-cols-[1fr_1.05fr]">
           <div className="glass-card rounded-[34px] border border-white/15 bg-white/10 p-4 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-xl transition duration-500 hover:-translate-y-2">
-            <img
-              src={hero2}
+            <img src={hero2}
               alt="Academic Network"
-              className="h-[460px] w-full rounded-[26px] object-cover"
-            />
+              className="h-[460px] w-full rounded-[26px] object-cover" loading="lazy" width="600" height="400" />
           </div>
 
           <div className="fade-up">
@@ -600,15 +592,13 @@ export default function Home() {
             key={item.name}
             className="glass-card group flex h-[82px] items-center justify-center rounded-[18px] border border-[#DDE9F7] bg-white/90 p-3 shadow-[0_8px_24px_rgba(8,34,74,.07)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#FFB000] hover:bg-[#FFF7E5] hover:shadow-[0_12px_32px_rgba(255,157,0,.18)]"
           >
-            <img
-              src={item.logo}
+            <img src={item.logo}
               alt={item.name}
               className="max-h-[42px] max-w-[105px] object-contain transition duration-300 group-hover:scale-110"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
                 e.currentTarget.nextSibling.style.display = "block";
-              }}
-            />
+              }} loading="lazy" width="64" height="64" />
             <span className="hidden text-center text-[15px] font-black text-[#083A7C]">
               {item.name}
             </span>

@@ -102,14 +102,7 @@ const NaacSupport = () => {
     },
   ];
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -199,11 +192,9 @@ const NaacSupport = () => {
                   transition={{ duration: 0.45 }}
                   className="relative overflow-hidden rounded-[12px]"
                 >
-                  <img
-                    src={slides[activeSlide].image}
+                  <img src={slides[activeSlide].image}
                     alt={slides[activeSlide].title}
-                    className="h-[430px] w-full object-cover"
-                  />
+                    className="h-[430px] w-full object-cover" loading="lazy" width="600" height="400" />
                   <div className="absolute inset-0 bg-[#1B3A6B]/55" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h2 className="mb-2 text-[28px] font-semibold text-[#FFFFFF]">

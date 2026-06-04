@@ -147,17 +147,7 @@ const coverageSections = [
 ];
 
 export default function PressMediaPage() {
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#EEF5FF] font-['Plus_Jakarta_Sans',sans-serif] text-[#08224A]">
@@ -241,22 +231,16 @@ export default function PressMediaPage() {
           </div>
 
           <div className="grid gap-5 press-fade-up [animation-delay:.12s]">
-            <img
-              src={heroImages[0]}
+            <img src={heroImages[0]}
               alt="Press media coverage"
-              className="h-[330px] w-full rounded-[26px] border border-white/20 object-cover p-2 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md"
-            />
+              className="h-[330px] w-full rounded-[26px] border border-white/20 object-cover p-2 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md" loading="lazy" width="600" height="400" />
             <div className="grid gap-5 sm:grid-cols-2">
-              <img
-                src={heroImages[1]}
+              <img src={heroImages[1]}
                 alt="Newspaper coverage"
-                className="h-[160px] w-full rounded-[20px] border border-white/20 object-cover shadow-[0_16px_42px_rgba(0,0,0,.18)]"
-              />
-              <img
-                src={heroImages[2]}
+                className="h-[160px] w-full rounded-[20px] border border-white/20 object-cover shadow-[0_16px_42px_rgba(0,0,0,.18)]" loading="lazy" width="600" height="400" />
+              <img src={heroImages[2]}
                 alt="Media press"
-                className="h-[160px] w-full rounded-[20px] border border-white/20 object-cover shadow-[0_16px_42px_rgba(0,0,0,.18)]"
-              />
+                className="h-[160px] w-full rounded-[20px] border border-white/20 object-cover shadow-[0_16px_42px_rgba(0,0,0,.18)]" loading="lazy" width="600" height="400" />
             </div>
           </div>
         </div>
@@ -339,11 +323,9 @@ export default function PressMediaPage() {
                       key={item.title}
                       className="group overflow-hidden rounded-[20px] border border-[#DDE9F7] bg-white shadow-[0_10px_28px_rgba(8,34,74,.07)] transition duration-300 hover:-translate-y-2 hover:border-[#FFB000] hover:shadow-[0_18px_48px_rgba(11,102,195,.14)]"
                     >
-                      <img
-                        src={item.image}
+                      <img src={item.image}
                         alt={item.title}
-                        className="h-[260px] w-full object-cover transition duration-500 group-hover:scale-105"
-                      />
+                        className="h-[260px] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" width="600" height="400" />
                       <div className="p-4">
                         <h4 className="text-[16px] font-black text-[#082B63]">
                           {item.title}

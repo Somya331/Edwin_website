@@ -307,17 +307,7 @@ export default function ProfessionalMembershipPage() {
   const [memberSearch, setMemberSearch] = useState("");
   const [formStatus, setFormStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredMemberships = useMemo(() => {
     const query = searchTerm.toLowerCase().trim();
@@ -347,11 +337,9 @@ export default function ProfessionalMembershipPage() {
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
       <header className="relative w-full overflow-hidden bg-[#FFFFFF]">
         <div className="relative min-h-[620px] w-full">
-          <img
-            src={heroImage}
+          <img src={heroImage}
             alt="Professional Membership"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+            className="absolute inset-0 h-full w-full object-cover" loading="lazy" width="600" height="400" />
 
           <div className="absolute inset-0 bg-[#1B3A6B]/70" />
 
@@ -602,11 +590,9 @@ export default function ProfessionalMembershipPage() {
                       }`}
                     >
                       <td className="px-5 py-4">
-                        <img
-                          src={member.image}
+                        <img src={member.image}
                           alt={member.name}
-                          className="h-20 w-20 rounded-[8px] border border-[#D6E0F0] object-cover"
-                        />
+                          className="h-20 w-20 rounded-[8px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
                       </td>
                       <td className="px-5 py-4 text-[15px] font-semibold text-[#1A1A2E]">
                         {member.name}

@@ -20,14 +20,7 @@ const EducationalTours = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeCategory, setActiveCategory] = useState("travel");
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const slides = useMemo(
     () => [
@@ -130,11 +123,9 @@ const EducationalTours = () => {
               index === activeSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img
-              src={slide.image}
+            <img src={slide.image}
               alt={slide.title}
-              className="h-full w-full object-cover"
-            />
+              className="h-full w-full object-cover" loading="lazy" width="600" height="400" />
             <div className="absolute inset-0 bg-gradient-to-br from-[#031329]/90 via-[#073B86]/82 to-[#051B3B]/88" />
           </div>
         ))}
@@ -322,13 +313,11 @@ const EducationalTours = () => {
                   index === 0 || index === 5 ? "lg:row-span-2" : ""
                 }`}
               >
-                <img
-                  src={image}
+                <img src={image}
                   alt={`Educational tour experience ${index + 1}`}
                   className={`w-full object-cover transition duration-300 hover:scale-105 ${
                     index === 0 || index === 5 ? "h-[420px]" : "h-[230px]"
-                  }`}
-                />
+                  }`} loading="lazy" width="600" height="400" />
               </motion.div>
             ))}
           </div>

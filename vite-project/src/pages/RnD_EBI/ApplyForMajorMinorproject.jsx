@@ -27,6 +27,7 @@ const MajorProjects = () => {
   });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const springY = useSpring(y, { stiffness: 100, damping: 30 });
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   // Hero slides data
   const heroSlides = [
@@ -216,7 +217,7 @@ const MajorProjects = () => {
                 style={{ 
                   backgroundImage: `url(${slide.image})`,
                   y: springY,
-                  scale: useTransform(scrollYProgress, [0, 1], [1, 1.1])
+                  scale: scale
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A6B]/85 to-[#1B3A6B]/50 backdrop-blur-[2px]" />
@@ -587,11 +588,9 @@ const MajorProjects = () => {
       >
         <div className="absolute -top-6 -right-6 w-full h-full rounded-[32px] bg-[#C89B3C]/20" />
         <div className="relative rounded-[32px] overflow-hidden shadow-2xl border-8 border-white">
-          <img
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=900&fit=crop"
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=900&fit=crop"
             alt="Dr. Steve Austin"
-            className="w-[430px] h-[500px] object-cover"
-          />
+            className="w-[430px] h-[500px] object-cover" loading="lazy" width="600" height="400" />
         </div>
 
         <div className="absolute -bottom-6 left-6 bg-[#1B3A6B] text-white px-6 py-4 rounded-2xl shadow-xl">

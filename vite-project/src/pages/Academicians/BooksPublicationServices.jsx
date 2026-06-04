@@ -388,17 +388,7 @@ export default function EdwinGroupPublicationsPage() {
   const [chapterStatus, setChapterStatus] = useState("");
   const [editorStatus, setEditorStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredBooks = useMemo(() => {
     const query = bookSearch.toLowerCase().trim();
@@ -433,11 +423,9 @@ export default function EdwinGroupPublicationsPage() {
   return (
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
       <header className="relative min-h-[760px] overflow-hidden bg-[#1B3A6B]">
-        <img
-          src={heroImage}
+        <img src={heroImage}
           alt="Edwin Book Publication"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
+          className="absolute inset-0 h-full w-full object-cover object-center" loading="lazy" width="600" height="400" />
         <div className="absolute inset-0 bg-[#1B3A6B]/75" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#FFFFFF] to-transparent" />
 
@@ -599,11 +587,9 @@ export default function EdwinGroupPublicationsPage() {
               </p>
 
               <div className="mt-8 overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                <img
-                  src={publishingDeskImage}
+                <img src={publishingDeskImage}
                   alt="Book writing and publication desk"
-                  className="h-[310px] w-full object-cover"
-                />
+                  className="h-[310px] w-full object-cover" loading="lazy" width="600" height="400" />
               </div>
             </div>
 
@@ -679,11 +665,9 @@ export default function EdwinGroupPublicationsPage() {
             </div>
 
             <div className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-              <img
-                src={amazonBookImage}
+              <img src={amazonBookImage}
                 alt="Books availability on Amazon"
-                className="h-[360px] w-full object-cover"
-              />
+                className="h-[360px] w-full object-cover" loading="lazy" width="600" height="400" />
               <div className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[#1B3A6B] text-[#FFFFFF]">
@@ -729,11 +713,9 @@ export default function EdwinGroupPublicationsPage() {
                   }}
                   className="group overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition duration-200 ease-in-out hover:border-[#C89B3C]"
                 >
-                  <img
-                    src={feature.image}
+                  <img src={feature.image}
                     alt={feature.title}
-                    className="h-44 w-full object-cover"
-                  />
+                    className="h-44 w-full object-cover" loading="lazy" width="600" height="400" />
                   <div className="p-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] text-[#1B3A6B] transition duration-200 ease-in-out group-hover:border-[#C89B3C] group-hover:text-[#C89B3C]">
                       <Icon className="text-xl" />
@@ -891,11 +873,9 @@ export default function EdwinGroupPublicationsPage() {
                       }`}
                     >
                       <td className="px-5 py-4">
-                        <img
-                          src={book.image}
+                        <img src={book.image}
                           alt={book.title}
-                          className="h-24 w-24 rounded-[8px] border border-[#D6E0F0] object-cover"
-                        />
+                          className="h-24 w-24 rounded-[8px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
                       </td>
                       <td className="px-5 py-4 text-[15px] font-semibold leading-[1.7] text-[#1A1A2E]">
                         {book.title}

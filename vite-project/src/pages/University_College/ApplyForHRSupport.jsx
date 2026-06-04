@@ -94,11 +94,7 @@ export default function HRPage() {
   const [status, setStatus] = useState("");
 
   useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
+    
 
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroImages.length);
@@ -106,7 +102,7 @@ export default function HRPage() {
 
     return () => {
       clearInterval(timer);
-      document.head.removeChild(fontLink);
+      
     };
   }, []);
 
@@ -126,7 +122,7 @@ export default function HRPage() {
               activeSlide === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
             }`}
           >
-            <img src={image} alt="HR support" className="h-full w-full object-cover" />
+            <img src={image} alt="HR support" className="h-full w-full object-cover" loading="lazy" width="600" height="400" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A6B]/95 via-[#1B3A6B]/80 to-[#1B3A6B]/25" />
           </div>
         ))}
@@ -186,11 +182,9 @@ export default function HRPage() {
 
         <div className="relative mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div className="overflow-hidden rounded-[26px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_18px_50px_rgba(27,58,107,0.12)]">
-            <img
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=90"
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=90"
               alt="HR meeting"
-              className="h-[420px] w-full rounded-[20px] object-cover"
-            />
+              className="h-[420px] w-full rounded-[20px] object-cover" loading="lazy" width="600" height="400" />
           </div>
 
           <div>
@@ -305,11 +299,9 @@ export default function HRPage() {
                   className="group overflow-hidden rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_12px_32px_rgba(27,58,107,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#C89B3C] hover:shadow-[0_22px_50px_rgba(27,58,107,0.16)]"
                 >
                   <div className="overflow-hidden">
-                    <img
-                      src={card.image}
+                    <img src={card.image}
                       alt={card.title}
-                      className="h-[190px] w-full object-cover transition duration-500 group-hover:scale-110"
-                    />
+                      className="h-[190px] w-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="600" height="400" />
                   </div>
                   <div className="p-6">
                     <div className="flex h-13 w-13 items-center justify-center rounded-[14px] bg-[#EAF1FB] text-[#1B3A6B]">

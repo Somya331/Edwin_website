@@ -23,11 +23,9 @@ export default function BirthdaysPage() {
   return (
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
       <section className="relative h-[430px] w-full overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1600&q=90"
+        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1600&q=90"
           alt="Birthday Celebration"
-          className="h-full w-full object-cover"
-        />
+          className="h-full w-full object-cover" loading="lazy" width="600" height="400" />
 
         <div className="absolute inset-0 bg-[#1B3A6B]/55" />
 
@@ -80,11 +78,9 @@ export default function BirthdaysPage() {
                   className="group overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] transition duration-200 hover:-translate-y-1 hover:border-[#C89B3C]"
                 >
                   <div className="overflow-hidden">
-                    <img
-                      src={photo}
+                    <img src={photo}
                       alt={`${section.heading} ${index + 1}`}
-                      className="h-[280px] w-full object-cover transition duration-500 group-hover:scale-110"
-                    />
+                      className="h-[280px] w-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="600" height="400" />
                   </div>
 
                 </motion.div>

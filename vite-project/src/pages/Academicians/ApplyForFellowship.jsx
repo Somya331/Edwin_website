@@ -158,17 +158,7 @@ export default function FellowshipSupportPage() {
   const [newsStatus, setNewsStatus] = useState("");
   const [contactSearch, setContactSearch] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredContacts = useMemo(() => {
     const query = contactSearch.toLowerCase().trim();
@@ -197,11 +187,9 @@ export default function FellowshipSupportPage() {
       <header className="relative overflow-hidden bg-[#FFFFFF]">
         <div className="grid min-h-[720px] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative flex items-center overflow-hidden bg-[#1B3A6B] px-5 py-20">
-            <img
-              src={heroImage}
+            <img src={heroImage}
               alt="Edwin Apply for Fellowship"
-              className="absolute inset-0 h-full w-full object-cover object-center opacity-25"
-            />
+              className="absolute inset-0 h-full w-full object-cover object-center opacity-25" loading="lazy" width="600" height="400" />
             <div className="absolute inset-0 bg-[#1B3A6B]/80" />
 
             <div className="relative mx-auto w-full max-w-[680px] lg:mr-0">
@@ -260,11 +248,9 @@ export default function FellowshipSupportPage() {
                 className="grid gap-5"
               >
                 <div className="overflow-hidden rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_20px_55px_rgba(27,58,107,0.16)]">
-                  <img
-                    src={fellowshipImage}
+                  <img src={fellowshipImage}
                     alt="Academic fellowship recognition"
-                    className="h-[360px] w-full object-cover"
-                  />
+                    className="h-[360px] w-full object-cover" loading="lazy" width="600" height="400" />
                   <div className="p-6">
                     <h3 className="text-[22px] font-semibold text-[#1B3A6B]">
                       Edwin Science Society
@@ -379,11 +365,9 @@ export default function FellowshipSupportPage() {
             </div>
 
             <div className="overflow-hidden rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_20px_55px_rgba(27,58,107,0.12)]">
-              <img
-                src={researchImage}
+              <img src={researchImage}
                 alt="Academic research fellowship support"
-                className="h-[420px] w-full object-cover"
-              />
+                className="h-[420px] w-full object-cover" loading="lazy" width="600" height="400" />
             </div>
           </div>
 
@@ -478,11 +462,9 @@ export default function FellowshipSupportPage() {
                       }`}
                     >
                       <td className="px-5 py-4">
-                        <img
-                          src={item.image}
+                        <img src={item.image}
                           alt={item.name}
-                          className="h-24 w-24 rounded-[10px] border border-[#D6E0F0] object-cover"
-                        />
+                          className="h-24 w-24 rounded-[10px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
                       </td>
                       <td className="px-5 py-4 text-[15px] font-semibold leading-[1.7] text-[#1A1A2E]">
                         {item.name}

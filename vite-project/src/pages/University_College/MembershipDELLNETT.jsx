@@ -219,11 +219,9 @@ const DigitalLibrary = () => {
                   transition={{ duration: 0.5 }}
                   className="relative h-[450px] overflow-hidden rounded-[20px]"
                 >
-                  <img
-                    src={heroSlides[activeSlide].image}
+                  <img src={heroSlides[activeSlide].image}
                     alt={heroSlides[activeSlide].title}
-                    className="h-full w-full object-cover transition duration-700 hover:scale-105"
-                  />
+                    className="h-full w-full object-cover transition duration-700 hover:scale-105" loading="lazy" width="600" height="400" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#08224A]/90 via-[#08224A]/30 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
                     <h2 className="mb-3 text-[24px] font-bold text-white md:text-[28px]">
@@ -431,11 +429,9 @@ const DigitalLibrary = () => {
             viewport={{ once: true }}
             className="hidden lg:block overflow-hidden rounded-[32px] border-4 border-white/10 shadow-2xl"
           >
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
               alt="Expert"
-              className="h-[480px] w-full object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-500"
-            />
+              className="h-[480px] w-full object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-500" loading="lazy" width="600" height="400" />
           </motion.div>
 
           <motion.div
@@ -480,11 +476,9 @@ const DigitalLibrary = () => {
             viewport={{ once: true }}
             className="hidden lg:block overflow-hidden rounded-[32px] border-4 border-white/10 shadow-2xl"
           >
-            <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
               alt="Expert"
-              className="h-[480px] w-full object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-500"
-            />
+              className="h-[480px] w-full object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-500" loading="lazy" width="600" height="400" />
           </motion.div>
         </div>
       </section>

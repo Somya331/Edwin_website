@@ -2,17 +2,11 @@ import React, { useEffect } from 'react';
 
 const FAQ = () => {
   useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
+    
 
     window.location.replace('https://edwinincorp.zohodesk.in/portal/en/home');
 
-    return () => {
-      document.head.removeChild(fontLink);
-    };
+    
   }, []);
 
   return (

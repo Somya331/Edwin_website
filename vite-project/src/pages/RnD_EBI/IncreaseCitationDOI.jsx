@@ -14,14 +14,7 @@ import { motion } from "framer-motion";
 const IncreaseCitation = () => {
   const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const recruitmentRows = useMemo(
     () => [
@@ -88,11 +81,9 @@ const IncreaseCitation = () => {
   return (
     <main className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans'] text-[#1A1A2E]">
       <section className="relative flex min-h-[560px] items-center justify-center bg-[#FFFFFF]">
-        <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
           alt="Academic discussion"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+          className="absolute inset-0 h-full w-full object-cover" loading="lazy" width="600" height="400" />
         <div className="absolute inset-0 bg-[#1B3A6B]/75" />
         <div className="relative mx-auto max-w-[1200px] px-5 text-center">
           <p className="mx-auto mb-5 inline-flex rounded-[8px] border border-[#C89B3C] bg-[#FFFFFF] px-5 py-2 text-[13px] font-medium text-[#1B3A6B]">

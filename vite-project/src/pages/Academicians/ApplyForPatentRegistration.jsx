@@ -96,17 +96,7 @@ export default function PatentSupportPage() {
   const [formStatus, setFormStatus] = useState("");
   const [legalFormStatus, setLegalFormStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -126,11 +116,9 @@ export default function PatentSupportPage() {
         <div className="grid min-h-[680px] lg:grid-cols-[0.95fr_1.05fr]">
           <div className="relative flex items-center bg-[#1B3A6B] px-5 py-20">
             <div className="absolute inset-0">
-              <img
-                src={heroImage}
+              <img src={heroImage}
                 alt="Patent support and legal documentation"
-                className="h-full w-full object-cover opacity-20"
-              />
+                className="h-full w-full object-cover opacity-20" loading="lazy" width="600" height="400" />
               <div className="absolute inset-0 bg-[#1B3A6B]/85" />
             </div>
 
@@ -188,11 +176,9 @@ export default function PatentSupportPage() {
                 className="w-full"
               >
                 <div className="overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                  <img
-                    src={patentImage}
+                  <img src={patentImage}
                     alt="Patent documentation support"
-                    className="h-[360px] w-full object-cover"
-                  />
+                    className="h-[360px] w-full object-cover" loading="lazy" width="600" height="400" />
 
                   <div className="p-6">
                     <div className="grid gap-4 sm:grid-cols-3">
@@ -249,11 +235,9 @@ export default function PatentSupportPage() {
               </p>
 
               <div className="mt-8 overflow-hidden rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                <img
-                  src={innovationImage}
+                <img src={innovationImage}
                   alt="Research and innovation support"
-                  className="h-[300px] w-full object-cover"
-                />
+                  className="h-[300px] w-full object-cover" loading="lazy" width="600" height="400" />
               </div>
             </div>
 

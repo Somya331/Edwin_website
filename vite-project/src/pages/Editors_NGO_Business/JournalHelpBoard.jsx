@@ -206,17 +206,7 @@ export default function JournalsHelpBoardPage() {
   const [openingStatus, setOpeningStatus] = useState("");
   const [impactStatus, setImpactStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredServices = useMemo(() => {
     const value = search.toLowerCase().trim();
@@ -299,36 +289,30 @@ export default function JournalsHelpBoardPage() {
               <div className="absolute -right-5 -top-5 hidden h-24 w-24 rounded-[28px] bg-[#C89B3C]/20 lg:block" />
               <div className="relative grid gap-4">
                 <div className="overflow-hidden rounded-[34px] border border-white/20 bg-white/10 p-4 shadow-[0_30px_90px_rgba(0,0,0,.28)] backdrop-blur-md">
-                  <img
-                    src={heroImages.main}
+                  <img src={heroImages.main}
                     alt="Journal Help Board"
                     className="h-[360px] w-full rounded-[26px] object-cover lg:h-[430px]"
                     onError={(e) => {
                       e.currentTarget.src =
                         "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=90";
-                    }}
-                  />
+                    }} loading="lazy" width="600" height="400" />
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <img
-                    src={heroImages.journal}
+                  <img src={heroImages.journal}
                     alt="Online journal portal"
                     className="h-[180px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_10px_28px_rgba(27,58,107,0.10)]"
                     onError={(e) => {
                       e.currentTarget.src =
                         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=90";
-                    }}
-                  />
-                  <img
-                    src={heroImages.editor}
+                    }} loading="lazy" width="600" height="400" />
+                  <img src={heroImages.editor}
                     alt="Journal editor support"
                     className="h-[180px] w-full rounded-[24px] border border-[#D6E0F0] object-cover shadow-[0_10px_28px_rgba(27,58,107,0.10)]"
                     onError={(e) => {
                       e.currentTarget.src =
                         "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=90";
-                    }}
-                  />
+                    }} loading="lazy" width="600" height="400" />
                 </div>
               </div>
             </motion.div>
@@ -510,15 +494,13 @@ export default function JournalsHelpBoardPage() {
 
             <div className="relative">
               <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[28px] bg-[#C89B3C]/20" />
-              <img
-                src={heroImages.publishing}
+              <img src={heroImages.publishing}
                 alt="Journal publishing services"
                 className="relative h-[560px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_20px_50px_rgba(27,58,107,0.12)]"
                 onError={(e) => {
                   e.currentTarget.src =
                     "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=90";
-                }}
-              />
+                }} loading="lazy" width="600" height="400" />
             </div>
           </div>
         </div>

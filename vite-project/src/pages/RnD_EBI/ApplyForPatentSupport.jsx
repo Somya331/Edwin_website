@@ -12,14 +12,7 @@ import {
 import { motion } from "framer-motion";
 
 const PatentRegistration = () => {
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const patentFields = [
     "Basic Ideas",
@@ -67,22 +60,16 @@ const PatentRegistration = () => {
           </div>
 
           <div className="grid gap-6">
-            <img
-              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80"
               alt="Patent legal documents"
-              className="h-[260px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            />
+              className="h-[260px] w-full rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]" loading="lazy" width="600" height="400" />
             <div className="grid gap-6 md:grid-cols-2">
-              <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80"
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80"
                 alt="Patent paperwork"
-                className="h-[170px] w-full rounded-[12px] border border-[#D6E0F0] object-cover"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80"
+                className="h-[170px] w-full rounded-[12px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80"
                 alt="Certification documents"
-                className="h-[170px] w-full rounded-[12px] border border-[#D6E0F0] object-cover"
-              />
+                className="h-[170px] w-full rounded-[12px] border border-[#D6E0F0] object-cover" loading="lazy" width="600" height="400" />
             </div>
           </div>
         </div>
@@ -108,11 +95,9 @@ const PatentRegistration = () => {
                 be your partner in safeguarding your valuable innovations.
               </p>
             </div>
-            <img
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
               alt="Patent support meeting"
-              className="h-full min-h-[260px] rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
-            />
+              className="h-full min-h-[260px] rounded-[12px] border border-[#D6E0F0] object-cover shadow-[0_2px_8px_rgba(0,0,0,0.08)]" loading="lazy" width="600" height="400" />
           </div>
         </div>
       </section>

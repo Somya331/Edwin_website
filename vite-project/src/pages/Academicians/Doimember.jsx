@@ -132,17 +132,7 @@ export default function DoiMembershipPage() {
   const [formStatus, setFormStatus] = useState("");
   const [doiSearch, setDoiSearch] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredDoiAllocations = useMemo(() => {
     const query = doiSearch.toLowerCase().trim();
@@ -213,11 +203,9 @@ export default function DoiMembershipPage() {
           </div>
 
           <div className="relative min-h-[420px] lg:min-h-[650px]">
-            <img
-              src={heroImage}
+            <img src={heroImage}
               alt="DOI Membership digital publication"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+              className="absolute inset-0 h-full w-full object-cover" loading="lazy" width="600" height="400" />
 
             <div className="absolute inset-0 bg-[#1B3A6B]/20" />
 

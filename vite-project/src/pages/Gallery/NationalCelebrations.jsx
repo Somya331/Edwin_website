@@ -39,11 +39,9 @@ export default function NationalCelebrationsPage() {
   return (
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
       <section className="relative h-[430px] w-full overflow-hidden bg-[#0F2A4F]">
-        <img
-          src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=90"
+        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=90"
           alt="National Celebrations"
-          className="h-full w-full object-cover"
-        />
+          className="h-full w-full object-cover" loading="lazy" width="600" height="400" />
 
         <div className="absolute inset-0 bg-[#1B3A6B]/55" />
 
@@ -95,11 +93,9 @@ export default function NationalCelebrationsPage() {
                   className="group mb-[3px] break-inside-avoid overflow-hidden bg-[#FFFFFF]"
                 >
                   <div className="overflow-hidden">
-                    <img
-                      src={photo}
+                    <img src={photo}
                       alt={`${section.heading} ${index + 1}`}
-                      className="block h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                    />
+                      className="block h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]" loading="lazy" width="600" height="400" />
                   </div>
                 </motion.div>
               ))}

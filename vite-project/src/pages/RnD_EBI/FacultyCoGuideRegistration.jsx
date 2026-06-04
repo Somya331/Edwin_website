@@ -550,8 +550,7 @@ const FacultyCoGuideRegistration = () => {
                 className="group backdrop-blur-sm bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#D6E0F0] hover:border-[#C89B3C]"
               >
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-[#EAF1FB] to-white p-1 group-hover:scale-110 transition-transform duration-300">
-                  <img
-                    src={university.logo}
+                  <img src={university.logo}
                     alt={university.name}
                     className="w-full h-full object-cover rounded-full"
                     loading="lazy"
@@ -559,8 +558,7 @@ const FacultyCoGuideRegistration = () => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src =
                         'https://via.placeholder.com/150/1B3A6B/FFFFFF?text=University';
-                    }}
-                  />
+                    }} width="64" height="64" />
                 </div>
 
                 <h3 className="text-[#1A1A2E] font-semibold text-sm mb-1 group-hover:text-[#C89B3C] transition-colors">
@@ -626,16 +624,14 @@ const FacultyCoGuideRegistration = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <img
-                    src={testimonial.image}
+                  <img src={testimonial.image}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover border-2 border-[#C89B3C] group-hover:scale-110 transition-transform"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src =
                         'https://via.placeholder.com/50/1B3A6B/FFFFFF?text=User';
-                    }}
-                  />
+                    }} loading="lazy" width="600" height="400" />
 
                   <div>
                     <p className="font-bold text-[#1A1A2E] group-hover:text-[#C89B3C] transition-colors">

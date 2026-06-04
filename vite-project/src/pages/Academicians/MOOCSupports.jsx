@@ -175,17 +175,7 @@ export default function MoocSupportPage() {
   const [creatorStatus, setCreatorStatus] = useState("");
   const [institutionStatus, setInstitutionStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const handleStudentSubmit = (event) => {
     event.preventDefault();
@@ -209,11 +199,9 @@ export default function MoocSupportPage() {
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
       <header className="relative overflow-hidden bg-[#071B35]">
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
+          <img src={heroImage}
             alt="MOOC online education learning"
-            className="h-full w-full object-cover opacity-25"
-          />
+            className="h-full w-full object-cover opacity-25" loading="lazy" width="600" height="400" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(200,155,60,0.28),transparent_35%),linear-gradient(120deg,rgba(27,58,107,0.98),rgba(7,27,53,0.9))]" />
         </div>
 
@@ -305,11 +293,9 @@ export default function MoocSupportPage() {
             >
               <div className="absolute -left-6 -top-6 h-full w-full rounded-[34px] border border-[#C89B3C]/45" />
               <div className="relative overflow-hidden rounded-[34px] border border-[#D6E0F0]/30 bg-[#FFFFFF]/10 p-3 shadow-[0_25px_70px_rgba(0,0,0,0.35)] backdrop-blur">
-                <img
-                  src={heroSideImage}
+                <img src={heroSideImage}
                   alt="Digital classroom and online learners"
-                  className="h-[560px] w-full rounded-[26px] object-cover"
-                />
+                  className="h-[560px] w-full rounded-[26px] object-cover" loading="lazy" width="600" height="400" />
 
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
@@ -410,11 +396,9 @@ export default function MoocSupportPage() {
               className="relative"
             >
               <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[28px] bg-[#C89B3C]/20" />
-              <img
-                src={studentImage}
+              <img src={studentImage}
                 alt="Online students learning"
-                className="relative h-[520px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_20px_50px_rgba(27,58,107,0.12)]"
-              />
+                className="relative h-[520px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_20px_50px_rgba(27,58,107,0.12)]" loading="lazy" width="600" height="400" />
             </motion.div>
 
             <motion.div
@@ -628,11 +612,9 @@ export default function MoocSupportPage() {
               </p>
 
               <div className="mt-8 overflow-hidden rounded-[22px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_8px_30px_rgba(27,58,107,0.08)]">
-                <img
-                  src={studentImage}
+                <img src={studentImage}
                   alt="Students online course"
-                  className="h-[320px] w-full object-cover"
-                />
+                  className="h-[320px] w-full object-cover" loading="lazy" width="600" height="400" />
               </div>
             </div>
 

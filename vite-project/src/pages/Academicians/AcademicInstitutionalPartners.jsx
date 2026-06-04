@@ -207,17 +207,7 @@ export default function ChhindwaraConferencePage() {
   const [speakerStatus, setSpeakerStatus] = useState("");
   const [travelStatus, setTravelStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredAwards = useMemo(() => {
     const value = query.toLowerCase().trim();
@@ -252,11 +242,9 @@ export default function ChhindwaraConferencePage() {
     <div className="min-h-screen bg-[#FFFFFF] font-['Plus_Jakarta_Sans',sans-serif] text-[#1A1A2E]">
       <header className="relative overflow-hidden bg-[#071B35]">
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
+          <img src={heroImage}
             alt="International Conference Chhindwara"
-            className="h-full w-full object-cover opacity-30"
-          />
+            className="h-full w-full object-cover opacity-30" loading="lazy" width="600" height="400" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(200,155,60,0.32),transparent_34%),linear-gradient(120deg,rgba(27,58,107,0.98),rgba(7,27,53,0.92))]" />
         </div>
 
@@ -337,11 +325,9 @@ export default function ChhindwaraConferencePage() {
               <div className="absolute -left-6 -top-6 h-full w-full rounded-[34px] border border-[#C89B3C]/45" />
 
               <div className="relative overflow-hidden rounded-[34px] border border-[#D6E0F0]/30 bg-[#FFFFFF]/10 p-3 shadow-[0_25px_70px_rgba(0,0,0,0.35)] backdrop-blur">
-                <img
-                  src={auditoriumImage}
+                <img src={auditoriumImage}
                   alt="Conference auditorium"
-                  className="h-[560px] w-full rounded-[26px] object-cover"
-                />
+                  className="h-[560px] w-full rounded-[26px] object-cover" loading="lazy" width="600" height="400" />
 
                 <div className="absolute inset-x-6 bottom-6 rounded-[20px] border border-[#D6E0F0]/40 bg-[#FFFFFF]/95 p-5 backdrop-blur">
                   <p className="text-[13px] font-normal uppercase tracking-wide text-[#5A6A85]">
@@ -539,11 +525,9 @@ export default function ChhindwaraConferencePage() {
               className="relative"
             >
               <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[28px] bg-[#C89B3C]/20" />
-              <img
-                src={indiaCultureImage}
+              <img src={indiaCultureImage}
                 alt="Indian Knowledge Systems"
-                className="relative h-[520px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_20px_50px_rgba(27,58,107,0.12)]"
-              />
+                className="relative h-[520px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_20px_50px_rgba(27,58,107,0.12)]" loading="lazy" width="600" height="400" />
             </motion.div>
           </div>
         </div>
@@ -817,11 +801,9 @@ export default function ChhindwaraConferencePage() {
         <div className="mx-auto max-w-[1200px]">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="overflow-hidden rounded-[28px] border border-[#D6E0F0] bg-[#FFFFFF] shadow-[0_20px_55px_rgba(27,58,107,0.12)]">
-              <img
-                src={penchImage}
+              <img src={penchImage}
                 alt="Pench Tiger Reserve"
-                className="h-[450px] w-full object-cover"
-              />
+                className="h-[450px] w-full object-cover" loading="lazy" width="600" height="400" />
             </div>
 
             <div>

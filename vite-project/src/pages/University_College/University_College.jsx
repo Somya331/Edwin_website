@@ -18,14 +18,7 @@ import {
 const InstitutionalMembership = () => {
   const [activeService, setActiveService] = useState("Assistance for NAAC/MOU Sign");
 
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+  
 
   const mainServices = [
     "Assistance for NAAC/MOU Sign",
@@ -141,11 +134,9 @@ const InstitutionalMembership = () => {
             <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="overflow-hidden rounded-[12px] sm:col-span-2">
-                  <img
-                    src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80"
+                  <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80"
                     alt="Institutional Membership"
-                    className="h-[280px] w-full object-cover"
-                  />
+                    className="h-[280px] w-full object-cover" loading="lazy" width="600" height="400" />
                 </div>
 
                 <div className="rounded-[12px] bg-[#EAF1FB] p-5">

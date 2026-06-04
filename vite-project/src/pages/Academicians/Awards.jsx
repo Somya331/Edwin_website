@@ -274,17 +274,7 @@ export default function ApplyForAwardPage() {
   const [search, setSearch] = useState("");
   const [awardStatus, setAwardStatus] = useState("");
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   const filteredConferences = useMemo(() => {
     const query = search.toLowerCase().trim();
@@ -314,11 +304,9 @@ export default function ApplyForAwardPage() {
               <div className="absolute -left-5 -top-5 hidden h-24 w-24 rounded-[28px] bg-[#C89B3C]/20 lg:block" />
 
               <div className="relative overflow-hidden rounded-[34px] border border-[#D6E0F0] bg-[#FFFFFF] p-4 shadow-[0_22px_60px_rgba(27,58,107,0.14)]">
-                <img
-                  src={awardHeroImages.main}
+                <img src={awardHeroImages.main}
                   alt="Apply for Award"
-                  className="h-[420px] w-full rounded-[26px] object-cover"
-                />
+                  className="h-[420px] w-full rounded-[26px] object-cover" loading="lazy" width="600" height="400" />
 
                 <div className="absolute bottom-8 left-8 right-8 rounded-[22px] border border-[#FFFFFF]/40 bg-[#FFFFFF]/90 p-5 backdrop-blur">
                   <div className="flex flex-wrap gap-3">
@@ -499,16 +487,12 @@ export default function ApplyForAwardPage() {
             </div>
 
             <div className="grid gap-5">
-              <img
-                src={awardHeroImages.ceremony}
+              <img src={awardHeroImages.ceremony}
                 alt="Award ceremony"
-                className="h-[250px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_18px_42px_rgba(27,58,107,0.12)]"
-              />
-              <img
-                src={awardHeroImages.achievement}
+                className="h-[250px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_18px_42px_rgba(27,58,107,0.12)]" loading="lazy" width="600" height="400" />
+              <img src={awardHeroImages.achievement}
                 alt="Academic award"
-                className="h-[250px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_18px_42px_rgba(27,58,107,0.12)]"
-              />
+                className="h-[250px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_18px_42px_rgba(27,58,107,0.12)]" loading="lazy" width="600" height="400" />
             </div>
           </div>
         </div>

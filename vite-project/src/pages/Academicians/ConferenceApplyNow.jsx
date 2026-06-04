@@ -236,17 +236,7 @@ export default function ApplyForConferencesPage() {
     }));
   }, []);
 
-  useEffect(() => {
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
-
-    return () => {
-      document.head.removeChild(fontLink);
-    };
-  }, []);
+  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -466,11 +456,9 @@ export default function ApplyForConferencesPage() {
               className="relative"
             >
               <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[28px] bg-[#C89B3C]/20" />
-              <img
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=90"
+              <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=90"
                 alt="Conference networking"
-                className="relative h-[520px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_20px_50px_rgba(27,58,107,0.12)]"
-              />
+                className="relative h-[520px] w-full rounded-[28px] border border-[#D6E0F0] object-cover shadow-[0_20px_50px_rgba(27,58,107,0.12)]" loading="lazy" width="600" height="400" />
             </motion.div>
 
             <motion.div
@@ -772,13 +760,11 @@ export default function ApplyForConferencesPage() {
                 }`}
               >
                 <div className="relative overflow-hidden">
-                  <img
-                    src={item.image}
+                  <img src={item.image}
                     alt={item.title}
                     className={`w-full object-cover transition duration-500 group-hover:scale-110 ${
                       index === 0 ? "h-[430px]" : "h-[220px]"
-                    }`}
-                  />
+                    }`} loading="lazy" width="600" height="400" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A6B]/80 via-transparent to-transparent opacity-80" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <span className="inline-flex rounded-full bg-[#C89B3C] px-3 py-1 text-[12px] font-semibold text-[#FFFFFF]">

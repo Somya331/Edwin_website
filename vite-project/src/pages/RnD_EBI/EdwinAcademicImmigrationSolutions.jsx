@@ -153,7 +153,7 @@ function EdwinAcademicImmigrationSolutions() {
     <div className="w-full bg-white overflow-hidden">
       <style>
         {`
-          @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+          
 
           * {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -612,7 +612,7 @@ function EdwinAcademicImmigrationSolutions() {
     <div className="text-center mb-8">
       <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-semibold mb-4 shadow-sm">
         <FaFileSignature />
-        ​​Apply Now
+        Apply Now
       </div>
 
       <h2 className="text-4xl font-bold text-[#1B3A6B]">
@@ -654,7 +654,7 @@ function EdwinAcademicImmigrationSolutions() {
     <div className="text-center mb-8">
       <div className="inline-flex items-center gap-2 bg-white border border-[#D6E0F0] px-5 py-2 rounded-full text-[#1B3A6B] text-sm font-semibold mb-4 shadow-sm">
         <FaFileSignature />
-        ​​Apply Now
+        Apply Now
       </div>
 
       <h2 className="text-4xl font-bold text-[#1B3A6B]">
