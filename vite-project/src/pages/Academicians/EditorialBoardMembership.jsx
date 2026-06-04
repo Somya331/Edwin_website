@@ -554,67 +554,7 @@ export default function EditorialBoardPage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[#1B3A6B] px-5 py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
-          <div>
-            <p className="text-[13px] font-normal uppercase tracking-wide text-[#C89B3C]">
-              Keep in Touch with Us
-            </p>
-            <h2 className="mt-3 text-[28px] font-semibold text-[#FFFFFF]">
-              Need support for Editorial Board Membership?
-            </h2>
-            <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#FFFFFF]">
-              Contact Edwin Incorporation for editorial board membership, academic
-              participation, journal review support, and related publication services.
-            </p>
-
-            <a
-              href="mailto:care@edwinepc.com"
-              className="mt-8 inline-flex items-center gap-2 rounded-[8px] bg-[#C89B3C] px-6 py-[10px] text-[15px] font-medium text-[#FFFFFF] transition duration-200 ease-in-out hover:bg-[#FFFFFF] hover:text-[#1B3A6B]"
-            >
-              Email Now
-              <FaArrowRight />
-            </a>
-          </div>
-
-          <div className="rounded-[12px] border border-[#D6E0F0] bg-[#FFFFFF] p-6">
-            <div className="grid gap-5">
-              <div className="flex gap-3">
-                <FaMapMarkerAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi
-                  110019
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaPhoneAlt className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  India: 011-66155019
-                  <br />
-                  Phone: +91 6262752167
-                  <br />
-                  Phone: +12792029553
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaEnvelope className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  care@edwinepc.com
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <FaGlobe className="mt-1 shrink-0 text-[#C89B3C]" />
-                <p className="text-[15px] font-normal leading-[1.7] text-[#1A1A2E]">
-                  www.academichelpstore.com
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 }
