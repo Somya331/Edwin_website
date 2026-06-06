@@ -9,12 +9,14 @@ const AboutUs = React.lazy(() => import('./pages/Home/AboutUs'));
 const Jobs = React.lazy(() => import('./pages/Home/Jobs'));
 const ApplyForScheduleMeeting = React.lazy(() => import('./pages/Home/ApplyForScheduleMeeting'));
 const PartnershipProgramme = React.lazy(() => import('./pages/Home/PartnershipProgramme'));
+const DEO = React.lazy(() => import('./pages/Home/DEO'));
 
 
 // Academicians
 
 const Awards = React.lazy(() => import('./pages/Academicians/Awards'));
 const ResearchPaper = React.lazy(() => import('./pages/Academicians/ResearchPaperPublicationServices'));
+
 
 const EditorialBoardMembership = React.lazy(() => import('./pages/Academicians/EditorialBoardMembership'));
 const MembershipOthers = React.lazy(() => import('./pages/Academicians/MembershipOthers'));
@@ -117,7 +119,6 @@ const simpleRedirects = [
   ['Apply-For-Grants', '/apply-for-grants', true],
   ['BPO-Services', '/university-college', true],
   ['bulk', '/Researchpaper'],
-  ['DEO', '/jobs', true],
   ['doi-membership', '/doi-member'],
   ['Editorial-Board', '/editorial-board-membership', true],
   ['Edwin-journals', '/edwin-journal', true],
@@ -315,6 +316,7 @@ const router = createBrowserRouter([
       { path: 'apply-schedule-meeting', element: <ApplyForScheduleMeeting /> },
       { path: 'partnership-programme', element: <PartnershipProgramme /> },
       { path: 'awards', element: <Awards /> },
+      { path: 'deo', element: <DEO /> },
 
       
       { path: 'Researchpaper', element: <ResearchPaper /> },

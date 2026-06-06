@@ -5,6 +5,7 @@ export const ROUTES = {
   APPLY_SCHEDULE_MEETING: '/apply-schedule-meeting',
   PARTNERSHIP_PROGRAMME: '/partnership-programme',
   AWARDS: '/awards',
+  DEO: '/deo',
 
   ACADEMICIANS: '/academicians',
   RESEARCH_PAPER_PUBLICATION_SERVICES: '/research-paper-publication-services',

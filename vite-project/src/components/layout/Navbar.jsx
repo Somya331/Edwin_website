@@ -72,6 +72,7 @@ const MENU_STRUCTURE = [
       { label: 'Apply for Jobs', path: '/jobs' },
       { label: 'Apply For Schedule Meeting', path: '/apply-schedule-meeting' },
       { label: 'Partnership Programme', path: '/partnership-programme' },
+       { label: 'DEO', path: '/deo' },
     ]
   },
   {
