@@ -6,6 +6,7 @@ import TopBar from './components/layout/TopBar';
 import FloatingWhatsApp from "./components/common/FloatingWhatsApp";
 import SEOManager from "./components/common/SEOManager";
 import './App.css';
+import RedirectHandler from "./RedirectHandler";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             Loading...
           </div>
         }>
+          <RedirectHandler />
           <Outlet />
         </Suspense>
         <FloatingWhatsApp />

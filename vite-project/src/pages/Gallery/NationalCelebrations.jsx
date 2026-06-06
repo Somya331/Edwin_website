@@ -104,32 +104,6 @@ export default function NationalCelebrationsPage() {
         </section>
       ))}
 
-      <section className="bg-[#FFFFFF] px-5 py-16">
-        <div className="mx-auto max-w-[1200px] text-center">
-          <h2 className="text-[28px] font-semibold text-[#1B3A6B]">
-            Keep in Touch with Us
-          </h2>
-
-          <div className="mt-8 rounded-[12px] border border-[#D6E0F0] bg-[#EAF1FB] p-8">
-            <p className="text-[15px] leading-[1.8]">
-              15th Floor, Eros Corporate Tower, Nehru Place, New Delhi, Delhi
-              110019
-            </p>
-            <p className="mt-3 text-[15px] leading-[1.8]">
-              India : 011-66155019
-              <br />
-              Phone: +91 6262752167
-              <br />
-              Phone: +12792029553
-            </p>
-            <p className="mt-3 text-[15px] leading-[1.8]">
-              Email: care@edwinepc.com
-              <br />
-              Website: www.academichelpstore.com
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

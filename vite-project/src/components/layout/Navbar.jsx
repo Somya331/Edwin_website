@@ -507,9 +507,11 @@ const Navbar = () => {
 
         <div className="logo-section">
           <div className="brand-box">
-            <img src="https://www.academichelpstore.com/logo.jpeg"
+            <img
+              src="https://www.academichelpstore.com/logo.jpeg"
               alt="Logo"
-              className="brand-logo" loading="lazy" width="64" height="64" />
+              className="brand-logo"
+            />
             <div>
               <div className="brand-title">Edwin_Incorporation</div>
               <div className="brand-subtitle">
