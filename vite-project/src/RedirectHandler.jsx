@@ -11,9 +11,9 @@ const RedirectHandler = () => {
     if (targetUrl) {
       window.location.href = targetUrl;
     }
-  }, [location]);
+  }, [location.pathname]);
 
-  return <div>Redirecting...</div>;
+  return null;
 };
 
 export default RedirectHandler;
